@@ -80,7 +80,7 @@ Ask these; do not add a survey. The value is in the unguarded answer, not in cov
 - [ ] **Keep the moments where the subject says "I don't know" or "I never thought about it"** — real is more credible than fluent
 - [ ] Back up the audio **immediately** (phone plus cloud)
 - [ ] **Complete `consent.md` before leaving** — consent cannot be collected afterwards
-- [ ] ⚠️ **Ask permission explicitly for public use.** The clip will be shown on stage and published in a public repository
+- [ ] **Ask permission explicitly for public use.** The clip will be shown on stage and published in a public repository
 
 ---
 
@@ -88,10 +88,10 @@ Ask these; do not add a survey. The value is in the unguarded answer, not in cov
 
 ```
 assets/interviews/
-├── README.md            <- you are here
-├── consent.md           <- subject consent record (required)
-├── cantonese/           <- Cantonese material
-└── english/             <- English / Tagalog material, if filmed
+|-- README.md            <- you are here
+|-- consent.md           <- subject consent record (required)
+|-- cantonese/           <- Cantonese material
+`-- english/             <- English / Tagalog material, if filmed
 ```
 
 **Large files must not be committed to git** (`.gitignore` excludes `*.mp4`, `*.mov`, `*.wav`, `*.m4a`).

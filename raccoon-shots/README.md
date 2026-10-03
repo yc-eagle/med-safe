@@ -10,11 +10,11 @@
 
 ```
 raccoon-shots/
-├── 01-<short-purpose>.png
-├── 02-<short-purpose>.png
-├── 03-output.png          <- the Raccoon output for a verified-and-rejected case
-├── 04-lookup-failed.png   <- checked against our rule data, not found
-└── 05-our-substitute.png  <- what we used instead
+|-- 01-<short-purpose>.png
+|-- 02-<short-purpose>.png
+|-- 03-output.png          <- the Raccoon output for a verified-and-rejected case
+|-- 04-lookup-failed.png   <- checked against our rule data, not found
+`-- 05-our-substitute.png  <- what we used instead
 ```
 
 **Every filename must be referenced in the matching record in `raccoon-usage-log.md`.**
