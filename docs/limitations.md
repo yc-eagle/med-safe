@@ -90,11 +90,21 @@
 
 ---
 
-## 6. Checklist
+## 6. How to report this honestly
+
+**Observational research and engineering testing are reported separately.** The engineering suite passing is evidence that the software behaves as specified. It is **not** evidence of clinical effectiveness, of real user satisfaction, or of any award-level validation.
+
+**No incidence rate is stated without real data.** Where a rate is unknown, the field is left blank rather than estimated.
+
+The team's original framing — error classification, what to do on failure, and what is out of scope — is preserved in the [team planning archive](team-planning/README.md). **This table does not represent a professionally approved medical risk classification.** Zero of the 14 rules have professional approval.
+
+---
+
+## 7. Checklist
 
 - [x] Failure table reflects the implemented output labels
 - [x] **"A missing match never establishes safety" is enforced in code**
 - [x] Non-coverage table completed from [`decision-logic.md`](decision-logic.md)
 - [ ] The four "do not do" items verified in the interface and in the demo
 - [ ] All fallback paths exercised in the rehearsal
-- [ ] Fallback paths tested
+- [ ] No incidence rate stated without real data

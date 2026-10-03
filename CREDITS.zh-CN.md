@@ -9,26 +9,45 @@
 
 ## 1. 开源库与框架
 
-| 名称 | 用途 | 版本 | 许可证 | 用在哪 |
-|---|---|---|---|---|
-| _待填_ | | | | |
+以下是实际随包交付的组件，取自 `app/vendor/` 与 `tools/asr-requirements.lock.txt`。许可证文本随这些资源一起放在本仓库中。
 
-<!--
-填写示例：
-| Tesseract OCR | 离线文字识别 | 5.x | Apache-2.0 | 读取药品标签 |
-| Ollama | 本地模型推理 | - | MIT | 端侧推理 |
-| FastAPI | 后端框架 | 0.1xx | MIT | API 服务 |
--->
+| 名称 | 用途 | 许可证 | 用在哪 |
+|---|---|---|---|
+| **Tesseract.js** | 浏览器端 OCR 引擎 | Apache-2.0 | `app/vendor/tesseract.min.js`、`worker.min.js` |
+| **tesseract.js-core** | 编译为 WebAssembly 的 Tesseract | Apache-2.0 | `app/vendor/tesseract-core*.wasm` |
+| **tessdata_fast** — `eng`、`chi_tra` | 英文与繁体中文的训练语言数据 | Apache-2.0 | `app/vendor/eng.traineddata`、`chi_tra.traineddata` |
+| **regenerator-runtime** | 随 Tesseract.js 一起打包的运行时依赖 | MIT | `app/vendor/tesseract.min.js.LICENSE.txt` |
+| **Apple Vision framework** | macOS 上的端侧 OCR | Apple 系统框架，按原样使用 | `native/ocr.swift` |
+| **MLX** | 可选粤语语音模型的本地推理运行时 | MIT | `tools/asr-requirements.lock.txt` |
+| **Qwen3-ASR**（`mlx-community/Qwen3-ASR-0.6B-4bit`） | 粤语语音识别，可选的 Apple Silicon 路径 | 模型作者公布的模型许可证 | 由 `tools/install_voice.py` 下载，revision `313d850181767edf09f00a9c289becca70e58cd0`，约 0.7 GB。**权重不在本仓库中再分发** |
 
-**每引入一个新库就补一行。** 尤其注意许可证类型，copyleft 类许可证会带来义务。
+**为什么要把许可证文本文件提交进仓库：** Apache-2.0 与 MIT 的条款要求声明随分发一起传递。它们在 `app/vendor/*LICENSE*.txt`。
+
+**每引入一个新组件就补一行。** 尤其是 copyleft 类许可证带有义务，使用前必须核查。
+
+### 刻意不使用的组件
+
+记录在此，以免这个结论丢失、时间被花第二遍：
+
+| 名称 | 状态 |
+|---|---|
+| **RxNav / RxNav-in-a-Box**（美国 NLM） | **未用作相互作用数据库。** 其官方 FAQ 说明相互作用 API 已退役 |
+| **DrugBank** | **未使用。** 需要学术授权；下载页显示学术数据下载暂时暂停 |
+| **Ollama、FastAPI 及同类** | **未使用。** 早期规划笔记曾把它们列为示例；交付的原型并不依赖它们 |
 
 ---
 
-## 2. 数据集
+## 2. 实际使用的数据集
 
-| 名称 | 提供方 | 许可证 / 条款 | 用途 | 是否已确认可用 |
+| 名称 | 提供方 | 许可证 / 条款 | 用途 | 是否在使用 |
 |---|---|---|---|---|
-| _待填_ | | | | |
+| **香港注册药剂制品目录及结构定义** | 香港特区政府卫生署药物办公室，经 DATA.GOV.HK 提供 | DATA.GOV.HK 条款与细则。署名与来源日期保留；不暗示政府认可 | 注册编号、产品名称、持证人、有效成分 | **是。** 快照 2026-09-25 |
+| **药物办公室消费者指引**（对乙酰氨基酚；PDE-5 抑制剂与硝酸酯；口服 NSAID 指引） | 卫生署药物办公室 | 公开官方网页，已引用 | 成分级证据与本地分类 | **是** |
+| **DailyMed 标签**（华法林、氯吡格雷、克拉霉素） | 美国国家医学图书馆 | 公开标签记录，按章节引用 | 规则 R02-R14 的成分级引用证据 | **是。** **不等同于香港产品批准标签** |
+| **MedlinePlus / ASHP** 条目记录 | 美国国家医学图书馆 / ASHP | 公开记录，已引用 | 成分科普材料（14 个成分档案，13 条来源记录） | **是** |
+| **Qwen3-ASR**（`mlx-community/Qwen3-ASR-0.6B-4bit`） | 模型作者，经 `mlx-community` 发布 | 作者公布的模型许可证 | 可选的本地粤语语音识别 | **是**，由安装脚本按锁定 revision 下载。**权重不在此处再分发** |
+
+**关于公开仓库范围的说明：** 结构化规则与简短的事实性摘要逐条引用这些来源，并保留来源链接、文档日期、章节与 SHA-256 记录。**完整下载的临床 HTML 与美国的标签 XML 不进入公开仓库。** 来源权利不转让给 MedSafe。见 [`data-pack/CREDITS.md`](data-pack/CREDITS.md)。
 
 ### 候选数据源
 
@@ -61,7 +80,7 @@
 
 | 工具 | 用途 | 性质 |
 |---|---|---|
-| **商汤小浣熊（Raccoon Work）** | 资料检索、数据分析、文档撰写、编码辅助 | **开发工具，非运行时依赖** |
+| **商汤小浣熊（SenseTime Raccoon Work）** | 资料检索、数据分析、文档撰写、编码辅助 | **开发工具，非运行时依赖** |
 
 ### 关于 Raccoon Work 的声明
 
