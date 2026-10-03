@@ -3,8 +3,8 @@
 我们想请你帮忙做三件事：实测粤语/英语语音、演一段照护者情景、录一段英文旁白。你不用懂医学，也不用服药。
 
 准备（2 分钟）
-用手机 Safari 或 Chrome 打开：https://tomato-roster-naples-varies.trycloudflare.com/
-参考录屏：https://tomato-roster-naples-varies.trycloudflare.com/showcase/
+用手机 Safari 或 Chrome 打开：https://med-care.pages.dev/
+参考录屏：https://med-care.pages.dev/showcase/
 找安静、光线好的地方，关通知。情景视频横拍，普通 1080p 即可。可以只拍手和手机；露脸和声音只在你同意公开的情况下使用。文件名统一用 speaker01，不写中文姓名。
 
 任务一：真实语音测试（6 分钟）

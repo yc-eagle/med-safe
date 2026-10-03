@@ -1,0 +1,72 @@
+{
+  "tested_at": "2026-10-03T23:42:01.220Z",
+  "url": "https://med-care.pages.dev/",
+  "method": "Anonymous Chrome fetch with SHA-256 comparison. The initial Python request via the configured proxy returned HTTP 403; browser navigation and same-origin asset fetches succeeded.",
+  "checks": [
+    {
+      "path": "app.js",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/app.js",
+      "sha256": "2bc68511327c8908b5432be73a27292d1c7cca8951cdbe41d457d20f1f653310",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "data.js",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/data.js",
+      "sha256": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "sw.js",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/sw.js",
+      "sha256": "c0c04809070e5c0afb021b54a5eac93b4ef9b88fa936e5f1dd93a8e0d873af4f",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "showcase/index.html",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/showcase/",
+      "sha256": "3e2f80dc57a21bffb5d5c455122ca473b9683570f95320284a3cdbc3760f592f",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "showcase/volunteer.html",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/showcase/volunteer",
+      "sha256": "77987a9e96653755fe6fab95a7767f7b578233585f6ecb4d453c7e849872a422",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "showcase/MedSafe-QR.png",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/showcase/MedSafe-QR.png",
+      "sha256": "41797757d830c3e405d465e8f3c0120f8927abf4313af5a2b25bcf801823c478",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "index.html",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/",
+      "sha256": "6fa939f50784a5719b903af6bc0380344a06dd78b56a57b3ca38f0bdd9057fb9",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "showcase/先看这里-使用与演示.txt",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/showcase/%E5%85%88%E7%9C%8B%E8%BF%99%E9%87%8C-%E4%BD%BF%E7%94%A8%E4%B8%8E%E6%BC%94%E7%A4%BA.txt",
+      "sha256": "a7ea4fa7db6bf299899063cd60dc938164eb90383d848ed31d1eaf4b9345c9f3",
+      "matches_prepared_file": true
+    },
+    {
+      "path": "showcase/files.json",
+      "http_status": 200,
+      "final_url": "https://med-care.pages.dev/showcase/files.json",
+      "sha256": "adc046aa4f9ef3a1a12e374f2d89b28f75e49825d76aed28d3d56d00774edb07",
+      "matches_prepared_file": true
+    }
+  ],
+  "final_update_verified_at": "2026-10-03T23:48:45.064Z",
+  "final_deployment_id": "da9f4d41-dcb8-4f5a-a51b-33bdad54c65b"
+}

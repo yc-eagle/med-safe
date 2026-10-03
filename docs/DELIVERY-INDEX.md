@@ -1,14 +1,15 @@
 # MedSafe — current demo and deliverables
 
-Updated 3 October 2026. This index collects the team's project and the supplementary work in PR #3. The codebase remains **yc-eagle/med-safe**. The team main branch is preserved; the supplementary branch has not been merged automatically.
+Updated 4 October 2026 (Hong Kong time). This index collects the team's project and the supplementary work in PR #3. The codebase remains **yc-eagle/med-safe**. The team main branch is preserved; the supplementary branch has not been merged automatically.
 
 ## Open the product
 
-- **Interactive product for exhibition and testing:** https://tomato-roster-naples-varies.trycloudflare.com/
-- **Recorded examples and captured answer audio:** https://tomato-roster-naples-varies.trycloudflare.com/showcase/
-- **20-minute volunteer guide:** https://tomato-roster-naples-varies.trycloudflare.com/showcase/volunteer.html
+- **Interactive product for exhibition and testing:** https://med-care.pages.dev/
+- **Recorded examples and captured answer audio:** https://med-care.pages.dev/showcase/
+- **20-minute volunteer guide:** https://med-care.pages.dev/showcase/volunteer.html
+- **Phone QR code:** [MedSafe-QR.png](../assets/MedSafe-QR.png)
 
-The first URL is the actual interactive medicine checker. The second is a recording gallery. The temporary host depends on the host computer and tunnel staying online; it is not permanent hosting. Downloaded recordings can be played offline. An installed, verified offline copy of the core app supports its documented local features; browser speech recognition still requires a network and installed voices determine local reading support.
+The first URL is the actual interactive medicine checker. The second is a recording gallery. The fixed Cloudflare Pages host does not depend on the development computer staying online. Downloaded recordings can be played offline. On a phone, first open the new address while connected, choose **Prepare offline** and wait for download verification; then add it to the home screen if supported. The old hostname's saved cache does not transfer. An installed, verified offline copy supports its documented local features; browser speech recognition still requires a network and installed voices determine local reading support.
 
 ## GitHub links
 
@@ -18,6 +19,8 @@ The first URL is the actual interactive medicine checker. The second is a record
 | Latest supplementary implementation and handoff | [codex/voice-photo-checks](https://github.com/yc-eagle/med-safe/tree/codex/voice-photo-checks) · [PR #3](https://github.com/yc-eagle/med-safe/pull/3) |
 | Download the whole rehearsal package | [MedSafe-rehearsal-kit-20261003.zip](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-rehearsal-kit-20261003.zip) |
 | All published rehearsal media and QR | [Rehearsal release](https://github.com/yc-eagle/med-safe/releases/tag/rehearsal-20261003) |
+| Complete deployable website | [MedSafe-Cloudflare-Pages.zip](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-Cloudflare-Pages.zip) |
+| Fixed-host deployment and verification | [Deployment receipt](../qa/cloudflare-package-status.json) · [browser checks](../qa/cloudflare-browser-verification.json) · [offline checks](../qa/cloudflare-offline-verification.json) |
 | English voice video | [MP4](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/en-voice-demo.mp4) |
 | Cantonese voice video | [MP4](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/yue-voice-demo.mp4) |
 | Three text scenarios | [MP4](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/text-three-cases.mp4) |
@@ -59,9 +62,9 @@ The SQLite table contents also remained identical. A successful rebuild can ther
 
 This does not mean the catalogue provides 14,269 fully assessed medicines or exhaustive interaction coverage. The catalogue, the 13 prepared formulations and the 14 reviewed rules have different scopes. Review status follows the team's review record; it is not clinical outcome validation.
 
-For the currently running static host, replacing the served files does not require a server restart. The public data already matches the build. A phone using an older saved offline copy should use **Check for updates / 檢查更新** and reopen the app; reopening clears the current medicine session.
+The published data matches this build. Cloudflare serves a deployed snapshot: after source changes, rebuild and deploy the website files; restarting a development server does not update this fixed address. A phone using an older saved offline copy should use **Check for updates / 檢查更新** and reopen the app; reopening clears the current medicine session.
 
 
 ## Fixed website address and presentation update
 
-The patient-facing pages now use shorter English, Mandarin and Cantonese instructions. Review labels follow the team-recorded rule status; source links, coverage limits and speech-service consent remain visible. See [Cloudflare Pages setup](cloudflare-pages.md) and [presentation checks](../qa/public-copy-verification.json). The requested `med-care.pages.dev` address is pending account email verification and has not been reserved.
+The patient-facing pages now use shorter English, Mandarin and Cantonese instructions. Review labels follow the team-recorded rule status; source links, coverage limits and speech-service consent remain visible. See [Cloudflare Pages setup](cloudflare-pages.md) and [presentation checks](../qa/public-copy-verification.json). The fixed address **https://med-care.pages.dev/** is published. Application files were compared against the deployed origin, and the new origin passed phone-width browser and offline checks. Physical-phone speech and clinical validation remain separate tasks.

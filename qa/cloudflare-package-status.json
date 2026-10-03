@@ -1,17 +1,31 @@
 {
   "file": "MedSafe-Cloudflare-Pages.zip",
-  "bytes": 34914340,
-  "sha256": "528b7b249bfb8c90b5bcbee7a5376cc8a3036ff875fc3ac66ea2633f4f7cda40",
-  "files": 92,
+  "bytes": 34915586,
+  "sha256": "5025fed117789b97db1825f42fd745663d84fece50266945bb4ca8093903ecea",
+  "files": 93,
   "largest_asset_bytes": 5542358,
   "cloudflare_pages_file_limit_checked": true,
-  "domain_candidates": [
-    "med-care.pages.dev",
-    "medcare-hk.pages.dev",
-    "med-safe-hk.pages.dev"
-  ],
-  "domain_check": "No DNS records observed. Availability and ownership require authenticated project creation.",
-  "deployment_status": "Cloudflare account login completed. Project creation rejected until account email verification is completed (API code 8000077). No pages.dev hostname has been reserved or deployed.",
-  "includes": "Public app and existing recorded-example gallery; no local API or patient files.",
-  "current_temporary_preview": "https://tomato-roster-naples-varies.trycloudflare.com/"
+  "deployment_status": "Production deployment successful; fixed hostname verified in anonymous Chrome. No GitHub main merge performed.",
+  "published_at_hkt": "2026-10-04",
+  "url": "https://med-care.pages.dev/",
+  "project_name": "med-care",
+  "deployment_id": "da9f4d41-dcb8-4f5a-a51b-33bdad54c65b",
+  "deployment_url": "https://da9f4d41.med-care.pages.dev/",
+  "production_branch": "codex/voice-photo-checks",
+  "application_source_commit": "c732c82395c9a99f35f77826450c1b4ced71cfdd",
+  "additional_packaging": "Recorded-example gallery and QR use the fixed address. Archive is the exact uploaded file set.",
+  "repository": "https://github.com/yc-eagle/med-safe",
+  "delivery_mode": "Cloudflare Pages Direct Upload; not automatic Git deployment",
+  "includes": "Public app and recorded-example gallery; no local API, credentials or patient files.",
+  "verification": {
+    "browser": "cloudflare-browser-verification.json",
+    "offline": "cloudflare-offline-verification.json",
+    "assets": "cloudflare-live-assets.json",
+    "qr_decodes_to": "https://med-care.pages.dev/",
+    "physical_phone_tested": false,
+    "live_microphone_tested": false,
+    "clinical_safety_assessed": false
+  },
+  "initial_verified_deployment_id": "189218bf-b176-40ea-ade8-6c5db03a2313",
+  "final_update_scope": "Only the downloadable Chinese handoff instructions and their gallery checksum list changed after the browser/offline checks; all app assets are unchanged."
 }
