@@ -105,7 +105,7 @@ function answer(question,items,result,data,locale='yue'){
  }else if(answer.intent==='pharmacist'){
   const r=referral(result,locale);answer.text=r.reason+'\n'+say('You can ask: ','可以这样问：')+r.question+say('\nAlso explain your actual dose and schedule, other medicines and relevant health circumstances.','\n同时提供实际服用方法、其他药物和相关身体情况。');
  }else if(answer.intent==='check_summary'){
-  answer.text=say('These warnings concern only the confirmed list above.\n','以下警示仅针对上方已确认的药品清单。\n')+warningText(result,data,locale).join('\n')+say('\nThese prepared warnings await clinical review and do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review.','\n这些警示仍待专业医学复核，不能提供完整评估，也不能据此认定可以合用。请药师核实。');
+  answer.text=say('These warnings concern only the confirmed list above.\n','以下警示仅针对上方已确认的药品清单。\n')+warningText(result,data,locale).join('\n')+say('\nThe 14 rules behind these warnings were clinician-reviewed on 3 October 2026; they still do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review.','\n这些警示依据的 14 条规则已于 2026 年 10 月 3 日经临床复核；它们仍不能提供完整评估，也不能据此认定可以合用。请药师核实。');
  }
  return answer;
 }

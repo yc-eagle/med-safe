@@ -4,7 +4,7 @@ const norm=x=>String(x??'').normalize('NFKC').toLowerCase().replace(/\s+/g,' ').
 function ingredient(value,data){const v=norm(value);const entry=data.aliases.find(x=>x.aliases.some(a=>norm(a)===v));return entry?norm(entry.canonical):v;}
 function parse(raw){let s=String(raw).trim();if(s.startsWith('```')&&s.endsWith('```'))s=s.replace(/^```(?:json)?\s*/i,'').replace(/\s*```$/,'');return JSON.parse(s);}
 function validate(truth,output,data){
- const result={schema_version:'1.0',status:'unverified',identity_accepted:false,clinical_safety:'not_assessed',patient_dose:'not_assessed',rule_coverage:'not_assessed',rows:[],limitations:['Only compares selected catalogue fields against a dated snapshot.','Does not establish the truth of the photograph or an individual prescription.','Rules and aliases await clinical review.']};
+ const result={schema_version:'1.0',status:'unverified',identity_accepted:false,clinical_safety:'not_assessed',patient_dose:'not_assessed',rule_coverage:'not_assessed',rows:[],limitations:['Only compares selected catalogue fields against a dated snapshot.','Does not establish the truth of the photograph or an individual prescription.','The 14 rules were clinician-reviewed on 3 October 2026; ingredient alias mappings have not been reviewed.']};
  if(!Array.isArray(truth)||!truth.length||truth.length>4||truth.some(x=>!x.confirmed)){result.reason='reference_confirmation_required';return result;}
  if(new Set(truth.map(x=>x.id)).size!==truth.length){result.reason='duplicate_reference';return result;}
  if(!output||typeof output!=='object'||Array.isArray(output)||!Array.isArray(output.products)||output.products.length!==truth.length){result.reason='output_schema_or_count_invalid';return result;}
