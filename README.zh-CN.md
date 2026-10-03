@@ -48,6 +48,7 @@
 ## 已部署的内容
 
 - **公开移动端入口：** [MedSafe](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
+- **备用公开入口：** [GitHub Pages 版 MedSafe](https://lkwet.github.io/med-safe-demo/) · [录像与幻灯片](https://lkwet.github.io/med-safe-demo/demo.html)。原站点无法访问时可使用此镜像；团队源码仍以本仓库为准。
 - **全部数据与规则：** [可视化清单](app/data-report.html) | [机器可读清单](data/data_inventory.json) | [数据说明](docs/data-inventory.md)
 - **决策如何做出：** [决策逻辑与证据边界](docs/decision-logic.md) | [14 条规则](docs/rules/README.zh-CN.md)
 - **演示材料：** [3 分钟录像与下载](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html) | [仓库内的录像](assets/demo-3min.mp4) | [8 页可编辑 Deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)

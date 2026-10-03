@@ -8,6 +8,7 @@
 |---|---|---|
 | 公开仓库 | https://github.com/yc-eagle/med-safe | 已合并并推送到 main；队友原有提交保留 |
 | 在线演示 | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site | 已公开；手机离线升级已发布，真实手机仍待试用；缓存及断网工作流通过 16 项工程检查 |
+| 备用在线演示 | https://lkwet.github.io/med-safe-demo/ | 已公开发布到 GitHub Pages；53 项离线资源校验及 7 项匿名浏览器检查通过，覆盖语言切换、离线查药、规则及照片识字。本镜像的真机手机测试仍待完成。 |
 | 3 分钟录屏 | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html | 已生成 180 秒 / 约 5.54 MB 新版录屏：`assets/demo-3min.mp4`，已随 V2 公开发布 |
 | Pitch Deck | `deck/` 或公共下载 | 已生成 8 页可编辑 PPTX 与 PDF：`deck/Med-Safe-HacKU2026.*`，已随 V2 公开发布 |
 | Raccoon 使用亮点 | `raccoon-usage-log.md` | 收到分享链接，正文未成功取得，真实记录待 Lin MA |

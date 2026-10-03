@@ -8,6 +8,7 @@ Deadline: **2026-10-04 13:00 HKT**. The official handbook has been verified loca
 |---|---|---|
 | Public repository | https://github.com/yc-eagle/med-safe | Merged and pushed to main; the teammates' existing commits are preserved |
 | Online demo | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site | Public; the mobile offline upgrade is published, a real phone is still to be tried; the cache and offline workflow passed 16 engineering checks |
+| Alternative online demo | https://lkwet.github.io/med-safe-demo/ | Public GitHub Pages mirror; all 53 offline assets verified, with 7 anonymous browser checks covering language switching, offline lookup, rules and photo OCR. Physical-phone testing of this mirror remains pending. |
 | 3-minute recording | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html | A new 180-second / about 5.54 MB recording has been generated: `assets/demo-3min.mp4`, publicly released with V2 |
 | Pitch Deck | `deck/` or public download | An 8-page editable PPTX and PDF have been generated: `deck/Med-Safe-HacKU2026.*`, publicly released with V2 |
 | Raccoon usage highlights | `raccoon-usage-log.md` | The share link was received, the body was not successfully obtained, the real record is pending Lin MA |
