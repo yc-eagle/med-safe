@@ -1,0 +1,12 @@
+{
+  "products": 14269,
+  "product_ingredient_rows": 23835,
+  "unique_raw_ingredient_strings": 2081,
+  "source_updated": "2026-09-25",
+  "demo_products": 13,
+  "demo_rules": 10,
+  "xsd_valid": true,
+  "duplicate_registration_numbers": 0,
+  "missing_name_or_ingredients": 0,
+  "sqlite_integrity": "ok"
+}

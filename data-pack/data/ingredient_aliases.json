@@ -1,0 +1,126 @@
+[
+  {
+    "canonical": "paracetamol",
+    "display_zh_hant": "撲熱息痛",
+    "aliases": [
+      "paracetamol",
+      "撲熱息痛",
+      "acetaminophen",
+      "对乙酰氨基酚",
+      "對乙酰氨基酚",
+      "扑热息痛"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "warfarin",
+    "display_zh_hant": "華法林",
+    "aliases": [
+      "warfarin",
+      "華法林",
+      "warfarin sodium",
+      "华法林"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "ibuprofen",
+    "display_zh_hant": "布洛芬",
+    "aliases": [
+      "ibuprofen",
+      "布洛芬"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "aspirin",
+    "display_zh_hant": "阿司匹林",
+    "aliases": [
+      "aspirin",
+      "阿司匹林",
+      "acetylsalicylic acid"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "naproxen",
+    "display_zh_hant": "萘普生",
+    "aliases": [
+      "naproxen",
+      "萘普生"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "clopidogrel",
+    "display_zh_hant": "氯吡格雷",
+    "aliases": [
+      "clopidogrel",
+      "氯吡格雷",
+      "clopidogrel (as bisulfate)",
+      "clopidogrel bisulfate"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "omeprazole",
+    "display_zh_hant": "奧美拉唑",
+    "aliases": [
+      "omeprazole",
+      "奧美拉唑",
+      "omeprazole (as magnesium)",
+      "奥美拉唑"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "esomeprazole",
+    "display_zh_hant": "埃索美拉唑",
+    "aliases": [
+      "esomeprazole",
+      "埃索美拉唑",
+      "esomeprazole (as magnesium)",
+      "艾司奥美拉唑"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "simvastatin",
+    "display_zh_hant": "辛伐他汀",
+    "aliases": [
+      "simvastatin",
+      "辛伐他汀"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "clarithromycin",
+    "display_zh_hant": "克拉霉素",
+    "aliases": [
+      "clarithromycin",
+      "克拉霉素"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "sildenafil",
+    "display_zh_hant": "西地那非",
+    "aliases": [
+      "sildenafil",
+      "西地那非",
+      "sildenafil (as citrate)",
+      "昔多芬"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  },
+  {
+    "canonical": "glyceryl trinitrate",
+    "display_zh_hant": "硝酸甘油",
+    "aliases": [
+      "glyceryl trinitrate",
+      "硝酸甘油",
+      "nitroglycerin"
+    ],
+    "provenance": "Manually curated demo mapping; salt mappings limited to these explicitly listed terms. Chinese labels need Ella review."
+  }
+]

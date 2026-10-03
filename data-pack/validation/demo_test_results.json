@@ -1,0 +1,197 @@
+{
+  "tests": [
+    {
+      "case": "duplicate_paracetamol",
+      "inputs": [
+        "HK-53362",
+        "HK-53319"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R01"
+      ],
+      "passed": true,
+      "duration_seconds": 2.041697734966874e-05
+    },
+    {
+      "case": "warfarin_ibuprofen",
+      "inputs": [
+        "HK-41421",
+        "HK-35198"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R02"
+      ],
+      "passed": true,
+      "duration_seconds": 1.025001984089613e-05
+    },
+    {
+      "case": "warfarin_aspirin",
+      "inputs": [
+        "HK-41421",
+        "HK-67345"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R03"
+      ],
+      "passed": true,
+      "duration_seconds": 1.1917029041796923e-05
+    },
+    {
+      "case": "warfarin_naproxen",
+      "inputs": [
+        "HK-41421",
+        "HK-34921"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R04"
+      ],
+      "passed": true,
+      "duration_seconds": 8.000002708286047e-06
+    },
+    {
+      "case": "warfarin_clopidogrel",
+      "inputs": [
+        "HK-41421",
+        "HK-43787"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R05"
+      ],
+      "passed": true,
+      "duration_seconds": 8.041970431804657e-06
+    },
+    {
+      "case": "clopidogrel_omeprazole",
+      "inputs": [
+        "HK-43787",
+        "HK-44354"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R06"
+      ],
+      "passed": true,
+      "duration_seconds": 8.167000487446785e-06
+    },
+    {
+      "case": "clopidogrel_esomeprazole",
+      "inputs": [
+        "HK-43787",
+        "HK-64320"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R07"
+      ],
+      "passed": true,
+      "duration_seconds": 7.833004929125309e-06
+    },
+    {
+      "case": "simvastatin_clarithromycin",
+      "inputs": [
+        "HK-34337",
+        "HK-43890"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R08"
+      ],
+      "passed": true,
+      "duration_seconds": 7.791968528181314e-06
+    },
+    {
+      "case": "warfarin_paracetamol",
+      "inputs": [
+        "HK-41421",
+        "HK-53362"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R09"
+      ],
+      "passed": true,
+      "duration_seconds": 7.833994459360838e-06
+    },
+    {
+      "case": "sildenafil_nitroglycerin",
+      "inputs": [
+        "HK-45575",
+        "HK-67272"
+      ],
+      "expected_status": "alerts_found",
+      "rule_ids": [
+        "R10"
+      ],
+      "passed": true,
+      "duration_seconds": 4.458997864276171e-06
+    },
+    {
+      "case": "unknown_product",
+      "inputs": [
+        "HK-53362",
+        "HK-00000"
+      ],
+      "expected_status": "incomplete_check",
+      "rule_ids": [],
+      "passed": true,
+      "duration_seconds": 1.8749851733446121e-06
+    },
+    {
+      "case": "uncovered_pair",
+      "inputs": [
+        "HK-44354",
+        "HK-53362"
+      ],
+      "expected_status": "no_rule_found",
+      "rule_ids": [],
+      "passed": true,
+      "duration_seconds": 7.209018804132938e-06
+    },
+    {
+      "case": "same_pack_twice",
+      "inputs": [
+        "HK-53362",
+        "HK-53362"
+      ],
+      "expected_status": "duplicate_input_requires_review",
+      "rule_ids": [],
+      "passed": true,
+      "duration_seconds": 1.207983586937189e-06
+    },
+    {
+      "case": "insufficient",
+      "inputs": [
+        "HK-53362"
+      ],
+      "expected_status": "insufficient_products",
+      "rule_ids": [],
+      "passed": true,
+      "duration_seconds": 7.500057108700275e-07
+    },
+    {
+      "case": "mixed_unknown_and_alert",
+      "inputs": [
+        "HK-41421",
+        "HK-35198",
+        "UNKNOWN"
+      ],
+      "expected_status": "incomplete_check",
+      "rule_ids": [
+        "R02"
+      ],
+      "passed": true,
+      "duration_seconds": 8.000002708286047e-06
+    },
+    {
+      "case": "identity_confirmation_gate",
+      "passed": true
+    }
+  ],
+  "passed": 16,
+  "note": "Software behavior tests only; not clinical validation or a representative real-world study."
+}

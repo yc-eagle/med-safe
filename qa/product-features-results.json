@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-03T06:38:37.581Z",
+  "passed": 14,
+  "checks": [
+    "Every demo product ingredient has an explicit sourced profile",
+    "Compound medicine keeps every active ingredient",
+    "All catalogue entries expose official holder and no invented clinical fields",
+    "Unknown profiles stay visibly absent",
+    "A single confirmed medicine may get sourced general use information",
+    "Side-effect intent cannot be swallowed by use substring",
+    "Storage information does not invent a shelf life or dose",
+    "No profile answer before identity confirmation",
+    "Personal dose still routes to a professional",
+    "Emergency help does not wait for identity confirmation",
+    "Unselected context is never treated as no risk",
+    "Catalogue overlap outside demo scope remains a fact, not clinical approval",
+    "Ingredient question on a non-demo product uses exact catalogue identity",
+    "Unknown medicine does not disappear from a general information answer"
+  ],
+  "engineering_checks_not_clinical_review": true
+}

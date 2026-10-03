@@ -1,0 +1,111 @@
+{
+  "date": "2026-10-03T06:38:36.585Z",
+  "passed": 26,
+  "failed": 0,
+  "results": [
+    {
+      "name": "Cantonese combination question uses R01",
+      "status": "passed"
+    },
+    {
+      "name": "No claim of clinical safety",
+      "status": "passed"
+    },
+    {
+      "name": "No medicines automatically selected",
+      "status": "passed"
+    },
+    {
+      "name": "Transcript confirmation does not replace pack confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "Needs explicit rule check",
+      "status": "passed"
+    },
+    {
+      "name": "Dose question refers for individual review",
+      "status": "passed"
+    },
+    {
+      "name": "Stopping prescription question refers",
+      "status": "passed"
+    },
+    {
+      "name": "Pregnancy question not answered from interaction rules",
+      "status": "passed"
+    },
+    {
+      "name": "Negated medicine statement does not trigger rule",
+      "status": "passed"
+    },
+    {
+      "name": "Unconfirmed spoken medicine requires identity",
+      "status": "passed"
+    },
+    {
+      "name": "Spoken extra HK number requires identity",
+      "status": "passed"
+    },
+    {
+      "name": "Blood thinner remains ambiguous",
+      "status": "passed"
+    },
+    {
+      "name": "Anti-inflammatory colloquial name remains ambiguous",
+      "status": "passed"
+    },
+    {
+      "name": "Chinese ingredient alias supports candidate search",
+      "status": "passed"
+    },
+    {
+      "name": "Acetaminophen maps to paracetamol",
+      "status": "passed"
+    },
+    {
+      "name": "Brand family produces candidates only",
+      "status": "passed"
+    },
+    {
+      "name": "English substring does not confuse omeprazole and esomeprazole",
+      "status": "passed"
+    },
+    {
+      "name": "Known and unknown combinations preserve missing coverage",
+      "status": "passed"
+    },
+    {
+      "name": "No-hit answer does not imply safe",
+      "status": "passed"
+    },
+    {
+      "name": "Pharmacist prompt includes concrete question",
+      "status": "passed"
+    },
+    {
+      "name": "Unexpected question stays out of scope",
+      "status": "passed"
+    },
+    {
+      "name": "Injection text cannot bypass rule coverage",
+      "status": "passed"
+    },
+    {
+      "name": "R08 contraindication remains distinct",
+      "status": "passed"
+    },
+    {
+      "name": "R09 consult-before-use is not absolute contraindication",
+      "status": "passed"
+    },
+    {
+      "name": "Unlisted named medicine cannot inherit selected-list answer",
+      "status": "passed"
+    },
+    {
+      "name": "Brand is explained without assuming formulation",
+      "status": "passed"
+    }
+  ]
+}

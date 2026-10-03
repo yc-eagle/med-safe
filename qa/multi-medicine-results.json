@@ -1,0 +1,175 @@
+{
+  "date": "2026-10-03T06:44:30.313Z",
+  "passed": 41,
+  "failed": 0,
+  "scope": "Software behavior only. Curated clinical rules remain pending professional review. No patient outcome or clinical accuracy study.",
+  "catalogue": 14269,
+  "rules": 14,
+  "extra_non_demo_fixture": "HK-69192",
+  "results": [
+    {
+      "name": "Exactly 14 current rules have explicit evidence, scope and date or disclosed null",
+      "status": "passed"
+    },
+    {
+      "name": "R01 applies in both input orders: HK-53362+HK-53319",
+      "status": "passed"
+    },
+    {
+      "name": "R01 applies in both input orders: HK-53319+HK-53362",
+      "status": "passed"
+    },
+    {
+      "name": "R02 applies in both input orders: HK-41421+HK-35198",
+      "status": "passed"
+    },
+    {
+      "name": "R02 applies in both input orders: HK-35198+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R03 applies in both input orders: HK-41421+HK-67345",
+      "status": "passed"
+    },
+    {
+      "name": "R03 applies in both input orders: HK-67345+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R04 applies in both input orders: HK-41421+HK-34921",
+      "status": "passed"
+    },
+    {
+      "name": "R04 applies in both input orders: HK-34921+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R05 applies in both input orders: HK-41421+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R05 applies in both input orders: HK-43787+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R06 applies in both input orders: HK-43787+HK-44354",
+      "status": "passed"
+    },
+    {
+      "name": "R06 applies in both input orders: HK-44354+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R07 applies in both input orders: HK-43787+HK-64320",
+      "status": "passed"
+    },
+    {
+      "name": "R07 applies in both input orders: HK-64320+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R08 applies in both input orders: HK-34337+HK-43890",
+      "status": "passed"
+    },
+    {
+      "name": "R08 applies in both input orders: HK-43890+HK-34337",
+      "status": "passed"
+    },
+    {
+      "name": "R09 applies in both input orders: HK-41421+HK-53362",
+      "status": "passed"
+    },
+    {
+      "name": "R09 applies in both input orders: HK-53362+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R10 applies in both input orders: HK-45575+HK-67272",
+      "status": "passed"
+    },
+    {
+      "name": "R10 applies in both input orders: HK-67272+HK-45575",
+      "status": "passed"
+    },
+    {
+      "name": "R11 applies in both input orders: HK-43787+HK-35198",
+      "status": "passed"
+    },
+    {
+      "name": "R11 applies in both input orders: HK-35198+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R12 applies in both input orders: HK-43787+HK-34921",
+      "status": "passed"
+    },
+    {
+      "name": "R12 applies in both input orders: HK-34921+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R13 applies in both input orders: HK-43890+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R13 applies in both input orders: HK-41421+HK-43890",
+      "status": "passed"
+    },
+    {
+      "name": "R14 applies in both input orders: HK-43787+HK-67345",
+      "status": "passed"
+    },
+    {
+      "name": "R14 applies in both input orders: HK-67345+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "Three medicines produce every one of three pairs and preserve all warnings",
+      "status": "passed"
+    },
+    {
+      "name": "Four medicines enumerate six pairs, including uncovered pairs",
+      "status": "passed"
+    },
+    {
+      "name": "Twelve distinct medicines enumerate 66 pairs without claiming higher-order safety",
+      "status": "passed"
+    },
+    {
+      "name": "Thirteen inputs are rejected before evaluating any pair",
+      "status": "passed"
+    },
+    {
+      "name": "An unidentified medicine remains visible beside known warnings",
+      "status": "passed"
+    },
+    {
+      "name": "Unconfirmed identity blocks all medical rules",
+      "status": "passed"
+    },
+    {
+      "name": "Explicit unknown route does not inherit a demo route hint",
+      "status": "passed"
+    },
+    {
+      "name": "Catalogue product beyond demo formulations needs its route before applying a rule",
+      "status": "passed"
+    },
+    {
+      "name": "Same non-demo product yields sourced warning after operator records oral route",
+      "status": "passed"
+    },
+    {
+      "name": "Outside-route match stays a potential warning, not an applied rule",
+      "status": "passed"
+    },
+    {
+      "name": "No matching rule does not become a safe combination",
+      "status": "passed"
+    },
+    {
+      "name": "Repeated catalogue ID is not treated as two independent products",
+      "status": "passed"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "duration_seconds" : 0.70245397090911865,
+  "results" : [
+    {
+      "confidence" : 0.5,
+      "text" : "OCR TEST \/ 合成測試圖片"
+    },
+    {
+      "confidence" : 0.5,
+      "text" : "撲熱息痛 PARACETAMOL 500 MG"
+    },
+    {
+      "confidence" : 0.5,
+      "text" : "華法林 WARFARIN SODIUM"
+    },
+    {
+      "confidence" : 0.5,
+      "text" : "布洛芬 IBUPROFEN"
+    },
+    {
+      "confidence" : 1,
+      "text" : "請向藥劑師核實，勿自行改藥。"
+    }
+  ]
+}

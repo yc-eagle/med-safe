@@ -1,0 +1,587 @@
+{
+  "schema_version": "1.0",
+  "prepared_on": "2026-10-03",
+  "review_status": "pending_ella_review",
+  "sources": {
+    "paracetamol": {
+      "title": "香港藥物辦公室：撲熱息痛",
+      "url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/knowledge_on_medicines/paracetamol.html",
+      "jurisdiction": "HK",
+      "document_date": "2023-12",
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "nsaids": {
+      "title": "香港藥物辦公室：口服非類固醇消炎藥",
+      "url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/dm_03.html",
+      "jurisdiction": "HK",
+      "document_date": "2025-08",
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "blood": {
+      "title": "香港藥物辦公室：抗凝血及抗血小板藥",
+      "url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/dm_25.html",
+      "jurisdiction": "HK",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "general": {
+      "title": "香港藥物辦公室：一般用藥知識",
+      "url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/knowledge_on_medicines/general_use_on_medicine.html",
+      "jurisdiction": "HK",
+      "document_date": "2024-08",
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "omeprazole": {
+      "title": "MedlinePlus / ASHP：Omeprazole",
+      "url": "https://medlineplus.gov/druginfo/meds/a693050.html",
+      "jurisdiction": "US",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "esomeprazole": {
+      "title": "MedlinePlus / ASHP：Esomeprazole",
+      "url": "https://medlineplus.gov/druginfo/meds/a699054.html",
+      "jurisdiction": "US",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "simvastatin": {
+      "title": "MedlinePlus / ASHP：Simvastatin",
+      "url": "https://medlineplus.gov/druginfo/meds/a692030.html",
+      "jurisdiction": "US",
+      "document_date": "2026-02-15",
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "clarithromycin": {
+      "title": "MedlinePlus / ASHP：Clarithromycin",
+      "url": "https://medlineplus.gov/druginfo/meds/a692005.html",
+      "jurisdiction": "US",
+      "document_date": "2026-05-15",
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "nitrates": {
+      "title": "MedlinePlus / ASHP：Nitroglycerin Sublingual",
+      "url": "https://medlineplus.gov/druginfo/meds/a601086.html",
+      "jurisdiction": "US",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "sildenafil": {
+      "title": "香港藥物辦公室：慎用壯陽產品",
+      "url": "https://www.drugoffice.gov.hk/eps/do/tc/consumer/virility.html",
+      "jurisdiction": "HK",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "guaifenesin": {
+      "title": "MedlinePlus / ASHP：Guaifenesin",
+      "url": "https://medlineplus.gov/druginfo/meds/a682494.html",
+      "jurisdiction": "US",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "phenylephrine": {
+      "title": "MedlinePlus / ASHP：Phenylephrine",
+      "url": "https://medlineplus.gov/druginfo/meds/a606008.html",
+      "jurisdiction": "US",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    },
+    "emergency": {
+      "title": "香港消防處：召喚救護車",
+      "url": "https://www.hkfsd.gov.hk/eng/source/safety/uambu.htm",
+      "jurisdiction": "HK",
+      "document_date": null,
+      "checked_on": "2026-10-03",
+      "scope": "ingredient_or_class_education_not_HK_product_label"
+    }
+  },
+  "ingredients": {
+    "paracetamol": {
+      "canonical": "paracetamol",
+      "zh_hant": "撲熱息痛",
+      "class_zh": "止痛退燒藥",
+      "class_en": "Analgesic / antipyretic",
+      "use_zh": "用於紓緩疼痛及退燒；複方感冒藥亦可能含有此成分。",
+      "use_en": "Used for pain and fever; it may also occur in combination cold medicines.",
+      "side_effects_zh": "可出現過敏；過量可造成嚴重肝損傷。",
+      "side_effects_en": "Allergic reactions can occur; overdose can seriously injure the liver.",
+      "precautions_zh": "先核對其他藥物有沒有相同成分；肝病或正服華法林者先問醫護。",
+      "precautions_en": "Check other medicines for the same ingredient; discuss liver disease or warfarin use with a professional.",
+      "source_ids": [
+        "paracetamol"
+      ],
+      "aliases": [
+        "paracetamol",
+        "acetaminophen",
+        "撲熱息痛",
+        "对乙酰氨基酚",
+        "對乙酰氨基酚",
+        "扑热息痛"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "ibuprofen": {
+      "canonical": "ibuprofen",
+      "zh_hant": "布洛芬",
+      "class_zh": "非類固醇消炎藥（NSAID）",
+      "class_en": "Non-steroidal anti-inflammatory drug",
+      "use_zh": "可紓緩疼痛、炎症及發燒。",
+      "use_en": "Used to relieve pain, inflammation and fever.",
+      "side_effects_zh": "可能胃部不適、出血；腎臟及心血管風險須評估。",
+      "side_effects_en": "Stomach upset or bleeding may occur; kidney and cardiovascular risks need assessment.",
+      "precautions_zh": "有胃潰瘍、腎病、哮喘、懷孕或正服薄血藥時，先請醫護核實。",
+      "precautions_en": "Ask a professional about ulcers, kidney disease, asthma, pregnancy or blood-thinner use.",
+      "source_ids": [
+        "nsaids"
+      ],
+      "aliases": [
+        "ibuprofen",
+        "布洛芬"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "naproxen": {
+      "canonical": "naproxen",
+      "zh_hant": "萘普生",
+      "class_zh": "非類固醇消炎藥（NSAID）",
+      "class_en": "Non-steroidal anti-inflammatory drug",
+      "use_zh": "可紓緩疼痛、炎症及發燒。",
+      "use_en": "Used to relieve pain, inflammation and fever.",
+      "side_effects_zh": "可能胃部不適、出血；腎臟及心血管風險須評估。",
+      "side_effects_en": "Stomach upset or bleeding may occur; kidney and cardiovascular risks need assessment.",
+      "precautions_zh": "有胃潰瘍、腎病、哮喘、懷孕或正服薄血藥時，先請醫護核實。",
+      "precautions_en": "Ask a professional about ulcers, kidney disease, asthma, pregnancy or blood-thinner use.",
+      "source_ids": [
+        "nsaids"
+      ],
+      "aliases": [
+        "naproxen",
+        "萘普生"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "aspirin": {
+      "canonical": "aspirin",
+      "zh_hant": "阿司匹林",
+      "class_zh": "抗血小板藥／NSAID",
+      "class_en": "Antiplatelet / NSAID",
+      "use_zh": "低劑量處方可用於減少血小板聚集；用途取決於處方。",
+      "use_en": "Low-dose treatment may reduce platelet aggregation; the purpose depends on the prescription.",
+      "side_effects_zh": "可能胃部不適或出血。",
+      "side_effects_en": "Stomach problems and bleeding can occur.",
+      "precautions_zh": "不要因這張資料卡自行開始或停止服用；與其他薄血藥合用須核實。",
+      "precautions_en": "Do not start or stop it from this card; combinations with other blood thinners need review.",
+      "source_ids": [
+        "blood",
+        "nsaids"
+      ],
+      "aliases": [
+        "aspirin",
+        "阿司匹林",
+        "acetylsalicylic acid"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "warfarin": {
+      "canonical": "warfarin",
+      "zh_hant": "華法林",
+      "class_zh": "抗凝血藥",
+      "class_en": "Anticoagulant",
+      "use_zh": "用於預防或治療特定血栓相關情況，須按個人處方及監測安排。",
+      "use_en": "Used for selected clot-related conditions under individual prescribing and monitoring.",
+      "side_effects_zh": "主要風險是出血。",
+      "side_effects_en": "Bleeding is a major risk.",
+      "precautions_zh": "其他藥物、草藥及飲食變化可能影響治療；不可由藥盒推斷個人劑量。",
+      "precautions_en": "Other medicines, herbal products and diet changes can affect treatment; a box cannot establish the personal dose.",
+      "source_ids": [
+        "blood"
+      ],
+      "aliases": [
+        "warfarin",
+        "warfarin sodium",
+        "華法林",
+        "华法林"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "clopidogrel": {
+      "canonical": "clopidogrel",
+      "zh_hant": "氯吡格雷",
+      "class_zh": "抗血小板藥",
+      "class_en": "Antiplatelet",
+      "use_zh": "減少血小板聚集，用於特定心腦血管處方。",
+      "use_en": "Reduces platelet aggregation in selected cardiovascular prescriptions.",
+      "side_effects_zh": "可能增加出血。",
+      "side_effects_en": "Bleeding risk can increase.",
+      "precautions_zh": "新加胃藥或其他薄血藥前先核實；不要自行停處方。",
+      "precautions_en": "Check new acid-suppressing or blood-thinning medicines with a professional; do not stop a prescription yourself.",
+      "source_ids": [
+        "blood"
+      ],
+      "aliases": [
+        "clopidogrel",
+        "clopidogrel bisulfate",
+        "clopidogrel hydrogen sulphate",
+        "氯吡格雷",
+        "clopidogrel (as bisulfate)"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "omeprazole": {
+      "canonical": "omeprazole",
+      "zh_hant": "奧美拉唑",
+      "class_zh": "質子泵抑制劑（PPI）",
+      "class_en": "Proton pump inhibitor",
+      "use_zh": "減少胃酸，用於胃酸相關疾病的處方或治療安排。",
+      "use_en": "Reduces stomach acid in acid-related conditions.",
+      "side_effects_zh": "可能頭痛、噁心或腹瀉；不是完整副作用清單。",
+      "side_effects_en": "Headache, nausea or diarrhea may occur; this is not a complete list.",
+      "precautions_zh": "正服氯吡格雷者須核實合用；劑型和療程依實際處方。",
+      "precautions_en": "Concurrent clopidogrel requires review; formulation and treatment duration depend on the prescription.",
+      "source_ids": [
+        "omeprazole"
+      ],
+      "aliases": [
+        "omeprazole",
+        "omeprazole magnesium",
+        "omeprazole sodium",
+        "奧美拉唑",
+        "omeprazole (as magnesium)",
+        "奥美拉唑"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "esomeprazole": {
+      "canonical": "esomeprazole",
+      "zh_hant": "埃索美拉唑",
+      "class_zh": "質子泵抑制劑（PPI）",
+      "class_en": "Proton pump inhibitor",
+      "use_zh": "減少胃酸，用於胃酸相關疾病的處方或治療安排。",
+      "use_en": "Reduces stomach acid in acid-related conditions.",
+      "side_effects_zh": "可能頭痛、噁心或腹瀉；不是完整副作用清單。",
+      "side_effects_en": "Headache, nausea or diarrhea may occur; this is not a complete list.",
+      "precautions_zh": "正服氯吡格雷者須核實合用；劑型和療程依實際處方。",
+      "precautions_en": "Concurrent clopidogrel requires review; formulation and treatment duration depend on the prescription.",
+      "source_ids": [
+        "esomeprazole"
+      ],
+      "aliases": [
+        "esomeprazole",
+        "esomeprazole magnesium",
+        "esomeprazole sodium",
+        "埃索美拉唑",
+        "esomeprazole (as magnesium)",
+        "艾司奥美拉唑"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "simvastatin": {
+      "canonical": "simvastatin",
+      "zh_hant": "辛伐他汀",
+      "class_zh": "他汀類降血脂藥",
+      "class_en": "Statin",
+      "use_zh": "降低膽固醇，部分處方用於減低心血管事件風險。",
+      "use_en": "Lowers cholesterol and may reduce cardiovascular risk in selected patients.",
+      "side_effects_zh": "可能胃部不適；不明原因肌肉痛或無力需及時求醫。",
+      "side_effects_en": "Stomach symptoms can occur; unexplained muscle pain or weakness needs prompt medical advice.",
+      "precautions_zh": "新加抗生素等藥物前要核實相互作用。",
+      "precautions_en": "Check interactions before adding medicines such as antibiotics.",
+      "source_ids": [
+        "simvastatin"
+      ],
+      "aliases": [
+        "simvastatin",
+        "辛伐他汀"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "clarithromycin": {
+      "canonical": "clarithromycin",
+      "zh_hant": "克拉霉素",
+      "class_zh": "大環內酯類抗生素",
+      "class_en": "Macrolide antibiotic",
+      "use_zh": "用於特定細菌感染，不治療一般病毒性感冒。",
+      "use_en": "Treats certain bacterial infections; it does not treat viral colds.",
+      "side_effects_zh": "可能噁心、腹瀉或味覺改變。",
+      "side_effects_en": "Nausea, diarrhea or taste changes may occur.",
+      "precautions_zh": "與辛伐他汀等藥物可有重要相互作用；按處方療程使用。",
+      "precautions_en": "Important interactions include simvastatin; follow the prescribed treatment course.",
+      "source_ids": [
+        "clarithromycin"
+      ],
+      "aliases": [
+        "clarithromycin",
+        "克拉霉素"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "sildenafil": {
+      "canonical": "sildenafil",
+      "zh_hant": "昔多芬／西地那非",
+      "class_zh": "PDE-5 抑制劑",
+      "class_en": "PDE-5 inhibitor",
+      "use_zh": "本次資料介紹用於勃起功能障礙的藥物；其他適應症不可由此推斷。",
+      "use_en": "This source discusses treatment of erectile dysfunction; it does not establish other indications.",
+      "side_effects_zh": "可能頭痛、面紅或血壓下降。",
+      "side_effects_en": "Headache, flushing or lowered blood pressure may occur.",
+      "precautions_zh": "不能把硝酸鹽類藥物合用當作安全；需醫護核實。",
+      "precautions_en": "Combination with nitrate medicines needs urgent professional review.",
+      "source_ids": [
+        "sildenafil"
+      ],
+      "aliases": [
+        "sildenafil",
+        "sildenafil citrate",
+        "西地那非",
+        "sildenafil (as citrate)",
+        "昔多芬"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "glyceryl trinitrate": {
+      "canonical": "glyceryl trinitrate",
+      "zh_hant": "硝酸甘油",
+      "class_zh": "硝酸鹽類血管擴張藥",
+      "class_en": "Nitrate vasodilator",
+      "use_zh": "舌下片可用於心絞痛的個人治療安排。",
+      "use_en": "Sublingual tablets are used in individualized angina treatment.",
+      "side_effects_zh": "可能頭痛、頭暈或低血壓。",
+      "side_effects_en": "Headache, dizziness or low blood pressure may occur.",
+      "precautions_zh": "舌下片與吞服片不同；務必核實實際劑型及處方，不依本卡決定救急劑量。",
+      "precautions_en": "Sublingual and swallowed tablets differ; confirm formulation and prescription. This card does not set an emergency dose.",
+      "source_ids": [
+        "nitrates"
+      ],
+      "aliases": [
+        "glyceryl trinitrate",
+        "nitroglycerin",
+        "硝酸甘油"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "guaifenesin": {
+      "canonical": "guaifenesin",
+      "zh_hant": "愈創甘油醚",
+      "class_zh": "祛痰藥",
+      "class_en": "Expectorant",
+      "use_zh": "用於幫助排痰，複方藥可能同時含止痛或鼻塞藥成分。",
+      "use_en": "Helps loosen phlegm; combination products may include other active ingredients.",
+      "side_effects_zh": "可能噁心、嘔吐或頭痛。",
+      "side_effects_en": "Nausea, vomiting or headache may occur.",
+      "precautions_zh": "核對複方全部成分；兒童或持續咳嗽須專業評估。",
+      "precautions_en": "Check every ingredient; children or persistent cough need professional assessment.",
+      "source_ids": [
+        "guaifenesin"
+      ],
+      "aliases": [
+        "guaifenesin"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    },
+    "phenylephrine hydrochloride": {
+      "canonical": "phenylephrine hydrochloride",
+      "zh_hant": "鹽酸去氧腎上腺素",
+      "class_zh": "減充血藥成分",
+      "class_en": "Decongestant ingredient",
+      "use_zh": "部分感冒複方含此成分；本卡不判定產品療效或個人是否適用。",
+      "use_en": "An ingredient in some cold products; this card does not establish efficacy or personal suitability.",
+      "side_effects_zh": "可能緊張、頭暈或失眠。",
+      "side_effects_en": "Nervousness, dizziness or difficulty sleeping may occur.",
+      "precautions_zh": "有高血壓、心臟病或正在服其他藥物時先核實；不要把複方只當止痛藥。",
+      "precautions_en": "Discuss high blood pressure, heart disease and other medicines with a professional; a combination is not just a painkiller.",
+      "source_ids": [
+        "phenylephrine"
+      ],
+      "aliases": [
+        "phenylephrine hydrochloride",
+        "phenylephrine"
+      ],
+      "review_status": "pending_ella_review",
+      "scope": "general_ingredient_information",
+      "personal_dose": null
+    }
+  },
+  "formulations": {
+    "HK-53362": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "500MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-53319": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-41421": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "1MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-35198": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "200MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-67345": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "100MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-34921": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "250MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-43787": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "75MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-44354": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "20MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-64320": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "20MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-34337": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "10MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-43890": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "500MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-45575": {
+      "form_hint": "tablet",
+      "strength_text_in_name": [
+        "25MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    },
+    "HK-67272": {
+      "form_hint": "sublingual_tablet",
+      "strength_text_in_name": [
+        "0.6MG"
+      ],
+      "provenance": "product_name_and_existing_demo_selection_not_verified_pack_label",
+      "strength_per_unit": null,
+      "complete_HK_label": null,
+      "review_status": "pending_ella_review"
+    }
+  },
+  "storage": {
+    "zh": "先看實際藥袋／標籤的貯存要求，保留原容器並避免兒童接觸；不同製劑要求可不同，不自動假定可放雪櫃。",
+    "en": "Follow the actual label storage instructions, retain the original container and keep away from children. Requirements vary; do not assume refrigeration is appropriate.",
+    "source_ids": [
+      "general"
+    ]
+  },
+  "limits": {
+    "catalogue_is_not_label": true,
+    "patient_dosing": false,
+    "all_adverse_effects": false,
+    "clinical_validation": false,
+    "copyright": "Brief original factual summaries and links only; complete ASHP texts are not redistributed."
+  }
+}

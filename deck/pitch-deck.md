@@ -1,8 +1,20 @@
-# Pitch Deck — Slide-by-Slide Structure
+﻿# Pitch Deck — Slide-by-Slide Structure
 
 [English](pitch-deck.md) | [中文](pitch-deck.zh-CN.md)
 
-> **Owner: Yicheng (YC)** | Target: **final by tonight (3 Oct)** | **Top 8 pitching round, 4 Oct 16:20**
+> **Earlier planning material — corrections applied.** This structure was written before the product was built. Where it conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> **Must be corrected on stage:**
+> - **Cantonese is prioritised**, not "English first, Cantonese next". English narration appears in the demo video only.
+> - **Risk levels are separate**: labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient. **Not every warning is "must not be taken together".**
+> - When a sourced rule matches, **the product does show the warning**. What it never outputs is a **"safe" conclusion**. A missing rule is a **coverage** status.
+> - **Leaflets do contain interaction sections.** Do not say "never mentions".
+> - **Zero of the 14 rules are professionally approved.** The product grants no complete permission to combine.
+> - The capabilities of general assistants, drug tools and pharmacist services must be **verified one by one**, not summarised as "none of them do" or "only we do".
+>
+> **Deliverables already produced:** [8-slide editable deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3-minute recording](../assets/demo-3min.mp4) | [public product](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
+
+> **Owner: Yicheng (YC)** | **Top 8 pitching round, 4 Oct 16:20**
 > Running time: **about 6 minutes including Q&A** (8 teams in 80 minutes)
 > Companion docs: [`../docs/competitors.md`](../docs/competitors.md) (slide 11) / [`../docs/demo-script.md`](../docs/demo-script.md) (slides 7, 10) / [`../docs/limitations.md`](../docs/limitations.md) and [`../docs/data-handling.md`](../docs/data-handling.md) (slide 13)
 
@@ -140,7 +152,7 @@ Three parts:
 | Reads out the medicine, with **voice output** (English / Cantonese) | **"These two must not be taken together."** Plus source, plus consult a doctor | **"I cannot find information on these two medicines. Please consult a doctor."** |
 | It **works** | It is **useful** | It is **trustworthy** |
 
-(Boundary case: blurred photo → "I cannot read this photo clearly. Please take another one.")
+(Boundary case: blurred photo -> "I cannot read this photo clearly. Please take another one.")
 
 **Script (30 s)**
 > "The interaction has three states.
@@ -157,7 +169,7 @@ Three parts:
 
 **On the slide:** live demo, or a 20-second looping recording
 
-**What to do:** photograph two boxes on stage → produce **"these two must not be taken together"** plus the source
+**What to do:** photograph two boxes on stage -> produce **"these two must not be taken together"** plus the source
 
 **Script (30 s)**
 > "Let me photograph two boxes."
@@ -197,7 +209,7 @@ Three parts:
 
 | **Today: the manual method** | **MedSafe** |
 |---|---|
-| Read the box → cannot understand → find the leaflet → cannot remember → phone a family member → they are unsure too → wait for the next appointment | Photograph → read the result |
+| Read the box -> cannot understand -> find the leaflet -> cannot remember -> phone a family member -> they are unsure too -> wait for the next appointment | Photograph -> read the result |
 | **Steps: __** / **Time: __** | **Steps: __** / **Time: __** |
 | **The end point is often still "I don't know"** | The end point is a definite answer, or an honest "I cannot find it" |
 
@@ -277,10 +289,10 @@ Three parts:
 **On the slide**
 
 **What it gets wrong:**
-- Blurred photo, similar packaging → misidentification → **degrades to "please retake"**
-- Combination products, supplements → uncertain ingredient recognition → **goes to state 3**
-- Insufficient data coverage → **goes to state 3; never states "no interaction found"**
-- Chinese patent medicines and herbal medicines → limited coverage, **stated as such**
+- Blurred photo, similar packaging -> misidentification -> **degrades to "please retake"**
+- Combination products, supplements -> uncertain ingredient recognition -> **goes to state 3**
+- Insufficient data coverage -> **goes to state 3; never states "no interaction found"**
+- Chinese patent medicines and herbal medicines -> limited coverage, **stated as such**
 
 **What leaves the device:**
 - By default **everything runs on the device** — photographs do not leave the phone

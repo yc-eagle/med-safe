@@ -1,0 +1,26 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+const root=path.resolve(__dirname,'..');const context={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'app/data.js'),'utf8'),context);
+const D=JSON.parse(JSON.stringify(context.window.MED_DATA)),E=require('../app/engine.js');
+let passed=0;const details=[];
+function test(name,fn){fn();passed++;details.push({name,status:'passed'});}
+const check=(...ids)=>E.check(ids.map(id=>({id,confirmed:true})),D);
+const cases=[['R01','HK-53362','HK-53319'],['R02','HK-41421','HK-35198'],['R03','HK-41421','HK-67345'],['R04','HK-41421','HK-34921'],['R05','HK-41421','HK-43787'],['R06','HK-43787','HK-44354'],['R07','HK-43787','HK-64320'],['R08','HK-34337','HK-43890'],['R09','HK-41421','HK-53362'],['R10','HK-45575','HK-67272']];
+for(const [rule,a,b] of cases)for(const pair of [[a,b],[b,a]])test(rule+' '+pair.join('+'),()=>assert.deepEqual(check(...pair).alerts.map(x=>x.rule_id),[rule]));
+test('Nothing checked before identity confirmation',()=>{let r=E.check([{id:'HK-53362',confirmed:true},{id:'HK-53319',confirmed:false}],D);assert.equal(r.status,'identity_confirmation_required');assert.equal(r.alerts.length,0)});
+test('One medicine is insufficient',()=>assert.equal(check('HK-53362').status,'insufficient_products'));
+test('Repeated scan is not a second product',()=>assert.equal(check('HK-53362','HK-53362').status,'duplicate_input_requires_review'));
+test('Known alert survives an unknown product',()=>{let r=check('HK-53362','HK-53319','MISSING');assert.equal(r.status,'incomplete_check');assert.equal(r.alerts[0].rule_id,'R01');assert.deepEqual(r.unknown,['MISSING'])});
+test('Catalogue record outside rule scope remains unknown to rules',()=>assert.equal(check('HK-53362','HK-58956').status,'incomplete_check'));
+test('No hit never means safe',()=>{let r=check('HK-44354','HK-35198');assert.equal(r.status,'no_rule_found');assert.equal(r.clinicalSafety,'not_assessed');assert.equal(r.coverageComplete,false)});
+test('Route mismatch prevents applying oral rule',()=>{let copy=structuredClone(D);copy.demoProducts.find(p=>p.registration_number==='HK-53362').demo_route='topical';assert.equal(E.check([{id:'HK-53362',confirmed:true},{id:'HK-53319',confirmed:true}],copy).alerts.length,0)});
+test('Exact registration normalisation',()=>assert.equal(E.search(D.products,'hk 53362')[0].registration_number,'HK-53362'));
+test('Brand search retains formulation choice',()=>assert.ok(E.search(D.products,'PANADOL').length>1));
+test('Two OCR registrations yield two candidates',()=>assert.equal(E.suggest(D.products,[{text:'HK-53362 HK-53319'}]).candidates.length,2));
+test('Malformed six-digit registration never truncates',()=>assert.equal(E.suggest(D.products,[{text:'HK-533620'}]).candidates.length,0));
+test('Unknown OCR registration retained beside known one',()=>assert.deepEqual(E.suggest(D.products,[{text:'HK-53362 HK-00000'}]).unmatchedIds,['HK-00000']));
+test('Blank OCR stays blank',()=>assert.equal(E.suggest(D.products,[]).candidates.length,0));
+test('Known alias mapping is explicit',()=>assert.ok(D.aliases.find(x=>x.canonical==='paracetamol').aliases.includes('對乙酰氨基酚')));
+test('All 78 distinct demo pairs always disclose clinical uncertainty',()=>{for(let i=0;i<D.demoProducts.length;i++)for(let j=i+1;j<D.demoProducts.length;j++){let r=check(D.demoProducts[i].registration_number,D.demoProducts[j].registration_number);assert.equal(r.clinicalSafety,'not_assessed');assert.equal(r.reviewStatus,'pending_ella_review');assert.equal(r.coverageComplete,false)}});
+const result={date:new Date().toISOString(),passed,failed:0,catalogue:D.products.length,details};
+fs.mkdirSync(path.join(root,'qa'),{recursive:true});fs.writeFileSync(path.join(root,'qa/engine-results.json'),JSON.stringify(result,null,2));console.log(`${passed} meaningful engine checks passed`);

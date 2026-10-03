@@ -1,3 +1,52 @@
+# Credentials / machine-specific runtime
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credentials*.json
+*token*.json
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.voice-runtime/
+.runtime/
+node_modules/
+.playwright/
+*.log
+native/ocr
+*.safetensors
+*.gguf
+*.pt
+*.pth
+*.onnx
+# Original third-party medical article / label downloads: hashes and URLs stay public
+/data-pack/evidence/
+/data-pack/raw/*
+!/data-pack/raw/DrugList.xml
+!/data-pack/raw/DrugList.xsd
+# No private competition/admin/patient material or unpublished interviews
+**/*Handbook*.docx
+**/*Teams*.xlsx
+**/*Redemption*
+**/*兑换码*
+/assets/interviews/
+/assets/raccoon-shots/
+**/patient-uploads/
+**/private/
+# Historical handoff is excluded except clearly constructed validation examples
+/handoff/*
+!/handoff/sunsy-evidence/
+/handoff/sunsy-evidence/*
+!/handoff/sunsy-evidence/examples/
+# Earlier process documents; current facts live in root docs and docs/
+/data-pack/COST_AND_DATA_FLOW.md
+/data-pack/TECH_CHECKS.md
+/public-site/
+
+# Additional team scaffold exclusions
 # ============================================================
 # MedSafe — .gitignore
 # ⚠️ 本仓库是 PUBLIC 的。任何提交上去的密钥都会立刻被爬虫扫到。
@@ -78,3 +127,14 @@ desktop.ini
 .idea/
 *.swp
 *~
+
+# Deliberate small, synthetic submission assets (not patient media)
+!/assets/demo-3min.mp4
+!/data-pack/validation/cantonese_sample.wav
+!/data-pack/validation/mandarin_sample.wav
+# Team interview templates are public; recordings require separate consent.
+!/assets/interviews/
+/assets/interviews/*
+!/assets/interviews/README.md
+!/assets/interviews/consent.md
+/work/

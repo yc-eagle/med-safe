@@ -1,0 +1,62 @@
+{
+  "R01": {
+    "rule_id": "R01",
+    "spoken_yue": "呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R02": {
+    "rule_id": "R02",
+    "spoken_yue": "華法林同布洛芬一齊用，有機會增加出血風險。請藥劑師或者開藥醫生核實同安排監測。呢個提示唔代表一律禁用，亦唔好自行停處方藥。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R03": {
+    "rule_id": "R03",
+    "spoken_yue": "華法林同阿司匹林一齊用，有機會增加出血風險。請藥劑師或者開藥醫生核實同安排監測。呢個提示唔代表一律禁用，亦唔好自行停處方藥。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R04": {
+    "rule_id": "R04",
+    "spoken_yue": "華法林同萘普生一齊用，有機會增加出血風險。請藥劑師或者開藥醫生核實同安排監測。呢個提示唔代表一律禁用，亦唔好自行停處方藥。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R05": {
+    "rule_id": "R05",
+    "spoken_yue": "華法林同氯吡格雷一齊用，有機會增加出血風險。請藥劑師或者開藥醫生核實同安排監測。呢個提示唔代表一律禁用，亦唔好自行停處方藥。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R06": {
+    "rule_id": "R06",
+    "spoken_yue": "奧美拉唑可能令氯吡格雷嘅作用減弱。呢份說明書建議避免一齊用，請藥劑師或者開藥醫生確認點樣處理，唔好自行改藥。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R07": {
+    "rule_id": "R07",
+    "spoken_yue": "埃索美拉唑可能令氯吡格雷嘅作用減弱。呢份說明書建議避免一齊用，請藥劑師或者開藥醫生確認點樣處理，唔好自行改藥。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R08": {
+    "rule_id": "R08",
+    "spoken_yue": "呢份說明書將辛伐他汀同克拉霉素合用列為禁忌，可能引致肌肉損傷。請盡快向藥劑師或者開藥醫生核實點樣處理，唔好自行調整處方。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R09": {
+    "rule_id": "R09",
+    "spoken_yue": "如果正服用華法林，加用撲熱息痛之前要先問藥劑師或者醫生。呢個係需要個別評估嘅注意事項，唔代表一律禁用。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  },
+  "R10": {
+    "rule_id": "R10",
+    "spoken_yue": "西地那非同硝酸甘油呢類硝酸鹽藥物一齊用，可能令血壓降得太低。請盡快向藥劑師或者醫生核實呢個組合。",
+    "review_status": "pending_ella_review",
+    "changes_medical_rule": false
+  }
+}

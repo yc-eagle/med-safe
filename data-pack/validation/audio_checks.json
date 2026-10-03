@@ -1,0 +1,14 @@
+{
+  "mandarin_sample.wav": {
+    "seconds": 6.198367346938776,
+    "sample_rate": 22050,
+    "channels": 1,
+    "nonzero_samples": true
+  },
+  "cantonese_sample.wav": {
+    "seconds": 5.949433106575964,
+    "sample_rate": 22050,
+    "channels": 1,
+    "nonzero_samples": true
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "audited_on": "2026-10-03",
+  "scope": "current repository publication candidates; source exclusions and mechanical credential/path scan, not legal or clinical certification",
+  "data_snapshot_date": "2026-09-25",
+  "clinical_rule_drafts": 14,
+  "clinically_approved_rules": 0,
+  "public_catalogue_originals": [
+    {
+      "path": "data-pack/raw/DrugList.xml",
+      "bytes": 4296227,
+      "sha256": "9723afc3202fd1030d6106bb8918328ddd5ac1ad36c59fd9617458f6b97c1b7b",
+      "matches_download_manifest": true,
+      "source": "https://www.drugoffice.gov.hk/eps/psi/DrugList.xml",
+      "attribution": "Hong Kong SAR Government, Department of Health, Drug Office",
+      "terms": "https://data.gov.hk/en/terms-and-conditions"
+    },
+    {
+      "path": "data-pack/raw/DrugList.xsd",
+      "bytes": 1104,
+      "sha256": "04c1a9c51909d556610e5fa7b38bad48d8fde5b66119a3f168748588177b7d38",
+      "matches_download_manifest": true,
+      "source": "https://www.drugoffice.gov.hk/eps/psi/DrugList.xsd",
+      "attribution": "Hong Kong SAR Government, Department of Health, Drug Office",
+      "terms": "https://data.gov.hk/en/terms-and-conditions"
+    }
+  ],
+  "third_party_snapshot_files": [
+    {
+      "path": "data-pack/evidence/hk_terms.html",
+      "excluded_by_gitignore": true,
+      "sha256": "c901a8f56c42a4cbcb2502c10d3623309529500e38f5d6c247aab68c6149dde0"
+    },
+    {
+      "path": "data-pack/evidence/hk_anticoagulants.html",
+      "excluded_by_gitignore": true,
+      "sha256": "2d0c766968cdd50e6473f2c5d8dd625e832958b3deb14b4f4a2180000a34c2cb"
+    },
+    {
+      "path": "data-pack/evidence/hk_paracetamol.html",
+      "excluded_by_gitignore": true,
+      "sha256": "7e048f2f48d8b783440b553bae763de952c5e59f9327dded8c944741bb93231f"
+    },
+    {
+      "path": "data-pack/evidence/hk_sildenafil.html",
+      "excluded_by_gitignore": true,
+      "sha256": "bc8fbac3cea56391ca170d8f55da225d2f325a75acde3a4900a63caa6f914060"
+    },
+    {
+      "path": "data-pack/evidence/hk_catalog.html",
+      "excluded_by_gitignore": true,
+      "sha256": "9ef082f470536bffaba4371b849fd32d8467df9f6cbca2f7070e29899731c07a"
+    },
+    {
+      "path": "data-pack/evidence/rxnav_faq.html",
+      "excluded_by_gitignore": true,
+      "sha256": "c5504507b52c82d079ffd3fd1e6761a212c5a36feafc09a5874020510221f05d"
+    },
+    {
+      "path": "data-pack/raw/DrugList.xml",
+      "excluded_by_gitignore": false,
+      "sha256": "9723afc3202fd1030d6106bb8918328ddd5ac1ad36c59fd9617458f6b97c1b7b"
+    },
+    {
+      "path": "data-pack/raw/clarithromycin_label.xml",
+      "excluded_by_gitignore": true,
+      "sha256": "7d449a2ae748c67cdee029c866bc14cc7e09b368b014fd7cb2550cfb91134a12"
+    },
+    {
+      "path": "data-pack/raw/clopidogrel_label.xml",
+      "excluded_by_gitignore": true,
+      "sha256": "8b2ec478cce8b957610ecf4568c0b8e3b48bbe9fd72a0aae3045f28c8c3461d7"
+    },
+    {
+      "path": "data-pack/raw/DrugList.xsd",
+      "excluded_by_gitignore": false,
+      "sha256": "04c1a9c51909d556610e5fa7b38bad48d8fde5b66119a3f168748588177b7d38"
+    },
+    {
+      "path": "data-pack/raw/warfarin_label.xml",
+      "excluded_by_gitignore": true,
+      "sha256": "ab535cfa7977d8d7749d219dca2aa21a148780b88a5312720fc9783029ef0c7c"
+    }
+  ],
+  "third_party_summary_policy": "Only short original factual summaries, structured rule drafts and source metadata; full clinical article HTML and downloaded US label XML excluded",
+  "third_party_software_notices": [
+    "app/vendor/TESSDATA-LICENSE.txt",
+    "app/vendor/TESSERACT-CORE-LICENSE.txt",
+    "app/vendor/TESSERACT-LICENSE.txt",
+    "app/vendor/tesseract.min.js.LICENSE.txt",
+    "app/vendor/worker.min.js.LICENSE.txt"
+  ],
+  "public_source_provenance": [
+    "data-pack/download_manifest.json",
+    "data-pack/SHA256SUMS.txt",
+    "data-pack/data/rule_sources.json",
+    "data/data_inventory.json"
+  ],
+  "source_archive_metadata_notice": "Hashes/local_file references may describe excluded internal retrieval snapshots; they are not redistribution claims",
+  "sensitive_material_excluded": [
+    "patient media and interviews",
+    "participant roster",
+    "private handbook",
+    "redemption codes",
+    "credentials and private keys",
+    "model weights and machine runtimes"
+  ],
+  "mechanical_scan": {
+    "candidate_count": 138,
+    "credential_pattern_hits": [],
+    "personal_absolute_path_files": [],
+    "limitations": "Pattern scan only; does not guarantee detection of every private string or grant rights to unreviewed future files"
+  },
+  "original_code_license": "No blanket licence selected; retain rights pending team choice; third-party terms unchanged",
+  "public_publish_status": "prepared_for_parent_release_not_confirmation_of_push",
+  "ella_evidence": [
+    {
+      "platform": "Doubao",
+      "url": "https://www.doubao.com/thread/xiR1E6K1GlEjoUF7i",
+      "status": "received/link_retrieval_failed",
+      "clinical_approval": false
+    },
+    {
+      "platform": "Raccoon",
+      "url": "https://office.xiaohuanxiong.com/share/chat/5daf8487-2175-4236-b0fe-883b00688039",
+      "status": "received/link_retrieval_failed",
+      "clinical_approval": false
+    }
+  ]
+}

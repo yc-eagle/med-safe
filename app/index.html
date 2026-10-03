@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>藥盒核對 · HacKU 2026</title><link rel="icon" href="favicon.svg"><link rel="stylesheet" href="app.css"><link rel="stylesheet" href="product-features.css"><link rel="stylesheet" href="release.css"><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#246d63"></head>
+<body>
+<a class="skip-link" href="#search">跳到藥品查找 / Skip to medicine search</a>
+<header class="topbar"><a class="brand" href="index.html" aria-label="Medication check home"><span class="brandmark">＋</span><span data-t="brand">藥盒核對</span><small>HacKU 2026</small></a><div class="topright"><span class="local-dot" id="mode">本機演示</span><a class="smallbtn" href="verify.html" data-t="verifyAI">AI 輸出核驗</a><button id="large-font" class="smallbtn" aria-pressed="false">大字</button><button id="language" class="smallbtn" aria-label="Switch language">English</button></div></header>
+<main>
+<div id="print-report" class="print-only"></div>
+<div class="notice"><span class="notice-mark">i</span><span data-t="notice">黑客松原型，規則待醫學複核。只演示核對與轉介，不提供個人用藥決定。</span></div>
+<section class="intro"><p class="eyebrow" data-t="eyebrow">香港藥品資料 · 本地核對</p><h1 data-t="title">核對手上的兩盒藥</h1><p data-t="subtitle">先確認藥盒資料，再查看重複成分、已知警示與原始出處。</p></section>
+<div id="capability-strip" class="capability-strip"></div><p class="notice" data-t="prescriptionBoundary">藥盒資料不等於個人處方。藥袋或醫護指示與藥盒不同時，先向藥劑師或開藥醫生核實，不要自行加減量。</p><div class="workspace">
+<div class="input-column">
+<section class="panel add-panel"><div class="section-heading"><span class="step">1</span><h2 data-t="addTitle">加入藥品</h2><span class="section-note" data-t="addNote">先拍照，也可手動找</span></div>
+<fieldset class="label-mode"><legend>你手上的是 / What do you have?</legend><label><input type="radio" name="label-mode" value="pack" checked> 藥盒 / Pack</label><label><input type="radio" name="label-mode" value="bag"> 藥袋 / Pharmacy bag</label></fieldset><p id="label-guidance" class="micro"></p><div class="upload-area"><svg viewBox="0 0 48 48" fill="none" aria-hidden="true"><path d="M7 15h9l3-5h10l3 5h9v25H7V15Z" stroke="currentColor" stroke-width="2"/><circle cx="24" cy="27" r="8" stroke="currentColor" stroke-width="2"/></svg><div><h3 data-t="photoTitle">拍下完整藥名和 HK 註冊編號</h3><p data-t="photoHint">正面、光線均勻、每張最多兩盒。避開姓名等個人資料。</p><div class="button-row"><button type="button" class="button primary" id="open-camera">開啟相機</button><label for="photo" class="button secondary" id="upload-label" tabindex="0" role="button" data-t="upload">拍照／選擇圖片</label><input type="file" id="photo" accept="image/jpeg,image/png,image/heic,image/heif,image/tiff" capture="environment" hidden><button class="button secondary" id="ocr-sample" data-t="ocrSample">試用合成藥盒圖</button></div></div></div>
+<p class="micro" id="privacy" data-t="privacy">圖片只交給這台 Mac 識字，處理後刪除暫存檔。</p><div id="ocr-status" role="status" aria-live="polite"></div>
+<details id="ocr-details" hidden><summary data-t="ocrDetails">查看識別文字與候選</summary><div id="ocr-preview"></div><pre id="ocr-text"></pre><div id="ocr-candidates"></div><div id="ocr-correction" class="ocr-correction"></div></details>
+<div class="divider"><span data-t="or">或手動查找</span></div>
+<label for="search" class="field-label" data-t="searchLabel">HK 註冊編號、英文藥名或成分</label>
+<div class="search-box"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="6" stroke="currentColor" stroke-width="1.7"/><path d="m15 15 5 5" stroke="currentColor" stroke-width="1.7"/></svg><input id="search" type="search" autocomplete="off" placeholder="例如 HK-53362、PANADOL、paracetamol" aria-controls="search-results"><button id="search-btn" data-t="find">查找</button></div>
+<div id="search-results" aria-live="polite"></div>
+<div class="sample-row"><span data-t="samples">演示樣例</span><button data-case="duplicate" data-t="caseDuplicate">重複成分</button><button data-case="interaction" data-t="caseInteraction">相互作用</button><button data-case="contra" data-t="caseContra">禁忌例子</button><button data-case="unknown" data-t="caseUnknown">查不到</button></div>
+</section>
+<section class="panel selected-panel"><div class="section-heading"><span class="step">2</span><h2 data-t="confirmTitle">對照藥盒確認</h2><button id="clear" class="textbtn" data-t="clear">清空</button></div><p class="section-description" data-t="confirmHint">名稱相似可能是不同製劑。請逐一確認完整藥名、註冊號及劑型。</p><p id="list-progress" role="status"></p><div id="selected"></div><div id="confirmation-status" role="status" aria-live="polite"></div><details id="consultation-fields" class="consultation-fields"><summary id="context-title">有需要告訴藥師的情況？（可選）</summary><div id="context-options"></div><p class="micro" id="context-privacy"></p><textarea id="context-question" maxlength="400" rows="2" placeholder="想問藥師的問題；毋須姓名或病歷詳情"></textarea></details><button class="button primary check-button" id="check" disabled data-t="check">確認資料並核對</button></section>
+</div>
+<aside class="result-column"><section class="panel result-panel" aria-labelledby="result-heading"><div class="section-heading"><span class="step">3</span><h2 id="result-heading" data-t="resultTitle">核對結果</h2></div><div id="result" aria-live="polite"></div></section>
+<div class="coverage"><h3 data-t="coverageTitle">清楚知道這次能查到甚麼</h3><div class="stats"><div><strong>14,269</strong><span data-t="catalog">官方目錄藥品</span></div><div><strong>13</strong><span data-t="demoProducts">演示製劑</span></div><div><strong>14</strong><span data-t="demoRules">待複核規則</span></div></div><p data-t="coverageNote">目錄大小不等於安全核對範圍。查不到警示，也不能判定可以合用。</p><button id="about" class="textbtn" data-t="about">資料來源與離線範圍 ↗</button></div>
+</aside></div>
+<section class="panel voice-panel" aria-labelledby="voice-heading">
+<div class="section-heading"><span class="step">4</span><h2 id="voice-heading" data-v="heading">用廣東話問清楚</h2><span class="section-note" data-v="tag">先確認問句</span></div>
+<p data-v="intro">在加用新藥前，先確認上面的藥品，再問「呢兩隻藥可唔可以一齊食？」</p>
+<div class="button-row"><button id="record-question" class="button primary" disabled data-v="record">開始講廣東話</button><label for="voice-file" class="button secondary" tabindex="0" role="button" data-v="upload">選擇錄音</label><input type="file" id="voice-file" accept="audio/*" hidden></div>
+<p id="voice-status" class="micro" role="status" aria-live="polite"></p>
+<label for="question-text" class="field-label" data-v="label">我聽到你問（可以修改，也可以直接打字）</label>
+<textarea id="question-text" maxlength="500" rows="2" placeholder="呢兩隻藥可唔可以一齊食？"></textarea>
+<div class="question-examples"><button class="textbtn" data-question="呢兩隻藥可唔可以一齊食？" data-v="example1">可唔可以一齊食？</button><button class="textbtn" data-question="點解要問藥劑師？" data-v="example2">點解要問藥劑師？</button><button class="textbtn extra-question" data-question="呢啲藥有咩作用？">有咩作用？</button><button class="textbtn extra-question" data-question="呢啲藥有咩副作用？">有咩副作用？</button><button class="textbtn extra-question" data-question="呢啲藥應該點樣存放？">點樣存放？</button><button class="textbtn" data-question="我應該食幾多粒？" data-v="example3">應該食幾多？</button></div>
+<button id="confirm-question" class="button primary" disabled data-v="confirm">問句正確，請回答</button>
+<p class="micro" data-v="privacy">每段最多 20 秒；錄音只在這台 Mac 轉成文字，處理後刪除暫存。回答只根據已確認藥品與演示規則。</p>
+<div id="voice-answer" aria-live="polite" hidden><p id="answer-context" class="micro"></p><p id="answer-text"></p><p id="answer-sources" class="micro"></p><div class="button-row"><button id="speak-answer" class="button secondary" data-v="replay">再聽廣東話回答</button><button id="pharmacist-note" class="textbtn" data-v="handoff">帶甚麼問藥劑師</button></div><div id="answer-audio"></div></div>
+</section>
+<footer><span data-t="footer">資料快照：香港衞生署 · 2026-09-25</span><span data-t="footer2">無帳戶 · 無雲端模型 · 不儲存用藥歷史</span></footer>
+</main>
+<dialog id="dialog"><div class="dialog-top"><h2 id="dialog-title"></h2><button id="close-dialog" class="smallbtn" aria-label="Close">✕</button></div><div id="dialog-body"></div></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+<script src="browser-runtime.js"></script><script src="data.js"></script><script src="engine.js"></script><script src="medicine-info.js"></script><script src="patient.js"></script><script src="app.js"></script><script src="voice.js"></script><script src="product-features.js"></script><script src="release-ui.js"></script><script src="offline-runtime.js"></script>
+</body></html>

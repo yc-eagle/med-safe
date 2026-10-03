@@ -1,0 +1,38 @@
+MED SAFE · SYNTHETIC NARRATION · 180-SECOND ACTUAL BROWSER DEMONSTRATION
+Synthetic input labels; no real patient, real microphone or clinical validation.
+
+000-012s
+Med Safe helps Hong Kong users check medicine information before adding a new medicine. This recording uses synthetic demonstration inputs and synthetic narration. Clinical review is pending.
+
+012-032s
+We first read a synthetic label image. Recognition runs in this browser, using bundled models. The two registration numbers find candidates in the Hong Kong catalogue. Recognition does not automatically confirm a medicine, or make a treatment decision.
+
+032-044s
+We add both candidates, then check the full names, registration numbers, and how each medicine is used. Every medicine requires confirmation before checking.
+
+044-058s
+Both products list paracetamol. A prepared rule shows a duplicate ingredient warning. This check does not calculate the person’s actual dose or tell them to change a prescription.
+
+058-070s
+The source opens beside the warning. We retain the document date and relevant section. This rule uses Hong Kong Drug Office information and awaits professional review.
+
+070-085s
+The medicine details show every listed ingredient in this compound product. Prepared education includes selected uses, precautions and adverse effects with sources. Missing product details remain missing; they are not invented.
+
+085-101s
+Next, a selected example pairs simvastatin with clarithromycin. The cited label describes a contraindication. The software preserves that evidence category, instead of assigning the same label to every warning.
+
+101-115s
+Here the supporting document is a United States label. The interface states that limitation. A professional must confirm its application to the actual Hong Kong formulations before clinical use.
+
+115-133s
+Now an unidentified medicine joins the list. Three medicines create three distinct pairs. The original warning remains, but the full check is incomplete. No match in our small rule set can establish that a combination is safe.
+
+133-149s
+We type a Cantonese question for this recording. Users can also edit a recognized transcript before confirming it. The answer follows the confirmed medicines and available evidence. Phone speech recognition may use the browser provider after consent.
+
+149-165s
+The handoff brings medicine identities, unresolved items, sources and questions to a pharmacist. It leaves decisions about dose and the person’s medical circumstances with the professional. The result supports a clearer consultation.
+
+165-180s
+The prototype contains fourteen thousand two hundred sixty nine catalogue products and fourteen rule drafts. Engineering tests exercise the workflow. Real pack testing, professional review and a timed human comparison remain to be completed.

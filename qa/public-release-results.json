@@ -1,0 +1,87 @@
+{
+  "date": "2026-10-03T06:44:26.540Z",
+  "url": "http://127.0.0.1:8766",
+  "passed": 16,
+  "failed": 0,
+  "scope": "Chromium desktop emulating 320/390px. Tesseract performed real OCR of synthetic fixture; SpeechRecognition API simulated, no real microphone or cloud speech. Service workers intentionally blocked for this suite; offline support evaluated separately. Not physical iOS/Safari or Android device testing, patient testing or clinical validation.",
+  "results": [
+    {
+      "name": "Current public release loads with browser-only runtime",
+      "status": "passed"
+    },
+    {
+      "name": "OCR evidence",
+      "status": "passed",
+      "recognized_text": "SYNTHETIC TEST LABELS - NOT REAL PACKAGING\nNo product photos. No physical medicine verified.\nDEMO A\nDEMO B\nPANADOL CAPLET 500MG\nPANADOL COLD & COUGH TAB\nHK-53362\nHK-53319\nACTIVE INGREDIENTS\nACTIVE INGREDIENTS\nPARACETAMOL\nGUAIFENESIN\nPARACETAMOL\nPHENYLEPHRINE HYDROCHLORIDE\nFor software testing only\nFor software testing only",
+      "fixture": "app/sample-labels.png; synthetic labels, not a real package"
+    },
+    {
+      "name": "Browser Tesseract actually reads both synthetic HK registrations",
+      "status": "passed"
+    },
+    {
+      "name": "Synthetic OCR candidates can be added and require explicit identity confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "Manual entry with unknown routes exposes potential warning before applying rule",
+      "status": "passed"
+    },
+    {
+      "name": "Medicine-bag option provides privacy and no guessed-brand guidance",
+      "status": "passed"
+    },
+    {
+      "name": "Third unidentified medicine remains in all three pair results",
+      "status": "passed"
+    },
+    {
+      "name": "Web speech asks consent and decline never constructs recognition",
+      "status": "passed"
+    },
+    {
+      "name": "Consented simulated recognition requires transcript confirmation before answer",
+      "status": "passed"
+    },
+    {
+      "name": "Every built-in demo button loads two usable medicine cards",
+      "status": "passed"
+    },
+    {
+      "name": "320px zh large-text UI works without page or control overflow",
+      "status": "passed"
+    },
+    {
+      "name": "320px en large-text UI works without page or control overflow",
+      "status": "passed"
+    },
+    {
+      "name": "390px zh large-text UI works without page or control overflow",
+      "status": "passed"
+    },
+    {
+      "name": "390px en large-text UI works without page or control overflow",
+      "status": "passed"
+    },
+    {
+      "name": "No uncaught browser exceptions",
+      "status": "passed"
+    },
+    {
+      "name": "No outbound request or data upload during search, OCR and simulated speech",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "consoleErrors": [
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "Estimating resolution as 295",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "Failed to load resource: the server responded with a status of 404 (File not found)",
+    "Failed to load resource: the server responded with a status of 404 (File not found)"
+  ],
+  "external": [],
+  "request_count": 96
+}

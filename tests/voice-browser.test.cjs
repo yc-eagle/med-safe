@@ -1,0 +1,25 @@
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'playwright');
+const ROOT=path.resolve(__dirname,'..'),results=[],errors=[],external=[];const mark=name=>results.push({name,status:'passed'});
+(async()=>{
+ const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',args:['--use-fake-device-for-media-stream','--use-file-for-fake-audio-capture='+path.join(ROOT,'handoff/voice-samples/combination.wav')]});
+ const context=await browser.newContext({permissions:['microphone'],viewport:{width:1280,height:1100}});await context.route('**/*',route=>{const u=route.request().url();if(u.startsWith('http')&&!u.startsWith('http://127.0.0.1:8765')){external.push(u);return route.abort()}return route.continue()});
+ const page=await context.newPage();page.on('pageerror',e=>errors.push(e.message));await page.goto('http://127.0.0.1:8765');await page.waitForFunction(()=>!document.querySelector('#record-question').disabled);
+ await page.fill('#search','薄血丸');assert.match(await page.locator('#search-results').innerText(),/不能當成華法林/);assert.equal(await page.locator('#search-results [data-add]').count(),0);mark('Ambiguous term produces clarification, no product');
+ await page.fill('#search','必理痛');assert.ok(await page.locator('#search-results [data-add]').count()>1);mark('Hong Kong brand gives multiple candidates');
+ await page.click('[data-case=duplicate]');for(const cb of await page.locator('[data-confirm]').all())await cb.check();await page.click('#check');
+ await page.click('#record-question');await page.waitForFunction(()=>document.querySelector('#voice-status').textContent.includes('正在錄音'));await page.waitForTimeout(3900);await page.click('#record-question');await page.waitForFunction(()=>document.querySelector('#voice-status').textContent.includes('請先閱讀'),{},{timeout:110000});assert.match(await page.inputValue('#question-text'),/一[齊齐]食/);fs.writeFileSync(path.join(ROOT,'qa/microphone-transcript-observed.json'),JSON.stringify({synthetic:true,transcript:await page.inputValue('#question-text')},null,2));mark('Microphone capture using injected synthetic WAV transcribes Cantonese');
+ assert.equal(await page.locator('#voice-answer').isVisible(),false);mark('No answer until transcript confirmation');
+ // A real user must review and can edit the transcript. Simulate that explicit step; do not count it as ASR accuracy.
+ await page.fill('#question-text','呢兩隻藥可唔可以一齊食？');mark('Simulated user review corrects the transcript before answering');
+ await page.click('#confirm-question');assert.match(await page.locator('#answer-text').innerText(),/食重咗/);assert.match(await page.locator('#answer-sources').innerText(),/R01/);await page.waitForFunction(()=>document.querySelector('#answer-audio audio')?.duration>0,{},{timeout:60000});mark('Confirmed voice question returns grounded Cantonese speech');
+ await page.locator('.voice-panel').screenshot({path:path.join(ROOT,'handoff/screenshots/08-cantonese-question-answer.png')});
+ await page.click('#pharmacist-note');assert.match(await page.locator('#dialog').innerText(),/HK-53362/);assert.match(await page.locator('#dialog').innerText(),/實際劑量/);await page.screenshot({path:path.join(ROOT,'handoff/screenshots/09-pharmacist-handoff.png')});await page.click('#close-dialog');mark('Pharmacist handoff includes identities, missing details and source');
+ await page.fill('#question-text','我冇食華法林');assert.equal(await page.locator('#voice-answer').isVisible(),false);await page.click('#confirm-question');assert.match(await page.locator('#answer-text').innerText(),/更正用藥資料/);assert.equal(await page.locator('.selected-card').count(),2);mark('Negation prompts correction without changing medicines');
+ await page.fill('#question-text','我應該食幾多粒');await page.click('#confirm-question');assert.match(await page.locator('#answer-text').innerText(),/個人情況/);mark('Dosage question refers to individual review');
+ await page.locator('[data-confirm]').first().uncheck();assert.equal(await page.locator('#voice-answer').isVisible(),false);mark('Changed medicine confirmation clears spoken answer');
+ await page.fill('#question-text','呢兩隻藥可唔可以一齊食');await page.click('#confirm-question');assert.match(await page.locator('#answer-text').innerText(),/確認咗問句，唔等於確認咗藥品/);mark('Drug identity gate survives transcript confirmation');
+ await page.setViewportSize({width:390,height:844});await page.click('#large-font');assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));mark('Voice panel fits 390px large-text layout');
+ assert.deepEqual(errors,[]);assert.deepEqual(external,[]);mark('No JavaScript errors or external requests');
+ fs.writeFileSync(path.join(ROOT,'qa/voice-browser-results.json'),JSON.stringify({date:new Date().toISOString(),synthetic_audio:true,real_human_microphone_not_tested:true,operator_correction_simulated:true,passed:results.length,errors,external,results},null,2));console.log(results.length+' voice browser checks passed');await browser.close();
+})().catch(e=>{console.error(e);process.exit(1)});

@@ -30,17 +30,18 @@ Example rows:
 |---|---|---|---|---|
 | _TODO_ | | | | |
 
-### Candidate sources (under evaluation; move to the table above once confirmed)
+### Candidate sources
 
-| Name | Description | Note |
+| Name | Description | Status |
 |---|---|---|
-| **RxNav-in-a-Box** (U.S. NLM) | Downloadable, **locally installable** RxNav suite | Directly supports the offline requirement; evaluate first |
-| **TwoSides** dataset | Academic drug-drug interaction dataset, public on GitHub | Fallback |
-| **HODDI** dataset | High-order drug-drug interaction dataset (arXiv 2502.06274) | Fallback |
-| **Hospital Authority Medication Safety Bulletin** | Public PDF | Used for **local evidence** |
-| **Drug Office, Department of Health** consumer guidance | Public web pages | As above |
+| **Hong Kong registered pharmaceutical products catalogue** (Department of Health, Drug Office) | Official catalogue and schema, snapshot 2026-09-25 | **In use.** Supplies registration numbers, product names, certificate holders and active ingredients |
+| **Drug Office consumer guidance** (paracetamol; PDE-5 inhibitors and nitrates; oral NSAID guide) | Public official pages | **In use.** Ingredient-level evidence and local classification |
+| **DailyMed labelling** (warfarin, clopidogrel, clarithromycin) | US labelling full text with section numbers | **In use** as ingredient-level citation evidence. **Not equivalent to Hong Kong product approval labelling** |
+| **HODDI** | Research dataset of higher-order drug-drug interactions (arXiv 2502.06274) | Pages reviewed, **full dataset not downloaded**. Repository is MIT-licensed, but upstream sources include DrugBank and UMLS, so the repository licence does not automatically cover all upstream content |
+| **RxNav / RxNav-in-a-Box** (U.S. NLM) | RxNav application suite | **Do not invest further effort in treating this as a DDI database.** Its official FAQ states that the interaction application programming interface has been retired. Kept here so the finding is not lost and the time is not spent twice |
+| **DrugBank** | Comprehensive drug and interaction database | **Not downloaded.** Requires an academic licence; the download page showed academic data downloads temporarily paused. **Do not work around licensing with a mirror of unknown origin** |
 
-**DrugBank's full dataset requires an academic licence.** Do not assume it can be obtained on site.
+**No database yet supplies a licensed, Hong Kong-specific interaction knowledge base.** That is exactly why the current 14 rules are hand-coded from cited sources and why the coverage boundary is stated explicitly everywhere.
 
 ---
 

@@ -1,0 +1,112 @@
+[
+  {
+    "id": "hk_xml",
+    "url": "https://www.drugoffice.gov.hk/eps/psi/DrugList.xml",
+    "path": "raw/DrugList.xml",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 4296227,
+    "sha256": "9723afc3202fd1030d6106bb8918328ddd5ac1ad36c59fd9617458f6b97c1b7b",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "hk_xsd",
+    "url": "https://www.drugoffice.gov.hk/eps/psi/DrugList.xsd",
+    "path": "raw/DrugList.xsd",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 1104,
+    "sha256": "04c1a9c51909d556610e5fa7b38bad48d8fde5b66119a3f168748588177b7d38",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "hk_catalog",
+    "url": "https://data.gov.hk/en-data/dataset/hk-dh-dh_do-hk-dh-do-pharmaceutical-product",
+    "path": "evidence/hk_catalog.html",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 82291,
+    "sha256": "9ef082f470536bffaba4371b849fd32d8467df9f6cbca2f7070e29899731c07a",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "hk_terms",
+    "url": "https://data.gov.hk/en/terms-and-conditions",
+    "path": "evidence/hk_terms.html",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 39948,
+    "sha256": "c901a8f56c42a4cbcb2502c10d3623309529500e38f5d6c247aab68c6149dde0",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "hk_paracetamol",
+    "url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/knowledge_on_medicines/paracetamol.html",
+    "path": "evidence/hk_paracetamol.html",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 9521,
+    "sha256": "7e048f2f48d8b783440b553bae763de952c5e59f9327dded8c944741bb93231f",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "hk_anticoagulants",
+    "url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/dm_25.html",
+    "path": "evidence/hk_anticoagulants.html",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 44997,
+    "sha256": "2d0c766968cdd50e6473f2c5d8dd625e832958b3deb14b4f4a2180000a34c2cb",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "hk_sildenafil",
+    "url": "https://www.drugoffice.gov.hk/eps/do/tc/consumer/virility.html",
+    "path": "evidence/hk_sildenafil.html",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 8627,
+    "sha256": "bc8fbac3cea56391ca170d8f55da225d2f325a75acde3a4900a63caa6f914060",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "rxnav_faq",
+    "url": "https://www.lhncbc.nlm.nih.gov/RxNav/information/FAQs.html",
+    "path": "evidence/rxnav_faq.html",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 15033,
+    "sha256": "c5504507b52c82d079ffd3fd1e6761a212c5a36feafc09a5874020510221f05d",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "warfarin_label",
+    "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/8c876dd3-d659-479e-994c-39454c7028cc.xml",
+    "path": "raw/warfarin_label.xml",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 207714,
+    "sha256": "ab535cfa7977d8d7749d219dca2aa21a148780b88a5312720fc9783029ef0c7c",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "clopidogrel_label",
+    "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/98a83879-4e53-41f5-83bc-681b342884dd.xml",
+    "path": "raw/clopidogrel_label.xml",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 120804,
+    "sha256": "8b2ec478cce8b957610ecf4568c0b8e3b48bbe9fd72a0aae3045f28c8c3461d7",
+    "retrieved_date": "2026-10-03"
+  },
+  {
+    "id": "clarithromycin_label",
+    "url": "https://dailymed.nlm.nih.gov/dailymed/services/v2/spls/d22bd12c-737b-4aab-e053-2995a90aff60.xml",
+    "path": "raw/clarithromycin_label.xml",
+    "status": "200",
+    "downloaded": true,
+    "bytes": 115398,
+    "sha256": "7d449a2ae748c67cdee029c866bc14cc7e09b368b014fd7cb2550cfb91134a12",
+    "retrieved_date": "2026-10-03"
+  }
+]

@@ -1,29 +1,78 @@
-# Medication Criteria: Three Tiers
+# Medication Criteria
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-> **This directory is the product's decision core.** Whether the state machine can play the "signal danger" and "decline to answer" cards **depends entirely on whether there is anything in here.**
-> **Owner: Ella.** Target: **a rough but complete first version this afternoon** (10-15 entries is enough). Everything tonight builds on something that runs.
+> **This directory is the product's decision core.**
+> **Owner: Ella.** All 14 rules are drafts. **The number of professionally approved rules is currently zero.** Line-by-line review table: [`review.csv`](review.csv).
+
+---
+
+## 0. Correction: the tiers are a display summary, not the code
+
+The three tiers below were the original team plan. **The implemented engine keeps a finer set of source strengths, and collapsing them is a factual error that must not be repeated on stage.**
+
+| Implemented evidence level | Meaning | Must NOT be presented as |
+|---|---|---|
+| `label_contraindication` | The labelling contraindicates the combination | — |
+| `label_recommends_avoid` | The labelling advises avoiding it | "banned" |
+| `increased_bleeding_risk` and other increased-risk levels | A risk is increased | **"must not be taken together"** |
+| `consult_before_use` | Consult first | a prohibition |
+| `duplicate_ingredient` | The same ingredient appears twice | an interaction |
+
+> **An increased-risk warning is not a prohibition.** Warfarin with aspirin carries an increased bleeding risk and must not be escalated into "contraindicated for every patient". Aspirin with clopidogrel may be a **deliberate regimen prescribed by a doctor**, so the product does not advise stopping it.
+>
+> **A missing rule is a coverage status, never a pharmacological conclusion.** It can never be read back as safety.
+
+Where this document and [`../decision-logic.md`](../decision-logic.md) or the program differ, **the implementation is authoritative.**
 
 ---
 
 ## 1. Why three tiers
 
-The three-state machine is driven directly by these tiers. **One tier maps to one state.**
+The three tiers are a **presentation summary** used to explain the product. They are useful for a demo slide; they are not the data model.
 
-| Tier | Meaning | System behaviour | State |
+| Tier | Meaning | System behaviour | Presentation state |
 |---|---|---|---|
-| **L1 - Contraindicated / severe interaction** | There is clear evidence that they **should not be used together** | **Explicit warning**: "These two must not be taken together." Plus source. Plus consult a doctor | 2 - signal danger |
-| **L2 - Caution / requires doctor confirmation** | A risk exists but it is **not necessarily an absolute prohibition**; it needs professional judgement | **Flags the risk** plus consult a doctor | 2, softer form |
-| **L3 - No data** | The combination **cannot be found** in our data | "I cannot find information on these two medicines. Please consult a doctor." | 3 - decline to answer |
+| **L1 - Labelling contraindication** | The labelling contraindicates the combination | Explicit warning, with source, plus consult a doctor | shows a warning |
+| **L2 - Recommends avoid / increased risk / consult first** | A risk exists but it is **not an absolute prohibition** | Flags the risk at its correct strength, plus consult a doctor | shows a warning |
+| **L3 - No data** | The combination **is not covered** by the current rules | "I cannot find information on these two medicines. Please consult a doctor." | states **not covered** |
 
 **One further case belongs to none of these tiers** (it is an input-quality issue, not a medical judgement):
 
 | Situation | Behaviour |
 |---|---|
-| Blurred photo / medicine not recognised | "I cannot read this photo clearly. Please take another one." (retryable) |
+| Blurred photo / medicine not recognised | Retake, choose another image, or enter the registration number; **human confirmation** |
 
-> **L3 is not "safe". L3 is "we do not know".** The wording must never allow anyone to read "cannot find" as "no problem". This is the single most easily misunderstood point in the whole product, and the most dangerous.
+> **L3 is not "safe". L3 is "not covered".** The wording must never allow anyone to read "cannot find" as "no problem". This is the single most easily misunderstood point in the whole product, and the most dangerous.
+>
+> **A photograph cannot confirm identity.** Neither can OCR. Both produce candidates only, and the user confirms the product item by item.
+
+---
+
+## 1b. The 14 current rules
+
+Each rule carries an ingredient pair, an evidence level, a permitted route and a source section. Route, formulation, source and wording must be reviewed together.
+
+| ID | Ingredient pair | Evidence level | Permitted route |
+|---|---|---|---|
+| R01 | paracetamol + paracetamol | duplicate ingredient | oral |
+| R02 | warfarin + ibuprofen | increased bleeding risk | oral |
+| R03 | warfarin + aspirin | increased bleeding risk | oral |
+| R04 | warfarin + naproxen | increased bleeding risk | oral |
+| R05 | warfarin + clopidogrel | increased bleeding risk | oral |
+| R06 | clopidogrel + omeprazole | label recommends avoid | oral |
+| R07 | clopidogrel + esomeprazole | label recommends avoid | oral |
+| R08 | simvastatin + clarithromycin | label contraindication | oral |
+| R09 | warfarin + paracetamol | consult before use | oral |
+| R10 | sildenafil + glyceryl trinitrate | nitrate warning | oral, sublingual |
+| R11 | clopidogrel + ibuprofen | increased bleeding risk | oral |
+| R12 | clopidogrel + naproxen | increased bleeding risk | oral |
+| R13 | clarithromycin + warfarin | increased bleeding risk | oral |
+| R14 | clopidogrel + aspirin | increased bleeding risk | oral |
+
+R11 and R12 are coded from the cited labelling's NSAID class warning together with the Hong Kong Drug Office oral NSAID ingredient classification, with `derived_from_class=true`. **The derivation must not be hidden.** R14 preserves the fact that a doctor may deliberately prescribe dual antiplatelet therapy, so that a risk prompt does not become advice to stop medication unaided.
+
+**US sources are not equivalent to Hong Kong product approval labelling.** The ingredient and route conditions that gate a match reduce misuse but do **not** constitute a complete clinical applicability assessment.
 
 ---
 

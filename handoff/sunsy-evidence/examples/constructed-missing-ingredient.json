@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "input_index": 1,
+      "registration_number": "HK-53362",
+      "product_name": "PANADOL CAPLET 500MG",
+      "ingredients": [
+        "paracetamol"
+      ],
+      "dose": null,
+      "frequency": null
+    },
+    {
+      "input_index": 2,
+      "registration_number": "HK-53319",
+      "product_name": "PANADOL COLD & COUGH TAB",
+      "ingredients": [
+        "paracetamol"
+      ],
+      "dose": null,
+      "frequency": null
+    }
+  ]
+}

@@ -1,8 +1,16 @@
-# Data and Privacy: What Leaves the Device
+﻿# Data and Privacy: What Leaves the Device
 
 [English](data-handling.md) | [中文](data-handling.zh-CN.md)
 
 > The problem statement **requires** this: *"State what it costs, what it gets wrong, and **what leaves the device**."*
+
+> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
+> - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
+> - **Zero of the 14 rules are professionally approved.**
+> - Capabilities of third-party products and services must be verified individually, not generalised.
 > **Owner: Sun.**
 
 ---

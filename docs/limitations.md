@@ -1,4 +1,4 @@
-# What It Gets Wrong
+﻿# What It Gets Wrong
 
 [English](limitations.md) | [中文](limitations.zh-CN.md)
 
@@ -15,7 +15,7 @@
 | # | Failure mode | When it happens | Severity | Our handling |
 |---|---|---|---|---|
 | 1 | **Medicine misidentification** | Blurred photo, poor angle, low light, similar packaging | High | Degrades to "I cannot read this photo clearly. Please take another one." |
-| 2 | **Ingredient misidentification** | Combination products, supplements, over-the-counter packaging | High | Recognition uncertain → goes to state 3 |
+| 2 | **Ingredient misidentification** | Combination products, supplements, over-the-counter packaging | High | Recognition uncertain -> goes to state 3 |
 | 3 | **Insufficient data coverage** | The combination is not in our data | Medium | **Goes to state 3** — never "no interaction found" |
 | 4 | **Chinese patent and herbal medicines not covered** | Patent medicine packaging, raw herbs | Medium | Coverage stated honestly |
 | 5 | **Speech recognition or synthesis error** | Noisy environment, accent | Low | Text is shown on screen as well; never voice-only |

@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-03T06:48:21.345Z",
+  "passed": 5,
+  "checks": [
+    "A changed asset causes failure, no ready flag, and partial cache removal",
+    "Retry after restoring source saves a complete copy",
+    "Failed new-version download keeps previous complete cache and reports update failure",
+    "Previous version still reloads and searches after failed update, while offline",
+    "Successful verified update removes the obsolete version only after completion"
+  ]
+}
