@@ -129,11 +129,12 @@ cp .env.example .env        # PowerShell: Copy-Item .env.example .env
 med-safe/
 ├── README.md                  ← 你在这里
 ├── CREDITS.md                 ← 开源库与数据来源署名
-├── deck/                      ← Pitch Deck
+├── deck/                      ← Pitch Deck（逐页结构与讲稿见 deck/pitch-deck.md）
 ├── docs/
 │   ├── problem.md             ← 用户、失败链路、根因、现有替代方案
 │   ├── rules/                 ← ⭐ 用药判据三层（禁用 / 慎用 / 无资料）
 │   ├── demo-script.md         ← 三张牌的演示脚本与现场检查
+│   ├── competitors.md         ← ⭐ 竞品对照与口头稿（路演用）
 │   ├── evidence-protocol.md   ← 手工方法对照、成本、错误率
 │   ├── limitations.md         ← ⭐ 它会错在哪
 │   ├── data-handling.md       ← ⭐ 什么离开设备
