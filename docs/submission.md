@@ -4,9 +4,9 @@
 
 | 材料 | 目标／位置 | 本次整理状态 |
 |---|---|---|
-| 公开仓库 | https://github.com/yc-eagle/med-safe | 队友提交已合并，等待最终推送；以实际 push 结果验收 |
+| 公开仓库 | https://github.com/yc-eagle/med-safe | 已合并并推送到 main；队友原有提交保留 |
 | 在线演示 | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site | 已公开；手机离线升级已发布，真实手机仍待试用；缓存及断网工作流通过 16 项工程检查 |
-| 3 分钟录屏 | 公共视频链接／仓库 Release 资产 | 已生成 180 秒 / 约 5.54 MB 新版录屏：`assets/demo-3min.mp4`，已随 V2 公开发布 |
+| 3 分钟录屏 | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html | 已生成 180 秒 / 约 5.54 MB 新版录屏：`assets/demo-3min.mp4`，已随 V2 公开发布 |
 | Pitch Deck | `deck/` 或公共下载 | 已生成 8 页可编辑 PPTX 与 PDF：`deck/Med-Safe-HacKU2026.*`，已随 V2 公开发布 |
 | Raccoon 使用亮点 | `raccoon-usage-log.md` | 收到分享链接，正文未成功取得，真实记录待 Ella |
 | 最终报名／提交表 | 主办方指定表单 | 尚未收到可操作的表单地址；没有声称已提交 |

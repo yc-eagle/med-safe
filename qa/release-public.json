@@ -1,0 +1,17 @@
+{
+  "site_url": "https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site",
+  "access": "public",
+  "site_deployment_status": "succeeded",
+  "site_deployment_id": "appgdep_6ac0a729cfc48191a53416198c9771f0",
+  "site_source_commit": "790762d006a3a7d401ab6827a0ac4258a81f45d4",
+  "github_url": "https://github.com/yc-eagle/med-safe",
+  "github_main_merge": "adbd7d9",
+  "team_prior_commit_preserved": "9c499e2",
+  "video_url": "https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html",
+  "video_duration_seconds": 180,
+  "offline_assets": 47,
+  "offline_bytes": 55155968,
+  "clinical_review": "pending",
+  "actual_phone_test": "pending",
+  "competition_form_submitted": false
+}
