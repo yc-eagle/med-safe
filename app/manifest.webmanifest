@@ -1,6 +1,6 @@
 {
   "id": "./",
-  "name": "MedSafe — Medicine check",
+  "name": "MedSafe",
   "short_name": "MedSafe",
   "description": "Medicine information, sourced warnings and questions for a pharmacist in Hong Kong.",
   "lang": "en",

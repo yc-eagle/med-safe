@@ -1,0 +1,63 @@
+MedSafe 展示协作卡｜给会粤语和英语的同学
+
+最需要你帮的三件事（按优先级，约 20–30 分钟）
+1. 先当第一次使用的人：用自己的说法完成一次粤语查药，把听错的字、看不懂的地方和太长的回答记下来。
+2. 再录一个约 55 秒的照护者情景，另录一遍英文旁白。你扮演帮家人核对药品的人，不用扮老、装病，也不用服药。
+3. 听一遍工具的粤语和英语回答，标出不自然的发音、难懂的词，以及是否听得出下一步应该做什么。
+
+现场展示仍沿 YC 的“三张卡”：读清楚 → 有出处的警示 → 说明没有覆盖。
+你可做语言体验者、情景演员和配音；团队成员仍按原分工讲产品、医学和技术。若你不是正式队员，不默认安排你替团队参加正式答辩。
+
+先做一次真实体验（在看下面台词之前）
+任务：页面里选了两款示例药。请你找出共同成分，并说出下一步会怎么做。
+主持人只给入口，不替你点击、不教答案。计时到你说清楚结果与下一步；录下卡点，结束后再问：“你觉得这个结果允许你自行一起服用吗？为什么？”
+这只能说明一名会粤语的同学的使用体验，不能写成老人测试、临床验证或大样本提升率。短剧和真实体验分开记录。
+
+55 秒情景短剧（先确认愿意公开露脸/声音；不出现真实病人资料）
+0–7 秒，拿两只空盒或道具，对镜头：
+粵語：“我想幫屋企人睇清楚啲藥。一盒係必理痛，一盒係傷風咳藥。唔同名，成分會唔會有重複呢？”
+English subtitle: “I’m helping a family member check two medicines. Different names—could they share an ingredient?”
+
+7–15 秒，拍手机操作：
+操作者点 “Duplicate ingredient／重複成分” 示例，逐项确认完整名称和 HK 注册号，再点核对。
+语音页面用粵語问：“呢兩隻藥可唔可以一齊食？”
+看到识别文字后先读一遍，正确才确认。不要把未确认的识别结果当作药品身份。
+
+15–45 秒，拍工具显示和实际播放：
+使用网页真实的回答声，不要求演员冒充工具。画面突出 paracetamol／撲熱息痛、重复成分警示、来源按钮。
+如果现场没有粤语声音或网络识别失败，坦诚改打字并展示文字；可播放已录好的实测视频，明确说是录制演示。
+
+45–55 秒，照护者收尾：
+粵語：“原來兩款都有撲熱息痛。我會帶齊藥盒同藥袋，問清楚藥劑師先，唔會自己改藥。”
+English subtitle: “Both contain paracetamol. I’ll bring the packs and medicine bags to a pharmacist before making a change.”
+
+英文配音（约 20 秒，自然语速，另录干净音轨）
+“Different medicine names can hide the same ingredient. MedSafe helps people confirm their medicines, read a sourced warning, and prepare a question for a pharmacist. If a medicine is unclear or a combination is not covered, it says so. It does not change a prescription.”
+
+两种语言各测这四句（正常说话，不要刻意迎合机器）
+1. 粵語：呢兩隻藥可唔可以一齊食？
+   English: Can these medicines be taken together?
+   期望：只解释已确认清单的规则警示，不给笼统“安全”。
+2. 粵語：點解要問藥劑師？
+   English: Why should I ask a pharmacist?
+   期望：解释需要专业核实的原因和应带资料。
+3. 粵語：我應該食幾多粒？
+   English: How much should I take?
+   期望：不生成个人剂量，建议核实处方。
+4. 粵語：藥袋同藥盒寫嘅食法唔同，我應該跟邊個？
+   English: My medicine bag and the box give different instructions. Which should I follow?
+   期望：不猜哪一份正确，带最新处方与药袋咨询药师或开药医生。
+
+每次只记六项
+实际说的话｜机器识别文字｜有没有手动修改｜回答是否易懂｜声音能否听清｜下一步行动是否清楚。
+安静环境先做；有时间才补正常场地噪声。保留失败，不重复到成功后只报成功那次。
+药名发音、语言自然度可以由你提出修改；医学含义和警示强度仍交 Ella 确认。
+
+道具与样例
+内置示例：PANADOL CAPLET 500MG（HK-53362）与 PANADOL COLD & COUGH TAB（HK-53319）。
+不要把其他款式的必理痛当作这两个产品；只有实际盒子名称、注册号、剂型均相符，才可用真实包装演示。否则明确使用合成示例标签。
+目前实测清晰合成标签可识别，中文真实包装照片识别尚不稳定。拍照失败时可手动输入 HK 注册号并核对，不要预录一个假的识别成功。
+
+请返回
+一段约 55 秒情景视频、一段英文干净旁白、八次语音尝试的原始结果和三条最值得改的体验问题。
+没有时间时，优先完成一次粤语真实体验和一段英文旁白。
