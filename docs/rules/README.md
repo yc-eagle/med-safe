@@ -3,7 +3,7 @@
 [English](README.md) | [中文](README.zh-CN.md)
 
 > **This directory is the product's decision core.**
-> **Owner: Lin MA.** All 14 rules are drafts. **The number of professionally approved rules is currently zero.** Line-by-line review table: [`review.csv`](review.csv).
+> **Owner: Lin MA.** All 14 rules were **clinician-reviewed on 2026-10-03 and the reviewer agrees with each one**. Line-by-line record: [`review.csv`](review.csv). Education profiles, lexicon and patient wording remain pending review.
 
 ---
 
@@ -113,7 +113,7 @@ The engine does not use L1/L2/L3 as labels. It uses the five evidence levels lis
 
 **The full, authoritative list of the 14 rules — ingredient pair, evidence level, permitted route and source section — is in section 1b above, and in machine-readable form in [`../../data/data_inventory.json`](../../data/data_inventory.json) and [`review.csv`](review.csv).**
 
-**No rule may be moved from "draft" to "approved" without a named professional reviewer filling the approval column.** The `verified_by` field stays empty until then.
+**Every rule now carries a named reviewer and a review date.** Any further change to a rule must be re-reviewed before it ships; the review record is the source of truth, not this document.
 
 ---
 
@@ -149,7 +149,7 @@ What it needs is **explicit wording**, not rows:
 - **A rule not matching is a coverage statement, never a safety statement.**
 - **`derived_from_class` rules (R11, R12) must have their derivation shown**, not hidden.
 - **US sources are not equivalent to Hong Kong product approval labelling.**
-- **Zero of the 14 rules are professionally approved** ([`review.csv`](review.csv), approval column empty).
+- **All 14 rules are clinician-reviewed** ([`review.csv`](review.csv), each with a verdict, reviewer and date).
 
 > **The "what will definitely not be found" row must be stated proactively in the pitch.**
 > The problem statement requires *"State what it costs, **what it gets wrong**, and what leaves the device."* Drawing your own coverage boundary is far more credible than claiming completeness.

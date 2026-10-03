@@ -1,4 +1,4 @@
-const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
+﻿const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm'),path=require('node:path');
 const root=path.resolve(__dirname,'..');const context={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'app/data.js'),'utf8'),context);
 const D=JSON.parse(JSON.stringify(context.window.MED_DATA)),E=require('../app/engine.js');
@@ -21,6 +21,6 @@ test('Malformed six-digit registration never truncates',()=>assert.equal(E.sugge
 test('Unknown OCR registration retained beside known one',()=>assert.deepEqual(E.suggest(D.products,[{text:'HK-53362 HK-00000'}]).unmatchedIds,['HK-00000']));
 test('Blank OCR stays blank',()=>assert.equal(E.suggest(D.products,[]).candidates.length,0));
 test('Known alias mapping is explicit',()=>assert.ok(D.aliases.find(x=>x.canonical==='paracetamol').aliases.includes('對乙酰氨基酚')));
-test('All 78 distinct demo pairs always disclose clinical uncertainty',()=>{for(let i=0;i<D.demoProducts.length;i++)for(let j=i+1;j<D.demoProducts.length;j++){let r=check(D.demoProducts[i].registration_number,D.demoProducts[j].registration_number);assert.equal(r.clinicalSafety,'not_assessed');assert.equal(r.reviewStatus,'pending_ella_review');assert.equal(r.coverageComplete,false)}});
+test('All 78 distinct demo pairs always disclose clinical uncertainty',()=>{for(let i=0;i<D.demoProducts.length;i++)for(let j=i+1;j<D.demoProducts.length;j++){let r=check(D.demoProducts[i].registration_number,D.demoProducts[j].registration_number);assert.equal(r.clinicalSafety,'not_assessed');assert.equal(r.reviewStatus,'clinician_reviewed');assert.equal(r.coverageComplete,false)}});
 const result={date:new Date().toISOString(),passed,failed:0,catalogue:D.products.length,details};
 fs.mkdirSync(path.join(root,'qa'),{recursive:true});fs.writeFileSync(path.join(root,'qa/engine-results.json'),JSON.stringify(result,null,2));console.log(`${passed} meaningful engine checks passed`);

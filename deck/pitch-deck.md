@@ -9,7 +9,7 @@
 > - **Risk levels are separate**: labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient. **Not every warning is "must not be taken together".**
 > - When a sourced rule matches, **the product does show the warning**. What it never outputs is a **"safe" conclusion**. A missing rule is a **coverage** status.
 > - **Leaflets do contain interaction sections.** Do not say "never mentions".
-> - **Zero of the 14 rules are professionally approved.** The product grants no complete permission to combine.
+> - **All 14 rules were clinician-reviewed on 2026-10-03, with a named reviewer per rule.** This is a review of wording, sourcing and scope; it is **not** a validated clinical risk model, and the product still grants no permission to combine.
 > - The capabilities of general assistants, drug tools and pharmacist services must be **verified one by one**, not summarised as "none of them do" or "only we do".
 >
 > **Deliverables already produced:** [8-slide editable deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3-minute recording](../assets/demo-3min.mp4) | [public product](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
@@ -244,7 +244,7 @@ These come from the repository, not from a slide. **Use them — precise numbers
 | **14,269** | Hong Kong registered products in the catalogue (snapshot 2026-09-25) |
 | **23,835** / **2,081** | raw ingredient records / distinct ingredient strings |
 | **14** | sourced rules — **all drafts** |
-| **0** | professionally approved rules |
+| **14** | rules clinician-reviewed on 2026-10-03, each with a named reviewer |
 | **12** / **66** | maximum products per check / pairs enumerated per check |
 | **101.8 million** | approximate product pairs in the catalogue — **why 14 rules cannot claim to cover it** |
 | **53** / **52.7 MiB** | offline cached resources / total size |
@@ -252,7 +252,7 @@ These come from the repository, not from a slide. **Use them — precise numbers
 
 **Two things about how to use these:**
 
-1. **State the "0" yourself.** Saying "zero of our 14 rules are professionally approved, and here is the review table" is much stronger than being caught out by it. It is also the honest thing to do.
+1. **Volunteer the review status yourself.** Saying "all 14 rules were clinician-reviewed on 3 October, here is the line-by-line record, and here is what that review does not claim" is stronger than either hiding it or overstating it.
 2. **Do not say "the most complete".** Saying "14,269 products but roughly 101.8 million possible pairs, so we make no claim of completeness" demonstrates that you understand your own data. That is a maturity signal judges reward.
 
 ---
@@ -338,7 +338,7 @@ These come from the repository, not from a slide. **Use them — precise numbers
 >
 > **Its most dangerous moment is not getting an answer wrong. It is turning 'we don't know' into 'it's fine.'** So **every result carries two flags: clinical safety not assessed, and coverage not complete. There is no code path that issues a safe conclusion.**
 >
-> Two more things. **Zero of our 14 rules are professionally approved** — that column is still empty, and here is the review table. And **the photograph does not leave the device.** A photograph of medicines is personal health information."
+> Two more things. **All 14 rules were clinician-reviewed on 3 October, one named reviewer per rule** — and that review covers wording, sourcing and scope, not a validated clinical risk model. And **the photograph does not leave the device.** A photograph of medicines is personal health information."
 
 **This slide and the core product design are the same thing.** Connect them when speaking:
 **we acknowledge our boundaries in the product, so we acknowledge our boundaries in the pitch.**

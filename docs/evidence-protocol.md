@@ -7,7 +7,7 @@
 > - **The interface opens in English**, with Mandarin and Cantonese selectors (`?lang=en|cmn|yue`). Language and voice availability are separate settings. Changing language converts display text only; catalogue values, source records and clinical rules are unchanged.
 > - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
 > - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
-> - **Zero of the 14 rules are professionally approved.**
+> - **All 14 rules were clinician-reviewed on 2026-10-03, with a named reviewer per rule.** The review covers wording, sourcing and scope, not a validated clinical risk model.
 > - Capabilities of third-party products and services must be verified individually, not generalised.
 
 > The problem statement's EVIDENCE requirement is scored item by item:

@@ -96,7 +96,7 @@
 
 **No incidence rate is stated without real data.** Where a rate is unknown, the field is left blank rather than estimated.
 
-The team's original framing — error classification, what to do on failure, and what is out of scope — is preserved in the [team planning archive](team-planning/README.md). **This table does not represent a professionally approved medical risk classification.** Zero of the 14 rules have professional approval.
+The team's original framing — error classification, what to do on failure, and what is out of scope — is preserved in the [team planning archive](team-planning/README.md). **This table does not represent a professionally approved medical risk classification.** All 14 rules have been clinician-reviewed, which is a review of wording, sourcing and scope, not a validated clinical risk model.
 
 ---
 

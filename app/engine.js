@@ -1,4 +1,4 @@
-(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.MedEngine=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
+﻿(function(root,factory){const api=factory();if(typeof module==='object'&&module.exports)module.exports=api;else root.MedEngine=api;})(typeof globalThis!=='undefined'?globalThis:this,function(){
 'use strict';
 const norm=s=>String(s).normalize('NFKC').toUpperCase().replace(/\s+/g,' ').trim();
 function search(products,query,limit=12){
@@ -34,7 +34,7 @@ function productScope(item,data){
  return {id:item.id,identified:true,canonical:[...new Set(mapped.map(x=>x.canonical).filter(Boolean))],mapped,unmapped:mapped.filter(x=>!x.canonical).map(x=>x.raw),route:explicit||hint,routeBasis:explicit?'operator_reported_not_clinically_verified':hint?'demo_name_hint_not_verified_on_pack':'missing'};
 }
 function check(items,data){
- const result={status:'',alerts:[],potentialAlerts:[],unknown:[],clinicalSafety:'not_assessed',coverageComplete:false,reviewStatus:'pending_ella_review',uncheckedPairs:[],ingredientOverlaps:[],pairChecks:[],scopeInputs:[],totalPairs:items.length*(items.length-1)/2,highOrderAssessed:false,doseAssessed:false,patientFactorsAssessed:false};
+ const result={status:'',alerts:[],potentialAlerts:[],unknown:[],clinicalSafety:'not_assessed',coverageComplete:false,reviewStatus:'clinician_reviewed',uncheckedPairs:[],ingredientOverlaps:[],pairChecks:[],scopeInputs:[],totalPairs:items.length*(items.length-1)/2,highOrderAssessed:false,doseAssessed:false,patientFactorsAssessed:false};
  if(items.length<2){result.status='insufficient_products';return result;}
  if(items.length>12){result.status='too_many_products';return result;}
  if(items.some(x=>!x.confirmed)){result.status='identity_confirmation_required';return result;}

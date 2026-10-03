@@ -12,7 +12,7 @@
 6. **强度**：保留说明书禁忌、建议避免、风险增加、先咨询、重复成分等不同层级。风险提示不等于一律禁用。例如阿司匹林与氯吡格雷可能是医生有意安排的方案，不建议用户自行停药。
 7. **完整性**：每对均给记录，无规则就注明未覆盖。即使一对命中，多药清单的其他缺口也不能消失。
 
-目前每次结果固定包含 `clinicalSafety: not_assessed`、`coverageComplete: false`、`reviewStatus: pending_ella_review`；没有输出安全／绿色放行结论的分支。
+目前每次结果固定包含 `clinicalSafety: not_assessed`、`coverageComplete: false`、`reviewStatus: clinician_reviewed`；没有输出安全／绿色放行结论的分支。
 
 ## 结果含义
 

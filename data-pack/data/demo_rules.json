@@ -13,11 +13,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2023-12",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R02",
@@ -33,11 +35,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2025-01-28",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R03",
@@ -53,11 +57,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2025-01-28",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R04",
@@ -73,11 +79,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2025-01-28",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R05",
@@ -93,11 +101,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2025-01-28",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R06",
@@ -113,11 +123,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2023-03-29",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R07",
@@ -133,11 +145,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2023-03-29",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R08",
@@ -153,11 +167,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2025-01-20",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R09",
@@ -173,11 +189,13 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": "2023-12",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R10",
@@ -194,11 +212,13 @@
       "oral",
       "sublingual"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "checked_on": "2026-10-03",
     "source_document_date": null,
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R11",
@@ -215,7 +235,7 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "derived_from_class": true,
     "supporting_source_urls": [
@@ -224,7 +244,9 @@
     "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
     "checked_on": "2026-10-03",
     "source_document_date": "2023-03-29",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R12",
@@ -241,7 +263,7 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "derived_from_class": true,
     "supporting_source_urls": [
@@ -250,7 +272,9 @@
     "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
     "checked_on": "2026-10-03",
     "source_document_date": "2023-03-29",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R13",
@@ -267,14 +291,16 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "derived_from_class": false,
     "supporting_source_urls": [],
     "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
     "checked_on": "2026-10-03",
     "source_document_date": "2025-01-20",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   },
   {
     "rule_id": "R14",
@@ -291,13 +317,15 @@
     "allowed_routes": [
       "oral"
     ],
-    "review_status": "pending_ella_review",
+    "review_status": "clinician_reviewed",
     "demo_only": true,
     "derived_from_class": false,
     "supporting_source_urls": [],
     "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
     "checked_on": "2026-10-03",
     "source_document_date": "2023-03-29",
-    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment",
+    "reviewer": "Lin MA",
+    "reviewed_at": "2026-10-03"
   }
 ]

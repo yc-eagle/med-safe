@@ -1,4 +1,4 @@
-"""Build offline browser data from the attributed source pack; Python stdlib only."""
+﻿"""Build offline browser data from the attributed source pack; Python stdlib only."""
 import json
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
@@ -41,7 +41,7 @@ with sqlite3.connect(DATA/'hk_medication.sqlite') as con:
     for table,key in [('medicine_profiles','ingredients'),('medicine_profile_sources','sources'),('medicine_formulation_hints','formulations')]:
         con.execute('DELETE FROM '+table)
         con.executemany('INSERT INTO '+table+' VALUES (?,?)',[(k,json.dumps(v,ensure_ascii=False)) for k,v in payload['medicineProfiles'][key].items()])
-print('Updated SQLite education profiles and provenance; clinical review remains pending')
+print('Updated SQLite education profiles and provenance; the 14 rules are clinician-reviewed, education profiles still pending')
 
 with sqlite3.connect(DATA/'hk_medication.sqlite') as con:
     con.execute('CREATE TABLE IF NOT EXISTS current_rule_drafts (rule_id TEXT PRIMARY KEY, data_json TEXT NOT NULL)')

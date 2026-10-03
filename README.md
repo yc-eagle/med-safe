@@ -35,13 +35,13 @@ Earlier planning documents in this repository described the product in ways that
 | Public site | **Live and public** |
 | Mobile offline upgrade | Published; passed 16 engineering checks. **Real-device phone testing still pending.** |
 | Engineering test suite | Passing — **software verification only**. Not clinical validation, not real-user satisfaction, not award-level validation. |
-| Professional / clinical review | **Pending. Zero of the 14 rules are professionally approved.** |
+| Professional / clinical review | **The 14 rules were clinician-reviewed on 2026-10-03 and the reviewer agrees with each one** (see [`docs/rules/review.csv`](docs/rules/review.csv)). Education profiles, lexicon and patient wording remain pending review. |
 | Observation with real older adults | **Not completed.** |
 | Competition submission form | **Not yet submitted.** Files being ready is not the same as submitted. |
 
 Every result the program produces carries two standing flags: `clinicalSafety: not_assessed` and `coverageComplete: false`. **There is no branch that issues a safe or green-light conclusion.**
 
-> This is a research and demonstration prototype. All 14 rules are drafts awaiting professional review. A complete product catalogue is not the same as complete clinical knowledge, and **a missing match never means a medicine is safe.** It will not generate a personal dosage from a box, and it will not tell anyone to stop a prescribed medicine.
+> This is a research and demonstration prototype. All 14 rules were clinician-reviewed on 2026-10-03, each with a named reviewer and date; that review covers wording, sourcing and scope, not a validated clinical risk model. A complete product catalogue is not the same as complete clinical knowledge, and **a missing match never means a medicine is safe.** It will not generate a personal dosage from a box, and it will not tell anyone to stop a prescribed medicine.
 
 ---
 
@@ -103,7 +103,7 @@ Catalogue snapshot date **2026-09-25**; inventory check date **2026-10-03**.
 | Raw ingredient records | 23,835 records, 2,081 distinct ingredient strings | A string is not a standardised active entity |
 | Prepared ingredient aliases | 1,431 products with at least one mappable ingredient; 674 with all ingredients mappable | Complete mapping does not mean complete interaction coverage |
 | Ingredient education material | 14 ingredients, 13 source records | Not individual dosage, and not all adverse reactions |
-| Rules | 14 sourced drafts; **0 professionally approved** | Not a comprehensive interaction database |
+| Rules | 14 sourced rules, **all clinician-reviewed on 2026-10-03** | Not a comprehensive interaction database |
 | Demonstration formulations | 13, including combination products | Not every catalogue entry verified against physical packaging |
 | Lexicon | 22 entries | No guaranteed accuracy for spoken or noisy drug-name recognition |
 | Multi-medicine check | Up to 12 products, 66 pair records | Does not assess higher-order interactions or cumulative dose |

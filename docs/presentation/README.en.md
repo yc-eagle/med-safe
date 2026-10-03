@@ -45,7 +45,7 @@ The mobile website requires no account. After explicitly downloading the offline
 | Official Hong Kong catalogue | **14,269 products**, snapshot dated 25 September 2026 |
 | Ingredient records | 23,835 rows; 2,081 distinct original ingredient strings |
 | Educational information | **14 ingredient profiles**, with source links |
-| Curated checking knowledge | **14 sourced rule drafts**, all awaiting professional review |
+| Curated checking knowledge | **14 sourced rules, all clinician-reviewed on 2026-10-03** |
 | Demonstration formulations | 13 selected products, including compound formulations |
 | Multiple medicines | Up to **12 products and 66 pair records** |
 

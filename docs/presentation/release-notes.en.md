@@ -21,4 +21,4 @@ OpenCC JavaScript 1.0.5 converts Traditional Chinese display text to Simplified 
 - [Offline language and OCR checks](../../qa/offline-languages-results.json)
 - [Companion page checks](../../qa/resource-pages-languages-results.json)
 
-The professional review status of all 14 rules remains pending.
+All 14 rules were clinician-reviewed on 2026-10-03, with a named reviewer and verdict for each. Education profiles, lexicon and patient wording remain pending review.

@@ -1,4 +1,4 @@
-# Data dictionary and scope
+﻿# Data dictionary and scope
 
 Current inventory is `../data/data_inventory.json`. Its counts are authoritative for the generated browser bundle, subject to rebuilding after edits.
 
@@ -17,3 +17,7 @@ Current inventory is `../data/data_inventory.json`. Its counts are authoritative
 Missing values are unknown, not absent risk. Complete HK labels, structured per-unit strengths, dose/frequency/duration, manufacturer, batch, expiry, complete interactions and individualized contraindication assessment are not supplied. No rule hit cannot become a safe verdict.
 
 SQLite is a local representation of these entities, not a separate licensed clinical source. The current-rule table and JSON must be kept synchronized during releases; legacy table names do not imply distinct clinical evidence. All 14 rules have zero professional approvals at this release.
+
+## Review status
+
+The 14 curated clinical rules were clinician-reviewed on 2026-10-03, each with a named reviewer and verdict. Ingredient education profiles, the seed lexicon and patient wording remain pending review.

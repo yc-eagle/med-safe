@@ -12,7 +12,7 @@ Core code: `app/engine.js`. The input is 2 to 12 distinct products together with
 6. **Strength**: Labelling contraindication, recommends avoid, increased risk, consult first, duplicate ingredient and other different levels are kept. A risk warning is not the same as a blanket prohibition. For example, aspirin with clopidogrel may be a regimen deliberately arranged by a doctor, and users are not advised to stop it themselves.
 7. **Completeness**: Every pair is given a record; where there is no rule, it is marked as not covered. Even when one pair matches, the other gaps in a multi-medicine list do not disappear.
 
-Every result currently always contains `clinicalSafety: not_assessed`, `coverageComplete: false` and `reviewStatus: pending_ella_review`; there is no branch that outputs a safe / green-light conclusion.
+Every result currently always contains `clinicalSafety: not_assessed`, `coverageComplete: false` and `reviewStatus: clinician_reviewed`; there is no branch that outputs a safe / green-light conclusion.
 
 ## What the output can mean
 

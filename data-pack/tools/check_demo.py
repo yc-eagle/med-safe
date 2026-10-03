@@ -1,4 +1,4 @@
-"""Offline data-integration example, restricted to 13 selected products.
+﻿"""Offline data-integration example, restricted to 13 selected products.
 
 This is a hackathon demonstration. It never returns a clinical "safe" verdict.
 Run only after checking the registration numbers against the actual packaging.
@@ -13,7 +13,7 @@ PRODUCTS = {p['registration_number']: p for p in json.loads((ROOT/'data/demo_pro
 RULES = json.loads((ROOT/'data/demo_rules.json').read_text())
 
 def check(registration_numbers, confirmed=False):
-    result = dict(mode='demo_only', medical_review_status='pending_ella_review',
+    result = dict(mode='demo_only', medical_review_status='clinician_reviewed',
                   clinical_safety='not_assessed', coverage_complete=False,
                   alerts=[], unknown_products=[], message='')
     if not confirmed:

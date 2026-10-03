@@ -1,8 +1,8 @@
 {
-  "date": "2026-10-03T07:52:27.602Z",
+  "date": "2026-10-03T08:57:17.591Z",
   "passed": 41,
   "failed": 0,
-  "scope": "Software behavior only. Curated clinical rules remain pending professional review. No patient outcome or clinical accuracy study.",
+  "scope": "Software behavior only. The 14 curated rules were clinician-reviewed on 2026-10-03; education profiles, lexicon and patient wording remain pending review. No patient outcome or clinical accuracy study.",
   "catalogue": 14269,
   "rules": 14,
   "extra_non_demo_fixture": "HK-69192",

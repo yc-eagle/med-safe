@@ -7,7 +7,7 @@
 > - **The interface opens in English**, with Mandarin and Cantonese selectors (`?lang=en|cmn|yue`). Language and voice availability are separate settings. Changing language converts display text only; catalogue values, source records and clinical rules are unchanged.
 > - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
 > - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
-> - **Zero of the 14 rules are professionally approved.**
+> - **All 14 rules were clinician-reviewed on 2026-10-03, with a named reviewer per rule.** The review covers wording, sourcing and scope, not a validated clinical risk model.
 > - Capabilities of third-party products and services must be verified individually, not generalised.
 
 > **Owner: Yicheng JIANG.** Used for the **4 Oct exhibition hour** (technical judges score the Exhibition, 30 marks, which decides who reaches the Top 8) and for the **4 Oct 16:20 pitching round**.
@@ -50,7 +50,7 @@
 - Do **not** say "it refuses to answer when it finds a danger." **When a rule matches, it does warn.** What it never outputs is a **safe** conclusion.
 - Do **not** say "these two must not be taken together" for an **increased-risk** rule. Warfarin plus aspirin is a raised bleeding risk, **not a ban**, and aspirin plus clopidogrel may be a **doctor's deliberate regimen** — the product does not advise stopping it.
 - Do **not** say the leaflet "never mentions" interactions. It does; the problem is readability.
-- Do **not** claim any rule is clinically approved. **Zero of the 14 are.**
+- Do **not** claim the review validates clinical risk. **All 14 rules were clinician-reviewed on 3 October**, and that review covers wording, sourcing and scope only.
 
 ---
 
