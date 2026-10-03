@@ -1,27 +1,114 @@
-# 验证协议与记录边界
+﻿# Evidence Protocol
 
-## 软件检查
+> **Internal working document**, written in English for consistency with the rest of the repository.
 
-检查身份门槛、复方完整性、显式别名、途径限制、2–12 款逐对记录、未知成分与未命中不放行、来源保留、粤语转写确认、权限拒绝、重拍、手机排版和数据清除。`tests/` 提供可执行检查，`qa/` 保存本次实际结果。合成图像／语音须标注，不当作真实用户性能。
+> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
+> - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
+> - **Zero of the 14 rules are professionally approved.**
+> - Capabilities of third-party products and services must be verified individually, not generalised.
 
-## 真人现有做法与工具比较
+> The problem statement's EVIDENCE requirement is scored item by item:
+>
+> *"Compare against the setting's current **manual method**, or a simple substitute — **the steps and the time** — and show what the capability contributes that the manual method cannot. State **what it costs**, **what it gets wrong**, and **what leaves the device**."*
+>
+> **Owner: Ella (items 1 and 2), Sun (items 3 and 5).**
 
-请取得自愿参与者同意，用非个人医疗决定的标准任务。先记录他们平时会怎样认药和找依据，允许使用其惯常的工具；不要教他们故意犯错。再用原型完成同一难度任务。多名参与者可交错先后顺序以减少学习影响。
+---
 
-最少记录：匿名编号、是否目标人群、任务与顺序、每一步、起止时间、能否确认完整制剂／成分、答案和出处、未解决问题、参与者原话。成人参赛者仅为便利样本，不能代表长者。角色扮演属于演示，不能计为独立用户访谈。
+## 1. The comparison: the existing manual method
 
-请参与者复述：这次核对了什么、仍不知道什么、下一步会做什么。重点发现是否把“没有命中”误读为安全、是否能看到复方成分、是否知道人工确认步骤。记录实际结果，不预填节省时间或准确率。
+**The problem statement asks for a comparison, not a single data point.**
 
-## 真实药盒与粤语
+| # | Step | Time | Note |
+|---|---|---|---|
+| 1 | Pick up the box, read the label | | |
+| 2 | Cannot understand it, find the leaflet | | |
+| 3 | Cannot remember, phone a family member | | |
+| 4 | They are unsure too, wait for the next appointment | | |
+| 5 | **Still uncertain at the end** | | This is the key one: the manual method often ends in "I still do not know" |
 
-先收集具备发布权限、无患者个人资料的两款实际演示包装。保留前／后／成分／注册号，人工参照独立建立真值。粤语包含真实说话者及合理噪声条件，报告人数、句数、修正前后错误和失败样例；不把五段合成录音概括为临床识别率。
+**Total time for the manual method: ______**
 
-## AI 生成内容
+**Our method:**
 
-保留平台、日期、完整输入、未经改写的输出与截图，再对照原始来源逐项验证。成功与失败都记录。Ella 的分享链接尚未取到正文，因此没有将其中内容写为医学批准或完成验证。
+| # | Step | Time |
+|---|---|---|
+| 1 | Photograph | |
+| 2 | Read the result | |
+| | **Total** | |
 
-## 团队展示需要的观测项
+### The three numbers that must be recorded
 
-分别记录原方法与产品的步骤数、总时间、最终仍不确定的任务比例，以及是否找到正确产品和来源。当前产品流程包含人工确认与途径确认，不能把所有操作简写为两步以压低用时。不要预设原方法一定慢、一定自信出错或没有出处。
+1. **Steps and total time for the manual method**
+2. **Steps and total time for our method**
+3. **The manual method's "still uncertain" rate** — after going through the whole chain, what proportion of people **still do not have an answer**
 
-若访谈覆盖粤语长者与英语照护者，分别报告人数、任务和结论；只取得其中一类样本时相应缩小结论。知情同意模板在 [`assets/interviews/consent.md`](../assets/interviews/consent.md)，实际同意和是否允许公开展示需独立记录。原始取证目标存于 [历史计划](team-planning/README.md)。
+> **Number 3 matters more than 1 and 2.** The real gap is not the seconds saved. It is that
+> **the manual method often ends in "I still do not know", while ours ends in either a definite judgement or an honest "I cannot find it".**
+> That is what the manual method cannot contribute.
+
+---
+
+## 2. What the manual method cannot do
+
+State this explicitly, and make it **verifiable**:
+
+- [ ] The manual method **cannot verify interactions across three or more medicines in under a minute**
+- [ ] The manual method **cannot know** what is inside a box that looks like a supplement
+- [ ] The manual method has **no consistent source** — it runs on memory and impression — whereas **every judgement we produce carries a source**
+- [ ] **The manual method never tells you it does not know** — people tend to give a confident but wrong answer
+
+---
+
+## 3. What it costs
+
+<!-- TODO (Sun) -->
+
+| Item | Cost | Note |
+|---|---|---|
+| On-device inference hardware requirement | _TODO_ | Can it run on an ordinary phone or laptop |
+| Size of the offline data pack | _TODO_ | Determines whether offline is realistic |
+| Cost per call when online | _TODO_ | Estimated |
+| Development and maintenance | _TODO_ | State it honestly |
+
+---
+
+## 4. What it gets wrong
+
+See [`limitations.md`](limitations.md).
+
+---
+
+## 5. What leaves the device
+
+See [`data-handling.md`](data-handling.md).
+
+---
+
+## 6. First-hand interviews
+
+See [`../assets/interviews/`](../assets/interviews/).
+
+**Both are required** (see the explanation in that directory):
+
+| Material | Language | What it establishes | Status |
+|---|---|---|---|
+| Interview 1 | **Cantonese** | The medication difficulties of older adults | _TODO_ |
+| Interview 2 | **English** | The difficulties of foreign domestic helpers | _TODO_ |
+
+> **If only one was filmed, narrow the conclusion in the pitch.**
+> Using Cantonese-only evidence to make a claim about foreign domestic helpers is over-claiming, and one question from a judge exposes it.
+
+---
+
+## 7. Completion check
+
+- [ ] Manual method versus tool: **steps and time** recorded, including the "still uncertain" rate
+- [ ] "What the manual method cannot do" written as **verifiable statements**, not adjectives
+- [ ] Costs stated
+- [ ] `limitations.md` (what it gets wrong) completed
+- [ ] `data-handling.md` (what leaves the device) completed
+- [ ] Both interviews filmed, or the conclusion narrowed in the pitch

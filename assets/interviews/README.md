@@ -1,69 +1,70 @@
-# 一线访谈素材
+# Interview Material
 
-> **负责人：YC（拍摄）· Ella（提问内容）**
-> **目的**：证明痛点和需求的真实性。路演评分表第一格 *Problem Framing & Relevance* 拿 4–5 分要求 *"supported by convincing evidence or examples"* —— **这个目录就是那个 evidence。**
+> **Internal working document**, written in English for consistency with the rest of the repository.
+> **Owner: YC (filming), Ella (question content).**
+> **Purpose:** to establish that the problem and the need are real. The pitching criterion *Problem Framing & Relevance* requires *"supported by convincing evidence or examples"* for full marks — **this directory is that evidence.**
 
 ---
 
-## ⚠️ 必须拍两段，因为有两个用户
+## Both are required, because there are two users
 
-| 素材 | 语言 | 拍谁 | 证明什么 |
+| Material | Language | Who | What it establishes |
 |---|---|---|---|
-| **采访一** | **粤语** | 香港本地朋友 / 长者照顾者 | 证明**长者**的用药困境 |
-| **采访二** | **英语** | 菲佣 / 外籍家庭佣工 | 证明**外籍佣工**的困境 |
+| **Interview 1** | **Cantonese** | A Hong Kong friend or family caregiver | The medication difficulties of **older adults** |
+| **Interview 2** | **English** | A Filipina domestic helper | The difficulties of **foreign domestic helpers** |
 
-**为什么必须要英语那段**：外籍佣工讲的是他加禄语 / 英语，**不是粤语**。而产品里"英语语音输出"这个功能存在的理由就是他们。
-**如果只拍到粤语那段，路演时不要把结论说到外籍佣工头上** —— 那样证据就用超了。只说"这证明了家庭用药的信息在交付那一刻就丢了"。
+**Why the English one matters:** foreign domestic helpers speak Tagalog or English, **not Cantonese**. And "English voice output" exists in the product precisely for them.
+**If only the Cantonese clip was filmed, do not extend the conclusion to foreign domestic helpers in the pitch** — say only that "this shows the information is lost at the moment it is handed over."
 
 ---
 
-## 采访提纲（7 题）
+## Interview questions
 
-| # | 问题 | 抓什么 |
+| # | Question | What it is after |
 |---|---|---|
-| 1 | 你或你家里长辈，每天大概要吃几种药？ | 建立"多重用药"前提 |
-| 2 | 这些药你是怎么记住的？有没有忘过、重复吃过？ | 真实失败场景 |
-| 3 | 医生讲完之后，你还记得要问什么吗？ | 信息在交付那一刻就丢了 |
-| 4 | 药盒上那张纸，你平时会看吗？看得懂吗？ | "说明书等于不存在" |
-| 5 | 如果同时吃两种药，你会去查它们能不能一起吃吗？怎么查？ | ⭐ **核心题** |
-| 6 | 家里有没有请人帮忙照顾？她怎么知道哪盒药是什么？ | ⭐ 引出外籍佣工 |
-| 7 | 如果有个东西，拍一下就能告诉你"这两盒不能一起吃"，你会用吗？ | 验证需求 |
+| 1 | How many medicines do you, or an older person in your family, take each day? | Establishes polypharmacy |
+| 2 | How do you keep track of them? Have you ever missed one or taken one twice? | A real failure scenario |
+| 3 | After the doctor finishes explaining, do you still remember what to ask? | Information is lost at handover |
+| 4 | Do you read the leaflet in the box? Can you understand it? | "The leaflet might as well not exist" |
+| 5 | If you take two medicines at once, do you check whether they can be taken together? How? | The core question, leading to "nobody does this check" |
+| 6 | Does anyone help care for the older person at home? How do they know which box is which? | Leads to the foreign domestic helper user |
+| 7 | If something could tell you by photograph that "these two must not be taken together", would you use it? | Validates the need |
 
-**英语版把第 5、6 题换成**：
-- *"How do you know which pill is which, when the label is in Chinese?"*
-- *"If you are not sure whether two medicines can be taken together, who do you ask?"*
+**English version of questions 5 and 6:**
+- "How do you know which pill is which, when the label is in Chinese?"
+- "If you are not sure whether two medicines can be taken together, who do you ask?"
 
 ---
 
-## 目录约定
+## Directory convention
 
 ```
 assets/interviews/
-├── README.md            ← 你在这里
-├── consent.md           ← 受访者同意情况（必填）
-├── cantonese/           ← 粤语素材
-└── english/             ← 英语素材
+├── README.md            <- you are here
+├── consent.md           <- subject consent record (required)
+├── cantonese/           <- Cantonese material
+└── english/             <- English material
 ```
 
-⚠️ **大文件不要提交进 git**（`.gitignore` 已排除 `*.mp4` / `*.mov` / `*.wav`）。
-**视频传网盘或 YouTube（公开或未列出），把链接写进下面的表。**
+**Large files must not be committed to git** (`.gitignore` already excludes `*.mp4`, `*.mov`, `*.wav`).
+**Upload video to cloud storage or YouTube (public or unlisted) and record the link in the table below.**
 
 ---
 
-## 素材登记
+## Material register
 
-| 素材 | 文件 / 链接 | 时长 | 语言 | 拍摄日期 | 是否可用于公开演示 |
+| Material | File / link | Duration | Language | Date filmed | Cleared for public demo |
 |---|---|---|---|---|---|
-| 采访一 | _待填_ | | 粤语 | | |
-| 采访二 | _待填_ | | 英语 | | |
+| Interview 1 | _TODO_ | | Cantonese | | |
+| Interview 2 | _TODO_ | | English | | |
 
 ---
 
-## 拍摄纪律
+## Filming discipline
 
-- [ ] **横屏**拍
-- [ ] **单独收音**（第二台手机贴近受访者）
-- [ ] 每段拍够 **3–5 分钟**素材，最后剪 **60–90 秒**
-- [ ] **受访者说"不知道"、说"没想过"也要留着** —— 真实比顺口更可信
-- [ ] 录音**当场备份**（手机 + 云盘各一份）
-- [ ] **记录受访者是否同意素材用于公开演示**（见 `consent.md`）
+- [ ] Film in **landscape**
+- [ ] **Separate audio capture** (a second phone close to the subject)
+- [ ] Shoot **3-5 minutes** per interview, edit down to **60-90 seconds**
+- [ ] **Keep the moments where the subject says "I don't know" or "I never thought about it"** — real is more credible than fluent
+- [ ] Back up the audio **immediately** (phone plus cloud)
+- [ ] **Record whether the subject consents to public use** (see `consent.md`)

@@ -1,360 +1,400 @@
-# Pitch Deck · 逐页结构
+# Pitch Deck — Slide-by-Slide Structure
 
-> **原始团队规划，尚未作为事实完成逐项核实。** 正文保留供团队继续编辑，不能直接当作当前产品能力、临床结论、已完成访谈或比赛官方时间表。
-> 当前可用材料：[8 页可编辑 PPTX](Med-Safe-HacKU2026.pptx) · [PDF](Med-Safe-HacKU2026.pdf) · [180 秒录屏](../assets/demo-3min.mp4) · [公开产品](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)。手机离线升级已公开发布；真实手机和临床复核仍待完成。
-> **展示时必须纠正：** 目前优先支持粤语，不是“英语优先、粤语下一步”；风险增加、建议避免和说明书禁忌是不同层级，不能把所有警示说成“不能同服”；14 条规则全待专业复核，不提供完整合用许可。说明书可以包含相互作用章节，不能说“从来不提与别的药合用”。通用模型、药品工具和药师服务的具体能力需要逐产品、逐服务核实，不能概括成“都不会／都没有／只有我们能”。
+[English](pitch-deck.md) | [中文](pitch-deck.zh-CN.md)
 
+> **Earlier planning material — corrections applied.** This structure was written before the product was built. Where it conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> **Must be corrected on stage:**
+> - **Cantonese is prioritised**, not "English first, Cantonese next". English narration appears in the demo video only.
+> - **Risk levels are separate**: labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient. **Not every warning is "must not be taken together".**
+> - When a sourced rule matches, **the product does show the warning**. What it never outputs is a **"safe" conclusion**. A missing rule is a **coverage** status.
+> - **Leaflets do contain interaction sections.** Do not say "never mentions".
+> - **Zero of the 14 rules are professionally approved.** The product grants no complete permission to combine.
+> - The capabilities of general assistants, drug tools and pharmacist services must be **verified one by one**, not summarised as "none of them do" or "only we do".
+>
+> **Deliverables already produced:** [8-slide editable deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3-minute recording](../assets/demo-3min.mp4) | [public product](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
 
-> **负责人：YC** ｜ 目标：**今晚（10/3）定稿** ｜ **10/4 16:20 Top 8 路演**
-> 时长基准：**约 6 分钟含问答**（8 队分 80 分钟）
-> 配套：[`../docs/competitors.md`](../docs/competitors.md)（第 11 页）· [`../docs/demo-script.md`](../docs/demo-script.md)（第 7、10 页）· [`../docs/limitations.md`](../docs/limitations.md) + [`../docs/data-handling.md`](../docs/data-handling.md)（第 13 页）
+> **Owner: Yicheng (YC)** | **Top 8 pitching round, 4 Oct 16:20**
+> Running time: **about 6 minutes including Q&A** (8 teams in 80 minutes)
+> Companion docs: [`../docs/competitors.md`](../docs/competitors.md) (slide 11) / [`../docs/demo-script.md`](../docs/demo-script.md) (slides 7, 10) / [`../docs/limitations.md`](../docs/limitations.md) and [`../docs/data-handling.md`](../docs/data-handling.md) (slide 13)
 
 ---
 
-## 时间预算（先看这个）
+## Timing budget (read this first)
 
-| 页 | 秒 | 累计 |
+| Slides | Seconds | Cumulative |
 |---|---|---|
-| 1–4 开场与问题 | 105 | 1:45 |
-| 5 根因 | 30 | 2:15 |
-| 6–7 方案 + 现场演示 | 60 | 3:15 |
-| 8–9 证据 | 90 | 4:45 |
-| 10 断网 | 15 | 5:00 |
-| 11 竞品 | 45 | 5:45 |
-| 12–13 影响 + 风险 | 45 | 6:30 |
-| 14–15 下一步 + 收尾 | 30 | 7:00 |
+| 1-4 Opening and problem | 105 | 1:45 |
+| 5 Root cause | 30 | 2:15 |
+| 6-7 Solution and live demo | 60 | 3:15 |
+| 8-9 Evidence | 90 | 4:45 |
+| 10 Offline demo | 15 | 5:00 |
+| 11 Competition | 45 | 5:45 |
+| 12-13 Impact and risk | 45 | 6:30 |
+| 14-15 Next steps and close | 30 | 7:00 |
 
-⚠️ **合计 7:00，超了。** 若时间紧，**先砍第 12、14 页**（影响与下一步），
-**绝不要砍第 5、8、9、11、13 页** —— 那五页是评分表里最吃分的。目标压到 **5:50 + 问答**。
+**Total 7:00 — that is over budget.** If time is tight, cut slides 12 and 14 first (impact and next steps).
+**Never cut slides 5, 8, 9, 11 or 13** — those five carry the most marks. Target 5:50 plus Q&A.
 
 ---
 
-## 第 1 页 · 标题
+## Slide 1 — Title
 
-**幻灯片上**
+**On the slide**
 
 > # MedSafe
-> ### 拍一盒药，它告诉你这两盒能不能一起吃。
-> ### 不确定的时候，它会说「我查不到」。
+> ### Photograph a medicine box and it tells you whether it can be taken with another.
+> ### When it cannot verify something, it says so.
 >
-> HacKU 2026 · 深科技赛道
+> HacKU 2026 — DeepTech Track
+> Group 51 — Bauhinia Spheal
 
-**讲稿（15 秒）**
-> 「我们做的东西，一句话：拍一盒药，它告诉你这两盒能不能一起吃；**不确定的时候，它会说『我查不到』**。」
+**Script (15 s)**
+> "One sentence: photograph a medicine box and it tells you whether the two can be taken together. **When it cannot verify something, it says so.**"
 
-**要点**：**不要读标题。** 直接用一句话说完，然后立刻进第 2 页。
+**Note:** do not read the title aloud. Say the one sentence and move on immediately.
 
 ---
 
-## 第 2 页 · 钩子 ⭐
+## Slide 2 — Hook
 
-**幻灯片上**
+**On the slide**
 
-> ## 药剂师不在凌晨两点。
-> ## 也不在你家的厨房里。
+> ## The pharmacist is not there at 2 a.m.
+> ## And not at your kitchen table.
 
-**讲稿（30 秒）**
-> 「香港的社区药剂师一直在推动用药管理 —— 这件事真的有人在管。
+**Script (30 s)**
+> "Community pharmacists in Hong Kong have been working on medication management for years. This problem genuinely has people on it.
 >
-> **但他们不在凌晨两点，也不在你家的厨房里。**
+> **But they are not there at two in the morning, and they are not at your kitchen table.**
 >
-> 而当照顾一位长者的，是一位**看不懂中文药品说明**的外籍家庭佣工时，药盒上那张纸，约等于不存在。」
+> And when the person looking after an older adult is a **foreign domestic helper who cannot read Chinese**, the leaflet in that box might as well not exist."
 
-**⚠️ 这一页说完，立刻打一次"拒绝牌"**（见第 10 页的说明）——
-在开头就让评委记住"它会拒绝回答"，后面所有功能才可信。
+**Play the "not covered" card immediately after this slide** (see slide 10) —
+establish early that when the rules do not cover a pair, the product says so instead of implying safety. Everything after that becomes credible.
 
 ---
 
-## 第 3 页 · 用户是谁
+## Slide 3 — Who the users are
 
-**幻灯片上**（两栏对比）
+**On the slide** (two columns)
 
-| **独居长者** | **外籍家庭佣工** |
+| **Older adults living alone** | **Foreign domestic helpers** |
 |---|---|
-| 同时服用多个专科开的好几种药 | 实际负责分药、提醒吃药、陪同覆诊 |
-| 医生当面讲了一遍，离开诊室就记不住 | **看不懂中文** —— 药盒标签、说明、覆诊纸对她等于空白 |
-| 药盒字太小，说明书通常已经丢了 | 她要的是**核对**，不是**诊断** |
+| Take several medicines from several different specialists | Handle the pills, the reminders and the clinic visits |
+| The doctor explains it once; it is not retained after leaving the room | **Cannot read Chinese** — labels, instructions and appointment slips are blank to her |
+| Print on the box is too small; the leaflet is usually lost | What she needs is **verification**, not **diagnosis** |
 
-> **语言的错位是双向的**：长者用粤语讲，佣工用英语／他加禄语理解，中间没有翻译。
+> **The language gap runs both ways**: the older adult speaks Cantonese, the helper understands English or Tagalog, and there is nothing in between.
 
-**讲稿（30 秒）**
+**Script (30 s)**
 
 ---
 
-## 第 4 页 · 真实的失败链路
+## Slide 4 — The real failure chain
 
-**幻灯片上**（流程图）
+**On the slide** (flow)
 
 ```
-长者同时服用来自不同专科的好几种药
-   ↓  医生当面讲一遍 → 没记住
-回家后由外籍家庭佣工分药、提醒吃药
-   ↓  她看不懂中文标签
-药盒上的字太小 → 自己判断
-   ↓
-重复用药 / 漏药 / 自行加药
+Older adult takes several medicines from several specialists
+   |
+Doctor explains once, face to face - not retained
+   |
+At home, a foreign domestic helper handles the pills
+   |
+She cannot read the Chinese label
+   |
+Small print, so she makes her own judgement
+   |
+Duplicated doses / missed doses / self-added medicines
 ```
 
-> ⚠️ **这不是"效率"问题，是会进医院的问题。**
+> **This is not an efficiency problem. This is a hospital admission problem.**
 
-**讲稿（30 秒）**
-> 「这不是效率问题。**重复用药和自行加药，是会进医院的问题。**」
+**Script (30 s)**
+> "This is not about efficiency. **Duplicated doses and self-added medicines are how people end up in hospital.**"
 
 ---
 
-## 第 5 页 · ⭐ 根因（必须讲到这一层）
+## Slide 5 — Root cause (this is where the marks are)
 
-> **评分要求**：*Problem Framing* 拿 5 分需要 *"insight into **root causes**"*。
-> **讲现象拿 3 分，讲根因拿 5 分。**
+> **Scoring:** *Problem Framing* needs *"insight into **root causes**"* for full marks.
+> **Describing the symptom earns 3. Naming the root cause earns 5.**
 
-**幻灯片上**
+**On the slide**
 
-> ## 核对用药安全的能力，被锁在药房里。
+> ## The knowledge that makes medication safe is locked inside the pharmacy.
 
-三条拆解：
+Three parts:
 
-| # | 事实 | 后果 |
+| # | Fact | Consequence |
 |---|---|---|
-| **1** | 核对用药安全需要**专业判断**，不只是查资料 | 长者与佣工**不具备**这个能力 |
-| **2** | 药剂师的服务**时间与地点**是有限的 | **凌晨、周末、在家里**都够不到 |
-| **3** | 现有工具只做**信息检索**，不做**核对判断** | 人真正卡住的地方，**没有人回答** |
+| **1** | Checking medication safety requires **professional judgement**, not just lookup | Older adults and helpers **do not have it** |
+| **2** | A pharmacist's **hours and location** are limited | **2 a.m., weekends, at home** are all out of reach |
+| **3** | Existing tools do **information retrieval**, not **verification** | The place a person actually gets stuck is **never answered** |
 
-> **问题不是没有人管，是管不到那一刻。**
+> **The problem is not that nobody is managing it. It is that it cannot be reached at the moment it matters.**
 
-**讲稿（30 秒）**
-> 「所以真正的问题不是『没有人管』。**是管不到那一刻。**
+**Script (30 s)**
+> "So the real problem is not that nobody is managing this. **It is that it cannot be reached at the moment it matters.**
 >
-> 而现有工具都只做『查药』—— 查得到药，但**没人回答『这两个能不能一起吃』**。**人卡住的地方，恰恰是判断。**」
+> And every existing tool does lookup — you can find the drug, but **nobody answers 'can these two be taken together?'** **The place people get stuck is the judgement.**"
 
 ---
 
-## 第 6 页 · 方案：三值状态机
+## Slide 6 — Solution: confirm, warn, and state what is not covered
 
-**幻灯片上**（三条并列，视觉上要一眼看懂）
+**On the slide** (three columns, visually equal — this matters)
 
-| **① 翻译** | **② 报危险** | **③ 拒绝回答** |
+| **1. Read it clearly** | **2. Show the sourced warning** | **3. State what is not covered** |
 |---|---|---|
-| 单张照片，识别成功 | 多张照片，**查到相互作用** | 多张照片，**查不到这个组合** |
-| 读取药品信息 + **语音朗读**（英语 / 粤语） | **「这两盒不能一起吃」** + 来源 + 请咨询医生 | **「我查不到这两盒药的资料，请咨询医生。」** |
+| One photo, then **the user confirms the product** | A sourced rule matches, **and the route is in scope** | The rules do not cover this pair |
+| Reads out the medicine, with **voice output** (Cantonese first, English available) | **The warning, at its real strength** — labelling contraindication, recommends avoid, or increased risk are different things — plus the source, plus consult a doctor | **"I cannot find information on these two medicines. Please consult a doctor."** |
+| It **works** | It is **useful** | It is **honest about its coverage** |
 
-> **当前医学措辞修正：** 上表为原始演示设想。实际展示应读出具体规则的证据层级和行动建议；增加出血风险不等同所有情况都禁用，尤其不能促使用户自行停用医生安排的抗血小板／抗凝治疗。请使用当前程序的逐条警示。
-| 它**能用** | 它**有用** | 它**可信** |
+(Boundary case: blurred photo -> retake, choose another image, or enter the registration number. **A photo never confirms identity on its own.**)
 
-（边界情况：照片模糊 → 「我看不清，请重拍」）
-
-**讲稿（30 秒）**
-> 「我们的交互只有三条线。
+**Script (30 s)**
+> "Three things happen, and only three.
 >
-> 能识别，就读给你听。**查到危险，就明确告诉你不能一起吃。查不到，就说我查不到。**
+> If it can read the box, it reads it to you — and you confirm it, because **a photograph cannot confirm which medicine this is.**
 >
-> **这三条线不是错误处理 —— 它们就是产品本身。**」
+> If a sourced rule matches, it shows you the warning **at the strength the source actually supports.** An increased risk is not the same as a prohibition — warfarin with aspirin is a raised bleeding risk, not a ban.
+>
+> And if our rules do not cover the pair, **it says so.** It never says 'safe'. **There is no branch in this program that outputs a safe conclusion.**"
 
-**⚠️ 视觉纪律**：三条线要**等宽并列**，不要让 ③ 看起来像"异常分支"。它是设计，不是兜底。
+**Visual discipline:** the three columns must be **equal in width and weight**. Column 3 is not an exception branch — **it is a coverage statement, and it is the honest half of the product.**
+
+**Do not say** "it refuses to answer when it finds a danger." That is factually wrong: when a rule matches, it warns. What it refuses to produce is a **clean bill of health**.
 
 ---
 
-## 第 7 页 · 现场演示 ① + ②
+## Slide 7 — Live demo, states 1 and 2
 
-**幻灯片上**：**放实时演示，或 20 秒的循环录屏**
+**On the slide:** live demo, or a 20-second looping recording
 
-**做什么**：现场拍两盒药 → 打出「**这两盒不能一起吃**」+ 来源
+**What to do:** photograph two boxes on stage -> produce **the warning, at the strength the source supports** (a contraindication and an increased risk are not the same sentence) plus the source
 
-**讲稿（30 秒）**
-> 「我现在拍两盒药给您看。」
-> *（演示。让结果自己说话，不要边操作边解释。）*
+**Script (30 s)**
+> "Let me photograph two boxes."
+> *Run the demo. Let the result speak. Do not narrate while operating.*
 
-**⚠️ 纪律**
-- **不要一边点一边讲。** 让评委看结果。
-- **必须一次跑通。** 演示前彩排过三遍。
-- 若现场设备出问题 → **立刻无缝切到录屏**（放在备用设备上）。
+**Discipline**
+- Do not talk and click at the same time. Let the judges watch the result.
+- It must run first time. Rehearse it three times beforehand.
+- If the device fails on stage, **switch to the recording immediately** (keep it on a second device, already open).
 
 ---
 
-## 第 8 页 · ⭐ 证据：真实访谈
+## Slide 8 — Evidence: real interviews
 
-**幻灯片上**：**两段采访片段（各 20–25 秒）**
+**On the slide:** **two interview clips, 20-25 seconds each**
 
-| 片段 | 语言 | 证明了什么 |
+| Clip | Language | What it establishes |
 |---|---|---|
-| 片段一 | **粤语** | 长者 / 家庭照顾者的用药困境 |
-| 片段二 | **英语** | 外籍家庭佣工的困境 |
+| Clip 1 | **Cantonese** | The medication difficulties of older adults and family caregivers |
+| Clip 2 | **English** | The difficulties of foreign domestic helpers |
 
-**讲稿（45 秒）**
-> 「这不是我们坐在房间里想出来的。**我们在香港问了真实的人。**」
+**Script (45 s)**
+> "We did not invent this in a room. **We asked real people in Hong Kong.**"
 
-**⚠️⚠️ 范围纪律（最容易被抓的地方）**
+**Scope discipline — this is the easiest place to get caught**
 
-- 如果**只拍到粤语**那段：**绝对不要把结论说到外籍佣工头上。** 只说「这证明了家庭用药的信息在交付那一刻就丢了」。
-- 如果**两段都拍到**：这才是完整的证据链，可以放心把两个用户都讲透。
+- If you **only filmed the Cantonese clip**: do **not** extend the conclusion to foreign domestic helpers. Say only that "this shows the information is lost at the moment it is handed over."
+- If you **filmed both**: the evidence chain is complete and you can speak to both users confidently.
 
-> 用一段证据去支撑两个结论 = **证据用超了**。评委一问就露。
+> Using one piece of evidence to support two conclusions is **over-claiming**. One question from a judge exposes it.
 
 ---
 
-## 第 9 页 · ⭐ 证据：手工方法 vs 工具
+## Slide 9 — Evidence: manual method versus the tool
 
-**幻灯片上**（并排对比）
+**On the slide** (side by side)
 
-| **现在：手工方法** | **MedSafe** |
+| **Today: the manual method** | **MedSafe** |
 |---|---|
-| 读药盒 → 看不懂 → 翻说明书 → 想不起来 → 打电话问家人 → 家人也不确定 → 等下次覆诊 | 拍照 → 读出结果 |
-| **步骤：__ 步** ／ **耗时：__** | **步骤：__ 步** ／ **耗时：__** |
-| ⭐ **终点常常仍然是「还是不知道」** | 终点是一个**明确判断**，或一句**诚实的「我查不到」** |
+| Read the box -> cannot understand -> find the leaflet -> cannot remember -> phone a family member -> they are unsure too -> wait for the next appointment | Photograph -> read the result |
+| **Steps: __** / **Time: __** | **Steps: __** / **Time: __** |
+| **The end point is often still "I don't know"** | The end point is a definite answer, or an honest "I cannot find it" |
 
-**讲稿（45 秒）**
-> 「题目要求我们对比现有方法。
+**Script (45 s)**
+> "The problem statement asks us to compare against the manual method.
 >
-> 手工做完这一整套 —— 读药盒、翻说明书、打电话、等覆诊 —— **很多情况下终点仍然是『还是不知道』。**
+> You work through the whole chain — read the box, find the leaflet, phone someone, wait for the appointment — and **very often you still end up not knowing.**
 >
-> **真正的差距不是快了__秒，是终点不一样**：它给你的要么是一个判断，要么是一句诚实的『我查不到』。**手工方法不会告诉你它不知道。**」
+> **The real difference is not the __ seconds saved. It is where you end up**: either a warning with a source, or an honest 'not covered'. **The manual method never tells you that it does not know.**"
 
-> ⚠️ **空的数字必须在彩排前填上**（见 [`../docs/evidence-protocol.md`](../docs/evidence-protocol.md)）。**幻灯片上留空格比数字不好看严重得多。**
+**The blank numbers must be filled in before the rehearsal** (see [`../docs/evidence-protocol.md`](../docs/evidence-protocol.md)). An empty field on a slide is far worse than an unimpressive number.
 
----
+### Verified numbers you can state with confidence
 
-## 第 10 页 · ⭐ 断网演示
+These come from the repository, not from a slide. **Use them — precise numbers are far more convincing than adjectives**, and every one of them is checkable by a judge in [`../data/data_inventory.json`](../data/data_inventory.json).
 
-**幻灯片上**
-
-> ## 没有信号，它也照样工作。
-
-**做什么**：**当场断开网络**（拔网线 / 关 WiFi），重跑一次第 7 页的演示。
-
-**讲稿（15 秒）**
-> 「题目的障碍之一是『没有信号』。所以我现在**把网断掉，再跑一次。**」
-
-**⚠️ 这一页的价值**
-- 把"障碍"从**口号**变成**事实**
-- 同时证明两件评委关心的事：**我们真的解决了障碍**，以及**我们知道自己的边界在哪**
-- **整场路演性价比最高的一个动作**
-
-**⚠️ 务必先彩排**：断网后如果有任何功能降级，**主动说出来**，不要等评委发现。
-
----
-
-## 第 11 页 · ⚠️ 竞品（我们最弱的一格，必须准备）
-
-> **评分要求**：*"Excellent competitive understanding with a highly convincing unique positioning."*
-> **完整文本见 [`../docs/competitors.md`](../docs/competitors.md)，口播稿在那一份的第四节。**
-
-**幻灯片上**（五行表格）
-
-| | 做到了 | **缺口** |
-|---|---|---|
-| 通用 AI 助手 | 什么都能问 | 不认识本地药名 · 不能离线 · ⭐ **会自信地说错** |
-| 药盒说明书 | 官方准确 | 只讲这一种药 · **从不提和别的药一起吃** |
-| 药品查询工具 / 医健通 | 权威信息与纪录 | **只给信息不给判断** · 要登入 · 假设你看得懂 |
-| 社区 / 遥距药剂师咨询 | ⭐ **有真正的专业判断** | **要打电话、要在服务时间、要授权** |
-| **MedSafe** | **在那一刻给出判断，并标出哪里不确定** | 我们**不替代药师** |
-
-**讲稿（45 秒）**
-> 用 [`../docs/competitors.md`](../docs/competitors.md) 第四节的中文口播稿。
-
-**⚠️ 收尾那句是全场最好的一句**：
-
-> **「香港缺的不是专业判断，缺的是它在场的那一刻。」**
-
----
-
-## 第 12 页 · 影响与规模
-
-**幻灯片上**
-- 香港长者多重用药的普遍程度
-- 外籍家庭佣工在本港家庭照护中的实际占比
-- **这是一个每天都在发生的决策，不是一次性的事件**
-
-**讲稿（30 秒）**
-
-**⚠️ 若时间不够，这一页最先砍。**
-
----
-
-## 第 13 页 · ⭐ 风险意识（明写要这一项）
-
-> **评分要求**：*Impact, Feasibility & Future Vision* 拿 5 分明确包含 **"risk awareness"**。
-> **这一页就是那 5 分。**
-
-**幻灯片上**
-
-**我们会错在哪：**
-- 照片模糊 / 包装相近 → 识别错 → **降级为「请重拍」**
-- 复方制剂、保健品 → 成分识别不确定 → **走 ③ 拒绝回答**
-- 数据覆盖不足 → **走 ③ 拒绝回答，绝不说「没有相互作用」**
-- 中成药 / 中药 → 覆盖有限，**如实说明**
-
-**什么离开设备：**
-- 默认**全部在设备上完成** —— 照片不出手机
-- 药品照片属于个人健康信息，本就不该无条件上传
-
-**讲稿（30 秒）**
-> 「我们也说清楚我们做不到什么。
->
-> **它最危险的一刻不是它答错，是它把『我不知道』说成『没问题』。** 所以查不到的时候它只有一个行为：**叫你去问药师。**
->
-> 还有一件事：**照片不出手机。** 药品照片本来就是个人健康信息。」
-
-**⚠️ 这一页和产品的核心设计是同一件事** —— 讲的时候要连起来：
-**我们在产品里承认边界，所以我们在路演里也承认边界。**
-
----
-
-## 第 14 页 · 下一步
-
-**幻灯片上**
-- 粤语版本（现在优先英语，服务外佣）
-- 扩展中成药 / 中药覆盖
-- 渠道：社区药房 · 长者中心 · 家佣中介
-
-**讲稿（15 秒）**
-
-**⚠️ 时间不够时和 12 页一起砍。**
-
----
-
-## 第 15 页 · 收尾
-
-**幻灯片上**
-
-> # 它最重要的功能，
-> # 是它会说「我不知道」。
-
-**讲稿（15 秒）**
-> 「今天所有 AI 都很会说话。**我们做了一个会说自己不知道的。**」
-
-**⚠️ 说完停住。** 不要补充、不要道歉、不要再解释。**让它停在那里。**
-
----
-
-## 分工
-
-| 人 | 角色 |
+| Number | What it is |
 |---|---|
-| **YC** | **主讲** —— 靠结构清晰取胜，不靠口音 |
-| **Ella** | 答医学 / 用户类问题；**演示第 7 页时扮演那位照顾长者的人** |
-| **sunsy** | 答技术类问题 |
+| **14,269** | Hong Kong registered products in the catalogue (snapshot 2026-09-25) |
+| **23,835** / **2,081** | raw ingredient records / distinct ingredient strings |
+| **14** | sourced rules — **all drafts** |
+| **0** | professionally approved rules |
+| **12** / **66** | maximum products per check / pairs enumerated per check |
+| **101.8 million** | approximate product pairs in the catalogue — **why 14 rules cannot claim to cover it** |
+| **47** / **52.6 MiB** | offline cached resources / total size |
+| **16** | offline engineering checks passed |
 
-**三人各答自己那块，不抢话。**
+**Two things about how to use these:**
+
+1. **State the "0" yourself.** Saying "zero of our 14 rules are professionally approved, and here is the review table" is much stronger than being caught out by it. It is also the honest thing to do.
+2. **Do not say "the most complete".** Saying "14,269 products but roughly 101.8 million possible pairs, so we make no claim of completeness" demonstrates that you understand your own data. That is a maturity signal judges reward.
 
 ---
 
-## 评委必问的三个问题（提前准备）
+## Slide 10 — Offline demo
 
-| 问题 | 谁答 | 要点 |
+**On the slide**
+
+> ## No signal. It still works.
+
+**What to do:** **disconnect the network on stage** (unplug the cable, turn off Wi-Fi) and run slide 7's demo again.
+
+**Script (15 s)**
+> "One of the barriers in the problem statement is having no connection. So **I am going to disconnect the network and run it again.**"
+
+**Why this slide is worth the 15 seconds**
+- It turns the barrier from a **claim** into a **fact**.
+- It demonstrates two things judges care about at once: **that we actually solved the barrier**, and **that we know where our own boundaries are**.
+- **Highest return of any 15 seconds in the pitch.**
+
+**Rehearse it.** If any capability degrades when offline, **say so yourself** rather than letting a judge find it.
+
+---
+
+## Slide 11 — Competition (our weakest area; must be prepared)
+
+> **Scoring:** *"Excellent competitive understanding with a highly convincing unique positioning."*
+> **Full text in [`../docs/competitors.md`](../docs/competitors.md); the spoken script is in section 4 of that file.**
+
+**On the slide** (five rows)
+
+| | What it does | **The gap** |
 |---|---|---|
-| **「数据从哪来？」** | sunsy | 具体数据源 + 许可证 + 覆盖范围（[`../CREDITS.md`](../CREDITS.md)） |
-| **「库覆盖多少？查不到怎么办？」** | Ella / sunsy | ⭐ 引到 ③：**查不到就说查不到**，并说明覆盖边界（[`../docs/rules/README.md`](../docs/rules/README.md) 第六节） |
-| **「它错了怎么办？」** | Ella | ⭐ 引到 [`../docs/limitations.md`](../docs/limitations.md) |
+| General-purpose AI assistants | Anything you ask | 1. Do not know local drug names<br>2. Need a connection<br>3. **Answer confidently and wrongly** |
+| The leaflet in the box | Official and accurate | 1. Covers that medicine in clinical language<br>2. **The people who need it cannot read it** |
+| Drug information tools / eHealth | Authoritative information and records | 1. **Give information, not judgement**<br>2. Require login<br>3. Assume literacy |
+| Community and remote pharmacist services | **Real professional judgement** | **Requires a phone call, service hours, and authorisation** |
+| **MedSafe** | **Gives a judgement at that moment, and marks where it is unsure** | We do **not** replace the pharmacist |
+
+**Script (45 s)**
+> Use the spoken script in section 4 of [`../docs/competitors.md`](../docs/competitors.md).
+
+**The closing line is the best sentence in the whole pitch:**
+
+> **"Hong Kong does not lack expertise. It lacks expertise at the moment it is needed."**
 
 ---
 
-## 定稿与彩排检查（10/4 上午）
+## Slide 12 — Impact and scale
 
-- [ ] 共 15 页，**导出了 PDF** 放进本目录
-- [ ] 第 9 页的两个数字**已填上**（步骤与耗时）
-- [ ] 第 5 页讲的是**根因**，不是现象
-- [ ] 第 8 页的访谈片段**已剪好**，且结论范围与素材语言**对得上**
-- [ ] 第 11 页竞品表**已核实**（[`../docs/competitors.md`](../docs/competitors.md) 第六节的待办）
-- [ ] 第 13 页有"我们会错在哪"和"什么离开设备"
-- [ ] **掐时间走一遍，压到 5:50 以内**
-- [ ] 断网演示**彩排过**
-- [ ] 备用设备能立刻接手
+**On the slide**
+- How common polypharmacy is among older adults in Hong Kong
+- The share of foreign domestic helpers in household care in Hong Kong
+- **This is a decision that happens every day, not a one-off event**
+
+**Script (30 s)**
+
+**If time is short, this is the first slide to cut.**
+
+---
+
+## Slide 13 — Risk awareness (explicitly scored)
+
+> **Scoring:** *Impact, Feasibility & Future Vision* requires **"risk awareness"** for full marks.
+> **This slide is those marks.**
+
+**On the slide**
+
+**What it gets wrong:**
+- Blurred photo, similar packaging -> misidentification -> **retake, choose another image, or enter the registration number; the user confirms**
+- Combination products, supplements -> uncertain ingredient recognition -> **listed as a gap; identity still requires user confirmation**
+- The rules do not cover the pair -> **states "not covered"; it never states "no interaction found"**
+- Chinese patent medicines, herbal medicines, supplements, food, and what was already taken today -> **outside current scope, stated as such**
+- **No number filled in without real data** — including error rates
+
+**What leaves the device:**
+- In the browser, photographs are recognised **on the device**
+- In the Mac version, photographs and recordings go only to a **local service on the same machine**, and temporary files are deleted with the request
+- **Browser speech may send recordings to the browser vendor** — disclosed separately, consent requested each time
+
+**Script (30 s)**
+> "We also say clearly what we cannot do.
+>
+> **Its most dangerous moment is not getting an answer wrong. It is turning 'we don't know' into 'it's fine.'** So **every result carries two flags: clinical safety not assessed, and coverage not complete. There is no code path that issues a safe conclusion.**
+>
+> Two more things. **Zero of our 14 rules are professionally approved** — that column is still empty, and here is the review table. And **the photograph does not leave the device.** A photograph of medicines is personal health information."
+
+**This slide and the core product design are the same thing.** Connect them when speaking:
+**we acknowledge our boundaries in the product, so we acknowledge our boundaries in the pitch.**
+
+---
+
+## Slide 14 — Next steps
+
+**On the slide**
+- **Cantonese is already prioritised**; English is available for foreign domestic helpers
+- Wider coverage: Chinese patent medicines, herbal medicines, supplements
+- **Getting the 14 rules professionally reviewed** — the approval column is currently empty
+- Real-device phone testing and observation with real older adults
+- Channels: community pharmacies, elderly centres, domestic helper agencies
+
+**Script (15 s)**
+
+**Cut together with slide 12 if time is short.**
+
+---
+
+## Slide 15 — Close
+
+**On the slide**
+
+> # Its most important feature
+> # is that it says "I don't know."
+
+**Script (15 s)**
+> "Every AI today is very good at talking. **We built one that says when it doesn't know.**"
+
+**Then stop.** Do not add anything, do not apologise, do not explain further. **Let it sit.**
+
+---
+
+## Roles
+
+| Person | Role |
+|---|---|
+| **YC** | **Main speaker** — wins on structure, not on accent |
+| **Ella** | Answers medical and user questions; **plays the caregiver in the slide 7 demo** |
+| **Sun** | Answers technical questions |
+
+Everyone answers their own area. Nobody talks over anybody.
+
+---
+
+## The three questions judges will ask
+
+| Question | Who answers | Key points |
+|---|---|---|
+| **"Where does the data come from?"** | Sun | Specific sources, licence, coverage ([`../CREDITS.md`](../CREDITS.md)) |
+| **"How much does the database cover? What if you cannot find it?"** | Ella / Sun | Point to state 3: **if it cannot find it, it says so**, and state the coverage boundary ([`../docs/rules/README.md`](../docs/rules/README.md), section 6) |
+| **"What if it is wrong?"** | Ella | Point to [`../docs/limitations.md`](../docs/limitations.md) |
+
+---
+
+## Final check and rehearsal (4 Oct morning)
+
+- [ ] 15 slides, **PDF exported** into this directory
+- [ ] The two numbers on slide 9 **are filled in** (steps and time)
+- [ ] Slide 5 states a **root cause**, not a symptom
+- [ ] Slide 8 clips **are edited**, and the conclusion's scope matches the language of the footage
+- [ ] Slide 11 comparison **has been verified** (see the TODO list in [`../docs/competitors.md`](../docs/competitors.md), section 6)
+- [ ] Slide 13 covers "what it gets wrong" and "what leaves the device"
+- [ ] **Timed run-through, under 5:50**
+- [ ] Offline demo **has been rehearsed**
+- [ ] Second device ready to take over immediately

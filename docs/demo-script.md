@@ -1,23 +1,132 @@
-# 三分钟展示脚本
+# Demo Script: The Three Cards
 
-全部演示输入应标为合成／公开药品资料；实际拍摄的包装另记来源。片中录屏应是当前程序实际操作，不用动画伪造成功结果。
+> **Internal working document**, written in English for consistency with the rest of the repository. A Chinese reference version can be added on request. A Chinese spoken script for the judges' questions is available at the end of this file.
 
-| 时段 | 展示 | 讲述重点 |
+> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
+> - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
+> - **Zero of the 14 rules are professionally approved.**
+> - Capabilities of third-party products and services must be verified individually, not generalised.
+
+> **Owner: YC.** Used for the **4 Oct exhibition hour** (technical judges score the Exhibition, 30 marks, which decides who reaches the Top 8) and for the **4 Oct 16:20 pitching round**.
+> The 3-minute demo video recorded tonight (3 Oct) follows the same script.
+
+---
+
+## Core principle
+
+**Demonstrate four actions and nothing else:**
+
+```
+1. Photograph
+2. Read out
+3. Verify
+4. Give the source
+```
+
+**Do not demo these:** account registration, history, dose reminders, dosage calculation, language switching, charts.
+**Each feature added costs one rehearsal.**
+
+---
+
+## 1. The three cards
+
+| Card | Material | What it shows | Time | Proves |
+|---|---|---|---|---|
+| **1. Read it clearly** | One **common medicine** | Photograph it, **let the user confirm the product**, read out the information | about 40 s | It **works** |
+| **2. Show the sourced warning** | **Two** medicines with a rule | Photograph them, show the warning **at its real strength** (increased risk or contraindication), plus the source, plus consult a doctor | about 60 s | It is **useful** (the high point) |
+| **3. State what is not covered** | **A pair the 14 rules do not cover** | Photograph them, **"not covered — please consult a doctor"** | about 30 s | It is **honest about its coverage** |
+
+### Three rehearsal rules
+
+1. **Card 3 must appear once in the first 30 seconds.** Establish early that uncovered pairs are stated as uncovered, so everything after it is credible.
+2. **Never present cards 2 and 3 back to back as one idea.** Card 2 shows a **sourced warning**; card 3 states a **coverage boundary**. **Presented together, both are lost.**
+3. **Demonstrate offline once.** Unplug the network and run it. It is the only way to turn "no signal" from a claim into a fact.
+
+### What must NOT be said on stage
+
+- Do **not** say "it refuses to answer when it finds a danger." **When a rule matches, it does warn.** What it never outputs is a **safe** conclusion.
+- Do **not** say "these two must not be taken together" for an **increased-risk** rule. Warfarin plus aspirin is a raised bleeding risk, **not a ban**, and aspirin plus clopidogrel may be a **doctor's deliberate regimen** — the product does not advise stopping it.
+- Do **not** say the leaflet "never mentions" interactions. It does; the problem is readability.
+- Do **not** claim any rule is clinically approved. **Zero of the 14 are.**
+
+---
+
+## 2. Props
+
+- [ ] **3 real medicine boxes** (physical packaging, not images)
+  - [ ] One common medicine (card 1)
+  - [ ] A pair with a sourced rule (card 2) — **Ella must confirm which evidence level it is**, and the wording must match that level
+  - [ ] A pair the rules do **not** cover (card 3) — confirm it is genuinely **not** in the 14 rules
+- [ ] Phone or laptop for the demo, **fully charged**
+- [ ] Power bank
+- [ ] **A second device** ready to take over immediately
+- [ ] Phone hotspot (do not rely on venue Wi-Fi)
+- [ ] A printed copy of "what we do not model" (`limitations.md`)
+
+---
+
+## 3. At the exhibition (4 Oct 14:40-15:40)
+
+**The DeepTech track has many teams and only 60 minutes. Judges spend under a minute at an average booth.**
+
+### Booth text (do not skip this)
+
+One line a judge can read in three seconds:
+
+> ### Photograph a medicine box and it tells you whether it can be taken with another.
+> ### When it cannot verify something, it says so.
+
+### Let the judges drive it
+
+**Do not demonstrate at them. Hand over the phone.**
+
+> "Try photographing any box."
+
+**That one action beats three minutes of explanation.** And "can a stranger use it in 60 seconds" is itself a live test of the *Solution & Human-Centered Design* criterion.
+
+---
+
+## 4. Pitching round (4 Oct 16:20, Top 8, about 6-7 minutes including Q&A)
+
+The full slide-by-slide structure, timing and scripts are in [`../deck/pitch-deck.md`](../deck/pitch-deck.md). Roles:
+
+- **Main speaker: YC.** Wins on structure, not on accent.
+- **Ella:** answers medical and user questions; **plays the caregiver in the slide 7 demo.**
+- **Sun:** answers technical questions.
+
+Everyone answers their own area. Nobody talks over anybody.
+
+---
+
+## 5. The three questions judges will ask
+
+| Question | Who answers | Key points |
 |---|---|---|
-| 0:00–0:20 | 长者／照护者面对多款药的任务说明 | 加感冒药前先认清产品和成分；药盒不等于个人处方 |
-| 0:20–0:55 | 搜索或拍照后逐项确认 | HK 注册号、复方成分、识别结果须人确认 |
-| 0:55–1:30 | 重复成分和有来源的警示 | 证据层级、原文日期与章节、不要自行改处方 |
-| 1:30–1:55 | 加入未覆盖药品／未知途径 | 多药每对都保留记录；查不到会明确说查不到 |
-| 1:55–2:20 | 粤语问句可改字、用途／副作用资料 | 模型处理输入，医学回答由可追溯资料约束；展示实际运行模式 |
-| 2:20–2:45 | 药师问题卡、大字模式、手机页面 | 把已知与未知一起交给药师，权限拒绝仍可打字 |
-| 2:45–3:00 | 覆盖与验证边界 | 14,269 产品目录 / 14 条待复核规则；给出公开试用入口 |
+| "Where does the data come from?" | Sun | Specific sources, licence, coverage ([`../CREDITS.md`](../CREDITS.md)) |
+| "How much does it cover? What if you cannot find it?" | Ella / Sun | Point to state 3: **if it cannot find it, it says so**, and state the boundary ([`rules/README.md`](rules/README.md), section 6) |
+| "What if it is wrong?" | Ella | Point to [`limitations.md`](limitations.md) |
 
-未完成的真人比较不能填虚构时间；未完成的手机离线功能不能在片中宣称已完成。通用 AI 平台对比要有实际原始输出，不以构造样例冒充 Ella 的小浣熊结果。
+---
 
-## 展位的三条展示路径
+## 6. Rehearsal check (4 Oct morning)
 
-保留团队提出的三张牌结构：**读清楚**（拍照、确认、资料朗读），**有据警示**（展示具体风险级别和出处），**承认未覆盖**（确认身份但规则不足，与模糊照片分别说明）。风险增加不一律说“不能一起吃”；第三条不以制造模型错误为目标。
+- [ ] All three cards run in sequence, timed
+- [ ] **Network unplugged and run once** (offline path)
+- [ ] Someone who did not build it tries it — can they use it in 60 seconds
+- [ ] Full 6-minute pitch walked through, timed
+- [ ] Demo device at 100 percent, power bank packed
+- [ ] Second device ready to take over
+- [ ] Booth text printed
 
-YC 主讲、Ella 解释医学资料与复核边界、sunsy 解释实现和数据流。实际问答分工以团队现场安排为准。提前准备清晰无个人资料的药盒、充电与备用设备，完成下载后实际断网重开；让未参与开发的人独立试一次并记录卡点。展位停留时长与路演时间应以主办方最新通知为准，不把原规划估计写成官方要求。
+---
 
-当前材料已生成：[`180 秒录屏`](../assets/demo-3min.mp4)、[`8 页幻灯片`](../deck/Med-Safe-HacKU2026.pptx)、[`PDF`](../deck/Med-Safe-HacKU2026.pdf)。当前文件是工程演示，不冒充临床验证。另保留[队友路演框架](../deck/pitch-deck.md)及[原始演示规划](team-planning/README.md)，使用前按实际功能和证据修订。
+## 7. Chinese reference for the three answers
+
+**「数据从哪来？」** 具体数据源名称、许可证类型、覆盖范围。答不上来源的数据源不要用。
+
+**「库覆盖多少？查不到怎么办？」** 直接引到状态 3：**查不到就说查不到**，并主动说明覆盖边界（哪些情况一定查不到）。这一问是送分的，不要答成"我们还在补"。
+
+**「它错了怎么办？」** 分三类答：识别错 -> 降级为请重拍；数据没命中 -> 走状态 3；措辞歧义 -> 由 Ella 逐条审查过。然后补一句"我们不做诊断，也不给剂量建议"。

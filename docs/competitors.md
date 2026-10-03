@@ -1,115 +1,124 @@
-# 竞品与现有替代方案
+# Competition and Existing Alternatives
 
-> **原始团队规划，尚未作为事实完成逐项核实。** 正文保留供团队继续编辑，不能直接当作当前产品能力、临床结论、已完成访谈或比赛官方时间表。
-> 当前可用材料：[8 页可编辑 PPTX](../deck/Med-Safe-HacKU2026.pptx) · [PDF](../deck/Med-Safe-HacKU2026.pdf) · [180 秒录屏](../assets/demo-3min.mp4) · [公开产品](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)。手机离线升级已公开发布；真实手机和临床复核仍待完成。
-> **展示时必须纠正：** 目前优先支持粤语，不是“英语优先、粤语下一步”；风险增加、建议避免和说明书禁忌是不同层级，不能把所有警示说成“不能同服”；14 条规则全待专业复核，不提供完整合用许可。说明书可以包含相互作用章节，不能说“从来不提与别的药合用”。通用模型、药品工具和药师服务的具体能力需要逐产品、逐服务核实，不能概括成“都不会／都没有／只有我们能”。
+[English](competitors.md) | [中文](competitors.zh-CN.md)
 
+> **Purpose:** the pitching criterion **Market / Competitive Understanding (5 marks)** — our weakest area.
 
-> **用途**：路演评分表 **Market / Competitive Understanding（5 分）** —— 我们唯一明显偏弱的一格。
-> **拿分要求**：*"Excellent competitive understanding with a highly convincing unique positioning"*（5 分）/ *"Strong comparison showing clear gaps and opportunities"*（4 分）。
-> **不是 5 分要"我们比他们好"，是要"我们知道自己站在哪、为什么站在那"。**
-
----
-
-## ⚠️ 使用前必须做的核实
-
-下表里标了 🔍 的条目，**路演前请务必亲自确认一遍功能范围**。在评委面前说错本地产品的功能，比不知道更糟。
-
-**核实方法**：下载 App 看一眼、或打开官网看功能列表。**五分钟就能做完，不要跳过。**
+> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
+> - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
+> - **Zero of the 14 rules are professionally approved.**
+> - Capabilities of third-party products and services must be verified individually, not generalised.
+> **What earns marks:** *"Excellent competitive understanding with a highly convincing unique positioning"* (5) / *"Strong comparison showing clear gaps and opportunities"* (4).
+> **Full marks do not require "we are better than them". They require "we know where we stand, and why".**
 
 ---
 
-## 一、对照表
+## Verification required before use
 
-| 现有方案 | 解决了什么 | **留下了什么缺口** | 缺口对谁最致命 |
+Entries marked **[verify]** below must be personally checked before the pitch. **Getting a local product's features wrong in front of a judge is worse than not knowing.**
+
+**How to check:** open the app, or open the official site and read the feature list. **Five minutes, not optional.**
+
+---
+
+## 1. Comparison
+
+| Existing option | What it solves | **What gap remains** | Who the gap hurts most |
 |---|---|---|---|
-| **通用 AI 对话助手**<br>（ChatGPT 等通用大模型） | 什么都能问 | ① **不认识香港本地药名与商品名**<br>② **不能离线**<br>③ ⭐ **会非常自信地说错** —— 而用药场景里，一个自信的错误比"不知道"危险得多 | 全部用户 |
-| **药盒上印的说明书 / 仿单** | 官方、准确、无需设备 | ① 一小张纸，丢了就没了<br>② **专业术语**<br>③ **只描述这一种药，绝不提"和别的药一起吃会怎样"** | 长者、外佣 |
-| **药品查询工具**<br>（卫生署药物办公室公开资讯、药典类 App） | 查得到药品资料，来源权威 | ① **只给信息，不给判断** —— 用户要自己完成"这两个能不能一起"的推理<br>② 多为网页，**要联网**<br>③ 假设读者看得懂并会推理 | 外佣 |
-| **医健通 eHealth / HA Go** 🔍<br>（政府电子健康纪录、医管局 App） | 病人的**官方用药纪录**、覆诊、预约 | ① 它是**纪录**，不是**核对**<br>② ⭐ **需要账号与登入** —— 家庭佣工通常没有<br>③ 界面以中文为主 | 外佣 |
-| **社区药剂师 / 遥距药剂师咨询**<br>（如圣雅各福群会惠泽社区药房自 2009 年起的免费遥距咨询服务） | ⭐ **有真正的专业判断**，能查阅医健通做药物整合 | ① **要主动打电话**<br>② **要在服务时间内**<br>③ **要完成授权**<br>④ 药剂师本人不在你家的厨房里 | 全部用户 |
-| **➜ MedSafe** | **在那个时刻给出判断**（拍照即可，无需账号），**并且明确标出哪里它不确定** | 我们**不做诊断、不给剂量、不替代药师** —— 见 [`../docs/limitations.md`](../docs/limitations.md) | — |
+| **General-purpose AI assistants** (ChatGPT and similar) | Anything can be asked | 1. **Do not know local Hong Kong drug or brand names**<br>2. **Cannot run offline**<br>3. **Answer confidently and wrongly** — and in a medication context a confident error is far more dangerous than not knowing | All users |
+| **The leaflet in the box** | Official, accurate, no device needed | 1. One sheet of small print, lost easily<br>2. **Clinical terminology**<br>3. **It does contain interaction sections** — the gap is that the people who need it **cannot read it**, and it is not tied to what is actually in front of them | Older adults, helpers |
+| **Drug information tools** (Drug Office public information, pharmacopoeia apps) | Authoritative drug information | 1. **Give information, not judgement** — the user has to complete the "can these two be taken together" reasoning themselves<br>2. Mostly web-based, **require a connection**<br>3. Assume the reader is literate and can reason from it | Helpers |
+| **eHealth / HA Go** **[verify]** (government electronic health records, Hospital Authority app) | The patient's **official medication record**, appointments, bookings | 1. It is a **record**, not a **check**<br>2. **Requires an account and login** — a domestic helper typically does not have one<br>3. Interface is predominantly Chinese | Helpers |
+| **Community / remote pharmacist consultation** (for example St. James' Settlement charity community pharmacy, free remote service since 2009) | **Genuine professional judgement**; can review the eHealth record and reconcile medicines | 1. **You have to call**<br>2. **During service hours**<br>3. **With authorisation in place**<br>4. The pharmacist is not in your kitchen | All users |
+| **MedSafe** | **Gives a judgement at that moment** (photograph only, no account) **and marks clearly where it is unsure** | We do **not** diagnose, give dosage, or replace a pharmacist — see [`limitations.md`](limitations.md) | — |
 
 ---
 
-## 二、⭐ 我们的位置（一句话）
+## 2. Our position, in one sentence
 
-> **别人在做"查药"，我们在做"核对"。**
+> **Everyone else is doing lookup. We are doing verification.**
 >
-> 差别在于：**「这是华法林」和「这两盒不能一起吃」是两件不同的事。**
-> 前者是信息，后者是判断 —— 而人真正卡住的地方，是判断。
+> The difference: **"this is warfarin" and "these two raise your bleeding risk, from this source" are two different things.**
+> The first is a lookup. The second is **a sourced warning attached to what is actually in your hand** — and that is where a person actually gets stuck.
 
-**第二句话（关于那一刻）：**
+**The second sentence (about the moment):**
 
-> 香港的用药服务不缺专业判断 —— **缺的是它在场的那一刻。**
-> 药剂师不在凌晨、不在周末、不在你家的厨房里；而外籍佣工没有账号、看不懂中文、也不在服务时间内。
+> Hong Kong does not lack professional judgement in medication. **What it lacks is that judgement being present at the moment it is needed.**
+> The pharmacist is not there at 2 a.m., at the weekend, or at your kitchen table; and the domestic helper has no account, cannot read Chinese, and is outside service hours.
 
 ---
 
-## 三、为什么现有方案没有填上这个缺口
+## 3. Why existing options have not closed this gap
 
-这不是"别人没想到"，而是**三个结构性原因**：
+This is not "nobody thought of it". There are three structural reasons:
 
-| # | 原因 | 说明 |
+| # | Reason | Explanation |
 |---|---|---|
-| **1** | **责任边界** | 给"能不能一起吃"下判断是有责任的。大厂产品倾向于只给信息，把判断留给专业人士 |
-| **2** | **离线很难** | 药名识别 + 相互作用数据 + 语音，全都要在设备上跑 —— 云优先的产品架构天然做不到 |
-| **3** | **语言与识字断层** | 现有产品的默认用户是"会中文、会登入、会推理"的人；而我们的用户恰好三条都不成立 |
+| **1** | **Liability boundaries** | Telling someone whether two medicines can be taken together carries responsibility. Large products tend to give information and leave judgement to professionals |
+| **2** | **Offline is hard** | Label recognition, interaction data and speech all have to run on the device. Cloud-first architectures cannot do this by default |
+| **3** | **The literacy and language divide** | Existing products assume a user who reads Chinese, can log in, and can reason from raw data. Our users fail all three |
 
-**➜ 我们的选择是正面的：** 接受一个"会承认不知道"的产品形态，换取**在最需要它的那一刻真的能用**。
+**Our choice is deliberate:** accept a product that admits what it does not know, in exchange for **actually being usable at the moment it is needed most**.
 
 ---
 
-## 四、路演口播版（45 秒，直接背）
-
-### 中文
-
-> 「看一下这个领域里已经有什么。
->
-> **通用大模型**什么都能聊 —— 但它不认识香港的药，不能离线，而且**会非常自信地说错**。在用药这件事上，一个自信的错误比"不知道"危险得多。
->
-> **药盒说明书**是准确的 —— 但它只讲这一种药，**从来不会告诉你它和另一种药一起吃会怎样**。
->
-> **药品查询工具和医健通**给的是权威的**纪录与信息** —— 但它们**假设你会登入、看得懂、并且能自己完成推理**。而我们的用户恰好三条都不成立。
->
-> 最接近的是**社区药剂师的遥距咨询** —— 香港真的有人在推，而且有真正的专业判断。但他们**需要你主动打电话、要在服务时间内、要完成授权**。
->
-> **所以：香港缺的不是专业判断，缺的是它在场的那一刻。**
->
-> 我们不替代药师。我们做的是**把药师的第一句话，搬到那个时刻** —— 并且在不确定的时候，明确说我不能确认。」
+## 4. Spoken script (45 seconds)
 
 ### English
 
 > "Look at what already exists.
 >
-> **General-purpose AI assistants** can talk about anything — but they don't know Hong Kong's drug names, they need a connection, and **they will answer confidently and wrongly.** In medication, a confident error is more dangerous than not knowing.
+> **General-purpose AI assistants** can talk about anything — but they do not know Hong Kong's drug names, they need a connection, and **they will answer confidently and wrongly.** In medication, a confident error is more dangerous than not knowing.
 >
-> **The leaflet in the box** is accurate — but it only describes that one medicine. **It never tells you what happens when you take it with something else.**
+> **The leaflet in the box** is accurate — but it covers one medicine only. **It never tells you what happens when you take it with something else.**
 >
 > **Drug information tools and eHealth** give you authoritative **records and information** — but they assume you can log in, read Chinese, and do the reasoning yourself. Our users fail all three.
 >
 > The closest thing is **community pharmacist teleconsultation** — it exists in Hong Kong, and it carries real professional judgement. But it requires you to call, during service hours, with authorisation.
 >
-> **So Hong Kong doesn't lack expertise. It lacks expertise at the moment it's needed.**
+> **So Hong Kong does not lack expertise. It lacks expertise at the moment it is needed.**
 >
-> We're not replacing the pharmacist. We're moving their first sentence to that moment — and when we can't verify something, we say so."
+> We are not replacing the pharmacist. We are moving their first sentence to that moment — and when we cannot verify something, we say so."
+
+### 中文
+
+> 「先看这个领域里已经有什么。
+>
+> **通用 AI 助手**什么都能聊 —— 但它不认识香港的药名，不能离线，而且**会非常自信地说错**。在用药这件事上，一个自信的错误比『不知道』危险得多。
+>
+> **药盒里的说明书**是准确的 —— 但它只讲这一种药，**从来不会告诉你它和另一种药一起吃会怎样**。
+>
+> **药品查询工具与医健通**给的是权威的**纪录与信息** —— 但它们假设你会登入、看得懂中文、并且能自己完成推理。我们的用户三条都不成立。
+>
+> 最接近的是**社区药剂师的遥距咨询** —— 香港真的有，而且有真正的专业判断。但它需要你主动打电话、要在服务时间内、要完成授权。
+>
+> **所以香港缺的不是专业判断，缺的是它在场的那一刻。**
+>
+> 我们不替代药师。我们做的是把药师的第一句话搬到那个时刻 —— 而且在无法确认的时候，我们说出来。」
 
 ---
 
-## 五、可能被追问的问题
+## 5. Questions we may be asked
 
-| 评委可能问 | 怎么答 |
+| Question | Answer |
 |---|---|
-| **「那你们和 ChatGPT 有什么区别？」** | 不是"更聪明"，是**三件它做不到的事**：认识本地药名、能离线跑、**以及在无法核实时拒绝回答**。第三件才是关键。 |
-| **「已经有药剂师服务了，为什么还需要你们？」** | 我们自己就说它存在、而且是更好的方案。**我们要覆盖的是它够不到的时刻**，不是取代它。 |
-| **「你们凭什么敢下判断？」** | 我们**不下诊断**，只做核对并给出来源。而且**查不到的时候我们不猜** —— 见 [`../docs/limitations.md`](../docs/limitations.md)。 |
-| **「用户凭什么信你们？」** | 这个问题问得对。我们的答案不是"因为我们准"，而是"**因为我们会说自己不知道**"。这是它可以被信任的唯一理由。 |
+| **"How are you different from ChatGPT?"** | Not "smarter" — **three things it cannot do**: know local Hong Kong registration numbers and ingredients, run offline, and **state plainly when a pair is not covered instead of implying safety.** The third one is the point. |
+| **"Pharmacist services already exist. Why do we need you?"** | We say so ourselves, and it is the better option. **We cover the moments it cannot reach.** We are not replacing it. |
+| **"What gives you the right to make a judgement?"** | We do **not** diagnose, and we do not give a verdict. We surface a warning **with its source and its strength**, and we keep the levels apart — an increased risk is not a prohibition. And **when a pair is not covered we say so** — see [`limitations.md`](limitations.md). |
+| **"Why would a user trust you?"** | Fair question. Our answer is not "because we are accurate". It is **"because it tells you what it has not covered."** That is the only reason it can be trusted. |
 
 ---
 
-## 六、待办
+## 6. TODO — verify before going on stage
 
-- [ ] 🔍 核实 **HA Go / 医健通** 是否真的需要账号登入、是否有药物相互作用提示功能
-- [ ] 🔍 核实香港市面上现有的**药品查询 App**（至少找 1–2 个具体的）
-- [ ] 确认**圣雅各福群会惠泽社区药房遥距药剂师咨询**服务的现行状态与范围
-- [ ] 若某项核实结果与上表不符，**立刻改表** —— 说错本地产品功能比不知道更糟
+**This whole table is planning material and is not yet fact-checked item by item.** None of it may be presented as a verified claim about another product's capabilities.
+
+- [ ] **Every row**, including the general assistants, must be checked **product by product and service by service**
+- [ ] Whether **HA Go / eHealth** genuinely requires account login, and whether it flags drug interactions
+- [ ] Existing **drug lookup apps** in Hong Kong (find at least 1-2 specific ones and check them)
+- [ ] The current status and scope of the **St. James' Settlement community pharmacy remote pharmacist consultation** service
+- [ ] **Do not summarise competitors** as "none of them do this" or "only we do". If a claim cannot be verified, **drop the claim rather than soften it**
+- [ ] If any verification contradicts the table above, **correct it immediately** — getting a local product's features wrong is worse than not knowing

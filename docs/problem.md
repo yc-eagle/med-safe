@@ -1,19 +1,98 @@
-# 场景与产品承诺
+﻿# The Problem
 
-用户是香港长者及照护者。任务是准备加用一款常见感冒药／止痛药，或整理当前几款药时，认清具体产品、看清已有警示，并带着完整药品清单问药师。
+[English](problem.md) | [中文](problem.zh-CN.md)
 
-香港场景以 HK 注册号、多种英文／中文药名及粤语交流切入。实际配药可能是原包装、药袋或个体化指示，不能从药盒直接推断处方。医院药袋图片可以帮助讨论流程，但未获明确再分发授权或含个人资料时不加入公开演示。
+> This expands on [`../README.md`](../README.md). It supports two scored items: **Problem Framing & Relevance** in the pitching round, and **Problem & User Needs** in the exhibition.
 
-任务流：输入 → 人确认药品及途径 → 成分展开 → 查看逐对结果与缺口 → 确认个人问题 → 下载药师问题卡。主动保留疑问比让用户误以为“没报错就是安全”更有价值。
+> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
+> - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
+> - **Zero of the 14 rules are professionally approved.**
+> - Capabilities of third-party products and services must be verified individually, not generalised.
 
-产品不提供诊断、开药、个体剂量、自动停换药或全面相互作用保证。过敏、孕哺、年龄、肝肾问题等可被记录为待核实事项，目前未自动作个体化风险判定。紧急症状提示联系当地急救服务，不把普通咨询自动归为急症。
+---
 
-真实长者访谈、现场噪声测试、真实药盒识别率、可理解性测试均待执行。设计目标不能当作已经证实的用户收益。
+## 1. Who the users are
 
-## 团队补充的用户假设
+### User A: older adults living alone in Hong Kong
 
-团队还提出外籍家庭照护者作为第二类用户，可能遇到中文药袋与英语／粤语沟通差异。当前提供繁体中文与英语界面、粤语输入与受控回答；未实现他加禄语，也未取得该群体的真实访谈证据。照护者阅读困难、服务时间缺口属于需要验证的具体假设，不概括为“没有任何工具”或“只有药师能核对”。
+- Often take **several medicines at once** (polypharmacy), prescribed by different specialists in different clinics
+- The print on the box is **small and full of terminology**, or the leaflet has been lost
+- The doctor explains once; **nothing is retained after leaving the room**
+- Typical failure outcomes: **duplicated ingredients, missed doses, medicines from different specialties mixed up**
 
-可沿用团队的任务链进行访谈：接受用药指示 → 回家辨认药品 → 理解标签 → 整理多款药 → 发现不确定并联系专业人士。逐步记录实际障碍，不能预先写定参与者会出错。现有药师服务是协作与转介渠道，不宣称它们都要求到场或无法提供遥距支持。
+### User B: foreign domestic helpers (mainly from the Philippines)
 
-[原始团队问题规划](team-planning/README.md)与[竞品讨论](competitors.md)保留；未经来源核查的服务年份、覆盖范围及泛化竞品描述不作为发布事实。
+- They carry out the **actual care work**: sorting pills, prompting doses, attending appointments
+- **They cannot read Chinese** — labels, leaflets and appointment slips are blank to them
+- The language gap runs both ways: **the older adult speaks Cantonese, the helper understands English or Tagalog, and there is nothing in between**
+- What she needs is **verification**, not **diagnosis** — and she has no tool for it
+
+> **The product's voice output is in English by default**, for User B.
+> **Cantonese (User A) is the next step.** If asked, state this priority honestly; do not present it as already delivered.
+
+---
+
+## 2. The real failure chain
+
+```
+Doctor explains -> the older adult does not retain it -> the helper cannot read the Chinese leaflet
+   -> the print on the box is too small -> she makes her own judgement -> added / missed / duplicated doses
+```
+
+**This is not an efficiency problem. It is a hospital admission problem.**
+
+---
+
+## 3. Root cause
+
+> **Checking whether several medicines can be taken together is something only a pharmacist does today — and the knowledge it requires is locked inside the pharmacy, in both time and space.**
+
+Three separate facts sit underneath that:
+
+| # | Fact | Consequence |
+|---|---|---|
+| **1** | Checking medication safety requires **professional judgement**, not just lookup | Older adults and helpers **do not have it** |
+| **2** | A pharmacist's **hours and location** are limited | **2 a.m., weekends, at home** are all out of reach |
+| **3** | Existing tools do **information retrieval**, not **verification** | The place a person actually gets stuck is **never answered** |
+
+**So: the problem is not that nobody is managing it. It is that it cannot be reached at the moment it matters.**
+
+---
+
+## 4. Our position
+
+**We do not replace the pharmacist. We provide a first-line response.**
+
+And the correct behaviour for a first-line response is to **escalate, not to guess.**
+
+That sentence maps directly onto the problem statement:
+
+> *"**A first-line response that escalates rather than guesses.**"*
+
+---
+
+## 5. Existing alternatives and where they fall short
+
+| Existing option | What it achieves | What it does not |
+|---|---|---|
+| **General-purpose AI assistants** | Anything you ask | Do not know local Hong Kong drug names; cannot run offline; **and answer confidently and wrongly** |
+| **The leaflet in the box** | Official and accurate | One sheet of small print, in clinical terminology; **older adults and helpers cannot read it** |
+| **Drug lookup apps and pharmacopoeias** | You can find the drug | **Give information, not judgement**; require a connection; assume literacy |
+| **Community pharmacist services** | Real professional judgement | **Require attendance and service hours; cannot reach "right now, at home"** |
+| **Our position** | **Gives a judgement at that moment, and marks clearly where it is unsure** | — |
+
+---
+
+## 6. Evidence status
+
+| Evidence type | Status |
+|---|---|
+| Research background on local polypharmacy and Western/Chinese medicine | Available: public literature from HKU's medical faculty (see [`../CREDITS.md`](../CREDITS.md)) |
+| The reach of community pharmacist services and the remaining gap | Available: public HKU Faculty of Medicine material and eHealth documentation |
+| **First-hand interviews (Cantonese + English)** | _TODO: see [`../assets/interviews/`](../assets/interviews/) and [`evidence-protocol.md`](evidence-protocol.md)_ |
+| Manual method versus tool: steps and time | _TODO: see [`evidence-protocol.md`](evidence-protocol.md)_ |
+
+> **Do not describe "there is literature on this" as "we did research".** Keep the two separate when speaking.

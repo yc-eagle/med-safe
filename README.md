@@ -1,122 +1,210 @@
-# MedSafe · 香港用药信息核对
+﻿# MedSafe — Hong Kong Medication Verification Assistant
 
-**先认清手上是什么药，再看有出处的警示，把没解决的问题带给药师。** 面向香港长者及照护者的 HacKU 2026 原型：支持药盒拍照、人工确认药品、成分查询、多药逐对核对、粤语问答和药师问题卡。
+[English](README.md) | [中文](README.zh-CN.md)
 
-> 当前为研究与展示原型，14 条规则全部待专业复核。产品目录完整导入不等于临床知识完整；未命中规则永远不表示安全。不会依据药盒生成个人剂量，也不会建议自行停用处方药。
+> **Confirm what is in your hand, read the sourced warnings, and take the unresolved questions to a pharmacist.**
+> A HacKU 2026 prototype for older adults and caregivers in Hong Kong: photograph a medicine box, confirm the product manually, look up ingredients, check selected medicines pair by pair, ask questions by voice, and leave with a question card for the pharmacist.
 
-- **团队仓库**：[yc-eagle/med-safe](https://github.com/yc-eagle/med-safe)
-- **手机公开入口**：[MedSafe](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site) — 已公开，可直接转发给队友；手机离线升级已公开发布。
-- **所有数据与规则**：[可视清单](app/data-report.html) · [机器可读清单](data/data_inventory.json) · [数据解释](docs/data-inventory.md)
-- **如何判断**：[算法与证据边界](docs/decision-logic.md) · [14 条规则](docs/rules/README.md)
-- **在线演示材料**：[三分钟录屏与下载页](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html)
-- **仓库内材料**：[180 秒录屏](assets/demo-3min.mp4) · [8 页可编辑幻灯片](deck/Med-Safe-HacKU2026.pptx) · [PDF](deck/Med-Safe-HacKU2026.pdf)
-- **队友试用**：[五分钟反馈步骤](docs/tryout.md) · [详细操作](docs/try-it.md)
+**HacKU 2026** — DeepTech Track | The University of Hong Kong | 2-4 October 2026
+**Group 51 — Bauhinia Spheal (紫荆海豹球)**
 
-## 先用起来
+**Problem statement:** *The Capability That Hasn't Travelled*
 
-### 手机或电脑网页
+---
 
-直接打开公开入口，不需要 GitHub 帐号。搜索完整 HK 注册号／产品名称 → 核对药盒并确认 → 选择实际给药途径 → 加入第二款或更多药品 → 查看逐对结果及出处。照片只是辅助找候选，不能替用户确认身份。可以只查一款药的资料，无须凑两款。
+## Corrections to earlier planning material
 
-公开网址已通过匿名 Chromium 完整离线下载、断网重开及查药测试；同时补充 9 项网站跳转回归检查。手机离线升级已通过 16 项核心工程检查（47 个缓存资源，约 52.6 MiB；含断网重开、查询、规则、OCR 和断网语音禁用），已发布至同一网址。正式发布状态以页面离线下载入口为准；尚未完成真实手机测试。浏览器语音可能由其服务商联网处理，使用前会说明并征得本次同意；不能把网页粤语识别说成全离线。离线时可手动输入。系统有本地粤语声音时才使用该声音朗读。
+Earlier planning documents in this repository described the product in ways that **do not match what was implemented**. Where they conflict with this README, [`docs/decision-logic.md`](docs/decision-logic.md) or the program itself, **the implementation is authoritative**.
 
-### 普通电脑，无模型也能离线查
+| Earlier planning said | Actually implemented |
+|---|---|
+| "English voice output first, Cantonese next" | **Cantonese is prioritised**, for the primary users — older adults in Hong Kong. English narration appears in the 3-minute demo video; it is not the product's language priority. |
+| "Contraindication means these must not be taken together" | **Risk levels are kept separate**: labelling contraindication, label recommends avoid, increased bleeding risk, consult first, duplicate ingredient. **An increased-risk warning is not a prohibition.** Warfarin plus aspirin must not be escalated into "banned for every patient". |
+| "The system declines to answer when it finds a risk" | The opposite: **when a sourced rule matches, it shows the warning**, at its correct strength. What it never outputs is a **"safe" conclusion**. A missing match is a **coverage** status and can never be read back as pharmacological safety. |
+| "The leaflet never mentions taking it with another medicine" | **Leaflets do contain interaction sections.** The real gap is that the people who need it cannot read it. Do not claim "never mentions". |
+| Generalisations about other products | The specific capabilities of general assistants, drug tools and pharmacist services must be **verified product by product and service by service**. They must not be summarised as "none of them do this" or "only we do". |
 
-1. 在 GitHub 点 **Code → Download ZIP**，解压。
-2. 打开 `app/index.html`：已下载的目录、资料、规则核对和问题卡可本地使用。
-3. 需要浏览器识字等完整网页功能时，在项目目录运行：
+**Also note:** the Raccoon Work award criterion is *Implementation & Completeness*, **one component of which** is validation of AI-generated outputs. It must not be restated as "AI validation is worth 30 percent".
+
+---
+
+## Status — stated precisely
+
+| Item | State |
+|---|---|
+| Public site | **Live and public** |
+| Mobile offline upgrade | Published; passed 16 engineering checks. **Real-device phone testing still pending.** |
+| Engineering test suite | Passing — **software verification only**. Not clinical validation, not real-user satisfaction, not award-level validation. |
+| Professional / clinical review | **Pending. Zero of the 14 rules are professionally approved.** |
+| Observation with real older adults | **Not completed.** |
+| Competition submission form | **Not yet submitted.** Files being ready is not the same as submitted. |
+
+Every result the program produces carries two standing flags: `clinicalSafety: not_assessed` and `coverageComplete: false`. **There is no branch that issues a safe or green-light conclusion.**
+
+> This is a research and demonstration prototype. All 14 rules are drafts awaiting professional review. A complete product catalogue is not the same as complete clinical knowledge, and **a missing match never means a medicine is safe.** It will not generate a personal dosage from a box, and it will not tell anyone to stop a prescribed medicine.
+
+---
+
+## What is deployed
+
+- **Public mobile entry point:** [MedSafe](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
+- **All data and rules:** [visual inventory](app/data-report.html) | [machine-readable inventory](data/data_inventory.json) | [data notes](docs/data-inventory.md)
+- **How decisions are made:** [decision logic and evidence boundaries](docs/decision-logic.md) | [the 14 rules](docs/rules/README.md)
+- **Demo material:** [3-minute recording and downloads](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html) | [recording in the repository](assets/demo-3min.mp4) | [8-slide editable deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)
+- **For teammates trying it:** [five-minute feedback steps](docs/tryout.md) | [detailed walkthrough](docs/try-it.md)
+- **Submission tracking:** [submission checklist](docs/submission.md)
+
+---
+
+## Running it
+
+### Phone or desktop, in a browser
+
+Open the public entry point; no GitHub account needed. Search by full HK registration number or product name, confirm the box, choose the actual route of administration, add a second or further medicine, and read the pair-by-pair results with their sources. A photograph only helps find candidates; **it does not confirm identity for the user**. A single medicine can be looked up on its own, without going through the pairwise rules.
+
+The public site has also passed anonymous Chromium testing of all offline downloads, an offline reload, and catalogue search, with 9 additional canonical-URL redirect regression checks. Physical phone testing remains pending.
+
+The mobile offline upgrade passed 16 core engineering checks (47 cached resources, about 52.6 MiB, covering offline reopen, lookup, rules, OCR and disabling speech when offline). **Official release status is determined by the offline download entry point on the page.** Browser speech may be processed by the browser vendor's servers; this is disclosed and consent is requested each time. **Web speech recognition is not fully offline and must not be described as such.** Manual input remains available offline. A local voice is used only when the device has one.
+
+### Desktop, offline, with no model
+
+1. On GitHub, choose **Code -> Download ZIP** and extract it.
+2. Open `app/index.html`. The downloaded catalogue, materials, rule checks and question card work locally.
+3. For full web features such as browser OCR, run:
 
 ```sh
 python3 -m http.server 8080 --bind 127.0.0.1 --directory app
 ```
 
-再打开 `http://127.0.0.1:8080`。识字资源随包提供，原图由浏览器处理；首次加载较大资源可能较慢。相机权限取决于浏览器和安全上下文。`file://` 备用模式不承诺相机或识字可用。外部原文链接断网时不能访问，本地摘要、日期与章节仍可查看。
+Then open `http://127.0.0.1:8080`. Recognition resources ship with the package and the original image is processed by the browser; the first load of large resources can be slow. Camera permission depends on the browser and on a secure context. **The `file://` fallback does not promise camera or OCR.** External source links do not resolve offline; local summaries, dates and sections still do.
 
-### Apple Silicon Mac：本地拍照识字与粤语识别
+### Apple Silicon Mac: local OCR and Cantonese recognition
 
-准备 Python 3；双击 `启动演示.command`，或运行 `python3 server.py`，打开 `http://127.0.0.1:8765`。服务器仅监听本机，不是供队友手机远程连接的地址。若缺少编译后的识字组件，程序会尝试用已安装的 `swiftc` 编译 `native/ocr.swift`；没有开发工具时仍可手动查询。
+Install Python 3, then double-click `启动演示.command` or run `python3 server.py`, and open `http://127.0.0.1:8765`. The server listens on the local machine only; **it is not an address for teammates' phones to connect to**. If compiled recognition components are missing, the program tries to compile `native/ocr.swift` with an installed `swiftc`; without developer tools, manual lookup still works.
 
-需要本地粤语语音输入时，首次联网运行：
+For local Cantonese speech input, run once with a connection:
 
 ```sh
 python3 tools/install_voice.py
 python3 server.py
 ```
 
-安装器仅支持 Apple Silicon macOS，为语音建立独立 `.voice-runtime`，安装锁定依赖，并下载约 0.7 GB 的固定版本 Qwen3-ASR 模型至相邻 `HacKU-Sunsy-VoiceModel/model`。首次安装不是离线操作；环境与模型齐备后可断网使用。没有云端 API Key。Windows／手机端没有随包提供这个 MLX 粤语模型。完整步骤见 [离线与资源](docs/offline.md)。
+The installer supports Apple Silicon macOS only. It creates a separate `.voice-runtime`, pins dependencies, and downloads a fixed Qwen3-ASR model (about 0.7 GB). **The first installation is not an offline operation**; once the environment and model are present it runs without a connection. There is no cloud API key. This MLX Cantonese model is **not** shipped for Windows or phones. Full steps: [offline and resources](docs/offline.md).
 
-## 当前数据做到哪里
+---
 
-目录快照日期 **2026-09-25**；整理检查日期 **2026-10-03**。
+## How far the data actually goes
 
-| 层次 | 实际范围 | 不能由此推断 |
+Catalogue snapshot date **2026-09-25**; inventory check date **2026-10-03**.
+
+| Layer | Actual scope | What cannot be inferred from it |
 |---|---:|---|
-| 香港注册药品 | 14,269 产品、14,269 唯一注册号 | 不是所有香港在用药品／完整批准说明书 |
-| 原始成分记录 | 23,835 条、2,081 个不同成分字符串 | 字符串不等于标准化活性实体 |
-| 已准备成分别名 | 1,431 产品至少含一种可映射成分；674 产品全部成分可映射 | 映射齐全不等于相互作用覆盖齐全 |
-| 成分教育资料 | 14 个成分，13 条来源记录 | 不是个体剂量或所有不良反应 |
-| 规则 | 14 条有来源的规则草案；**0 条专业批准** | 不是全面相互作用数据库 |
-| 演示制剂 | 13 款，包括复方 | 不是全目录都经实物核对 |
-| 词库 | 22 条 | 不保证口语／噪声环境药名识别准确率 |
-| 多药核对 | 最多 12 款，66 对逐对记录 | 不评估三药以上高阶相互作用或累积剂量 |
+| HK registered products | 14,269 products, 14,269 unique registration numbers | Not every medicine in use in Hong Kong, and not complete approved labelling |
+| Raw ingredient records | 23,835 records, 2,081 distinct ingredient strings | A string is not a standardised active entity |
+| Prepared ingredient aliases | 1,431 products with at least one mappable ingredient; 674 with all ingredients mappable | Complete mapping does not mean complete interaction coverage |
+| Ingredient education material | 14 ingredients, 13 source records | Not individual dosage, and not all adverse reactions |
+| Rules | 14 sourced drafts; **0 professionally approved** | Not a comprehensive interaction database |
+| Demonstration formulations | 13, including combination products | Not every catalogue entry verified against physical packaging |
+| Lexicon | 22 entries | No guaranteed accuracy for spoken or noisy drug-name recognition |
+| Multi-medicine check | Up to 12 products, 66 pair records | Does not assess higher-order interactions or cumulative dose |
 
-全部细节在 [data/data_inventory.json](data/data_inventory.json)；原始目录、清洗 JSON／CSV／SQLite、规则、出处、日期、缺失字段、未使用数据源均可查。**没有声称“最全”**：约 1.018 亿种目录产品两两组合，不可能由 14 条规则得到全面保障。
+Full detail is in [`data/data_inventory.json`](data/data_inventory.json): the raw catalogue, cleaned JSON/CSV/SQLite, rules, sources, dates, missing fields and unused sources are all inspectable.
 
-## 判断过程与模型分工
+**No claim of "the most complete".** Roughly 101.8 million product pairs exist in the catalogue; 14 rules cannot comprehensively cover them.
 
-1. 药名／照片／语音只帮助输入；OCR 与转写可能有错，必须人工核对。
-2. 用完整 HK 注册号和目录定位产品；品牌、模糊名称只给候选。
-3. 展开复方所有成分，只使用列明的同义词映射；未映射成分保留为缺口。
-4. 为每一对产品记录匹配结果；同时检查实际途径是否在规则范围内。
-5. 分别显示重复成分、说明书禁忌、建议避免、风险增加及先咨询，保留原文证据强度。
-6. 有命中也继续显示未核对部分。无命中、途径不明、身份未确认均不能输出“安全”。
+---
 
-医学判断是可查看的确定性规则。**Qwen3-ASR 只负责粤语转写，Tesseract／Apple Vision 只负责识字；没有通用生成模型替用户开药。** 问答用带来源的资料与受控措辞。完整过程见 [docs/decision-logic.md](docs/decision-logic.md)。
+## How a decision is made
 
-## 易用性与隐私
+Core code: [`app/engine.js`](app/engine.js). Input is 2 to 12 distinct products with the user's confirmation state and the actual route of administration.
 
-繁体中文／English、大字模式、相机重拍与文件选择、识别后可纠错、明确缺口、药师问题卡、本人处方与包装用法不一致时的核实提示，均围绕减少误读和误操作。拒绝相机／麦克风权限仍可打字使用。照片或录音不是必须条件。
+1. **Identity.** The full HK registration number must exist in the catalogue and be confirmed by the user item by item. OCR matches on number or name produce **candidates only**. A fuzzy brand cannot uniquely determine a formulation; if the user declines to confirm, the full check does not proceed.
+2. **Ingredients.** All ingredients are expanded from the catalogue. After NFKC, whitespace and case normalisation, **only explicit aliases are matched** — no string containment and no language-model guessing of salt-form equivalence. Both raw and unmapped values are kept.
+3. **Route.** The user selects oral, sublingual, topical and so on; an unconfirmed route is treated as a gap. Routes derived from demonstration formulation names are **sourced hints only**, not verified against physical packaging.
+4. **Pairwise.** For *n* products, all *n(n−1)/2* pairs are enumerated, up to 66. Each pair lists the original catalogue ingredients, matched rules, potential rules, gaps and status together.
+5. **Evidence.** A warning applies only when ingredients on both sides correspond to a rule **and** both routes fall inside the permitted scope. If ingredients match but the route is unconfirmed or outside scope, it is listed as a prompt to confirm, and must not be extrapolated.
+6. **Strength.** Labelling contraindication, label recommends avoid, increased risk, consult first and duplicate ingredient are kept at **different levels**. **A risk warning is not a blanket prohibition.** For example, aspirin with clopidogrel may be a deliberate regimen; users are not advised to stop it themselves.
+7. **Completeness.** Every pair gets a record; if no rule applies, it is marked as not covered. Even when one pair matches, the other gaps in a multi-medicine list do not disappear.
 
-浏览器版照片在本机识字；Mac 版照片／录音仅送到同一台电脑的本地服务，临时文件随请求删除。浏览器语音可能发送录音给浏览器服务商，必须另作说明。详见 [数据流向](docs/data-handling.md)。工程可用性测试不等于真实长者研究，真实观察还未完成。
+### What the output can mean
 
-## 目录与协作
+| Output | Meaning |
+|---|---|
+| `identity_confirmation_required` | At least one product has not been confirmed by the user |
+| `incomplete_check` | Unrecognised product, missing route, or unmapped ingredient |
+| `alerts_found` | At least one sourced rule matched within the selected scope |
+| `no_rule_found` | The current rule library has no match — **this does not mean the combination is safe** |
+| `route_review_required` | An ingredient prompt exists but the applicable route is not satisfied |
+| `duplicate_input_requires_review` | The same product was added twice; check first whether it really is a duplicate |
+
+`ingredientOverlaps` records only that catalogue ingredient text is identical. It must not be presented as the risk of an entire drug class. **Two products with different ingredients can still interact, and identical ingredients still require judgement against the actual dose and the prescription.**
+
+### Outside the model's capability
+
+Dosage, treatment duration, dosing intervals, higher-order interactions at three or more medicines, hepatic and renal adjustment, allergy matching, pregnancy, breastfeeding and paediatric regimens, comprehensive risk of multi-herb formulations, food interactions, and recall monitoring are **not** covered. These gaps cannot be closed by downloading more model weights; they need reliable data, defined scope, and professional validation.
+
+### Validating AI output
+
+[`app/verify.html`](app/verify.html) compares raw AI output against independently confirmed catalogue fields first, then checks rules separately. Alias normalisation, field conflicts and insufficient evidence are recorded separately. **A rule not being found does not mean the AI field is necessarily wrong; all fields being correct does not mean the medical judgement has been validated.** Raw output and the verification process are retained; failure cases are not manufactured and platform records are not fabricated.
+
+---
+
+## Usability and privacy
+
+Traditional Chinese and English, a large-text mode, camera retake and file selection, correction after recognition, explicit gaps, a pharmacist question card, and a prompt when the user's own prescription conflicts with the packaging are all aimed at reducing misreading and error. Declining camera or microphone permission still allows typing. **A photograph or recording is never required.**
+
+In the browser version, photographs are recognised on the device. In the Mac version, photographs and recordings go only to the local service on the same computer, and temporary files are deleted with the request. **Browser speech may send recordings to the browser vendor**, which is disclosed separately. See [what leaves the device](docs/data-handling.md).
+
+**Engineering usability testing is not the same as research with real older adults; real-world observation has not been completed.**
+
+---
+
+## Layout
 
 ```text
-app/                  浏览器产品、识字资源、AI 字段核验页
-native/               macOS Vision / 本地语音工作进程
-server.py             仅本机服务
- data/                当前完整清单、成分资料、患者措辞、词库
- data-pack/data/      注册目录、规则、别名、SQLite、来源元数据
- data-pack/raw/       获授权开放目录 XML / XSD
- docs/                场景、判断、数据处理、验证与提交说明
- docs/rules/review.csv 医学复核表，批准栏不能自动填写
- tests/、qa/           工程检查与结果，不冒充真人临床验证
+app/                   browser product, recognition resources, AI field verification page
+native/                macOS Vision and local speech worker processes
+server.py              local machine only
+data/                  current full inventory, ingredient material, patient wording, lexicon
+data-pack/data/        registration catalogue, rules, aliases, SQLite, source metadata
+data-pack/raw/         licensed open catalogue XML / XSD
+docs/                  scenario, decision, data handling, verification and submission notes
+docs/rules/review.csv  medical review table; the approval column cannot be filled automatically
+tests/, qa/            engineering checks and results; these do not stand in for clinical validation
 ```
 
-修改规则时同时更新依据、适用途径、证据层级、日期和专业复核表，再运行 `python3 tools/build_data.py`。当前事实以 README、`docs/`、`data/data_inventory.json` 和实际程序为准。更早交接材料不作为当前完成状态。
+New code lives in `app/`, `native/` and `server.py` — **not** in the planned `src/`.
 
-核心规则测试可运行 `node tests/engine.test.cjs`、`node tests/patient.test.cjs`、`node tests/validator.test.cjs` 和 `node tests/product-features.test.cjs`。浏览器及本地接口测试需要其相应运行环境；详见 [技术验证](TECHNICAL_REPORT.md)。
+When rules change, update the source, applicable route, evidence level, date and the professional review table together, then run `python3 tools/build_data.py`. Current fact is determined by this README, `docs/`, `data/data_inventory.json` and the actual program. **Earlier handover material does not represent current completion status.**
 
-## 提交与证据
+Core rule tests: `node tests/engine.test.cjs`, `node tests/patient.test.cjs`, `node tests/validator.test.cjs`, `node tests/product-features.test.cjs`. Browser and local API tests need their respective environments; see [technical report](TECHNICAL_REPORT.md).
 
-公开站点已上线；手机离线升级已上线；最终提交表仍按 [提交清单](docs/submission.md) 的实际状态更新。官方手册核实的截止时间为 **2026-10-04 13:00 HKT**；团队按更严格的准备目标同时提供公开仓库、在线演示、3 分钟视频和幻灯片。不要将“文件已备妥”写成“已提交”。
+---
 
-Ella 提供了豆包与小浣熊分享链接，当前自动工具未能取到对话正文；它们只计为收到链接，不能当医学批准或已完成 AI 输出验证。记录见 [Raccoon 日志](docs/raccoon-usage-log.md)。
+## Submission and evidence
 
-## 团队与展示协作
+The official deadline, verified by the team from the handbook, is **2026-10-04 13:00 HKT**. The team's own requirement is stricter, so **both** an online demonstration and a 3-minute recording are being prepared, rather than treating them as alternatives.
 
-Ella 负责专业资料、规则复核与真实小浣熊留证；sunsy 负责产品与技术实现；YC 负责产品叙事、仓库协作与展示。新增代码位于 `app/`、`native/`、`server.py`，不在规划中的 `src/`。
+**Do not write "files ready" as "submitted".**
 
-沿用团队“读清楚／发现有依据的警示／承认未覆盖”的展示结构，避免把所有风险都说成绝对不能同服。团队现有 [竞品讨论](docs/competitors.md) 与 [路演规划](deck/pitch-deck.md) 保留作为待核实的展示素材；其中尚未取证的概括或未更新的功能描述，应按当前实现和来源修正后再讲。原始冲突文档完整保存在 [历史计划](docs/team-planning/README.md)。
+Ella provided Doubao and Raccoon share links; automated tooling could not retrieve the conversation bodies. They count only as links received, and **must not be treated as medical approval or as completed validation of AI output.** Record: [Raccoon log](docs/raccoon-usage-log.md).
 
-## Credits / rights
+---
 
-香港政府开放目录、临床资料链接和开源组件分别署名，见 [CREDITS.md](CREDITS.md)。完整临床网页／美国标签下载快照、比赛兑换码、私人手册、真实患者影像与模型权重不随公开仓库上传。公开仓库不等同已选择开源许可证；原创代码授权待团队选择，未另授许可的权利保留。第三方许可保持原样。
+## Team
 
-## English overview
+**Group 51 — Bauhinia Spheal (紫荆海豹球)**
 
-MedSafe is a Hong Kong medication-information prototype for older adults and caregivers. Confirm the exact product, inspect sourced warnings, and bring unresolved questions to a pharmacist. It includes a 14,269-product registration catalogue, 14 educational ingredient profiles, 14 **unreviewed** rule drafts and up to 12 selected products / 66 pair records.
+| Member | University | GitHub | Responsibility |
+|---|---|---|---|
+| **Yicheng JIANG** | Beijing Foreign Studies University | [@yc-eagle](https://github.com/yc-eagle) | Overall topic selection and concept (originator of the idea) / core work / project progress management / repository and workflow / pitch deck / presentation and pitching |
+| **Shuoyang SUN** | Tsinghua University | _TODO: GitHub username_ | All desktop-web development / Live Demo |
+| **Lin MA (Ella)** | Tsinghua University | _TODO: GitHub username_ | Domain expertise, rule review, and Raccoon evidence |
 
-OCR and Cantonese ASR assist input only. Explicit ingredient aliases and route-limited deterministic rules produce traceable warnings. A missing match never establishes safety; dose, patient-specific contraindications and higher-order interactions are not assessed. The catalogue is not a complete clinical interaction database.
+The presentation keeps the team's structure: **read it clearly / find a sourced warning / admit what is not covered.** Do not present every risk as an absolute prohibition. The existing [competition discussion](docs/competitors.md) and [pitch planning](deck/pitch-deck.md) are retained as material still to be verified; unevidenced generalisations or outdated feature descriptions must be corrected against the current implementation and sources before use on stage. The original conflicting documents are preserved in the [team planning archive](docs/team-planning/README.md).
 
-Download the repository ZIP and open `app/index.html` for the offline manual workflow. Serve `app/` locally for browser OCR. The Apple Silicon build adds local Vision OCR and optional Qwen3-ASR after a first-time online installation. Web speech recognition may use the browser provider's servers and is disclosed separately. Public/mobile offline release status is tracked in the linked usage and submission documents.
+---
+
+## Credits and rights
+
+Hong Kong government open catalogue data, clinical source links and open-source components are attributed separately in [CREDITS.md](CREDITS.md). Full clinical web and US labelling snapshots, competition redemption codes, the private handbook, real patient imagery and model weights are **not** uploaded to the public repository. **A public repository is not the same as a chosen open-source licence**; the licence for original code awaits the team's decision, and rights not otherwise granted are reserved. Third-party licences remain unchanged.

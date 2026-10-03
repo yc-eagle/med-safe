@@ -1,20 +1,89 @@
-# 已知限制与失败时的操作
+# What It Gets Wrong
 
-| 失败或缺口 | 产品动作 | 仍待验证 |
-|---|---|---|
-| 反光、模糊、药袋遮挡、字太小 | 重拍、选图片、输入注册号；人工确认 | 真实药盒数据集及准确率 |
-| 品牌有多个制剂／语音听错 | 候选逐项确认，文字可编辑 | 真实粤语药名与现场噪声 |
-| 成分别名未准备 | 列出未映射成分 | 逐项来源与专业审阅 |
-| 途径不清或规则范围不符 | 提示确认途径、显示潜在警示 | 实物给药途径核对 |
-| 规则没有覆盖 | 明确“未覆盖”，带资料问药师 | 更大且获授权的临床知识库 |
-| 有个人处方或药袋用法 | 保留原指示疑问，不根据药盒改量 | 专业个体评估 |
-| 没有本地粤语声音／网页语音不可用 | 保留文字与手动输入 | 多种真实手机测试 |
-| 弱网／断网 | 已下载数据与手动工作流可用；外链不可查 | 各浏览器缓存保留与删除行为 |
+[English](limitations.md) | [中文](limitations.zh-CN.md)
 
-已录入 14,269 产品不表示全世界药品，也不表示所有香港在用产品。14 条规则全为草案；目前专业批准数为零。美国说明书仅作为成分层面的引用证据，其适用性仍须核对选定香港制剂。不能据此生成个人服用方案。
+> The problem statement **requires** this: *"State what it costs, **what it gets wrong**, and what leaves the device."*
+> **This is not a deduction. It is where the marks are.** Stating your boundary plainly is far more credible than claiming completeness.
+> The pitching criterion *Impact, Feasibility & Future Vision* requires **"risk awareness"** for full marks. **This page is those marks.**
 
-12 款药的 66 对遍历能减少遗漏配对，但未评估高阶相互作用、累积剂量或完整个体因素。观察研究和工程测试应分别报告；自动测试通过不能写成临床有效、真实用户满意或获奖水平已经证实。
+**Owner: Ella.**
 
-语音识别错误也可能把药名改成另一款药，不能一律归为低严重度。画面与声音同时显示仍需用户核对；没有真实数据时不填写发生率。中成药／草药、保健品、食物交互、今天已服剂量与服药时间也不在当前完整评估范围。
+---
 
-团队“错误分类、失败时怎么做、未覆盖范围”的思路保留，原始计划见 [存档](team-planning/README.md)。当前表格不代表医学风险分级已获专业批准。
+## 1. Failure modes
+
+| # | Failure mode | When it happens | Severity | Our handling |
+|---|---|---|---|---|
+| 1 | **Medicine misidentification** | Blurred photo, poor angle, low light, similar packaging | High | Retake, choose another image, or enter the registration number. **A photo and OCR produce candidates only; the user confirms identity.** |
+| 2 | **Ingredient misidentification** | Combination products, supplements, over-the-counter packaging | High | Unmapped ingredients are **listed as gaps**; identity still requires user confirmation |
+| 3 | **Insufficient rule coverage** | The pair is not covered by the 14 rules | Medium | Outputs **`no_rule_found`** — states **not covered**, and never "no interaction found" |
+| 4 | **Chinese patent medicines, herbal medicines and supplements not covered** | Patent medicine packaging, raw herbs | Medium | Outside current scope, **stated as such** |
+| 5 | **Speech recognition error** | Noisy environment, accent | **Not uniformly low** — a misheard name can point at a different drug | Text is shown as well as audio; **never voice-only**, and the user still confirms |
+| 6 | **Route of administration unclear** | Route not confirmed, or outside the rule's scope | Medium | Outputs **`route_review_required`**; shows the potential warning but does not extrapolate |
+| 7 | **Over-simplification** | Compressing a complex risk into one sentence | Medium | Wording reviewed line by line by Ella |
+| 8 | **Duplicate entry** | The same product added twice | Low | Outputs **`duplicate_input_requires_review`** |
+
+**No failure-rate number is filled in without real data.** Incidence rates are left blank deliberately.
+
+---
+
+## 2. The single most important rule: how we handle "I don't know"
+
+> **The correct output for L3 (no data found) is "I cannot find information on these two medicines. Please consult a doctor." It is never "no interaction found."**
+
+**Why this is called out separately:** turning "we do not know" into "it is fine" is the one **unforgivable** error in this product. The former is merely unhelpful. The latter causes harm.
+
+**This must be enforced in code**, not left as an optional item in a document.
+
+---
+
+## 3. What our model does not cover
+
+<!-- TODO (Sun and Ella) -->
+
+| Not covered | Note |
+|---|---|
+| Dosage and administration | We deliberately give **no** dosage advice |
+| The patient's own circumstances | Age, liver and kidney function, allergies, pregnancy — **we know none of it** |
+| Herbal medicines and supplements | _TODO: actual coverage_ |
+| Food-drug interactions | _TODO_ |
+| Drug names outside Hong Kong | Brand names differ by region |
+| Time | We do not know **what the user has already taken today** |
+
+---
+
+## 4. Four things we deliberately do not do
+
+> **MedSafe is a hackathon prototype. It is not a medical device and it does not provide medical advice.**
+
+- We do not diagnose.
+- We do not give dosage advice.
+- We do not suggest stopping, switching or adjusting medication.
+- We do not replace a pharmacist or a doctor.
+
+**When uncertain, the correct behaviour is to send the user to a professional.**
+
+---
+
+## 5. If an error does occur
+
+| Stage | Safe fallback |
+|---|---|
+| Low recognition confidence | Retake, choose another image, or enter the registration number; it does not guess |
+| Identity not confirmed by the user | Outputs `identity_confirmation_required`; the full check does not proceed |
+| Data not matched | Outputs `no_rule_found` and states **not covered** |
+| Route not confirmed or outside scope | Outputs `route_review_required`; shown as a prompt to confirm |
+| Ambiguous wording in the output | Reviewed line by line by Ella; must be checked before the demo |
+| System entirely unavailable | The interface states plainly: consult a doctor or pharmacist |
+
+<!-- TODO: document the actual degradation paths in the implementation. -->
+
+---
+
+## 6. Checklist
+
+- [ ] Failure-mode table corrected against the actual implementation
+- [ ] **"No data is not the same as no problem" is enforced in code and has been tested**
+- [ ] Non-coverage table completed
+- [ ] The four "do not do" items are stated in the interface and in the demo
+- [ ] Fallback paths tested

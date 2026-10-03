@@ -1,42 +1,84 @@
-# Credits, data provenance and rights
+# Credits and Attribution
 
-Prepared for HacKU 2026 on 3 October 2026. The public repository separates original code, open catalogue data, short factual summaries and third-party components. Public availability does not transfer third-party rights or imply medical/government endorsement.
+[English](CREDITS.md) | [中文](CREDITS.zh-CN.md)
 
-## Hong Kong official product catalogue
+> **Why this file exists:** the HacKU 2026 Code Rules state that open-source libraries and frameworks are permitted *"provided they are **properly credited**."*
+> **Start it on day one.** Anything reconstructed afterwards will be incomplete.
 
-**Hong Kong SAR Government, Department of Health, Drug Office** supplies the registered pharmaceutical-products XML/XSD. Snapshot lastUpdate: **2026-09-25**, retrieved **2026-10-03**. Catalogue page: https://data.gov.hk/en-data/dataset/hk-dh-dh_do-hk-dh-do-pharmaceutical-product . Source XML: https://www.drugoffice.gov.hk/eps/psi/DrugList.xml . XSD: https://www.drugoffice.gov.hk/eps/psi/DrugList.xsd . Use is subject to [DATA.GOV.HK terms](https://data.gov.hk/en/terms-and-conditions); retain source attribution, dates, and applicable notices. Data is supplied as-is; no government endorsement of MedSafe is claimed.
+---
 
-Original source SHA-256 values and download metadata are retained in `data-pack/download_manifest.json` and `data-pack/SHA256SUMS.txt`. Cleaned JSON/CSV/SQLite and the browser bundle are derived representations, not a new clinical approval.
+## 1. Open-source libraries and frameworks
 
-## Clinical evidence and educational information
+| Name | Purpose | Version | Licence | Used for |
+|---|---|---|---|---|
+| _TODO_ | | | | |
 
-The Hong Kong Drug Office, DailyMed label records, and MedlinePlus / ASHP are attributed item-by-item in `data-pack/data/rule_sources.json`, `data/medicine_profiles.json`, `data/data_inventory.json`, and `docs/data-inventory.md`. Preserve title, jurisdiction, document date, accessed date, exact URL and section where available.
+<!--
+Example rows:
+| Tesseract OCR | Offline text recognition | 5.x | Apache-2.0 | Reading medicine labels |
+| Ollama | Local model inference | - | MIT | On-device inference |
+| FastAPI | Backend framework | 0.1xx | MIT | API service |
+-->
 
-The public repository contains short original factual summaries and structured rule drafts. **Full downloaded clinical HTML and US label XML snapshots are excluded**, while their URLs and SHA-256 provenance remain public. Source metadata `local_file` paths refer to the internal retrieval set, not a promise that each full document is redistributed. ASHP material is not relicensed. US labels are not represented as Hong Kong product-specific approved labels. All 14 rule drafts await professional review.
+**Add a row every time a new library is introduced.** Pay attention to licence type in particular; copyleft licences carry obligations.
 
-## OCR, speech and software
+---
 
-- **Tesseract.js / naptha**: browser OCR integration, with bundled license notices in `app/vendor/`. **Tesseract.js-core** and **tessdata_fast** supply WASM and English/Traditional-Chinese trained data. Their original license texts, source URLs and available hashes are retained; see `app/vendor/sources.json` and `*LICENSE*.txt`.
-- **Apple Vision** and installed macOS voices are operating-system services. Their model weights or voice assets are not redistributed. `native/ocr.swift` is the prototype's original client code; the platform binary is locally built.
-- **Qwen3-ASR-0.6B**: https://huggingface.co/Qwen/Qwen3-ASR-0.6B . Local MLX conversion: https://huggingface.co/mlx-community/Qwen3-ASR-0.6B-4bit , fixed revision `313d850181767edf09f00a9c289becca70e58cd0`. Apache-2.0 model notices must remain with separately downloaded model assets. Model weights are not in this repository.
-- **MLX Audio**: https://github.com/Blaizzy/mlx-audio . Exact installation dependency versions are recorded in `tools/asr-requirements.lock.txt`; dependency licenses remain with their respective distributions.
-- Python standard library provides the local server. Browser code uses web platform APIs. Optional browser SpeechRecognition is supplied by the browser provider, not a MedSafe offline model.
-- Playwright/Chromium support engineering checks. FFmpeg may encode demonstration video. They are development tools, not clinical validators.
+## 2. Datasets
 
-## AI, synthetic examples and team evidence
+| Name | Provider | Licence / terms | Purpose | Cleared for use |
+|---|---|---|---|---|
+| _TODO_ | | | | |
 
-Codex assisted with research, coding, structured summaries, rule encoding, documentation and engineering checks. Model/OCR/ASR outputs are not clinical approval. Synthetic examples are labelled and cannot be attributed to real patients, participants or Raccoon platform outputs.
+### Candidate sources
 
-Ella's two AI share links are recorded in `docs/raccoon-usage-log.md`; their dialogue bodies could not be retrieved automatically. The project makes no source-level or clinical-review claim based solely on the links.
+| Name | Description | Status |
+|---|---|---|
+| **Hong Kong registered pharmaceutical products catalogue** (Department of Health, Drug Office) | Official catalogue and schema, snapshot 2026-09-25 | **In use.** Supplies registration numbers, product names, certificate holders and active ingredients |
+| **Drug Office consumer guidance** (paracetamol; PDE-5 inhibitors and nitrates; oral NSAID guide) | Public official pages | **In use.** Ingredient-level evidence and local classification |
+| **DailyMed labelling** (warfarin, clopidogrel, clarithromycin) | US labelling full text with section numbers | **In use** as ingredient-level citation evidence. **Not equivalent to Hong Kong product approval labelling** |
+| **HODDI** | Research dataset of higher-order drug-drug interactions (arXiv 2502.06274) | Pages reviewed, **full dataset not downloaded**. Repository is MIT-licensed, but upstream sources include DrugBank and UMLS, so the repository licence does not automatically cover all upstream content |
+| **RxNav / RxNav-in-a-Box** (U.S. NLM) | RxNav application suite | **Do not invest further effort in treating this as a DDI database.** Its official FAQ states that the interaction application programming interface has been retired. Kept here so the finding is not lost and the time is not spent twice |
+| **DrugBank** | Comprehensive drug and interaction database | **Not downloaded.** Requires an academic licence; the download page showed academic data downloads temporarily paused. **Do not work around licensing with a mirror of unknown origin** |
 
-The original challenge statement was reached through team-supplied event materials: https://docs.google.com/document/d/1iCqusHazP_ebXXQaql3C2oY1COa2rJjAbGU0nXCCAbg/edit . The public repo summarizes relevant requirements rather than redistributing private competition files, participant lists or redemption codes.
+**No database yet supplies a licensed, Hong Kong-specific interaction knowledge base.** That is exactly why the current 14 rules are hand-coded from cited sources and why the coverage boundary is stated explicitly everywhere.
 
-## Original code licence
+---
 
-No blanket open-source licence has been selected for original team-authored code. Rights not otherwise granted are reserved pending team choice. Third-party components and open catalogue data remain subject to their own terms; a future code licence must not override them. Public repository access and GitHub's platform terms are distinct from granting a broad downstream code licence.
+## 3. References
 
-## Team planning and background references
+| Name | Source | Used for |
+|---|---|---|
+| *The Blind Spot of Polypharmacy: Bridging Western Medicine and Traditional Chinese Medicine* | Medical Ethics and Humanities Unit, LKS Faculty of Medicine, HKU, August 2026 | Background: local polypharmacy and the Western/Chinese medicine blind spot |
+| "Medication management services: community pharmacists safeguarding medication safety" | HKU Faculty of Medicine column | Background: the reach of community pharmacist services and the gap that remains |
+| eHealth News issue 24, "Message from the Pharmacist" | eHealth, HKSAR Government | Evidence that remote pharmacist consultation exists, and its preconditions (call, service hours, authorisation) |
 
-Team planning materials are preserved in `docs/team-planning/` with their source commit. They contain research leads (including Hong Kong medication-management services and polypharmacy discussion) and potential datasets, not a record of data integrated into the runtime. RxNav-in-a-Box, TwoSides, HODDI, and DrugBank are not our clinical checking engine. Unverified publication/service claims remain leads until independently checked.
+<!-- TODO (Ella): add the clinical guidelines, interaction sources and references you actually rely on. -->
 
-Raccoon Work is a development aid and is not called by the runtime. Actual usage records must still be provided by Ella; template screenshots or an unfilled log are not evidence of an executed session or rejected result. Team interview consent forms are preparation tools, not proof that interviews occurred.
+---
+
+## 4. Development tools
+
+| Tool | Purpose | Nature |
+|---|---|---|
+| **SenseTime Raccoon Work** | Research lookup, data analysis, documentation, coding assistance | **Development tool, not a runtime dependency** |
+
+### Statement on Raccoon Work
+
+We used Raccoon Work **only as an assisting tool during development**.
+
+**It is not a runtime dependency of this product.** The product is designed to work **offline**, and therefore **nothing in the delivered prototype calls Raccoon Work**.
+
+Its output was treated as **input to be verified, not as a conclusion to be trusted**. The record of its use, how we verified it, and the outputs we **checked and rejected** are in [`raccoon-shots/`](raccoon-shots/) and [`docs/raccoon-usage-log.md`](docs/raccoon-usage-log.md).
+
+> This position is consistent with the product's own: **a medication safety tool should say "I cannot verify this" rather than guess.**
+
+---
+
+## 5. Other material
+
+| Material | Source / permission | Used for |
+|---|---|---|
+| Interview material under `assets/interviews/` | Informed consent recorded in that directory | Problem validation |
+
+<!-- TODO: record consent status for each interview subject and whether the material may be used publicly. -->

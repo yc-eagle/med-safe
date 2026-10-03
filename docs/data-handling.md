@@ -1,24 +1,82 @@
-# 哪些数据离开设备
+﻿# Data and Privacy: What Leaves the Device
 
-| 场景 | 处理地点 | 需要网络／离机内容 |
+[English](data-handling.md) | [中文](data-handling.zh-CN.md)
+
+> The problem statement **requires** this: *"State what it costs, what it gets wrong, and **what leaves the device**."*
+
+> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+>
+> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
+> - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
+> - **Zero of the 14 rules are professionally approved.**
+> - Capabilities of third-party products and services must be verified individually, not generalised.
+> **Owner: Sun.**
+
+---
+
+## 1. By default, nothing leaves the device
+
+| Action | Where it happens | Data leaving the device |
 |---|---|---|
-| 公开网页首次加载 | 网站托管端向设备提供静态文件 | 网页、目录、识字代码与模型下载；托管方可收到常规访问元数据 |
-| 浏览器照片识字 | 用户浏览器的 Tesseract | 应用不上传照片；原文外链是另行访问 |
-| Mac 版识字 | 同一台 Mac 的 Apple Vision | 浏览器将照片传至本机 `127.0.0.1`，临时文件随请求删除 |
-| Mac 粤语识别 | 同一台 Apple Silicon Mac 的 Qwen3-ASR | 首次安装下载依赖及模型；日常识别不需外部接口，音频临时文件随请求删除 |
-| 网页语音识别 | 浏览器提供的 SpeechRecognition | 浏览器可能把音频传给其服务商；本次同意后才启动，无法保证离线 |
-| 网页朗读 | 仅选择浏览器报告为本地的声音 | 没有合适本地粤语声时保留文字，不承诺所有手机有声音 |
-| 下载问题卡 | 用户主动保存至设备 | 下载文件可能含用户输入，分享由用户决定 |
-| 来源链接／GitHub | 外部站点 | 点击后适用各站点的处理方式 |
+| Photographing | On device | **None** |
+| Text recognition | On device | **None** |
+| Medicine lookup | Local data | **None** |
+| Interaction check | Local rules | **None** |
+| Speech synthesis | On device | **None** |
 
-无用户帐号、广告分析或患者数据库。当前产品不将药品选择、照片、录音或提问写入持久化患者档案。离线应用缓存若启用仅缓存公开静态应用资料，不应缓存问句或患者媒体。语音服务复用模型权重，不复用患者对话历史。
+<!-- TODO (Sun): confirm each row against the actual implementation and mark honestly anything not yet implemented. -->
 
-相机仅在用户启动时申请权限，拍摄／关闭后停止视频流；麦克风最多一次 20 秒。拒绝权限可继续手动输入。药品照片可能包含姓名或标签，公开演示优先用明确标记的合成标签，真实药袋发布前须另做授权与去标识化。
+**This is a design target, not an add-on.** Two reasons: one of the barriers in the problem statement is having no connection, and a photograph of someone's medicines is **personal health information** that should not be uploaded as a matter of course.
 
-这是已实现的数据流说明，不是对任何机构作出的法律合规认证。隐私说明应与上线版实测一致，不能把本机服务器处理描述成“从未离开手机”。
+---
 
-## 路演用一句话
+## 2. When it does go online
 
-“照片在当前浏览器或本机 Mac 识字；查药与规则用本地数据。网页语音可能交给浏览器服务商，因此另作说明；Mac 粤语模型装好后可离线。”不要把网络资源下载、托管访问元数据或网页语音隐藏在“什么都不出设备”的笼统说法里。
+<!-- TODO (Sun): if any part of the MVP requires connectivity, state it plainly -->
 
-团队原始离线目标保存在 [历史计划](team-planning/README.md)，当前表格优先。
+| Situation | Online? | What is sent | Why |
+|---|---|---|---|
+| _TODO_ | | | |
+
+> **If the prototype depends on connectivity anywhere, say so in the pitch before a judge asks.** Stating a boundary yourself earns credit. Having it discovered costs you.
+
+---
+
+## 3. Offline degradation
+
+| Scenario | Behaviour |
+|---|---|
+| Fully offline | _TODO: which functions remain available_ |
+| Unstable connection | _TODO_ |
+| Data pack not downloaded | _TODO_ |
+
+---
+
+## 4. Compliance notes
+
+| Item | Note |
+|---|---|
+| Hong Kong Personal Data (Privacy) Ordinance (PDPO) | Personal health information is not uploaded by default; if it ever is, the purpose and scope are stated |
+| Photograph retention | _TODO: retained or not, for how long, stored where_ |
+| Can the user delete it | _TODO_ |
+| Third-party services | List every third-party call and its data flow |
+
+---
+
+## 5. How to say it in the pitch
+
+One sentence, usable directly:
+
+> **"By default everything runs on the device — the photograph never leaves the phone, because a photograph of medicines is personal health information."**
+> "(Where applicable) It only goes online in ___ , it sends ___ , and it does not send ___ ."
+
+---
+
+## 6. Checklist
+
+- [ ] Table above corrected against the actual implementation
+- [ ] Photograph retention settled
+- [ ] All third-party calls listed
+- [ ] Offline path tested (**unplug the network and run it once**)
+- [ ] Can state "what leaves the device" in one sentence during the pitch

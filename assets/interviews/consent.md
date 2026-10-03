@@ -1,14 +1,14 @@
-# 受访者同意记录
+# Subject Consent Record
 
-> 演示视频与路演材料会公开（比赛要求所有材料公开可访问），也可能出现在宣传物料里。
-> **因此必须记录每一位受访者是否同意。** 没有同意的素材，不要放进任何公开材料。
+> Demonstration videos and pitch material will be public (all materials must be publicly viewable), and may also appear in promotional material.
+> **Consent must therefore be recorded for every subject.** Material without consent must not appear in any public material.
 
-| # | 称呼 / 代号 | 语言 | 拍摄日期 | 同意用于公开演示 | 同意用于宣传物料 | 备注 |
+| # | Name or code | Language | Date filmed | Cleared for public demo | Cleared for promotional use | Notes |
 |---|---|---|---|---|---|---|
-| 1 | | | | ☐ 是 ☐ 否 | ☐ 是 ☐ 否 | |
-| 2 | | | | ☐ 是 ☐ 否 | ☐ 是 ☐ 否 | |
+| 1 | | | | yes / no | yes / no | |
+| 2 | | | | yes / no | yes / no | |
 
-**记录要点**：
-- 只用**代号或称呼**，不需要写全名
-- 如果受访者不愿意露脸，可以只拍手部 / 背面 / 声音 —— **在备注里写清楚**
-- 如果受访者事后反悔，**立刻从所有公开材料里撤下**
+**Recording notes:**
+- Use a **code or first name only**; a full name is not needed
+- If the subject does not want to be identifiable, film hands, back of head or audio only — **state this in the notes**
+- If a subject withdraws consent afterwards, **remove the material from all public material immediately**
