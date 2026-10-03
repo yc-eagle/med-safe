@@ -14,5 +14,6 @@
     "pwa-failure-results.json",
     "media-check.json"
   ],
-  "clinical_review": "pending"
+  "clinical_review": "clinician_reviewed_2026-10-03",
+  "clinical_review_scope": "wording, sourcing and scope of the 14 rules; not a validated clinical risk model"
 }

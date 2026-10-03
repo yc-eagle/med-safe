@@ -24,7 +24,7 @@
   "engine_max_pairs": 66,
   "higher_order_interactions": false,
   "dose_assessment": false,
-  "clinical_review": "pending",
+  "clinical_review": "clinician_reviewed_2026-10-03",
   "sources": [
     {
       "title": "香港衞生署藥物辦公室：使用含撲熱息痛藥物的注意事項",
