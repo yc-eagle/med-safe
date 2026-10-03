@@ -1,4 +1,4 @@
-# MedSafe — Hong Kong Medication Verification Assistant
+﻿# MedSafe — Hong Kong Medication Verification Assistant
 
 **English** · [简体中文](README.zh-CN.md) · [廣東話](README.yue.md)
 
@@ -63,7 +63,7 @@ The product does not assess personal dose, a complete set of contraindications, 
 |---|---|---|
 | **Yicheng JIANG** · [@yc-eagle](https://github.com/yc-eagle) | Beijing Foreign Studies University | Original concept and topic selection; core project work; progress, repository and workflow; pitch deck and presentation |
 | **Shuoyang SUN** · [@lkwet](https://github.com/lkwet) | Tsinghua University | Desktop-web product development and live demonstration |
-| **Lin MA (Ella)** · [@huaxiamalin113](https://github.com/huaxiamalin113) | Tsinghua University | Domain expertise, rule-review work and Raccoon evidence |
+| **Lin MA** · [@huaxiamalin113](https://github.com/huaxiamalin113) | Tsinghua University | Domain expertise, rule-review work and Raccoon evidence |
 
 The team’s [AI-development evidence ledger](../raccoon-usage-log.md) separates reproducible engineering artifacts—data checks, rule code, offline runtime, validation tools and CI—from platform-use records. A software test does not establish that a Raccoon session occurred or that its output was medically approved.
 

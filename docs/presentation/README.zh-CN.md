@@ -1,4 +1,4 @@
-# MedSafe — 香港用药确认助手
+﻿# MedSafe — 香港用药确认助手
 
 [English](README.en.md) · **简体中文** · [廣東話](README.yue.md)
 
@@ -61,9 +61,9 @@ HacKU 2026 · DeepTech 赛道 · 香港大学 · 2026 年 10 月 2–4 日
 
 | 成员 | 学校 | 贡献 |
 |---|---|---|
-| **蒋奕诚 Yicheng JIANG** · [@yc-eagle](https://github.com/yc-eagle) | 北京外国语大学 | 原始创意与选题、核心项目工作、进度管理、仓库与工作流、幻灯片及展示 |
-| **孙 Shuoyang SUN** · [@lkwet](https://github.com/lkwet) | 清华大学 | 桌面网页产品开发及现场演示 |
-| **马琳 Lin MA（Ella）** · [@huaxiamalin113](https://github.com/huaxiamalin113) | 清华大学 | 专业资料、规则复核工作及小浣熊使用证据 |
+| **Yicheng JIANG** · [@yc-eagle](https://github.com/yc-eagle) | 北京外国语大学 | 原始创意与选题、核心项目工作、进度管理、仓库与工作流、幻灯片及展示 |
+| **Shuoyang SUN** · [@lkwet](https://github.com/lkwet) | 清华大学 | 桌面网页产品开发及现场演示 |
+| **Lin MA** · [@huaxiamalin113](https://github.com/huaxiamalin113) | 清华大学 | 专业资料、规则复核工作及小浣熊使用证据 |
 
 团队的 [AI 开发证据账](../raccoon-usage-log.md) 区分数据检查、规则代码、离线运行、核验工具与 CI 等可复现工程产物，以及真实平台使用记录。软件测试本身不证明发生过小浣熊使用，也不代表其输出已获医学批准。
 
