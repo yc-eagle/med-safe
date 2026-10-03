@@ -60,3 +60,8 @@ The SQLite table contents also remained identical. A successful rebuild can ther
 This does not mean the catalogue provides 14,269 fully assessed medicines or exhaustive interaction coverage. The catalogue, the 13 prepared formulations and the 14 reviewed rules have different scopes. Review status follows the team's review record; it is not clinical outcome validation.
 
 For the currently running static host, replacing the served files does not require a server restart. The public data already matches the build. A phone using an older saved offline copy should use **Check for updates / 檢查更新** and reopen the app; reopening clears the current medicine session.
+
+
+## Fixed website address and presentation update
+
+The patient-facing pages now use shorter English, Mandarin and Cantonese instructions. Review labels follow the team-recorded rule status; source links, coverage limits and speech-service consent remain visible. See [Cloudflare Pages setup](cloudflare-pages.md) and [presentation checks](../qa/public-copy-verification.json). The requested `med-care.pages.dev` address is pending Cloudflare account authorization and has not been reserved.

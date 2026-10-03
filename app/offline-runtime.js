@@ -26,7 +26,7 @@ window.OfflineRuntime=(()=>{
   }
   function render(){
     panel.hidden=!web();if(panel.hidden)return;
-    el('offline-title').textContent=tr('帶走使用 · 手機離線','Take it with you · offline on your phone');
+    el('offline-title').textContent=tr('離線使用','Use offline');
     const button=el('prepare-offline');button.textContent=phase==='downloading'?tr('正在下載…','Downloading…'):state.ready&&!state.current?tr('更新離線資料','Update offline copy'):state.current?tr('檢查更新','Check for updates'):tr('準備離線使用','Prepare for offline use');
     button.disabled=['checking','downloading','unsupported'].includes(phase)||navigator.onLine===false;
     const progress=el('offline-progress');progress.hidden=phase!=='downloading';
@@ -36,7 +36,7 @@ window.OfflineRuntime=(()=>{
     else if(phase==='downloading'){
       const loaded=download?.loaded||0,total=download?.total||state.bytes;
       progress.value=total?Math.round(loaded/total*100):0;
-      message=tr(`正在儲存公開程式與識字模型：${mb(loaded)} / ${mb(total)} MB。請保持頁面開啟，完成前不要斷網。`,`Saving public app files and OCR models: ${mb(loaded)} / ${mb(total)} MB. Keep this page open and stay online until complete.`);
+      message=tr(`正在下載離線檔案：${mb(loaded)} / ${mb(total)} MB。請保持頁面開啟，完成前不要斷網。`,`Downloading offline files: ${mb(loaded)} / ${mb(total)} MB. Keep this page open and stay online until complete.`);
     }else if(phase==='failed'){
       const why=state.code==='storage_full'?tr('儲存空間不足。','Storage is full.'):state.code==='release_changed'?tr('網站版本已更新，請重新整理後重試。','The site version changed. Reload and try again.'):tr('有檔案未下載或核對成功，請連網重試。','Some files could not be downloaded or verified. Reconnect and retry.');
       message=tr('今次準備未完成。','Preparation did not complete. ')+why+(state.ready?tr(' 上一次完整離線版本仍可使用。',' The previous complete offline version remains available.'):'');
