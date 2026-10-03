@@ -4,7 +4,7 @@
 
 > **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
 >
-> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **The interface opens in English**, with Mandarin and Cantonese selectors (`?lang=en|cmn|yue`). Language and voice availability are separate settings. Changing language converts display text only; catalogue values, source records and clinical rules are unchanged.
 > - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
 > - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
 > - **Zero of the 14 rules are professionally approved.**
@@ -44,7 +44,7 @@ These artifacts exist and can be checked by anyone. **They are candidates for th
 |---|---|---|
 | Data pipeline and cleaned catalogue | **14,269 products**, 23,835 product-ingredient rows, 2,081 distinct ingredient strings, plus XSD validation, zero duplicate registration numbers, SQLite integrity check | [`data-pack/validation/data_checks.json`](../data-pack/validation/data_checks.json), [`tools/build_data.py`](../tools/build_data.py) |
 | Deterministic rule engine | Pairwise enumeration up to 66 pairs, five separate evidence levels, output labels including `no_rule_found` and `route_review_required` | [`app/engine.js`](../app/engine.js), [`decision-logic.md`](decision-logic.md) |
-| Offline runtime | 47 cached resources, about 52.6 MiB, offline reopen, lookup, rules and OCR | [`app/sw.js`](../app/sw.js), [`app/offline-runtime.js`](../app/offline-runtime.js) |
+| Offline runtime | 53 cached resources, about 52.7 MiB, offline reopen, lookup, rules and OCR | [`app/sw.js`](../app/sw.js), [`app/offline-runtime.js`](../app/offline-runtime.js) |
 | Test suite | 11 test files covering engine, patient wording, validator, multi-medicine, product features, voice, browser and public release | [`tests/`](../tests) |
 | QA and verification harness | 16 core engineering checks, 9 redirect checks, published mobile offline check | [`qa/`](../qa) |
 | AI output validation page | Compares raw AI output against independently confirmed catalogue fields, then checks rules separately | [`app/verify.html`](../app/verify.html) |

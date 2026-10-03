@@ -7,7 +7,7 @@
 
 > **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`decision-logic.md`](decision-logic.md) or the program, **the implementation wins**.
 >
-> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **The interface opens in English**, with Mandarin and Cantonese selectors (`?lang=en|cmn|yue`). Language and voice availability are separate settings. Changing language converts display text only; catalogue values, source records and clinical rules are unchanged.
 > - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
 > - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
 > - **Zero of the 14 rules are professionally approved.**
@@ -52,7 +52,7 @@ Local speech (the Apple Silicon option) is different: once the model is installe
 | Data pack not downloaded | Only what is already cached is available. The offline download entry point on the page is the authoritative status indicator |
 | Offline installation size and cache completion | **Read from the shipped interface and verify on the device.** Do not quote a figure that has not been observed on that device |
 
-**Testing status, stated precisely:** the public URL has been verified in an **anonymous Chromium session** performing a full offline download, an offline reopen and a drug lookup while offline; **9 site-redirect regression checks** were added at the same time. The mobile offline upgrade passed **16 core engineering checks** across **47 cached resources, about 52.6 MiB**. **Testing on a physical phone has not been completed.** The declared scope of that suite is: Chromium desktop emulating 320/390px, real OCR of a synthetic fixture, simulated speech recognition, service workers blocked for that suite. **It is not physical iOS, Safari or Android device testing, not patient testing, and not clinical validation.**
+**Testing status, stated precisely:** the public URL has been verified in an **anonymous Chromium session** performing a full offline download, an offline reopen and a drug lookup while offline; **9 site-redirect regression checks** were added at the same time. The mobile offline upgrade passed **16 core engineering checks** across **53 cached resources, about 52.7 MiB**. **Testing on a physical phone has not been completed.** The declared scope of that suite is: Chromium desktop emulating 320/390px, real OCR of a synthetic fixture, simulated speech recognition, service workers blocked for that suite. **It is not physical iOS, Safari or Android device testing, not patient testing, and not clinical validation.**
 
 ---
 

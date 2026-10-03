@@ -1,11 +1,11 @@
-﻿# Pitch Deck — Slide-by-Slide Structure
+# Pitch Deck — Slide-by-Slide Structure
 
 [English](pitch-deck.md) | [中文](pitch-deck.zh-CN.md)
 
 > **Earlier planning material — corrections applied.** This structure was written before the product was built. Where it conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
 >
 > **Must be corrected on stage:**
-> - **Cantonese is prioritised**, not "English first, Cantonese next". English narration appears in the demo video only.
+> - **The interface opens in English**, with Mandarin and Cantonese selectors (`?lang=en|cmn|yue`). Do not say "Cantonese first" or "English first, Cantonese next" — all three are available. Language choice and voice availability are separate settings.
 > - **Risk levels are separate**: labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient. **Not every warning is "must not be taken together".**
 > - When a sourced rule matches, **the product does show the warning**. What it never outputs is a **"safe" conclusion**. A missing rule is a **coverage** status.
 > - **Leaflets do contain interaction sections.** Do not say "never mentions".
@@ -149,7 +149,7 @@ Three parts:
 | **1. Read it clearly** | **2. Show the sourced warning** | **3. State what is not covered** |
 |---|---|---|
 | One photo, then **the user confirms the product** | A sourced rule matches, **and the route is in scope** | The rules do not cover this pair |
-| Reads out the medicine, with **voice output** (Cantonese first, English available) | **The warning, at its real strength** — labelling contraindication, recommends avoid, or increased risk are different things — plus the source, plus consult a doctor | **"I cannot find information on these two medicines. Please consult a doctor."** |
+| Reads out the medicine, with **voice output** in the selected interface language, subject to the voices the device actually has | **The warning, at its real strength** — labelling contraindication, recommends avoid, or increased risk are different things — plus the source, plus consult a doctor | **"I cannot find information on these two medicines. Please consult a doctor."** |
 | It **works** | It is **useful** | It is **honest about its coverage** |
 
 (Boundary case: blurred photo -> retake, choose another image, or enter the registration number. **A photo never confirms identity on its own.**)
@@ -247,7 +247,7 @@ These come from the repository, not from a slide. **Use them — precise numbers
 | **0** | professionally approved rules |
 | **12** / **66** | maximum products per check / pairs enumerated per check |
 | **101.8 million** | approximate product pairs in the catalogue — **why 14 rules cannot claim to cover it** |
-| **47** / **52.6 MiB** | offline cached resources / total size |
+| **53** / **52.7 MiB** | offline cached resources / total size |
 | **16** | offline engineering checks passed |
 
 **Two things about how to use these:**

@@ -1,4 +1,4 @@
-﻿# MedSafe — Hong Kong Medication Verification Assistant
+# MedSafe — Hong Kong Medication Verification Assistant
 
 [English](README.md) | [中文](README.zh-CN.md)
 
@@ -18,7 +18,7 @@ Earlier planning documents in this repository described the product in ways that
 
 | Earlier planning said | Actually implemented |
 |---|---|
-| "English voice output first, Cantonese next" | **Cantonese is prioritised**, for the primary users — older adults in Hong Kong. English narration appears in the 3-minute demo video; it is not the product's language priority. |
+| "English voice output first, Cantonese next" | **The interface opens in English**, with Mandarin and Cantonese selectors (`?lang=en|cmn|yue`). All three are available now. Language choice and voice availability are separate settings, and switching language converts display text only — catalogue values, source records and clinical rules are unchanged. |
 | "Contraindication means these must not be taken together" | **Risk levels are kept separate**: labelling contraindication, label recommends avoid, increased bleeding risk, consult first, duplicate ingredient. **An increased-risk warning is not a prohibition.** Warfarin plus aspirin must not be escalated into "banned for every patient". |
 | "The system declines to answer when it finds a risk" | The opposite: **when a sourced rule matches, it shows the warning**, at its correct strength. What it never outputs is a **"safe" conclusion**. A missing match is a **coverage** status and can never be read back as pharmacological safety. |
 | "The leaflet never mentions taking it with another medicine" | **Leaflets do contain interaction sections.** The real gap is that the people who need it cannot read it. Do not claim "never mentions". |
@@ -64,7 +64,7 @@ Open the public entry point; no GitHub account needed. Search by full HK registr
 
 The public site has also passed anonymous Chromium testing of all offline downloads, an offline reload, and catalogue search, with 9 additional canonical-URL redirect regression checks. Physical phone testing remains pending.
 
-The public URL has been verified by an **anonymous Chromium session** doing a full offline download, an offline reopen, and a drug lookup while offline; **9 additional site-redirect regression checks** were added at the same time. The mobile offline upgrade passed 16 core engineering checks (47 cached resources, about 52.6 MiB, covering offline reopen, lookup, rules, OCR and disabling speech when offline). **Official release status is determined by the offline download entry point on the page. Testing on a physical phone has not been completed.** Browser speech may be processed by the browser vendor's servers; this is disclosed and consent is requested each time. **Web Cantonese recognition is not fully offline and must not be described as such.** Manual input remains available offline. A local voice is used only when the device has one.
+The public URL has been verified by an **anonymous Chromium session** doing a full offline download, an offline reopen, and a drug lookup while offline; **9 additional site-redirect regression checks** were added at the same time. The mobile offline upgrade passed 16 core engineering checks (53 cached resources, about 52.7 MiB, covering offline reopen, lookup, rules, OCR and disabling speech when offline). **Official release status is determined by the offline download entry point on the page. Testing on a physical phone has not been completed.** Browser speech may be processed by the browser vendor's servers; this is disclosed and consent is requested each time. **Web Cantonese recognition is not fully offline and must not be described as such.** Manual input remains available offline. A local voice is used only when the device has one.
 
 ### Desktop, offline, with no model
 

@@ -1,4 +1,4 @@
-# Download and Offline Mode
+﻿# Download and Offline Mode
 
 [中文](offline.md) | [English](offline.en.md)
 
@@ -7,7 +7,7 @@
 | Download the ZIP and open `app/index.html` | Catalogue, ingredient material, rule checks, manual Q&A and pharmacist question card | Download the complete package first; camera / recognition under `file://` is restricted |
 | Local static service on an ordinary computer | The functions above plus browser Tesseract recognition | Python 3; run the 8080 command in the README; resources ship with the package |
 | Local service on an Apple Silicon Mac | Apple Vision recognition, optional Qwen3-ASR Cantonese recognition, system read-aloud | Python, compiled OCR / developer tools, a pre-installed speech environment and model |
-| Installable offline web page on a phone | Passed 16 core engineering checks and published to the public site | 47 assets, about 52.6 MiB; after the download completes it can reopen, look up, run rules and OCR with the network disconnected; a real phone has not been tested yet, teammate real-device feedback pending |
+| Installable offline web page on a phone | Passed 16 core engineering checks and published to the public site | 53 assets, about 52.7 MiB; after the download completes it can reopen, look up, run rules and OCR with the network disconnected; a real phone has not been tested yet, teammate real-device feedback pending |
 
 ## Mac Cantonese installation
 

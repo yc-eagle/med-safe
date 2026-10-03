@@ -4,7 +4,7 @@
 
 > **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
 >
-> - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
+> - **The interface opens in English**, with Mandarin and Cantonese selectors (`?lang=en|cmn|yue`). Language and voice availability are separate settings. Changing language converts display text only; catalogue values, source records and clinical rules are unchanged.
 > - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
 > - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
 > - **Zero of the 14 rules are professionally approved.**
@@ -70,7 +70,7 @@ Source: [`../COST_AND_DATA_FLOW.md`](../COST_AND_DATA_FLOW.md). The honest headl
 | Item | Cost | Note |
 |---|---|---|
 | Per-question API cost | **None** | Catalogue search and the deterministic rules run in the browser with **no per-question paid API** |
-| Offline data pack | **47 resources, about 52.6 MiB** | The mobile offline cache. Initial download, decompression, memory and latency vary by device |
+| Offline data pack | **53 resources, about 52.7 MiB** | The mobile offline cache. Initial download, decompression, memory and latency vary by device |
 | On-device inference requirement | **No GPU or model needed for the core path.** Browser OCR uses bundled Tesseract WASM and the English / Traditional Chinese data | Runs on an ordinary laptop; performance on low-end phones is untested |
 | Optional local speech model | **About 0.7 GB**, downloaded once on an Apple Silicon Mac only | `mlx-community/Qwen3-ASR-0.6B-4bit`, fixed revision, installed into a separate runtime. **First installation is not an offline operation** |
 | Static hosting | Provider limits and terms apply | The prototype **does not promise free hosting indefinitely, nor a production service-level agreement** |
