@@ -1,171 +1,180 @@
-# MedSafe — 用药确认助手
+# MedSafe — Medication Verification Assistant
 
-> **拍下一盒药，它用英语或粤语读给你听。再拍一盒，它告诉你这两盒能不能一起吃 —— 查不到依据的时候，它会说「我查不到」，而不是猜。**
+[English](README.md) | [中文](README.zh-CN.md)
 
-**HacKU 2026** · 深科技赛道（DeepTech）
-香港大学 · 2026 年 10 月 2–4 日
-**题目：**《The Capability That Hasn't Travelled》
+> **Photograph a medicine box and it reads it out to you. Photograph a second one and it tells you whether the two can be taken together. When it cannot verify something, it says so instead of guessing.**
+
+**HacKU 2026** — DeepTech Track
+The University of Hong Kong — 2-4 October 2026
+**Group 51 — Bauhinia Spheal (紫荆海豹球)**
+
+**Problem statement:** *The Capability That Hasn't Travelled*
 
 ---
 
-## 给评委看的三个问题
+## Three Questions
 
 | | |
 |---|---|
-| **我们搬的是什么能力？** | **核对几种药能不能一起吃** —— 这件判断今天只有药师在做 |
-| **搬到哪？** | **香港的家里** —— 长者与家庭照护者的厨房桌上 |
-| **被什么挡住？** | ⭐ **user expertise（没有人看得懂输出）** —— 题目给出的四个障碍之一 |
+| **What capability are we moving?** | **Checking whether several medicines can be taken together** — a judgement that today only a pharmacist makes |
+| **Into what setting?** | **A Hong Kong home** — a kitchen table, a caregiver, two boxes of pills |
+| **What barrier keeps it out?** | **User expertise** — nobody in that room can read or interpret the output. One of the four barriers named in the problem statement. |
 
 ---
 
-## 链接
+## Links
 
 | | |
 |---|---|
-| **Live Demo** | _待填_ |
-| **3 分钟演示视频** | _待填_ |
-| **Pitch Deck** | [`deck/`](deck/) |
+| **Live Demo** | _TODO_ |
+| **3-minute demo video** | _TODO_ |
+| **Pitch deck** | [`deck/`](deck/) |
 
-<!-- TODO(YC): 比赛要求所有材料公开可访问。补齐两个链接后再提交。 -->
-
----
-
-## 问题
-
-香港的社区药剂师一直在推动用药管理，服务也真实存在 —— 例如圣雅各福群会惠泽社区药房自 2009 年起提供免费的**遥距药剂师咨询服务**，药剂师在病人授权下可查阅其医健通（eHealth）纪录来做药物整合。
-
-**但这个服务有一个前提**：病人或家属要主动打电话、要在服务时间内、要完成授权。
-
-而真实的场景是这样的：
-
-```
-长者同时服用来自不同专科的好几种药
-        ↓
-医生当面讲了一遍 → 长者没记住
-        ↓
-回家后由外籍家庭佣工负责分药、提醒吃药
-        ↓
-她看不懂中文的药品标签与说明
-        ↓
-药盒上的字太小 → 自己判断
-        ↓
-重复用药 / 漏药 / 自行加药
-```
-
-**➜ 问题不是没有人管，是管不到那一刻。**
-
-**根因**：核对用药安全需要的知识，**在时间和空间上都被锁在药房里**。而现有的工具只做"查药"（信息检索），**不做"核对"（判断）** —— 人真正卡住的地方，恰恰是判断。
+<!-- TODO: all materials must be publicly viewable. Fill both links before submitting. -->
 
 ---
 
-## 方案：三值状态机
+## The Problem
 
-产品的交互**只有三条线**。它们不是错误处理，**它们就是产品本身**。
+Community pharmacists in Hong Kong have been pushing medication management for years, and the service genuinely exists. St. James' Settlement's charity community pharmacy, for example, has run a free remote pharmacist consultation service since 2009 — the pharmacist can review the patient's eHealth record, with consent, and reconcile their medicines.
 
-| 状态 | 触发 | 系统行为 |
+But that service has preconditions: **you have to call, during service hours, with authorisation in place.**
+
+The real situation looks like this:
+
+```
+An older adult takes several medicines from several different specialists
+        |
+The doctor explains it once, face to face - and it is not retained
+        |
+At home, a foreign domestic helper handles the pills and the reminders
+        |
+She cannot read the Chinese labels or the instructions
+        |
+The print on the box is too small, so she makes her own judgement
+        |
+Duplicated doses / missed doses / self-added medicines
+```
+
+**The problem is not that nobody is managing it. The problem is that it cannot be reached at the moment it matters.**
+
+**Root cause:** the knowledge required to check medication safety is **locked inside the pharmacy — in both time and space.** And existing tools only do *lookup* (information retrieval), not *checking* (judgement). The place where a person actually gets stuck is the judgement.
+
+---
+
+## The Solution: A Three-State Machine
+
+The product has **three interaction states**. They are not error handling — **they are the product.**
+
+| State | Trigger | System behaviour |
 |---|---|---|
-| **① 翻译** | 单张照片，识别成功 | 读取药品信息 + **语音朗读**（英语 / 粤语） |
-| **② 报危险** | 多张照片，**查到相互作用或配伍禁忌** | **明确说出「这两盒不能一起吃」** + 给出来源 + 提示咨询医生 |
-| **③ 拒绝回答** | 多张照片，**数据里查不到这个组合** | 「我查不到这两盒药的资料，请咨询医生。」 |
+| **1. Translate** | One photo, recognised successfully | Reads out the medicine information, with **voice output** (English / Cantonese) |
+| **2. Signal danger** | Multiple photos, **an interaction or contraindication is found** | **States plainly: "These two must not be taken together."** Gives the source. Tells the user to consult a doctor. |
+| **3. Decline to answer** | Multiple photos, **the combination is not in our data** | "I cannot find information on these two medicines. Please consult a doctor." |
 
-**边界情况**（输入质量问题，不属于三条线）：照片模糊 / 识别不出 → 「我看不清这张照片，请重拍」（可重试）
+**Boundary case** (an input-quality issue, not one of the three states): blurred photo or unrecognisable medicine → "I cannot read this photo clearly. Please take another one." (retryable)
 
-### ⚠️ ② 和 ③ 不能混为一谈
+### States 2 and 3 must not be conflated
 
-**② 是主动抓出危险，③ 是主动承认不知道。**
-把两者混在一起，看起来就只是"这个系统有时候不回答" —— 而它们其实是这个产品最有价值的两件事。
+**State 2 actively catches a danger. State 3 actively admits ignorance.**
+Collapse them together and the product just looks like "sometimes it doesn't answer" — when in fact those are the two most valuable things it does.
 
-### 为什么这个设计重要
+### Why this design matters
 
-题目原文里有三句话，正好对应这三条线：
+Three sentences in the problem statement map directly onto the three states:
 
-| 题目原文 | 我们 |
+| Problem statement | Us |
 |---|---|
-| *"Reading a printed form, a label, a meter or **a prescription** in bad light or at an angle"* | ① |
-| *"**A first-line response that escalates rather than guesses**"* | ② |
-| *"…and reports **honestly** what it could not do"* | ③ |
+| *"Reading a printed form, a label, a meter or **a prescription** in bad light or at an angle"* | 1 |
+| *"**A first-line response that escalates rather than guesses**"* | 2 |
+| *"...and reports **honestly** what it could not do"* | 3 |
 
-**我们不替代药师，只做"一线响应"** —— 而一线响应的正确行为是**上报，不是猜**。
-
----
-
-## ⚠️ 这个系统不做什么
-
-> **MedSafe 是黑客松原型，不是医疗器械，也不提供医疗建议。**
-
-- ❌ **不做诊断**
-- ❌ **不给剂量建议**
-- ❌ **不建议停药、换药或调整用药**
-- ❌ **不替代药师或医生**
-
-它只做两件事：**把药品信息说成人话**，以及**在你把几种药一起吃之前提醒你去问专业人士**。
-
-**任何不确定的情况，它的正确行为是叫你去问药师，而不是给你一个答案。**
+**We do not replace the pharmacist. We provide a first-line response** — and the correct behaviour for a first-line response is **to escalate, not to guess.**
 
 ---
 
-## 运行
+## What This System Does Not Do
 
-<!-- TODO(sunsy): 技术栈确定后替换本段 -->
+> **MedSafe is a hackathon prototype. It is not a medical device and it does not provide medical advice.**
+
+- It does **not** diagnose.
+- It does **not** give dosage advice.
+- It does **not** suggest stopping, switching or adjusting medication.
+- It does **not** replace a pharmacist or a doctor.
+
+It does two things: **puts medicine information into plain language**, and **tells you to ask a professional before you take several medicines together.**
+
+**In any uncertain case, its correct behaviour is to send you to a pharmacist — not to give you an answer.**
+
+---
+
+## Running It
+
+<!-- TODO: replace once the stack is finalised -->
 
 ```bash
-# 1. 环境变量
-cp .env.example .env        # PowerShell: Copy-Item .env.example .env
+# 1. Environment variables
+cp .env.example .env
 
-# 2. 安装依赖
+# 2. Install dependencies
 # TODO
 
-# 3. 启动
+# 3. Start
 # TODO
 ```
 
-> **本产品的设计目标是可在离线条件下工作。** 药品照片属于个人健康信息，默认不出设备 —— 见 [`docs/data-handling.md`](docs/data-handling.md)。
+> The product is designed to work **offline**. Photographs of medicines are personal health information and by default never leave the device — see [`docs/data-handling.md`](docs/data-handling.md).
 
 ---
 
-## 仓库结构
+## Repository Layout
 
 ```
 med-safe/
-├── README.md                  ← 你在这里
-├── CREDITS.md                 ← 开源库与数据来源署名
-├── deck/                      ← Pitch Deck（逐页结构与讲稿见 deck/pitch-deck.md）
+├── README.md                  <- you are here (English)
+├── README.zh-CN.md            <- Chinese version
+├── CREDITS.md                 <- open-source and data attribution
+├── deck/                      <- pitch deck (see deck/pitch-deck.md)
 ├── docs/
-│   ├── problem.md             ← 用户、失败链路、根因、现有替代方案
-│   ├── rules/                 ← ⭐ 用药判据三层（禁用 / 慎用 / 无资料）
-│   ├── demo-script.md         ← 三张牌的演示脚本与现场检查
-│   ├── competitors.md         ← ⭐ 竞品对照与口头稿（路演用）
-│   ├── evidence-protocol.md   ← 手工方法对照、成本、错误率
-│   ├── limitations.md         ← ⭐ 它会错在哪
-│   ├── data-handling.md       ← ⭐ 什么离开设备
-│   └── raccoon-usage-log.md   ← 开发工具使用记录
+│   ├── problem.md             <- users, failure chain, root cause, alternatives
+│   ├── rules/                 <- medication criteria, three tiers
+│   ├── demo-script.md         <- the three-card demo plan and event-day checklist
+│   ├── competitors.md         <- competitive comparison and spoken script
+│   ├── evidence-protocol.md   <- manual-method comparison, cost, error rates
+│   ├── limitations.md         <- what it gets wrong
+│   ├── data-handling.md       <- what leaves the device
+│   └── raccoon-usage-log.md   <- development tool usage log
 ├── assets/
-│   └── interviews/            ← 一线访谈素材（粤语 + 英语）
-├── raccoon-shots/             ← 开发过程留痕
-└── src/                       ← 应用代码
+│   └── interviews/            <- first-hand interview material (Cantonese + English)
+├── raccoon-shots/             <- development-time screenshots
+└── src/                       <- application code
 ```
 
 ---
 
-## 团队
+## Team
 
-| 成员 | 学校 / 背景 | 负责 |
-|---|---|---|
-| **Ella（马琳）** | 清华大学医学院 | 专业判据与数据支持 · 开发工具使用记录 · 汇报与路演 |
-| **孙（Sun）** | 工业工程 / 铁路信息中心 | Web 端开发 · Live Demo |
-| **蒋奕诚（YC）** | 北京外国语大学 | 仓库与工作流 · Pitch Deck · 汇报与路演 |
+**Group 51 — Bauhinia Spheal (紫荆海豹球)**
 
----
+| Member | University | GitHub | Responsibility |
+|---|---|---|---|
+| **Yicheng JIANG** | Beijing Foreign Studies University | [@yc-eagle](https://github.com/yc-eagle) | Overall topic selection and concept (originator of the idea) / core work / project progress management / repository and workflow / pitch deck / presentation and pitching |
+| **Shuoyang SUN** | Tsinghua University | _TODO: GitHub username_ | All desktop-web development / Live Demo |
+| **Lin MA (Ella)** | Tsinghua University | _TODO: GitHub username_ | Domain expertise and professional support |
 
-## 致谢与来源
-
-所有开源库、数据集与参考资料**逐条列在 [`CREDITS.md`](CREDITS.md)**。
-
-开发过程中使用了 **商汤·小浣熊（Raccoon Work）** 作为辅助工具。
-**它是开发工具，不是产品的运行时依赖** —— 本产品必须在离线条件下工作，因此交付原型中没有任何一处调用 Raccoon。我们对它的输出**按需要验证的输入对待**，具体记录见 [`raccoon-shots/`](raccoon-shots/)。
+<!-- TODO: fill in the two GitHub usernames. -->
 
 ---
 
-## 许可
+## Sources and Attribution
 
-比赛期间产出的代码、设计与文档，版权归参赛队伍所有。
+Every open-source library, dataset and reference is listed in [`CREDITS.md`](CREDITS.md).
+
+**SenseTime Raccoon Work** was used during development as an assisting tool.
+**It is a development tool, not a runtime dependency of the product**: the product is required to work offline, so nothing in the delivered prototype calls Raccoon. Its output was treated as **input to be verified, not as a conclusion to be trusted**. The record is in [`raccoon-shots/`](raccoon-shots/).
+
+---
+
+## Licence
+
+Code, designs and documentation produced during the hackathon remain the property of the participating team.

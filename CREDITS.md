@@ -1,80 +1,83 @@
-# 来源与署名（CREDITS）
+# Credits and Attribution
 
-> **为什么要有这个文件**：HacKU 2026 的 Code Rules 明确要求 —— *"Open-source libraries and frameworks are permitted **provided they are properly credited**."*
-> **从第一天就开始记。** 事后补写一定会漏。
+[English](CREDITS.md) | [中文](CREDITS.zh-CN.md)
+
+> **Why this file exists:** the HacKU 2026 Code Rules state that open-source libraries and frameworks are permitted *"provided they are **properly credited**."*
+> **Start it on day one.** Anything reconstructed afterwards will be incomplete.
 
 ---
 
-## 一、开源库与框架
+## 1. Open-source libraries and frameworks
 
-| 名称 | 用途 | 版本 | 许可证 | 用在哪 |
+| Name | Purpose | Version | Licence | Used for |
 |---|---|---|---|---|
-| _待填_ | | | | |
+| _TODO_ | | | | |
 
 <!--
-填写格式示例：
-| Tesseract OCR | 离线文字识别 | 5.x | Apache-2.0 | 药品标签文字提取 |
-| Ollama | 本地模型推理 | - | MIT | 端侧推理 |
-| fastapi | 后端框架 | 0.1xx | MIT | API 服务 |
+Example rows:
+| Tesseract OCR | Offline text recognition | 5.x | Apache-2.0 | Reading medicine labels |
+| Ollama | Local model inference | - | MIT | On-device inference |
+| FastAPI | Backend framework | 0.1xx | MIT | API service |
 -->
 
-⚠️ **每引入一个新库，就补一行。** 尤其注意许可证类型（GPL 类会传染）。
+**Add a row every time a new library is introduced.** Pay attention to licence type in particular; copyleft licences carry obligations.
 
 ---
 
-## 二、数据集
+## 2. Datasets
 
-| 名称 | 提供方 | 许可证 / 使用条款 | 用途 | 是否已确认可用 |
+| Name | Provider | Licence / terms | Purpose | Cleared for use |
 |---|---|---|---|---|
-| _待填_ | | | | |
+| _TODO_ | | | | |
 
-### 候选数据源（调研中，确认使用后再移到上表）
+### Candidate sources (under evaluation; move to the table above once confirmed)
 
-| 名称 | 说明 | 备注 |
+| Name | Description | Note |
 |---|---|---|
-| **RxNav-in-a-Box**（美国 NLM） | 可下载、**可本地安装**的 RxNav 套件 | 天然支持"离线"这个卖点，优先评估 |
-| **TwoSides** 数据集 | 学术 DDI 数据集，GitHub 公开 | 备选 |
-| **HODDI** 数据集 | 高阶药物相互作用数据集（arXiv 2502.06274） | 备选 |
-| **香港医院管理局《药物安全通报》** | 公开 PDF | 做**本地化证据**用 |
-| **香港卫生署药物办公室** 消费者用药常识 | 公开网页 | 同上 |
+| **RxNav-in-a-Box** (U.S. NLM) | Downloadable, **locally installable** RxNav suite | Directly supports the offline requirement; evaluate first |
+| **TwoSides** dataset | Academic drug-drug interaction dataset, public on GitHub | Fallback |
+| **HODDI** dataset | High-order drug-drug interaction dataset (arXiv 2502.06274) | Fallback |
+| **Hospital Authority Medication Safety Bulletin** | Public PDF | Used for **local evidence** |
+| **Drug Office, Department of Health** consumer guidance | Public web pages | As above |
 
-⚠️ **DrugBank 的完整数据需要学术授权**，不要假设现场能拿到。
+**DrugBank's full dataset requires an academic licence.** Do not assume it can be obtained on site.
 
 ---
 
-## 三、参考资料与文献
+## 3. References
 
-| 名称 | 来源 | 用途 |
+| Name | Source | Used for |
 |---|---|---|
-| *The Blind Spot of Polypharmacy: Bridging Western Medicine and Traditional Chinese Medicine* | 香港大学医学院医学伦理与人文单元（MEHU），2026-08 | 问题背景：本地多重用药与中西药并用的盲区 |
-| 《藥物管理服務：社區藥劑師為用藥安全護航》 | 香港大学医学院专栏 | 背景：社区药剂师服务的覆盖范围与缺口 |
+| *The Blind Spot of Polypharmacy: Bridging Western Medicine and Traditional Chinese Medicine* | Medical Ethics and Humanities Unit, LKS Faculty of Medicine, HKU, August 2026 | Background: local polypharmacy and the Western/Chinese medicine blind spot |
+| "Medication management services: community pharmacists safeguarding medication safety" | HKU Faculty of Medicine column | Background: the reach of community pharmacist services and the gap that remains |
+| eHealth News issue 24, "Message from the Pharmacist" | eHealth, HKSAR Government | Evidence that remote pharmacist consultation exists, and its preconditions (call, service hours, authorisation) |
 
-<!-- TODO(Ella): 补入你实际引用的临床指南、药物相互作用来源等 -->
+<!-- TODO (Ella): add the clinical guidelines, interaction sources and references you actually rely on. -->
 
 ---
 
-## 四、开发辅助工具
+## 4. Development tools
 
-| 工具 | 用途 | 性质 |
+| Tool | Purpose | Nature |
 |---|---|---|
-| **商汤·小浣熊（Raccoon Work）** | 资料检索、数据分析、文档撰写、编码辅助 | **开发工具，非运行时依赖** |
+| **SenseTime Raccoon Work** | Research lookup, data analysis, documentation, coding assistance | **Development tool, not a runtime dependency** |
 
-### ⭐ 关于 Raccoon Work 的声明
+### Statement on Raccoon Work
 
-我们使用 Raccoon Work **仅作为开发过程中的辅助工具**。
+We used Raccoon Work **only as an assisting tool during development**.
 
-**它不是本产品的运行时依赖。** 本产品被设计为必须在**离线**条件下工作，因此交付的原型中**没有任何一处调用 Raccoon Work**。
+**It is not a runtime dependency of this product.** The product is designed to work **offline**, and therefore **nothing in the delivered prototype calls Raccoon Work**.
 
-我们对它的输出**按"需要验证的输入"对待，而不是可直接采信的结果**。具体的使用记录、验证方式，以及我们**核对后拒绝采纳**的输出，见 [`../raccoon-shots/`](../raccoon-shots/) 与 [`raccoon-usage-log.md`](raccoon-usage-log.md)。
+Its output was treated as **input to be verified, not as a conclusion to be trusted**. The record of its use, how we verified it, and the outputs we **checked and rejected** are in [`raccoon-shots/`](raccoon-shots/) and [`docs/raccoon-usage-log.md`](docs/raccoon-usage-log.md).
 
-> 这个立场与我们产品的立场一致：**一个用药安全工具，应该在无法核实时说「我查不到」，而不是猜。**
+> This position is consistent with the product's own: **a medication safety tool should say "I cannot verify this" rather than guess.**
 
 ---
 
-## 五、其他素材
+## 5. Other material
 
-| 素材 | 来源 / 授权 | 用途 |
+| Material | Source / permission | Used for |
 |---|---|---|
-| `assets/interviews/` 下的访谈素材 | 受访者知情同意，见该目录说明 | 问题验证 |
+| Interview material under `assets/interviews/` | Informed consent recorded in that directory | Problem validation |
 
-<!-- TODO(YC): 访谈素材需记录受访者同意情况，以及是否允许在演示中使用 -->
+<!-- TODO: record consent status for each interview subject and whether the material may be used publicly. -->

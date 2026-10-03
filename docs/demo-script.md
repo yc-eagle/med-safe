@@ -1,116 +1,117 @@
-# 演示脚本 · 三张牌
+# Demo Script: The Three Cards
 
-> 用途：**10/4 展览那一小时**（技术评委打 Exhibition 30 分，决定进不进 Top 8）+ **10/4 16:20 路演**。
-> 负责人：**YC**。今晚（10/3）录制 3 分钟演示视频也用这份脚本。
+> **Internal working document**, written in English for consistency with the rest of the repository. A Chinese reference version can be added on request. A Chinese spoken script for the judges' questions is available at the end of this file.
 
----
-
-## 核心原则
-
-**只演示四个动作，一个都不多：**
-
-```
-① 拍照 → ② 读出 → ③ 核对 → ④ 给出来源
-```
-
-**不要演示的功能**：账号注册、历史记录、提醒推送、剂量计算、语言切换界面、图表分析。
-**加一个功能，就少一次排练。**
+> **Owner: YC.** Used for the **4 Oct exhibition hour** (technical judges score the Exhibition, 30 marks, which decides who reaches the Top 8) and for the **4 Oct 16:20 pitching round**.
+> The 3-minute demo video recorded tonight (3 Oct) follows the same script.
 
 ---
 
-## 一、三张牌
+## Core principle
 
-| 牌 | 素材 | 展示什么 | 时长 | 证明 |
+**Demonstrate four actions and nothing else:**
+
+```
+1. Photograph
+2. Read out
+3. Verify
+4. Give the source
+```
+
+**Do not demo these:** account registration, history, dose reminders, dosage calculation, language switching, charts.
+**Each feature added costs one rehearsal.**
+
+---
+
+## 1. The three cards
+
+| Card | Material | What it shows | Time | Proves |
 |---|---|---|---|---|
-| **① 翻译牌** | 一盒**常见药** | 拍照 → 读出药品信息 + **英语语音** | ~40 秒 | 它**能用** |
-| **② 危险牌** | **两盒**有相互作用的药 | 拍照 → **「这两盒不能一起吃」** + 出处 + 请咨询医生 | ~60 秒 | 它**有用**（全场高音） |
-| **③ 拒绝牌** | **一盒查不到的药**，或一张糊掉的照片 | 拍照 → **「我查不到，请咨询医生」** | ~30 秒 | 它**可信** |
+| **1. Translate** | One **common medicine** | Photograph it, read out the information, English voice output | about 40 s | It **works** |
+| **2. Signal danger** | **Two** medicines with an interaction | Photograph them, **"these two must not be taken together"**, plus source, plus consult a doctor | about 60 s | It is **useful** (the high point) |
+| **3. Decline** | **One medicine that cannot be found**, or a blurred photo | Photograph it, **"I cannot find it. Please consult a doctor."** | about 30 s | It is **trustworthy** |
 
-### ⚠️ 三条排练纪律
+### Three rehearsal rules
 
-1. **③ 必须放在最前面出现一次。** 先让评委记住"它会拒绝回答"，后面所有功能才可信。
-2. **② 和 ③ 不许连在一起讲。** ② 是主动抓出危险，③ 是主动承认不知道 —— **混着讲，两张牌一起废**。
-3. **必须演示一次断网。** 拔掉网线 / 关掉 WiFi 跑一遍。**这是把"没有信号"这个障碍从口号变成事实的唯一办法。**
-
----
-
-## 二、演示道具清单
-
-- [ ] **3 盒真实的药**（带包装盒，不是图片）
-  - [ ] 一盒常见药（走 ①）
-  - [ ] 一对有相互作用的药（走 ②）—— ⚠️ 需 Ella 确认组合在 L1 里
-  - [ ] 一盒查不到的药（走 ③）—— ⚠️ 需确认它**确实**不在数据里
-- [ ] 手机 / 笔记本（演示设备，**提前充满电**）
-- [ ] 充电宝
-- [ ] **备用设备**（一台跑不通时立刻换）
-- [ ] 手机热点（不要依赖会场 WiFi）
-- [ ] 打印版的"我们没模拟什么"一页（[`limitations.md`](limitations.md)）
+1. **Card 3 must appear once in the first 30 seconds.** Establish early that it declines to answer, so everything after it is credible.
+2. **Never present cards 2 and 3 back to back as one idea.** Card 2 actively catches a danger; card 3 actively admits ignorance. **Presented together, both are lost.**
+3. **Demonstrate offline once.** Unplug the network and run it. It is the only way to turn "no signal" from a claim into a fact.
 
 ---
 
-## 三、展览现场（10/4 14:40–15:40）
+## 2. Props
 
-**⚠️ 深科技赛道队伍多、时间只有 60 分钟，评委在每个展位平均停留不到 1 分钟。**
+- [ ] **3 real medicine boxes** (physical packaging, not images)
+  - [ ] One common medicine (card 1)
+  - [ ] A pair with an interaction (card 2) — Ella must confirm the pair is in L1
+  - [ ] One that cannot be found (card 3) — confirm it is genuinely **not** in the data
+- [ ] Phone or laptop for the demo, **fully charged**
+- [ ] Power bank
+- [ ] **A second device** ready to take over immediately
+- [ ] Phone hotspot (do not rely on venue Wi-Fi)
+- [ ] A printed copy of "what we do not model" (`limitations.md`)
 
-### 展位视觉（必须做，不能省）
+---
 
-贴在展位上、评委走过来 3 秒能读懂的一行字：
+## 3. At the exhibition (4 Oct 14:40-15:40)
 
-> ### 拍一盒药，它会告诉你能不能和另一盒一起吃。
-> ### 不确定的时候，它会说「我查不到」。
+**The DeepTech track has many teams and only 60 minutes. Judges spend under a minute at an average booth.**
 
-配一句英文（有国际评委）：
+### Booth text (do not skip this)
 
-> ### Photograph a medicine box — it tells you whether it can be taken with another.
+One line a judge can read in three seconds:
+
+> ### Photograph a medicine box and it tells you whether it can be taken with another.
 > ### When it cannot verify something, it says so.
 
-### 让评委自己动手
+### Let the judges drive it
 
-**不要演示给他们看，把手机递过去。**
+**Do not demonstrate at them. Hand over the phone.**
 
-> 「您随便拍一盒试试。」
+> "Try photographing any box."
 
-**这一个动作胜过三分钟讲解。** 而"陌生人 60 秒能不能上手"本身就是 Exhibition 里 *Solution & Human-Centered Design* 那一格的实测。
-
----
-
-## 四、路演（10/4 16:20，Top 8，约 6–7 分钟含问答）
-
-| 段 | 时长 | 内容 | 覆盖哪一格评分 |
-|---|---|---|---|
-| **钩子** | 30 秒 | 「香港的社区药剂师一直在推用药管理 —— 但他们不在凌晨两点、不在你家里。而且当照顾老人的是一位看不懂中文的外籍佣工时，那张纸等于不存在。」**当场先打一次③拒绝牌。** | Problem Framing |
-| **问题与根因** | 60 秒 | 失败链路 → **根因：核对的能力被锁在药房里** | Problem Framing（要"根因"才给 5 分） |
-| **方案** | 60 秒 | 三值状态机；**当场拖一次**（①→②） | Solution Effectiveness |
-| **证据** | 90 秒 | 采访片段（粤语 + 英语）+ 手工 vs 工具的步骤与时间 + **断网演示** | Innovation / Feasibility |
-| **竞品** | 45 秒 | 通用大模型 / 说明书 / 药房 App / 社区药剂师 → **我们的位置** | ⚠️ **Market Understanding（最弱的一格）** |
-| **影响与下一步** | 45 秒 | 规模 + 渠道（社区药房 / 长者中心 / 家佣中介）+ **风险意识** | Impact / Future Vision |
-| **收尾** | 15 秒 | 「**它最重要的功能，是它会说『我不知道』。**」 | Pitch Delivery |
-
-### 分工
-
-- **主讲：YC**（靠结构清晰取胜，不靠口音）
-- **Ella**：答医学 / 用户类问题；**演示②时扮演那位照顾长者的人**
-- **sunsy**：答技术类问题
-- **三人各答自己那块，不抢话。**
+**That one action beats three minutes of explanation.** And "can a stranger use it in 60 seconds" is itself a live test of the *Solution & Human-Centered Design* criterion.
 
 ---
 
-## 五、⚠️ 评委必问的三个问题（提前准备答案）
+## 4. Pitching round (4 Oct 16:20, Top 8, about 6-7 minutes including Q&A)
 
-| 问题 | 谁答 | 要点 |
+The full slide-by-slide structure, timing and scripts are in [`../deck/pitch-deck.md`](../deck/pitch-deck.md). Roles:
+
+- **Main speaker: YC.** Wins on structure, not on accent.
+- **Ella:** answers medical and user questions; **plays the caregiver in the slide 7 demo.**
+- **Sun:** answers technical questions.
+
+Everyone answers their own area. Nobody talks over anybody.
+
+---
+
+## 5. The three questions judges will ask
+
+| Question | Who answers | Key points |
 |---|---|---|
-| **「数据从哪来？」** | sunsy | 具体数据源 + 许可证 + 覆盖范围（见 [`../CREDITS.md`](../CREDITS.md)） |
-| **「库覆盖多少？查不到怎么办？」** | Ella / sunsy | ⭐ 直接引到 ③：**查不到就说查不到**，并说明覆盖边界（见 [`rules/README.md`](rules/README.md) 第六节） |
-| **「它错了怎么办？」** | Ella | ⭐ 引到 [`limitations.md`](limitations.md)：错误类型 + 降级策略 + **我们不做诊断** |
+| "Where does the data come from?" | Sun | Specific sources, licence, coverage ([`../CREDITS.md`](../CREDITS.md)) |
+| "How much does it cover? What if you cannot find it?" | Ella / Sun | Point to state 3: **if it cannot find it, it says so**, and state the boundary ([`rules/README.md`](rules/README.md), section 6) |
+| "What if it is wrong?" | Ella | Point to [`limitations.md`](limitations.md) |
 
 ---
 
-## 六、彩排检查（10/4 上午）
+## 6. Rehearsal check (4 Oct morning)
 
-- [ ] 三张牌**连跑一遍**，掐时间
-- [ ] **拔网线跑一次**（离线路径）
-- [ ] 让**没参与开发的人**试一次，看能不能 60 秒上手
-- [ ] 6 分钟路演**完整走一遍**，掐时间
-- [ ] 演示设备 **100% 电量** + 充电宝
-- [ ] 备用设备能立刻接手
-- [ ] 展位文案已打印 / 已写好
+- [ ] All three cards run in sequence, timed
+- [ ] **Network unplugged and run once** (offline path)
+- [ ] Someone who did not build it tries it — can they use it in 60 seconds
+- [ ] Full 6-minute pitch walked through, timed
+- [ ] Demo device at 100 percent, power bank packed
+- [ ] Second device ready to take over
+- [ ] Booth text printed
+
+---
+
+## 7. Chinese reference for the three answers
+
+**「数据从哪来？」** 具体数据源名称、许可证类型、覆盖范围。答不上来源的数据源不要用。
+
+**「库覆盖多少？查不到怎么办？」** 直接引到状态 3：**查不到就说查不到**，并主动说明覆盖边界（哪些情况一定查不到）。这一问是送分的，不要答成"我们还在补"。
+
+**「它错了怎么办？」** 分三类答：识别错 → 降级为请重拍；数据没命中 → 走状态 3；措辞歧义 → 由 Ella 逐条审查过。然后补一句"我们不做诊断，也不给剂量建议"。

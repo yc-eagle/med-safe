@@ -1,74 +1,74 @@
-# 数据与隐私：什么离开了设备
+# Data and Privacy: What Leaves the Device
 
-> ⚠️ 题目**明确要求**这一页：*"State what it costs, what it gets wrong, and **what leaves the device**."*
-> **负责人：sunsy。**
+[English](data-handling.md) | [中文](data-handling.zh-CN.md)
+
+> The problem statement **requires** this: *"State what it costs, what it gets wrong, and **what leaves the device**."*
+> **Owner: Sun.**
 
 ---
 
-## 一、默认：什么都不离开设备
+## 1. By default, nothing leaves the device
 
-| 动作 | 在哪里发生 | 离开设备的数据 |
+| Action | Where it happens | Data leaving the device |
 |---|---|---|
-| 拍照 | 设备本地 | **无** |
-| 文字识别 | 设备本地 | **无** |
-| 药品信息查询 | 本地数据 | **无** |
-| 相互作用核对 | 本地规则 | **无** |
-| 语音合成 | 设备本地 | **无** |
+| Photographing | On device | **None** |
+| Text recognition | On device | **None** |
+| Medicine lookup | Local data | **None** |
+| Interaction check | Local rules | **None** |
+| Speech synthesis | On device | **None** |
 
-<!-- TODO(sunsy): 按实际实现逐条确认，并把"未实现"的诚实标出来 -->
+<!-- TODO (Sun): confirm each row against the actual implementation and mark honestly anything not yet implemented. -->
 
-**➜ 这是设计目标，不是附加功能。** 因为题目的障碍之一就是"没有信号"，
-而且药品照片属于**个人健康信息**，本就不该无条件上传。
+**This is a design target, not an add-on.** Two reasons: one of the barriers in the problem statement is having no connection, and a photograph of someone's medicines is **personal health information** that should not be uploaded as a matter of course.
 
 ---
 
-## 二、什么时候会联网
+## 2. When it does go online
 
-<!-- TODO(sunsy): 如果 MVP 阶段有部分环节要联网，如实写清楚 -->
+<!-- TODO (Sun): if any part of the MVP requires connectivity, state it plainly -->
 
-| 情况 | 联网吗 | 传什么 | 为什么 |
+| Situation | Online? | What is sent | Why |
 |---|---|---|---|
-| _待填_ | | | |
+| _TODO_ | | | |
 
-> ⚠️ **如果原型在某些环节依赖联网，必须在路演里主动说明**，不要等评委问。
-> 主动划边界是加分，被问出来是减分。
+> **If the prototype depends on connectivity anywhere, say so in the pitch before a judge asks.** Stating a boundary yourself earns credit. Having it discovered costs you.
 
 ---
 
-## 三、离线降级说明
+## 3. Offline degradation
 
-| 场景 | 行为 |
+| Scenario | Behaviour |
 |---|---|
-| 完全离线 | _待填：哪些功能仍然可用_ |
-| 网络不稳定 | _待填_ |
-| 数据包未下载 | _待填_ |
+| Fully offline | _TODO: which functions remain available_ |
+| Unstable connection | _TODO_ |
+| Data pack not downloaded | _TODO_ |
 
 ---
 
-## 四、合规说明
+## 4. Compliance notes
 
-| 项 | 说明 |
+| Item | Note |
 |---|---|
-| 香港《个人资料（私隐）条例》（PDPO） | 默认不上传个人健康信息；如需上传，说明目的与范围 |
-| 照片留存 | _待填：是否留存、留存多久、存在哪_ |
-| 用户能否删除 | _待填_ |
-| 第三方服务 | 列出所有第三方调用及其数据流向 |
+| Hong Kong Personal Data (Privacy) Ordinance (PDPO) | Personal health information is not uploaded by default; if it ever is, the purpose and scope are stated |
+| Photograph retention | _TODO: retained or not, for how long, stored where_ |
+| Can the user delete it | _TODO_ |
+| Third-party services | List every third-party call and its data flow |
 
 ---
 
-## 五、演示时的说法
+## 5. How to say it in the pitch
 
-一句话版本（路演直接用）：
+One sentence, usable directly:
 
-> 「**默认全部在设备上完成 —— 拍的照片不出手机，因为药品照片本来就是个人健康信息。**」
-> 「（如适用）只有在 ___ 的情况下才会联网，传的是 ___，不传的是 ___。」
+> **"By default everything runs on the device — the photograph never leaves the phone, because a photograph of medicines is personal health information."**
+> "(Where applicable) It only goes online in ___ , it sends ___ , and it does not send ___ ."
 
 ---
 
-## 六、完成检查
+## 6. Checklist
 
-- [ ] 上表按实际实现填准了
-- [ ] 照片是否留存、留存多久已明确
-- [ ] 所有第三方调用已列出
-- [ ] 离线路径已实测（**拔网线跑一次**）
-- [ ] 路演时能一句话说清"什么离开设备"
+- [ ] Table above corrected against the actual implementation
+- [ ] Photograph retention settled
+- [ ] All third-party calls listed
+- [ ] Offline path tested (**unplug the network and run it once**)
+- [ ] Can state "what leaves the device" in one sentence during the pitch

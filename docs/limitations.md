@@ -1,83 +1,85 @@
-# 它会错在哪
+# What It Gets Wrong
 
-> ⚠️ 题目**明确要求**这一页：*"State what it costs, **what it gets wrong**, and what leaves the device."*
-> **这不是减分项，是得分项。** 主动划清边界比假装全能可信得多。
-> 路演评分表里的 *Impact, Feasibility & Future Vision* 拿 5 分明确要求 **"risk awareness"** —— **这一页就是那 5 分。**
+[English](limitations.md) | [中文](limitations.zh-CN.md)
 
-**负责人：Ella。**
+> The problem statement **requires** this: *"State what it costs, **what it gets wrong**, and what leaves the device."*
+> **This is not a deduction. It is where the marks are.** Stating your boundary plainly is far more credible than claiming completeness.
+> The pitching criterion *Impact, Feasibility & Future Vision* requires **"risk awareness"** for full marks. **This page is those marks.**
+
+**Owner: Ella.**
 
 ---
 
-## 一、错误类型（分类写，不要写形容词）
+## 1. Failure modes
 
-| # | 错误类型 | 什么时候发生 | 严重程度 | 我们的处理 |
+| # | Failure mode | When it happens | Severity | Our handling |
 |---|---|---|---|---|
-| 1 | **药品识别错误** | 照片模糊、角度差、光线暗、包装相近 | 高 | 降级为「我看不清，请重拍」 |
-| 2 | **成分识别错误** | 复方制剂、保健品、非处方包装 | 高 | 识别不确定 → 走 ③ 拒绝回答 |
-| 3 | **数据覆盖不足** | 该组合不在我们的数据里 | 中 | ⭐ **走 ③ 拒绝回答**（绝不说"没有相互作用"） |
-| 4 | **中成药 / 中药未覆盖** | 中成药包装、药材 | 中 | 如实说明覆盖范围 |
-| 5 | **语音识别 / 合成的偏差** | 嘈杂环境、口音 | 低 | 屏幕同时显示文字，不只靠语音 |
-| 6 | **过度简化** | 把复杂风险说成一句话 | 中 | 由 Ella 逐条审查措辞 |
+| 1 | **Medicine misidentification** | Blurred photo, poor angle, low light, similar packaging | High | Degrades to "I cannot read this photo clearly. Please take another one." |
+| 2 | **Ingredient misidentification** | Combination products, supplements, over-the-counter packaging | High | Recognition uncertain → goes to state 3 |
+| 3 | **Insufficient data coverage** | The combination is not in our data | Medium | **Goes to state 3** — never "no interaction found" |
+| 4 | **Chinese patent and herbal medicines not covered** | Patent medicine packaging, raw herbs | Medium | Coverage stated honestly |
+| 5 | **Speech recognition or synthesis error** | Noisy environment, accent | Low | Text is shown on screen as well; never voice-only |
+| 6 | **Over-simplification** | Compressing a complex risk into one sentence | Medium | Wording reviewed line by line by Ella |
 
-<!-- TODO(Ella + sunsy): 按实际实现把上表改准确，补上"发生频率"一栏 -->
-
----
-
-## 二、⭐ 最重要的一条：我们如何处理"不知道"
-
-> **L3（查不到）的正确输出是「我查不到，请咨询医生」，永远不是「没有发现相互作用」。**
-
-**为什么这条要单独写**：把"我们不知道"说成"没问题"，是这个产品**唯一不可原谅的错误**。前者只是没用，后者会害人。
-
-**代码层面必须写死这一条**（不是文档里的可选项）。
+<!-- TODO (Ella and Sun): correct this table against the actual implementation and add a frequency column. -->
 
 ---
 
-## 三、我们的模型没有覆盖什么
+## 2. The single most important rule: how we handle "I don't know"
 
-<!-- TODO(sunsy + Ella) -->
+> **The correct output for L3 (no data found) is "I cannot find information on these two medicines. Please consult a doctor." It is never "no interaction found."**
 
-| 没覆盖 | 说明 |
+**Why this is called out separately:** turning "we do not know" into "it is fine" is the one **unforgivable** error in this product. The former is merely unhelpful. The latter causes harm.
+
+**This must be enforced in code**, not left as an optional item in a document.
+
+---
+
+## 3. What our model does not cover
+
+<!-- TODO (Sun and Ella) -->
+
+| Not covered | Note |
 |---|---|
-| 剂量与用法 | 我们**不做**剂量建议 |
-| 患者的个人情况 | 年龄、肝肾功能、过敏史、孕期 —— **我们完全不知道** |
-| 草药 / 保健品 | _待填：实际覆盖情况_ |
-| 食物与药物的相互作用 | _待填_ |
-| 香港以外地区的药品名 | 商品名存在地区差异 |
-| 时间维度 | 我们不知道用户**今天已经吃过什么** |
+| Dosage and administration | We deliberately give **no** dosage advice |
+| The patient's own circumstances | Age, liver and kidney function, allergies, pregnancy — **we know none of it** |
+| Herbal medicines and supplements | _TODO: actual coverage_ |
+| Food-drug interactions | _TODO_ |
+| Drug names outside Hong Kong | Brand names differ by region |
+| Time | We do not know **what the user has already taken today** |
 
 ---
 
-## 四、明确不做的四件事
+## 4. Four things we deliberately do not do
 
-> **MedSafe 是黑客松原型，不是医疗器械，也不提供医疗建议。**
+> **MedSafe is a hackathon prototype. It is not a medical device and it does not provide medical advice.**
 
-- ❌ 不做诊断
-- ❌ 不给剂量建议
-- ❌ 不建议停药、换药、调整用药
-- ❌ 不替代药师或医生
+- We do not diagnose.
+- We do not give dosage advice.
+- We do not suggest stopping, switching or adjusting medication.
+- We do not replace a pharmacist or a doctor.
 
-**不确定的时候，它的正确行为是叫你去问专业人士。**
+**When uncertain, the correct behaviour is to send the user to a professional.**
 
 ---
 
-## 五、如果错误真的发生了
+## 5. If an error does occur
 
-| 环节 | 兜底 |
+| Stage | Safe fallback |
 |---|---|
-| 识别置信度低 | 直接进入「请重拍」，不猜 |
-| 数据未命中 | 进入 ③ 拒绝回答 |
-| 输出措辞有歧义 | 由 Ella 逐条审查；演示前必须过一遍 |
-| 系统完全不可用 | 界面上明确显示「请咨询医生或药师」的兜底提示 |
+| Low recognition confidence | Goes straight to "please retake"; it does not guess |
+| Data not matched | Goes to state 3 |
+| Ambiguous wording in the output | Reviewed line by line by Ella; must be checked before the demo |
+| System entirely unavailable | The interface states plainly: consult a doctor or pharmacist |
 
-<!-- TODO: 补充实际实现中的降级路径 -->
+<!-- TODO: document the actual degradation paths in the implementation. -->
 
 ---
 
-## 六、完成检查
+## 6. Checklist
 
-- [ ] 错误类型表按实际实现改准了
-- [ ] **"查不到 ≠ 没问题" 已在代码里写死，并已实测验证**
-- [ ] 未覆盖范围表填完
-- [ ] 四条"不做的事"已在界面上 / 演示中明示
-- [ ] 兜底路径实测过
+- [ ] Failure-mode table corrected against the actual implementation
+- [ ] **"No data is not the same as no problem" is enforced in code and has been tested**
+- [ ] Non-coverage table completed
+- [ ] The four "do not do" items are stated in the interface and in the demo
+- [ ] Fallback paths tested

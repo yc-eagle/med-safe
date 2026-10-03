@@ -1,104 +1,106 @@
-# 证据方法
+# Evidence Protocol
 
-> 题目 **PS B** 的 EVIDENCE 原文，逐句都有对应的分值：
+> **Internal working document**, written in English for consistency with the rest of the repository.
+
+> The problem statement's EVIDENCE requirement is scored item by item:
 >
 > *"Compare against the setting's current **manual method**, or a simple substitute — **the steps and the time** — and show what the capability contributes that the manual method cannot. State **what it costs**, **what it gets wrong**, and **what leaves the device**."*
 >
-> **负责人：Ella（第 1、2 项）+ sunsy（第 3、5 项）。**
+> **Owner: Ella (items 1 and 2), Sun (items 3 and 5).**
 
 ---
 
-## 一、对比对象：现有的手工方法
+## 1. The comparison: the existing manual method
 
-**题目要的是"对比"，不是一个数据点。**
+**The problem statement asks for a comparison, not a single data point.**
 
-| # | 步骤 | 耗时 | 备注 |
+| # | Step | Time | Note |
 |---|---|---|---|
-| 1 | 拿起药盒，读标签 | | |
-| 2 | 看不懂 → 找说明书 | | |
-| 3 | 想不起来 → 打电话问家人 | | |
-| 4 | 家人也不确定 → 等下次覆诊 | | |
-| 5 | **最终仍然不确定** | | ← ⭐ 关键：手工方法的终点常常是"还是不知道" |
+| 1 | Pick up the box, read the label | | |
+| 2 | Cannot understand it, find the leaflet | | |
+| 3 | Cannot remember, phone a family member | | |
+| 4 | They are unsure too, wait for the next appointment | | |
+| 5 | **Still uncertain at the end** | | This is the key one: the manual method often ends in "I still do not know" |
 
-**手工方法的耗时合计：______**
+**Total time for the manual method: ______**
 
-**我们的方法：**
+**Our method:**
 
-| # | 步骤 | 耗时 |
+| # | Step | Time |
 |---|---|---|
-| 1 | 拍照 | |
-| 2 | 读出结果 | |
-| | **合计** | |
+| 1 | Photograph | |
+| 2 | Read the result | |
+| | **Total** | |
 
-### ⭐ 必须记录的三个数字
+### The three numbers that must be recorded
 
-1. **手工方法的步骤数与总耗时**
-2. **我们方法的步骤数与总耗时**
-3. ⭐ **手工方法的"不确定率"** —— 做完这一整套之后，有多少比例的人**仍然不知道答案**
+1. **Steps and total time for the manual method**
+2. **Steps and total time for our method**
+3. **The manual method's "still uncertain" rate** — after going through the whole chain, what proportion of people **still do not have an answer**
 
-> **第 3 个数字比第 1、2 个更重要。** 因为真正的差距不是"快了多少秒"，而是
-> **手工方法的终点常常是"还是不知道"，而我们的终点是一个明确的判断，或者一句诚实的"我查不到"。**
-> 这才是"手工方法做不到的事"。
-
----
-
-## 二、手工方法做不到的是什么
-
-明确写出、并且**可被验证**：
-
-- [ ] 手工**无法在几十秒内**核对三种以上药物的相互作用
-- [ ] 手工**无法知道**一个看起来像保健品的盒子里的成分
-- [ ] 手工方法**没有统一的依据来源**（凭记忆、凭经验、凭印象）—— 而我们**每条判断都有出处**
-- [ ] ⭐ 手工方法**不会告诉你它不知道** —— 人往往会给一个自信但错误的答案
+> **Number 3 matters more than 1 and 2.** The real gap is not the seconds saved. It is that
+> **the manual method often ends in "I still do not know", while ours ends in either a definite judgement or an honest "I cannot find it".**
+> That is what the manual method cannot contribute.
 
 ---
 
-## 三、它花多少钱
+## 2. What the manual method cannot do
 
-<!-- TODO(sunsy) -->
+State this explicitly, and make it **verifiable**:
 
-| 项 | 成本 | 备注 |
+- [ ] The manual method **cannot verify interactions across three or more medicines in under a minute**
+- [ ] The manual method **cannot know** what is inside a box that looks like a supplement
+- [ ] The manual method has **no consistent source** — it runs on memory and impression — whereas **every judgement we produce carries a source**
+- [ ] **The manual method never tells you it does not know** — people tend to give a confident but wrong answer
+
+---
+
+## 3. What it costs
+
+<!-- TODO (Sun) -->
+
+| Item | Cost | Note |
 |---|---|---|
-| 端侧推理的硬件要求 | _待填_ | 能不能跑在普通手机 / 笔记本上 |
-| 离线数据包的体积 | _待填_ | 决定了能不能真的离线 |
-| 联网时的调用成本 | _待填_ | 每次查询的估算 |
-| 开发 / 维护 | _待填_ | 诚实写 |
+| On-device inference hardware requirement | _TODO_ | Can it run on an ordinary phone or laptop |
+| Size of the offline data pack | _TODO_ | Determines whether offline is realistic |
+| Cost per call when online | _TODO_ | Estimated |
+| Development and maintenance | _TODO_ | State it honestly |
 
 ---
 
-## 四、它会错在哪
+## 4. What it gets wrong
 
-见 [`limitations.md`](limitations.md)。
-
----
-
-## 五、有什么离开了设备
-
-见 [`data-handling.md`](data-handling.md)。
+See [`limitations.md`](limitations.md).
 
 ---
 
-## 六、一线访谈
+## 5. What leaves the device
 
-见 [`../assets/interviews/`](../assets/interviews/)。
+See [`data-handling.md`](data-handling.md).
 
-**两段都要拍**（原因见该目录说明）：
+---
 
-| 素材 | 语言 | 证明什么 | 状态 |
+## 6. First-hand interviews
+
+See [`../assets/interviews/`](../assets/interviews/).
+
+**Both are required** (see the explanation in that directory):
+
+| Material | Language | What it establishes | Status |
 |---|---|---|---|
-| 采访一 | **粤语** | 长者的用药困境 | _待填_ |
-| 采访二 | **英语** | 外籍家庭佣工的困境 | _待填_ |
+| Interview 1 | **Cantonese** | The medication difficulties of older adults | _TODO_ |
+| Interview 2 | **English** | The difficulties of foreign domestic helpers | _TODO_ |
 
-> ⚠️ **如果只拍到一段，路演里必须把结论范围说小。**
-> 只用粤语证据去说外籍佣工的结论，是"证据用超了"—— 评委一问就会露。
+> **If only one was filmed, narrow the conclusion in the pitch.**
+> Using Cantonese-only evidence to make a claim about foreign domestic helpers is over-claiming, and one question from a judge exposes it.
 
 ---
 
-## 七、完成检查
+## 7. Completion check
 
-- [ ] 手工方法 vs 工具的 **步骤数与耗时** 已记录（含"仍然不知道"的比例）
-- [ ] 「手工方法做不到什么」写得**可验证**，不是形容词
-- [ ] 成本写清楚了
-- [ ] `limitations.md`（它会错在哪）写完了
-- [ ] `data-handling.md`（什么离开设备）写完了
-- [ ] 访谈两段都拍了，或在路演里缩小了结论范围
+- [ ] Manual method versus tool: **steps and time** recorded, including the "still uncertain" rate
+- [ ] "What the manual method cannot do" written as **verifiable statements**, not adjectives
+- [ ] Costs stated
+- [ ] `limitations.md` (what it gets wrong) completed
+- [ ] `data-handling.md` (what leaves the device) completed
+- [ ] Both interviews filmed, or the conclusion narrowed in the pitch
