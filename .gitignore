@@ -138,3 +138,6 @@ desktop.ini
 !/assets/interviews/README.md
 !/assets/interviews/consent.md
 /work/
+
+# Cloudflare deployment cache (local only)
+.wrangler/

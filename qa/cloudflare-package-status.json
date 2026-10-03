@@ -11,7 +11,7 @@
     "med-safe-hk.pages.dev"
   ],
   "domain_check": "No DNS records observed. Availability and ownership require authenticated project creation.",
-  "deployment_status": "Awaiting Cloudflare account authorization; no pages.dev URL has been reserved or deployed.",
+  "deployment_status": "Cloudflare account login completed. Project creation rejected until account email verification is completed (API code 8000077). No pages.dev hostname has been reserved or deployed.",
   "includes": "Public app and existing recorded-example gallery; no local API or patient files.",
   "current_temporary_preview": "https://tomato-roster-naples-varies.trycloudflare.com/"
 }

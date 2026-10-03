@@ -64,4 +64,4 @@ For the currently running static host, replacing the served files does not requi
 
 ## Fixed website address and presentation update
 
-The patient-facing pages now use shorter English, Mandarin and Cantonese instructions. Review labels follow the team-recorded rule status; source links, coverage limits and speech-service consent remain visible. See [Cloudflare Pages setup](cloudflare-pages.md) and [presentation checks](../qa/public-copy-verification.json). The requested `med-care.pages.dev` address is pending Cloudflare account authorization and has not been reserved.
+The patient-facing pages now use shorter English, Mandarin and Cantonese instructions. Review labels follow the team-recorded rule status; source links, coverage limits and speech-service consent remain visible. See [Cloudflare Pages setup](cloudflare-pages.md) and [presentation checks](../qa/public-copy-verification.json). The requested `med-care.pages.dev` address is pending account email verification and has not been reserved.
