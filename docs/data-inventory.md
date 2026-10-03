@@ -1,5 +1,7 @@
 # 数据、来源与缺口全清单
 
+[中文](data-inventory.md) | [English](data-inventory.en.md)
+
 机器可读的当前事实在 [`data/data_inventory.json`](../data/data_inventory.json)，界面详表在 [`app/data-report.html`](../app/data-report.html)。目录快照 2026-09-25，审计 2026-10-03。
 
 ## 当前使用的数据

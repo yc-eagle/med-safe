@@ -188,22 +188,31 @@ Three parts:
 
 ## Slide 8 — Evidence: real interviews
 
-**On the slide:** **two interview clips, 20-25 seconds each**
+**On the slide:** **interview clip(s), 20-25 seconds each**
 
 | Clip | Language | What it establishes |
 |---|---|---|
-| Clip 1 | **Cantonese** | The medication difficulties of older adults and family caregivers |
-| Clip 2 | **English** | The difficulties of foreign domestic helpers |
+| Clip 1 | **Cantonese** | The medication difficulties of a **family caregiver** in a Cantonese-speaking household |
+| Clip 2 | **English or Tagalog** | The difficulties of **foreign domestic helpers**, in their own words |
 
 **Script (45 s)**
-> "We did not invent this in a room. **We asked real people in Hong Kong.**"
+> "We did not invent this in a room. **We asked a real family caregiver, in Cantonese.**"
 
-**Scope discipline — this is the easiest place to get caught**
+### Scope discipline — this is the easiest place to get caught
 
-- If you **only filmed the Cantonese clip**: do **not** extend the conclusion to foreign domestic helpers. Say only that "this shows the information is lost at the moment it is handed over."
-- If you **filmed both**: the evidence chain is complete and you can speak to both users confidently.
+**Confirmed plan for tonight is one Cantonese-speaking interviewee.** That is one user, not two. A single Cantonese interview **cannot** support a conclusion about foreign domestic helpers, who speak English or Tagalog.
+
+- **If only the Cantonese clip is filmed** (do not extend the claim): say only that this shows **the information is lost at the moment it is handed over**, and support the helper's situation **separately, from documented facts** — she handles the pills, she cannot read Chinese labels, and the product's speech output exists because of her. **Do not attribute the Cantonese speaker's words to a helper.**
+- **If a second English or Tagalog clip is filmed:** the two-clip slide works as written, and you can speak to both users.
+
+**Also: the Cantonese speaker's background is Macau Cantonese**, which differs from Hong Kong Cantonese in vocabulary and usage. Introduce the clip accurately:
+
+> Say: **"a Cantonese-speaking family caregiver."**
+> Do **not** say: **"a Hong Kong local."**
 
 > Using one piece of evidence to support two conclusions is **over-claiming**. One question from a judge exposes it.
+>
+> **Three honest alternatives if the English clip does not happen are set out in [`../assets/interviews/README.md`](../assets/interviews/README.md) section 2**, including bringing Ella in on camera as expert framing — clearly labelled as expert opinion, **not** as user evidence.
 
 ---
 

@@ -37,11 +37,17 @@ For the record, so the time is not spent twice:
 
 ---
 
-## 2. Datasets
+## 2. Datasets actually used
 
-| Name | Provider | Licence / terms | Purpose | Cleared for use |
+| Name | Provider | Licence / terms | Purpose | In use |
 |---|---|---|---|---|
-| _TODO_ | | | | |
+| **Hong Kong registered pharmaceutical products catalogue and schema** | Department of Health, Drug Office, HKSAR Government, via DATA.GOV.HK | DATA.GOV.HK terms and conditions. Attribution and source dates retained; government endorsement is not implied | Registration numbers, product names, certificate holders, active ingredients | **Yes.** Snapshot 2026-09-25 |
+| **Drug Office consumer guidance** (paracetamol; PDE-5 inhibitors and nitrates; oral NSAID guide) | Department of Health, Drug Office | Public official web pages, cited | Ingredient-level evidence and local classification | **Yes** |
+| **DailyMed labelling** (warfarin, clopidogrel, clarithromycin) | U.S. National Library of Medicine | Public labelling records, cited by section | Ingredient-level citation evidence for rules R02-R14 | **Yes.** **Not equivalent to Hong Kong product approval labelling** |
+| **MedlinePlus / ASHP** item records | U.S. National Library of Medicine / ASHP | Public records, cited | Ingredient education material (14 profiles, 13 source records) | **Yes** |
+| **Qwen3-ASR** (`mlx-community/Qwen3-ASR-0.6B-4bit`) | Model authors, via `mlx-community` | Model licence as published by the authors | Optional local Cantonese speech recognition | **Yes**, downloaded by the installer at a pinned revision. **Weights are not redistributed here** |
+
+**Note on public repository scope:** structured rules and short factual summaries cite these sources item by item, and source links, document dates, sections and SHA-256 records are retained. **Full downloaded clinical HTML and U.S. label XML are excluded from the public repository.** Source rights are not transferred to MedSafe. See [`data-pack/CREDITS.md`](data-pack/CREDITS.md).
 
 ### Candidate sources
 

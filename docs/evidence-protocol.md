@@ -103,11 +103,14 @@ See [`../assets/interviews/`](../assets/interviews/).
 
 | Material | Language | What it establishes | Status |
 |---|---|---|---|
-| Interview 1 | **Cantonese** | The medication difficulties of older adults | _TODO_ |
-| Interview 2 | **English** | The difficulties of foreign domestic helpers | _TODO_ |
+| Interview 1 | **Cantonese** | The medication difficulties of family caregivers in a Cantonese-speaking household | **Scheduled for tonight.** One Cantonese-speaking interviewee (Macau Cantonese). Not yet filmed |
+| Interview 2 | **English or Tagalog** | The difficulties of foreign domestic helpers, in their own words | **Not scheduled.** Cannot be inferred from Interview 1 |
 
-> **If only one was filmed, narrow the conclusion in the pitch.**
+> **If only Interview 1 is filmed, narrow the conclusion in the pitch.**
 > Using Cantonese-only evidence to make a claim about foreign domestic helpers is over-claiming, and one question from a judge exposes it.
+> **See [`../assets/interviews/README.md`](../assets/interviews/README.md) section 2 for three honest alternatives.**
+>
+> **Also note the variety of Cantonese:** Macau Cantonese is a Cantonese variety but not identical to Hong Kong Cantonese. Present the interviewee as "a Cantonese-speaking family caregiver", not as "a Hong Kong local".
 
 ---
 
