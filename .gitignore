@@ -1,0 +1,80 @@
+# ============================================================
+# MedSafe — .gitignore
+# ⚠️ 本仓库是 PUBLIC 的。任何提交上去的密钥都会立刻被爬虫扫到。
+#    密钥一律放本地 .env，本文件已把它排除。
+# ============================================================
+
+# ---- 密钥与本地配置（最重要，不要删这几行）----
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+*.p12
+secrets.json
+credentials.json
+
+# ---- 依赖 ----
+node_modules/
+.pnpm-store/
+bower_components/
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- 构建产物 ----
+dist/
+build/
+out/
+.next/
+.cache/
+
+# ---- 大文件：演示视频 / 模型权重 / 数据包 ----
+# 视频请传网盘或 YouTube，把链接写进 README，不要提交进 git
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wav
+*.zip
+*.tar.gz
+*.7z
+*.onnx
+*.pt
+*.pth
+*.bin
+*.gguf
+*.safetensors
+models/
+data/raw/
+data/cache/
+
+# ---- 日志与临时文件 ----
+*.log
+logs/
+tmp/
+temp/
+*.tmp
+*.bak
+
+# ---- 操作系统 ----
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+desktop.ini
+
+# ---- 编辑器 ----
+.vscode/
+!.vscode/extensions.json
+.idea/
+*.swp
+*~
