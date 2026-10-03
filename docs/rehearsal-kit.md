@@ -52,4 +52,6 @@ On a phone with saved offline files, use **Check for updates / 檢查更新**, w
 
 ## Suggested volunteer contribution
 
+For a direct handoff, send the [20-minute execution card](volunteer-quickstart.zh-CN.txt). It includes the exact buttons, four short voice attempts, three filming shots, the English narration and the files to return.
+
 Prioritise one unaided Cantonese usability attempt, then a roughly 55-second caregiver role-play and a clean English voice-over. The script is in the download. Record raw attempts and recognition corrections, including failures. Report this as a Cantonese-speaking student's experience, not older-adult or clinical evidence. Language feedback can be reviewed by the volunteer; changes to medical meaning remain with the team's medical reviewer.
