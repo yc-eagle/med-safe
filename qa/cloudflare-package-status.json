@@ -1,8 +1,8 @@
 {
   "file": "MedSafe-Cloudflare-Pages.zip",
-  "bytes": 34915789,
-  "sha256": "3922b1b649fcc85a4e04cab0e64ff55b5a3922eb1c281617380831c857f5d2d4",
-  "files": 93,
+  "bytes": 34914340,
+  "sha256": "528b7b249bfb8c90b5bcbee7a5376cc8a3036ff875fc3ac66ea2633f4f7cda40",
+  "files": 92,
   "largest_asset_bytes": 5542358,
   "cloudflare_pages_file_limit_checked": true,
   "domain_candidates": [
@@ -12,5 +12,6 @@
   ],
   "domain_check": "No DNS records observed. Availability and ownership require authenticated project creation.",
   "deployment_status": "Awaiting Cloudflare account authorization; no pages.dev URL has been reserved or deployed.",
-  "includes": "Public app and existing recorded-example gallery; no local API or patient files."
+  "includes": "Public app and existing recorded-example gallery; no local API or patient files.",
+  "current_temporary_preview": "https://tomato-roster-naples-varies.trycloudflare.com/"
 }

@@ -4,9 +4,9 @@ Updated 3 October 2026. This index collects the team's project and the supplemen
 
 ## Open the product
 
-- **Interactive product for exhibition and testing:** https://cart-loop-automatically-josh.trycloudflare.com/
-- **Recorded examples and captured answer audio:** https://cart-loop-automatically-josh.trycloudflare.com/showcase/
-- **20-minute volunteer guide:** https://cart-loop-automatically-josh.trycloudflare.com/showcase/volunteer.html
+- **Interactive product for exhibition and testing:** https://tomato-roster-naples-varies.trycloudflare.com/
+- **Recorded examples and captured answer audio:** https://tomato-roster-naples-varies.trycloudflare.com/showcase/
+- **20-minute volunteer guide:** https://tomato-roster-naples-varies.trycloudflare.com/showcase/volunteer.html
 
 The first URL is the actual interactive medicine checker. The second is a recording gallery. The temporary host depends on the host computer and tunnel staying online; it is not permanent hosting. Downloaded recordings can be played offline. An installed, verified offline copy of the core app supports its documented local features; browser speech recognition still requires a network and installed voices determine local reading support.
 
