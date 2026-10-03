@@ -1,7 +1,7 @@
-# Interview Material
+﻿# Interview Material
 
 > **Internal working document**, written in English for consistency with the rest of the repository. The only Chinese text in this file is the wording of the seven questions, which the interviewer reads aloud.
-> **Owner: YC (filming), Ella (question content).**
+> **Owner: Yicheng JIANG (filming), Lin MA (question content).**
 > **Purpose:** to establish that the problem and the need are real. The pitching criterion *Problem Framing & Relevance* requires *"supported by convincing evidence or examples"* for full marks — **this directory is that evidence.**
 
 > **Status: filming is scheduled. This directory is currently empty of media.** Only this README and `consent.md` exist. Do not describe the interviews as evidence until the media is here.
@@ -45,7 +45,7 @@ This is honest, it still lands, and it requires no new footage.
 
 **Option B — add a second clip.** If an English- or Tagalog-speaking interviewee becomes available, record the same questions. This is the stronger version and restores the two-clip slide.
 
-**Option C — bring Ella in on camera.** Ella is a clinician. A 30-second segment where she explains why "the caregiver cannot read the label" is a real medication-safety problem is a **different kind of evidence** (expert framing, not user evidence) — useful, but label it as that. Do not present expert opinion as user evidence.
+**Option C — bring Lin MA in on camera.** Lin MA is a clinician. A 30-second segment where she explains why "the caregiver cannot read the label" is a real medication-safety problem is a **different kind of evidence** (expert framing, not user evidence) — useful, but label it as that. Do not present expert opinion as user evidence.
 
 ---
 

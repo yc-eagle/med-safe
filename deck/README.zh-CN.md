@@ -1,8 +1,8 @@
-﻿# Pitch Deck
+# Pitch Deck
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-> **负责人：蒋奕诚（YC）** | 目标：**今晚（10/3）定稿** | 10/4 16:20 Top 8 路演
+> **负责人：Yicheng JIANG** | 目标：**今晚（10/3）定稿** | 10/4 16:20 Top 8 路演
 > 时长：约 6 分钟含问答。
 
 ---

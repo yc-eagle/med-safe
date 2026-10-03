@@ -1,4 +1,4 @@
-# Pitch Deck — 逐页结构
+﻿# Pitch Deck — 逐页结构
 
 [English](pitch-deck.md) | [中文](pitch-deck.zh-CN.md)
 
@@ -14,7 +14,7 @@
 >
 > **已产出的交付物：** [8 页可编辑 Deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3 分钟录像](../assets/demo-3min.mp4) | [公开产品](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
 
-> **负责人：蒋奕诚（YC）** | **10 月 4 日 16:20 Top 8 路演**
+> **负责人：Yicheng JIANG** | **10 月 4 日 16:20 Top 8 路演**
 > 时长基准：**约 6 分钟含问答**（8 队分 80 分钟）
 > 配套文档：[`../docs/competitors.zh-CN.md`](../docs/competitors.zh-CN.md)（第 11 页）/ [`../docs/demo-script.md`](../docs/demo-script.md)（第 7、10 页）/ [`../docs/limitations.zh-CN.md`](../docs/limitations.zh-CN.md) 与 [`../docs/data-handling.zh-CN.md`](../docs/data-handling.zh-CN.md)（第 13 页）
 
@@ -212,7 +212,7 @@
 
 > 用一段证据去支撑两个结论，就是**证据用超了**。评委问一句就露。
 >
-> **如果英语片段最终没有拍成，[`../assets/interviews/README.md`](../assets/interviews/README.md) 第 2 节给出了三个诚实的替代方案**，其中包括让 Ella 出镜做专业背景说明 —— 必须清楚标明是专家意见，**不是**用户证据。
+> **如果英语片段最终没有拍成，[`../assets/interviews/README.md`](../assets/interviews/README.md) 第 2 节给出了三个诚实的替代方案**，其中包括让 Lin MA 出镜做专业背景说明 —— 必须清楚标明是专家意见，**不是**用户证据。
 
 ---
 
@@ -378,8 +378,8 @@
 
 | 人 | 角色 |
 |---|---|
-| **YC** | **主讲** —— 靠结构取胜，不靠口音 |
-| **Ella** | 回答医学与用户类问题；**在第 7 页演示中扮演照护者** |
+| **Yicheng JIANG** | **主讲** —— 靠结构取胜，不靠口音 |
+| **Lin MA** | 回答医学与用户类问题；**在第 7 页演示中扮演照护者** |
 | **孙** | 回答技术类问题 |
 
 各答自己那块，不抢话。
@@ -391,8 +391,8 @@
 | 问题 | 谁答 | 要点 |
 |---|---|---|
 | **「数据从哪来？」** | 孙 | 具体来源、许可证、覆盖范围（[`../CREDITS.zh-CN.md`](../CREDITS.zh-CN.md)） |
-| **「库覆盖多少？查不到怎么办？」** | Ella / 孙 | 引到第 3 件事：**查不到就直说**，并说明覆盖边界（[`../docs/rules/README.zh-CN.md`](../docs/rules/README.zh-CN.md) 第 6 节） |
-| **「它错了怎么办？」** | Ella | 引到 [`../docs/limitations.zh-CN.md`](../docs/limitations.zh-CN.md) |
+| **「库覆盖多少？查不到怎么办？」** | Lin MA / 孙 | 引到第 3 件事：**查不到就直说**，并说明覆盖边界（[`../docs/rules/README.zh-CN.md`](../docs/rules/README.zh-CN.md) 第 6 节） |
+| **「它错了怎么办？」** | Lin MA | 引到 [`../docs/limitations.zh-CN.md`](../docs/limitations.zh-CN.md) |
 
 ---
 

@@ -1,4 +1,4 @@
-# 队友五分钟试用
+﻿# 队友五分钟试用
 
 **手机直接打开：[MedSafe](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)**。不用登录，也不用下载 GitHub 文件。公开网页已上线；手机离线升级已公开发布至同一网址。
 

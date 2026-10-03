@@ -1,4 +1,4 @@
-# Demo Script: The Three Cards
+﻿# Demo Script: The Three Cards
 
 > **Internal working document**, written in English for consistency with the rest of the repository. A Chinese reference version can be added on request. A Chinese spoken script for the judges' questions is available at the end of this file.
 
@@ -10,7 +10,7 @@
 > - **Zero of the 14 rules are professionally approved.**
 > - Capabilities of third-party products and services must be verified individually, not generalised.
 
-> **Owner: YC.** Used for the **4 Oct exhibition hour** (technical judges score the Exhibition, 30 marks, which decides who reaches the Top 8) and for the **4 Oct 16:20 pitching round**.
+> **Owner: Yicheng JIANG.** Used for the **4 Oct exhibition hour** (technical judges score the Exhibition, 30 marks, which decides who reaches the Top 8) and for the **4 Oct 16:20 pitching round**.
 > The 3-minute demo video recorded tonight (3 Oct) follows the same script.
 
 ---
@@ -58,7 +58,7 @@
 
 - [ ] **3 real medicine boxes** (physical packaging, not images)
   - [ ] One common medicine (card 1)
-  - [ ] A pair with a sourced rule (card 2) — **Ella must confirm which evidence level it is**, and the wording must match that level
+  - [ ] A pair with a sourced rule (card 2) — **Lin MA must confirm which evidence level it is**, and the wording must match that level
   - [ ] A pair the rules do **not** cover (card 3) — confirm it is genuinely **not** in the 14 rules
 - [ ] Phone or laptop for the demo, **fully charged**
 - [ ] Power bank
@@ -93,9 +93,9 @@ One line a judge can read in three seconds:
 
 The full slide-by-slide structure, timing and scripts are in [`../deck/pitch-deck.md`](../deck/pitch-deck.md). Roles:
 
-- **Main speaker: YC.** Wins on structure, not on accent.
-- **Ella:** answers medical and user questions; **plays the caregiver in the slide 7 demo.**
-- **Sun:** answers technical questions.
+- **Main speaker: Yicheng JIANG.** Wins on structure, not on accent.
+- **Lin MA:** answers medical and user questions; **plays the caregiver in the slide 7 demo.**
+- **Shuoyang SUN:** answers technical questions.
 
 Everyone answers their own area. Nobody talks over anybody.
 
@@ -105,9 +105,9 @@ Everyone answers their own area. Nobody talks over anybody.
 
 | Question | Who answers | Key points |
 |---|---|---|
-| "Where does the data come from?" | Sun | Specific sources, licence, coverage ([`../CREDITS.md`](../CREDITS.md)) |
-| "How much does it cover? What if you cannot find it?" | Ella / Sun | Point to state 3: **if it cannot find it, it says so**, and state the boundary ([`rules/README.md`](rules/README.md), section 6) |
-| "What if it is wrong?" | Ella | Point to [`limitations.md`](limitations.md) |
+| "Where does the data come from?" | Shuoyang SUN | Specific sources, licence, coverage ([`../CREDITS.md`](../CREDITS.md)) |
+| "How much does it cover? What if you cannot find it?" | Lin MA / Shuoyang SUN | Point to state 3: **if it cannot find it, it says so**, and state the boundary ([`rules/README.md`](rules/README.md), section 6) |
+| "What if it is wrong?" | Lin MA | Point to [`limitations.md`](limitations.md) |
 
 ---
 
@@ -129,4 +129,4 @@ Everyone answers their own area. Nobody talks over anybody.
 
 **「库覆盖多少？查不到怎么办？」** 直接引到状态 3：**查不到就说查不到**，并主动说明覆盖边界（哪些情况一定查不到）。这一问是送分的，不要答成"我们还在补"。
 
-**「它错了怎么办？」** 分三类答：识别错 -> 降级为请重拍；数据没命中 -> 走状态 3；措辞歧义 -> 由 Ella 逐条审查过。然后补一句"我们不做诊断，也不给剂量建议"。
+**「它错了怎么办？」** 分三类答：识别错 -> 降级为请重拍；数据没命中 -> 走状态 3；措辞歧义 -> 由 Lin MA 逐条审查过。然后补一句"我们不做诊断，也不给剂量建议"。

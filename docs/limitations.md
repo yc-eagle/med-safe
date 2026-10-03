@@ -1,4 +1,4 @@
-# What It Gets Wrong
+﻿# What It Gets Wrong
 
 [English](limitations.md) | [中文](limitations.zh-CN.md)
 
@@ -6,7 +6,7 @@
 > **This is not a deduction. It is where the marks are.** Stating your boundary plainly is far more credible than claiming completeness.
 > The pitching criterion *Impact, Feasibility & Future Vision* requires **"risk awareness"** for full marks. **This page is those marks.**
 
-**Owner: Ella.**
+**Owner: Lin MA.**
 
 ---
 
@@ -20,7 +20,7 @@
 | 4 | **Chinese patent medicines, herbal medicines and supplements not covered** | Patent medicine packaging, raw herbs | Medium | Outside current scope, **stated as such** |
 | 5 | **Speech recognition error** | Noisy environment, accent | **Not uniformly low** — a misheard name can point at a different drug | Text is shown as well as audio; **never voice-only**, and the user still confirms |
 | 6 | **Route of administration unclear** | Route not confirmed, or outside the rule's scope | Medium | Outputs **`route_review_required`**; shows the potential warning but does not extrapolate |
-| 7 | **Over-simplification** | Compressing a complex risk into one sentence | Medium | Wording reviewed line by line by Ella |
+| 7 | **Over-simplification** | Compressing a complex risk into one sentence | Medium | Wording reviewed line by line by Lin MA |
 | 8 | **Duplicate entry** | The same product added twice | Low | Outputs **`duplicate_input_requires_review`** |
 
 **No failure-rate number is filled in without real data.** Incidence rates are left blank deliberately.
@@ -82,7 +82,7 @@
 | Data not matched | Outputs `no_rule_found` and states **not covered** |
 | Route not confirmed or outside scope | Outputs `route_review_required`; shown as a prompt to confirm, and not extrapolated |
 | The same product added twice | Outputs `duplicate_input_requires_review` |
-| Ambiguous wording in the output | Reviewed line by line by Ella; must be checked before the demo |
+| Ambiguous wording in the output | Reviewed line by line by Lin MA; must be checked before the demo |
 | System entirely unavailable | The interface states plainly: consult a doctor or pharmacist |
 | Offline, external citation link | The link does not resolve; the local summary, the date and the section reference remain |
 

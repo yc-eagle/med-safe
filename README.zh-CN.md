@@ -1,4 +1,4 @@
-# MedSafe — 香港用药核对助手
+﻿# MedSafe — 香港用药核对助手
 
 [English](README.md) | [中文](README.zh-CN.md)
 
@@ -187,7 +187,7 @@ tests/, qa/            工程检查与结果；它们不能替代临床验证
 
 **不要把「文件已就绪」写成「已提交」。**
 
-Ella 提供了豆包与小浣熊的分享链接；自动化工具无法取回对话正文。它们只能计为已收到的链接，**不得当作医学批准，也不得当作对 AI 输出的已完成验证**。记录见：[小浣熊使用记录](docs/raccoon-usage-log.md)。
+Lin MA 提供了豆包与小浣熊的分享链接；自动化工具无法取回对话正文。它们只能计为已收到的链接，**不得当作医学批准，也不得当作对 AI 输出的已完成验证**。记录见：[小浣熊使用记录](docs/raccoon-usage-log.md)。
 
 ---
 
@@ -197,9 +197,9 @@ Ella 提供了豆包与小浣熊的分享链接；自动化工具无法取回对
 
 | 成员 | 学校 | GitHub | 负责 |
 |---|---|---|---|
-| **蒋奕诚 Yicheng JIANG** | 北京外国语大学 | [@yc-eagle](https://github.com/yc-eagle) | 整体选题与概念（本想法由他提出）/ 核心工作 / 项目进度管理 / 仓库与工作流 / Pitch Deck / 汇报与路演 |
-| **孙硕阳 Shuoyang SUN** | 清华大学 | [@lkwet](https://github.com/lkwet) | 全部桌面网页开发 / Live Demo |
-| **马琳 Lin MA（Ella）** | 清华大学 | [@huaxiamalin113](https://github.com/huaxiamalin113) | 领域专业支持、规则审阅与小浣熊证据 |
+| **Yicheng JIANG** | 北京外国语大学 | [@yc-eagle](https://github.com/yc-eagle) | 整体选题与概念（本想法由他提出）/ 核心工作 / 项目进度管理 / 仓库与工作流 / Pitch Deck / 汇报与路演 |
+| **Shuoyang SUN** | 清华大学 | [@lkwet](https://github.com/lkwet) | 全部桌面网页开发 / Live Demo |
+| **Lin MA** | 清华大学 | [@huaxiamalin113](https://github.com/huaxiamalin113) | 领域专业支持、规则审阅与小浣熊证据 |
 
 汇报保持团队的结构：**把它读清楚 / 找到有来源的警告 / 承认哪些没有覆盖。** 不要把每一种风险都讲成绝对禁止。现有的[竞品讨论](docs/competitors.zh-CN.md)与[路演规划](deck/pitch-deck.zh-CN.md)保留为尚待核实的材料；没有证据的概括或过时的功能描述，必须按当前实现与来源更正后才能上台使用。原先相互冲突的文档保存在[团队规划存档](docs/team-planning/README.md)中。
 

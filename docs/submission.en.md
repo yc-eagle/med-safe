@@ -1,4 +1,4 @@
-# HacKU 2026 Submission Status
+﻿# HacKU 2026 Submission Status
 
 [中文](submission.md) | [English](submission.en.md)
 
@@ -10,7 +10,7 @@ Deadline: **2026-10-04 13:00 HKT**. The official handbook has been verified loca
 | Online demo | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site | Public; the mobile offline upgrade is published, a real phone is still to be tried; the cache and offline workflow passed 16 engineering checks |
 | 3-minute recording | https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html | A new 180-second / about 5.54 MB recording has been generated: `assets/demo-3min.mp4`, publicly released with V2 |
 | Pitch Deck | `deck/` or public download | An 8-page editable PPTX and PDF have been generated: `deck/Med-Safe-HacKU2026.*`, publicly released with V2 |
-| Raccoon usage highlights | `raccoon-usage-log.md` | The share link was received, the body was not successfully obtained, the real record is pending Ella |
+| Raccoon usage highlights | `raccoon-usage-log.md` | The share link was received, the body was not successfully obtained, the real record is pending Lin MA |
 | Final registration / submission form | The form designated by the organisers | No actionable form address has been received yet; no claim of submission is made |
 
 Final acceptance: visit every link in an incognito window; open the product on a phone; the downloaded video plays and its total duration meets the requirement; review the public source code and the data attributions; all completion statuses are aligned with the actual results. The team must not put API keys, redemption codes, access credentials, patient information or the private handbook into the public repository.

@@ -1,4 +1,4 @@
-# Development Tool Usage Log: SenseTime Raccoon Work
+﻿# Development Tool Usage Log: SenseTime Raccoon Work
 
 > **Internal working document**, written in English for consistency with the rest of the repository.
 
@@ -9,7 +9,7 @@
 > - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
 > - **Zero of the 14 rules are professionally approved.**
 > - Capabilities of third-party products and services must be verified individually, not generalised.
-> **Owner: Ella.**
+> **Owner: Lin MA.**
 > **Why keep it:** the HacKU 2026 *Raccoon Work Technical Sponsor Award* requires a short declaration in the submission form explaining how it was used.
 > **Append a row every time it is used.** Screenshots in particular cannot be reconstructed afterwards.
 
@@ -32,7 +32,7 @@
 
 **Do not invent records. Only write down what actually happened.**
 
-Ella has provided Doubao and Raccoon share links, but **the conversation bodies could not be retrieved by automated tooling**, so they currently count only as *links received*. That is not evidence of tool use, and it must not be presented as completed validation of AI output. See [`submission.md`](submission.md).
+Lin MA has provided Doubao and Raccoon share links, but **the conversation bodies could not be retrieved by automated tooling**, so they currently count only as *links received*. That is not evidence of tool use, and it must not be presented as completed validation of AI output. See [`submission.md`](submission.md).
 
 ---
 
@@ -52,7 +52,7 @@ These artifacts exist and can be checked by anyone. **They are candidates for th
 
 ---
 
-## B. What Ella still needs to write
+## B. What Lin MA still needs to write
 
 **Target: at least 5 records, of which at least 1 is REJECTED.** Each record must be a real event with a screenshot.
 

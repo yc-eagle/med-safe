@@ -1,4 +1,4 @@
-# Credits and Attribution
+﻿# Credits and Attribution
 
 [English](CREDITS.md) | [中文](CREDITS.zh-CN.md)
 
@@ -72,7 +72,7 @@ For the record, so the time is not spent twice:
 | "Medication management services: community pharmacists safeguarding medication safety" | HKU Faculty of Medicine column | Background: the reach of community pharmacist services and the gap that remains |
 | eHealth News issue 24, "Message from the Pharmacist" | eHealth, HKSAR Government | Evidence that remote pharmacist consultation exists, and its preconditions (call, service hours, authorisation) |
 
-<!-- TODO (Ella): add the clinical guidelines, interaction sources and references you actually rely on. -->
+<!-- TODO (Lin MA): add the clinical guidelines, interaction sources and references you actually rely on. -->
 
 ---
 

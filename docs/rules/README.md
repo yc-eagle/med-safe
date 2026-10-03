@@ -1,9 +1,9 @@
-# Medication Criteria
+﻿# Medication Criteria
 
 [English](README.md) | [中文](README.zh-CN.md)
 
 > **This directory is the product's decision core.**
-> **Owner: Ella.** All 14 rules are drafts. **The number of professionally approved rules is currently zero.** Line-by-line review table: [`review.csv`](review.csv).
+> **Owner: Lin MA.** All 14 rules are drafts. **The number of professionally approved rules is currently zero.** Line-by-line review table: [`review.csv`](review.csv).
 
 ---
 
@@ -156,7 +156,7 @@ What it needs is **explicit wording**, not rows:
 
 ---
 
-## 7. Pre-demo check (Ella)
+## 7. Pre-demo check (Lin MA)
 
 - [ ] At least **3** L1 entries, all of them **demo-able with common medicines**
 - [ ] At least **3** L2 entries

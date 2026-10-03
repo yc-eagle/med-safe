@@ -1,4 +1,4 @@
-# 来源与署名
+﻿# 来源与署名
 
 [English](CREDITS.md) | [中文](CREDITS.zh-CN.md)
 
@@ -72,7 +72,7 @@
 | "Medication management services: community pharmacists safeguarding medication safety" | 香港大学医学院专栏 | 背景：社区药剂师服务的覆盖范围与仍然存在的缺口 |
 | 医健通通讯第 24 期 "Message from the Pharmacist" | 香港特区政府医健通 | 证据：遥距药剂师咨询确实存在，以及它的前提条件（打电话、服务时间、授权） |
 
-<!-- TODO（Ella）：补上你实际依赖的临床指南、相互作用来源与参考文献。 -->
+<!-- TODO（Lin MA）：补上你实际依赖的临床指南、相互作用来源与参考文献。 -->
 
 ---
 

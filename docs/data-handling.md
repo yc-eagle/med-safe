@@ -1,9 +1,9 @@
-# Data and Privacy: What Leaves the Device
+﻿# Data and Privacy: What Leaves the Device
 
 [English](data-handling.md) | [中文](data-handling.zh-CN.md)
 
 > The problem statement **requires** this: *"State what it costs, what it gets wrong, and **what leaves the device**."*
-> **Owner: Sun.**
+> **Owner: Shuoyang SUN.**
 
 > **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`decision-logic.md`](decision-logic.md) or the program, **the implementation wins**.
 >

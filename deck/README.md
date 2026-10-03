@@ -1,8 +1,8 @@
-# Pitch Deck
+﻿# Pitch Deck
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-> **Owner: Yicheng (YC)** | Target: **final by tonight (3 Oct)** | Top 8 pitching round, 4 Oct 16:20
+> **Owner: Yicheng JIANG** | Target: **final by tonight (3 Oct)** | Top 8 pitching round, 4 Oct 16:20
 > Running time: about 6 minutes including Q&A.
 
 ---

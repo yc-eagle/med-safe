@@ -1,4 +1,4 @@
-# MedSafe — Hong Kong Medication Verification Assistant
+﻿# MedSafe — Hong Kong Medication Verification Assistant
 
 [English](README.md) | [中文](README.zh-CN.md)
 
@@ -187,7 +187,7 @@ The official deadline, verified by the team from the handbook, is **2026-10-04 1
 
 **Do not write "files ready" as "submitted".**
 
-Ella provided Doubao and Raccoon share links; automated tooling could not retrieve the conversation bodies. They count only as links received, and **must not be treated as medical approval or as completed validation of AI output.** Record: [Raccoon log](docs/raccoon-usage-log.md).
+Lin MA provided Doubao and Raccoon share links; automated tooling could not retrieve the conversation bodies. They count only as links received, and **must not be treated as medical approval or as completed validation of AI output.** Record: [Raccoon log](docs/raccoon-usage-log.md).
 
 ---
 
@@ -199,7 +199,7 @@ Ella provided Doubao and Raccoon share links; automated tooling could not retrie
 |---|---|---|---|
 | **Yicheng JIANG** | Beijing Foreign Studies University | [@yc-eagle](https://github.com/yc-eagle) | Overall topic selection and concept (originator of the idea) / core work / project progress management / repository and workflow / pitch deck / presentation and pitching |
 | **Shuoyang SUN** | Tsinghua University | [@lkwet](https://github.com/lkwet) | All desktop-web development / Live Demo |
-| **Lin MA (Ella)** | Tsinghua University | [@huaxiamalin113](https://github.com/huaxiamalin113) | Domain expertise, rule review, and Raccoon evidence |
+| **Lin MA** | Tsinghua University | [@huaxiamalin113](https://github.com/huaxiamalin113) | Domain expertise, rule review, and Raccoon evidence |
 
 The presentation keeps the team's structure: **read it clearly / find a sourced warning / admit what is not covered.** Do not present every risk as an absolute prohibition. The existing [competition discussion](docs/competitors.md) and [pitch planning](deck/pitch-deck.md) are retained as material still to be verified; unevidenced generalisations or outdated feature descriptions must be corrected against the current implementation and sources before use on stage. The original conflicting documents are preserved in the [team planning archive](docs/team-planning/README.md).
 

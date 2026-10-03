@@ -1,4 +1,4 @@
-# Pitch Deck — Slide-by-Slide Structure
+﻿# Pitch Deck — Slide-by-Slide Structure
 
 [English](pitch-deck.md) | [中文](pitch-deck.zh-CN.md)
 
@@ -14,7 +14,7 @@
 >
 > **Deliverables already produced:** [8-slide editable deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3-minute recording](../assets/demo-3min.mp4) | [public product](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
 
-> **Owner: Yicheng (YC)** | **Top 8 pitching round, 4 Oct 16:20**
+> **Owner: Yicheng JIANG** | **Top 8 pitching round, 4 Oct 16:20**
 > Running time: **about 6 minutes including Q&A** (8 teams in 80 minutes)
 > Companion docs: [`../docs/competitors.md`](../docs/competitors.md) (slide 11) / [`../docs/demo-script.md`](../docs/demo-script.md) (slides 7, 10) / [`../docs/limitations.md`](../docs/limitations.md) and [`../docs/data-handling.md`](../docs/data-handling.md) (slide 13)
 
@@ -212,7 +212,7 @@ Three parts:
 
 > Using one piece of evidence to support two conclusions is **over-claiming**. One question from a judge exposes it.
 >
-> **Three honest alternatives if the English clip does not happen are set out in [`../assets/interviews/README.md`](../assets/interviews/README.md) section 2**, including bringing Ella in on camera as expert framing — clearly labelled as expert opinion, **not** as user evidence.
+> **Three honest alternatives if the English clip does not happen are set out in [`../assets/interviews/README.md`](../assets/interviews/README.md) section 2**, including bringing Lin MA in on camera as expert framing — clearly labelled as expert opinion, **not** as user evidence.
 
 ---
 
@@ -378,9 +378,9 @@ These come from the repository, not from a slide. **Use them — precise numbers
 
 | Person | Role |
 |---|---|
-| **YC** | **Main speaker** — wins on structure, not on accent |
-| **Ella** | Answers medical and user questions; **plays the caregiver in the slide 7 demo** |
-| **Sun** | Answers technical questions |
+| **Yicheng JIANG** | **Main speaker** — wins on structure, not on accent |
+| **Lin MA** | Answers medical and user questions; **plays the caregiver in the slide 7 demo** |
+| **Shuoyang SUN** | Answers technical questions |
 
 Everyone answers their own area. Nobody talks over anybody.
 
@@ -390,9 +390,9 @@ Everyone answers their own area. Nobody talks over anybody.
 
 | Question | Who answers | Key points |
 |---|---|---|
-| **"Where does the data come from?"** | Sun | Specific sources, licence, coverage ([`../CREDITS.md`](../CREDITS.md)) |
-| **"How much does the database cover? What if you cannot find it?"** | Ella / Sun | Point to state 3: **if it cannot find it, it says so**, and state the coverage boundary ([`../docs/rules/README.md`](../docs/rules/README.md), section 6) |
-| **"What if it is wrong?"** | Ella | Point to [`../docs/limitations.md`](../docs/limitations.md) |
+| **"Where does the data come from?"** | Shuoyang SUN | Specific sources, licence, coverage ([`../CREDITS.md`](../CREDITS.md)) |
+| **"How much does the database cover? What if you cannot find it?"** | Lin MA / Shuoyang SUN | Point to state 3: **if it cannot find it, it says so**, and state the coverage boundary ([`../docs/rules/README.md`](../docs/rules/README.md), section 6) |
+| **"What if it is wrong?"** | Lin MA | Point to [`../docs/limitations.md`](../docs/limitations.md) |
 
 ---
 

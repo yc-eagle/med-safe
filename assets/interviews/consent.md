@@ -1,4 +1,4 @@
-# Subject Consent Record
+﻿# Subject Consent Record
 
 > Demonstration videos and pitch material will be public (all materials must be publicly viewable), and may also appear in promotional material.
 > **Consent must therefore be recorded for every subject.** Material without consent must not appear in any public material.

@@ -1,4 +1,4 @@
-# Evidence Protocol
+﻿# Evidence Protocol
 
 > **Internal working document**, written in English for consistency with the rest of the repository.
 
@@ -14,7 +14,7 @@
 >
 > *"Compare against the setting's current **manual method**, or a simple substitute — **the steps and the time** — and show what the capability contributes that the manual method cannot. State **what it costs**, **what it gets wrong**, and **what leaves the device**."*
 >
-> **Owner: Ella (items 1 and 2), Sun (items 3 and 5).**
+> **Owner: Lin MA (items 1 and 2), Shuoyang SUN (items 3 and 5).**
 
 ---
 

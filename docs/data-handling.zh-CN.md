@@ -1,11 +1,11 @@
-# 数据与隐私：什么离开设备
+﻿# 数据与隐私：什么离开设备
 
 [English](data-handling.md) | [中文](data-handling.zh-CN.md)
 
 > 题目原文**要求**写这个：*"State what it costs, what it gets wrong, and **what leaves the device**."*
 >
 > 中文：*"说清楚它的代价、它会错在哪，以及**什么会离开设备**。"*
-> **负责人：Sun。**
+> **负责人：Shuoyang SUN。**
 
 > **早期规划材料，已按实现更正。** 写于产品建成之前。本文与 [`../README.zh-CN.md`](../README.zh-CN.md)、[`decision-logic.md`](decision-logic.md) 或程序冲突时，**以实现为准**。
 >

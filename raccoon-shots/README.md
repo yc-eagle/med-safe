@@ -1,7 +1,7 @@
-# Development Tool Screenshots
+﻿# Development Tool Screenshots
 
 > **Internal working document**, written in English for consistency with the rest of the repository.
-> **Owner: Ella.**
+> **Owner: Lin MA.**
 > Companion record: [`../docs/raccoon-usage-log.md`](../docs/raccoon-usage-log.md)
 
 ---
