@@ -1,0 +1,16 @@
+{
+  "id": "./",
+  "name": "MedSafe 藥盒核對",
+  "short_name": "藥盒核對",
+  "description": "香港藥品查找、成分核對與藥師問題卡。預先準備後支援離線查詢及照片識字。",
+  "lang": "zh-Hant-HK",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f2",
+  "theme_color": "#246d63",
+  "icons": [
+    {"src": "icon-192.svg", "sizes": "192x192", "type": "image/svg+xml", "purpose": "any"},
+    {"src": "icon-512.svg", "sizes": "512x512", "type": "image/svg+xml", "purpose": "any maskable"}
+  ]
+}

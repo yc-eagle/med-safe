@@ -1,0 +1,8 @@
+data-pack/raw/* -text -diff
+app/vendor/* -text -diff
+*.csv -text
+*.png binary
+*.sqlite binary
+*.mp4 binary
+*.pptx binary
+*.pdf binary

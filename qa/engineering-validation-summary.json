@@ -1,0 +1,18 @@
+{
+  "reviewed_on": "2026-10-03",
+  "software_checks_only": true,
+  "real_patients_tested": false,
+  "physical_phones_tested": false,
+  "source_checks": [
+    "engine-results.json",
+    "patient-results.json",
+    "product-features-results.json",
+    "validator-results.json",
+    "multi-medicine-results.json",
+    "public-release-results.json",
+    "pwa-mobile-results.json",
+    "pwa-failure-results.json",
+    "media-check.json"
+  ],
+  "clinical_review": "pending"
+}

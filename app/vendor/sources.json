@@ -1,0 +1,26 @@
+[
+  {
+    "file": "eng.traineddata",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/eng.traineddata",
+    "sha256": "7d4322bd2a7749724879683fc3912cb542f19906c83bcc1a52132556427170b2",
+    "bytes": 4113088
+  },
+  {
+    "file": "chi_tra.traineddata",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/chi_tra.traineddata",
+    "sha256": "529c5b5797d64b126065cd55f2bb4c7fd7b15790798091b1ff259941a829330b",
+    "bytes": 2366642
+  },
+  {
+    "file": "TESSDATA-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/tesseract-ocr/tessdata_fast/main/LICENSE",
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "bytes": 11358
+  },
+  {
+    "file": "TESSERACT-CORE-LICENSE.txt",
+    "url": "https://raw.githubusercontent.com/naptha/tesseract.js-core/master/LICENSE",
+    "sha256": "c6596eb7be8581c18be736c846fb9173b69eccf6ef94c5135893ec56bd92ba08",
+    "bytes": 11358
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-03T06:47:21.888Z",
+  "checks": [
+    "Initial load does not claim offline readiness",
+    "Explicit prepare downloads and verifies all 47 assets including every OCR variant",
+    "Cache contains only manifest public assets and completion marker",
+    "Disconnected reload works without retaining medicine selections",
+    "Offline browser speech cannot start",
+    "Full catalogue searches work offline",
+    "Pair rule check and source summary work offline",
+    "Tesseract photo OCR works after offline reload on synthetic label",
+    "390px English large-text view has no horizontal overflow",
+    "No page JavaScript errors",
+    "Clearing offline assets removes readiness"
+  ],
+  "passed": 11,
+  "state": {
+    "ready": true,
+    "current": true,
+    "bytes": 55154472,
+    "type": "READY",
+    "version": "1f8e9e2d1f140fd6",
+    "files": 47,
+    "cachedVersion": "1f8e9e2d1f140fd6",
+    "preparing": false,
+    "preparedAt": "2026-10-03T06:47:12.371Z",
+    "phase": "idle"
+  },
+  "candidates": 2,
+  "errors": [],
+  "boundary": "Chromium mobile viewport and synthetic image; real iPhone/Android hardware and actual medicine packs not tested."
+}

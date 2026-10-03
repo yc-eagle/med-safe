@@ -1,0 +1,148 @@
+{
+  "date": "2026-10-03T06:38:35.920Z",
+  "passed": 35,
+  "failed": 0,
+  "catalogue": 14269,
+  "details": [
+    {
+      "name": "R01 HK-53362+HK-53319",
+      "status": "passed"
+    },
+    {
+      "name": "R01 HK-53319+HK-53362",
+      "status": "passed"
+    },
+    {
+      "name": "R02 HK-41421+HK-35198",
+      "status": "passed"
+    },
+    {
+      "name": "R02 HK-35198+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R03 HK-41421+HK-67345",
+      "status": "passed"
+    },
+    {
+      "name": "R03 HK-67345+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R04 HK-41421+HK-34921",
+      "status": "passed"
+    },
+    {
+      "name": "R04 HK-34921+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R05 HK-41421+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R05 HK-43787+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R06 HK-43787+HK-44354",
+      "status": "passed"
+    },
+    {
+      "name": "R06 HK-44354+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R07 HK-43787+HK-64320",
+      "status": "passed"
+    },
+    {
+      "name": "R07 HK-64320+HK-43787",
+      "status": "passed"
+    },
+    {
+      "name": "R08 HK-34337+HK-43890",
+      "status": "passed"
+    },
+    {
+      "name": "R08 HK-43890+HK-34337",
+      "status": "passed"
+    },
+    {
+      "name": "R09 HK-41421+HK-53362",
+      "status": "passed"
+    },
+    {
+      "name": "R09 HK-53362+HK-41421",
+      "status": "passed"
+    },
+    {
+      "name": "R10 HK-45575+HK-67272",
+      "status": "passed"
+    },
+    {
+      "name": "R10 HK-67272+HK-45575",
+      "status": "passed"
+    },
+    {
+      "name": "Nothing checked before identity confirmation",
+      "status": "passed"
+    },
+    {
+      "name": "One medicine is insufficient",
+      "status": "passed"
+    },
+    {
+      "name": "Repeated scan is not a second product",
+      "status": "passed"
+    },
+    {
+      "name": "Known alert survives an unknown product",
+      "status": "passed"
+    },
+    {
+      "name": "Catalogue record outside rule scope remains unknown to rules",
+      "status": "passed"
+    },
+    {
+      "name": "No hit never means safe",
+      "status": "passed"
+    },
+    {
+      "name": "Route mismatch prevents applying oral rule",
+      "status": "passed"
+    },
+    {
+      "name": "Exact registration normalisation",
+      "status": "passed"
+    },
+    {
+      "name": "Brand search retains formulation choice",
+      "status": "passed"
+    },
+    {
+      "name": "Two OCR registrations yield two candidates",
+      "status": "passed"
+    },
+    {
+      "name": "Malformed six-digit registration never truncates",
+      "status": "passed"
+    },
+    {
+      "name": "Unknown OCR registration retained beside known one",
+      "status": "passed"
+    },
+    {
+      "name": "Blank OCR stays blank",
+      "status": "passed"
+    },
+    {
+      "name": "Known alias mapping is explicit",
+      "status": "passed"
+    },
+    {
+      "name": "All 78 distinct demo pairs always disclose clinical uncertainty",
+      "status": "passed"
+    }
+  ]
+}

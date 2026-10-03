@@ -1,0 +1,303 @@
+[
+  {
+    "rule_id": "R01",
+    "kind": "duplicate",
+    "ingredient_a": "paracetamol",
+    "ingredient_b": "paracetamol",
+    "evidence_level": "duplicate_ingredient",
+    "summary_zh": "兩項產品含同一成分撲熱息痛，可能重複用藥；非經醫護人員指示，不應自行合用。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "hk_paracetamol",
+    "source_url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/knowledge_on_medicines/paracetamol.html",
+    "source_section": "Precautions: final bullet",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2023-12",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R02",
+    "kind": "pair",
+    "ingredient_a": "warfarin",
+    "ingredient_b": "ibuprofen",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "華法林與 布洛芬 合用可增加出血風險，需要醫護人員評估及監測；本提示不代表一律禁用。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "warfarin_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8c876dd3-d659-479e-994c-39454c7028cc",
+    "source_section": "7.3 Drugs that Increase Bleeding Risk, Table 3",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2025-01-28",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R03",
+    "kind": "pair",
+    "ingredient_a": "warfarin",
+    "ingredient_b": "aspirin",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "華法林與 阿司匹林 合用可增加出血風險，需要醫護人員評估及監測；本提示不代表一律禁用。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "warfarin_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8c876dd3-d659-479e-994c-39454c7028cc",
+    "source_section": "7.3 Drugs that Increase Bleeding Risk, Table 3",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2025-01-28",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R04",
+    "kind": "pair",
+    "ingredient_a": "warfarin",
+    "ingredient_b": "naproxen",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "華法林與 萘普生 合用可增加出血風險，需要醫護人員評估及監測；本提示不代表一律禁用。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "warfarin_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8c876dd3-d659-479e-994c-39454c7028cc",
+    "source_section": "7.3 Drugs that Increase Bleeding Risk, Table 3",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2025-01-28",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R05",
+    "kind": "pair",
+    "ingredient_a": "warfarin",
+    "ingredient_b": "clopidogrel",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "華法林與 氯吡格雷 合用可增加出血風險，需要醫護人員評估及監測；本提示不代表一律禁用。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "warfarin_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=8c876dd3-d659-479e-994c-39454c7028cc",
+    "source_section": "7.3 Drugs that Increase Bleeding Risk, Table 3",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2025-01-28",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R06",
+    "kind": "pair",
+    "ingredient_a": "clopidogrel",
+    "ingredient_b": "omeprazole",
+    "evidence_level": "label_recommends_avoid",
+    "summary_zh": "奧美拉唑 可減弱氯吡格雷的抗血小板作用；所引說明書建議避免合用，請由開藥醫生或藥劑師確認。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "clopidogrel_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98a83879-4e53-41f5-83bc-681b342884dd",
+    "source_section": "7.1 CYP2C19 Inhibitors / Proton Pump Inhibitors",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2023-03-29",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R07",
+    "kind": "pair",
+    "ingredient_a": "clopidogrel",
+    "ingredient_b": "esomeprazole",
+    "evidence_level": "label_recommends_avoid",
+    "summary_zh": "埃索美拉唑 可減弱氯吡格雷的抗血小板作用；所引說明書建議避免合用，請由開藥醫生或藥劑師確認。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "clopidogrel_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98a83879-4e53-41f5-83bc-681b342884dd",
+    "source_section": "7.1 CYP2C19 Inhibitors / Proton Pump Inhibitors",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2023-03-29",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R08",
+    "kind": "pair",
+    "ingredient_a": "simvastatin",
+    "ingredient_b": "clarithromycin",
+    "evidence_level": "label_contraindication",
+    "summary_zh": "所引說明書列辛伐他汀與克拉霉素合用為禁忌，可增加肌肉損傷及橫紋肌溶解風險，請立即向醫護人員核實用藥安排。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "clarithromycin_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d22bd12c-737b-4aab-e053-2995a90aff60",
+    "source_section": "4.5 Lomitapide, Lovastatin, and Simvastatin",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2025-01-20",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R09",
+    "kind": "pair",
+    "ingredient_a": "warfarin",
+    "ingredient_b": "paracetamol",
+    "evidence_level": "consult_before_use",
+    "summary_zh": "正服用華法林者，使用撲熱息痛前應先徵詢醫護人員意見；這項提示不是絕對禁忌。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "hk_paracetamol",
+    "source_url": "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/knowledge_on_medicines/paracetamol.html",
+    "source_section": "Precautions: anticoagulants",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": "2023-12",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R10",
+    "kind": "pair",
+    "ingredient_a": "sildenafil",
+    "ingredient_b": "glyceryl trinitrate",
+    "evidence_level": "nitrate_warning",
+    "summary_zh": "昔多芬／西地那非與硝酸鹽類藥物（包括硝酸甘油舌下片）合用可導致血壓過低，應由醫護人員核實。",
+    "action_zh": "請向藥劑師或開藥醫生核實。不要自行停藥、改藥或調整劑量。",
+    "source_id": "hk_sildenafil",
+    "source_url": "https://www.drugoffice.gov.hk/eps/do/tc/consumer/virility.html",
+    "source_section": "藥物治療：PDE-5 抑制劑與硝酸藥",
+    "allowed_routes": [
+      "oral",
+      "sublingual"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "checked_on": "2026-10-03",
+    "source_document_date": null,
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R11",
+    "kind": "pair",
+    "ingredient_a": "clopidogrel",
+    "ingredient_b": "ibuprofen",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "氯吡格雷與布洛芬合用可增加胃腸道出血風險；加用前請藥劑師或開藥醫生核實。",
+    "summary_en": "Clopidogrel with ibuprofen can increase gastrointestinal bleeding risk. Have the combination reviewed before adding it.",
+    "action_zh": "請由藥劑師或開藥醫生核實；不要自行停藥、改藥或調整劑量。",
+    "source_id": "clopidogrel_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98a83879-4e53-41f5-83bc-681b342884dd",
+    "source_section": "7.2 NSAIDs; ingredient class supported by Hong Kong Drug Office oral NSAID guide",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "derived_from_class": true,
+    "supporting_source_urls": [
+      "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/dm_03.html"
+    ],
+    "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
+    "checked_on": "2026-10-03",
+    "source_document_date": "2023-03-29",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R12",
+    "kind": "pair",
+    "ingredient_a": "clopidogrel",
+    "ingredient_b": "naproxen",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "氯吡格雷與萘普生合用可增加胃腸道出血風險；加用前請藥劑師或開藥醫生核實。",
+    "summary_en": "Clopidogrel with naproxen can increase gastrointestinal bleeding risk. Have the combination reviewed before adding it.",
+    "action_zh": "請由藥劑師或開藥醫生核實；不要自行停藥、改藥或調整劑量。",
+    "source_id": "clopidogrel_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98a83879-4e53-41f5-83bc-681b342884dd",
+    "source_section": "7.2 NSAIDs; ingredient class supported by Hong Kong Drug Office oral NSAID guide",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "derived_from_class": true,
+    "supporting_source_urls": [
+      "https://www.drugoffice.gov.hk/eps/do/en/consumer/news_informations/dm_03.html"
+    ],
+    "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
+    "checked_on": "2026-10-03",
+    "source_document_date": "2023-03-29",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R13",
+    "kind": "pair",
+    "ingredient_a": "clarithromycin",
+    "ingredient_b": "warfarin",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "克拉霉素與華法林合用可增加嚴重出血風險及影響 INR，需醫護核實並安排監測；不自行調整處方。",
+    "summary_en": "Clarithromycin with warfarin can increase serious bleeding risk and INR. A clinician should review the combination and monitoring; do not adjust the prescription yourself.",
+    "action_zh": "請由藥劑師或開藥醫生核實；不要自行停藥、改藥或調整劑量。",
+    "source_id": "clarithromycin_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=d22bd12c-737b-4aab-e053-2995a90aff60",
+    "source_section": "5.4 Drug interactions: Oral anticoagulants; 7 Table 8 Warfarin",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "derived_from_class": false,
+    "supporting_source_urls": [],
+    "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
+    "checked_on": "2026-10-03",
+    "source_document_date": "2025-01-20",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  },
+  {
+    "rule_id": "R14",
+    "kind": "pair",
+    "ingredient_a": "clopidogrel",
+    "ingredient_b": "aspirin",
+    "evidence_level": "increased_bleeding_risk",
+    "summary_zh": "阿司匹林與氯吡格雷有時是醫生刻意安排的雙重抗血小板治療，但也涉及出血風險。請核實個人處方及療程，不因這項提示自行停藥。",
+    "summary_en": "Aspirin with clopidogrel may be intentionally prescribed as dual antiplatelet therapy, but involves bleeding risk. Confirm the individual prescription and duration; do not stop treatment because of this prompt.",
+    "action_zh": "請由藥劑師或開藥醫生核實；不要自行停藥、改藥或調整劑量。",
+    "source_id": "clopidogrel_label",
+    "source_url": "https://dailymed.nlm.nih.gov/dailymed/drugInfo.cfm?setid=98a83879-4e53-41f5-83bc-681b342884dd",
+    "source_section": "2.1 ACS; 5.2 bleeding; 5.3 discontinuation; 5.4 recent TIA/stroke; 6.1 CURE",
+    "allowed_routes": [
+      "oral"
+    ],
+    "review_status": "pending_ella_review",
+    "demo_only": true,
+    "derived_from_class": false,
+    "supporting_source_urls": [],
+    "authoring": "AI-assisted paraphrase and rule encoding, not clinical approval",
+    "checked_on": "2026-10-03",
+    "source_document_date": "2023-03-29",
+    "rule_scope": "ingredient_pair_with_explicit_route_limits_not_personal_assessment"
+  }
+]

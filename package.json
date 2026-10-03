@@ -1,0 +1,12 @@
+{
+  "name": "med-safe-hacku-2026",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Evidence-linked Hong Kong medicine checking demonstrator",
+  "scripts": {
+    "test": "node tests/engine.test.cjs && node tests/patient.test.cjs && node tests/product-features.test.cjs && node tests/validator.test.cjs && node tests/multi-medicine.test.cjs",
+    "build:data": "python3 tools/build_data.py",
+    "build:offline": "python3 tools/build_offline_manifest.py",
+    "start": "python3 server.py"
+  }
+}

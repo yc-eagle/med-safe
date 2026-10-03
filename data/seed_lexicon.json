@@ -1,0 +1,351 @@
+{
+  "version": "2026-10-03-product-v2",
+  "purpose": "Controlled terminology and candidate search, not free medical translation or prescribing",
+  "entries": [
+    {
+      "id": "paracetamol",
+      "kind": "ingredient",
+      "canonical": "paracetamol",
+      "zh_hant": "撲熱息痛",
+      "spoken_yue": "撲熱息痛",
+      "aliases": [
+        "paracetamol",
+        "撲熱息痛",
+        "acetaminophen",
+        "对乙酰氨基酚",
+        "對乙酰氨基酚",
+        "扑热息痛"
+      ],
+      "search_query": "paracetamol",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "warfarin",
+      "kind": "ingredient",
+      "canonical": "warfarin",
+      "zh_hant": "華法林",
+      "spoken_yue": "華法林",
+      "aliases": [
+        "warfarin",
+        "華法林",
+        "warfarin sodium",
+        "华法林"
+      ],
+      "search_query": "warfarin",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "ibuprofen",
+      "kind": "ingredient",
+      "canonical": "ibuprofen",
+      "zh_hant": "布洛芬",
+      "spoken_yue": "布洛芬",
+      "aliases": [
+        "ibuprofen",
+        "布洛芬"
+      ],
+      "search_query": "ibuprofen",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "aspirin",
+      "kind": "ingredient",
+      "canonical": "aspirin",
+      "zh_hant": "阿司匹林",
+      "spoken_yue": "阿司匹林",
+      "aliases": [
+        "aspirin",
+        "阿司匹林",
+        "acetylsalicylic acid"
+      ],
+      "search_query": "aspirin",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "naproxen",
+      "kind": "ingredient",
+      "canonical": "naproxen",
+      "zh_hant": "萘普生",
+      "spoken_yue": "萘普生",
+      "aliases": [
+        "naproxen",
+        "萘普生"
+      ],
+      "search_query": "naproxen",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "clopidogrel",
+      "kind": "ingredient",
+      "canonical": "clopidogrel",
+      "zh_hant": "氯吡格雷",
+      "spoken_yue": "氯吡格雷",
+      "aliases": [
+        "clopidogrel",
+        "氯吡格雷",
+        "clopidogrel (as bisulfate)",
+        "clopidogrel bisulfate"
+      ],
+      "search_query": "clopidogrel",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "omeprazole",
+      "kind": "ingredient",
+      "canonical": "omeprazole",
+      "zh_hant": "奧美拉唑",
+      "spoken_yue": "奧美拉唑",
+      "aliases": [
+        "omeprazole",
+        "奧美拉唑",
+        "omeprazole (as magnesium)",
+        "奥美拉唑"
+      ],
+      "search_query": "omeprazole",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "esomeprazole",
+      "kind": "ingredient",
+      "canonical": "esomeprazole",
+      "zh_hant": "埃索美拉唑",
+      "spoken_yue": "埃索美拉唑",
+      "aliases": [
+        "esomeprazole",
+        "埃索美拉唑",
+        "esomeprazole (as magnesium)",
+        "艾司奥美拉唑"
+      ],
+      "search_query": "esomeprazole",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "simvastatin",
+      "kind": "ingredient",
+      "canonical": "simvastatin",
+      "zh_hant": "辛伐他汀",
+      "spoken_yue": "辛伐他汀",
+      "aliases": [
+        "simvastatin",
+        "辛伐他汀"
+      ],
+      "search_query": "simvastatin",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "clarithromycin",
+      "kind": "ingredient",
+      "canonical": "clarithromycin",
+      "zh_hant": "克拉霉素",
+      "spoken_yue": "克拉霉素",
+      "aliases": [
+        "clarithromycin",
+        "克拉霉素"
+      ],
+      "search_query": "clarithromycin",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "sildenafil",
+      "kind": "ingredient",
+      "canonical": "sildenafil",
+      "zh_hant": "西地那非",
+      "spoken_yue": "西地那非",
+      "aliases": [
+        "sildenafil",
+        "西地那非",
+        "sildenafil (as citrate)",
+        "昔多芬"
+      ],
+      "search_query": "sildenafil",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "glyceryl_trinitrate",
+      "kind": "ingredient",
+      "canonical": "glyceryl trinitrate",
+      "zh_hant": "硝酸甘油",
+      "spoken_yue": "硝酸甘油",
+      "aliases": [
+        "glyceryl trinitrate",
+        "硝酸甘油",
+        "nitroglycerin"
+      ],
+      "search_query": "glyceryl trinitrate",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Explicit alias list from original demo dataset; Chinese wording and salt mappings need clinical review"
+    },
+    {
+      "id": "brand_panadol",
+      "kind": "brand_family",
+      "canonical": "PANADOL",
+      "zh_hant": "必理痛",
+      "spoken_yue": "必理痛",
+      "aliases": [
+        "必理痛",
+        "panadol"
+      ],
+      "search_query": "PANADOL",
+      "identity_scope": "brand_candidate_only",
+      "review_status": "pending_ella_review",
+      "source_note": "Manual Hong Kong brand vocabulary; confirm the exact registration and formulation"
+    },
+    {
+      "id": "colloquial_blood_thinner",
+      "kind": "ambiguous_class",
+      "canonical": null,
+      "zh_hant": "薄血丸",
+      "spoken_yue": "薄血丸",
+      "aliases": [
+        "薄血丸",
+        "薄血藥",
+        "薄血药",
+        "blood thinner"
+      ],
+      "search_query": null,
+      "identity_scope": "never_resolve_identity",
+      "clarification_zh": "「薄血丸」可能指不同藥物，不能當成華法林的同義詞。請對照藥盒或藥袋上的完整名稱及註冊號；無法確認時請問藥劑師。",
+      "clarification_en": "Blood thinner can refer to different medicines. Check the exact label; do not treat it as a synonym for warfarin.",
+      "review_status": "pending_ella_review"
+    },
+    {
+      "id": "colloquial_anti_inflammatory",
+      "kind": "ambiguous_class",
+      "canonical": null,
+      "zh_hant": "消炎藥",
+      "spoken_yue": "消炎藥",
+      "aliases": [
+        "消炎藥",
+        "消炎药"
+      ],
+      "search_query": null,
+      "identity_scope": "never_resolve_identity",
+      "clarification_zh": "「消炎藥」不是可唯一識別藥品的名稱。請提供完整藥名或註冊號，不要據此猜成抗生素或止痛藥。",
+      "clarification_en": "This everyday term does not identify one medicine. Use the full name or registration number.",
+      "review_status": "pending_ella_review"
+    },
+    {
+      "id": "term_contraindication",
+      "kind": "risk_term",
+      "canonical": "contraindication",
+      "zh_hant": "禁忌",
+      "spoken_yue": "說明書列為唔應該合用嘅組合",
+      "aliases": [
+        "contraindication",
+        "禁忌"
+      ],
+      "identity_scope": "wording_only_not_a_rule",
+      "review_status": "pending_ella_review"
+    },
+    {
+      "id": "term_avoid",
+      "kind": "risk_term",
+      "canonical": "avoid concomitant use",
+      "zh_hant": "避免合用",
+      "spoken_yue": "說明書建議避免一齊用",
+      "aliases": [
+        "avoid concomitant use",
+        "避免合用"
+      ],
+      "identity_scope": "wording_only_not_a_rule",
+      "review_status": "pending_ella_review"
+    },
+    {
+      "id": "term_duplicate",
+      "kind": "risk_term",
+      "canonical": "duplicate ingredient",
+      "zh_hant": "重複成分",
+      "spoken_yue": "兩款藥有相同成分",
+      "aliases": [
+        "duplicate ingredient",
+        "重複成分"
+      ],
+      "identity_scope": "wording_only_not_a_rule",
+      "review_status": "pending_ella_review"
+    },
+    {
+      "id": "term_precaution",
+      "kind": "risk_term",
+      "canonical": "precaution",
+      "zh_hant": "注意事項",
+      "spoken_yue": "用之前需要留意同核實嘅事",
+      "aliases": [
+        "precaution",
+        "注意事項"
+      ],
+      "identity_scope": "wording_only_not_a_rule",
+      "review_status": "pending_ella_review"
+    },
+    {
+      "id": "term_unknown",
+      "kind": "risk_term",
+      "canonical": "insufficient information",
+      "zh_hant": "資料不足",
+      "spoken_yue": "資料未夠，暫時判斷唔到",
+      "aliases": [
+        "insufficient information",
+        "資料不足"
+      ],
+      "identity_scope": "wording_only_not_a_rule",
+      "review_status": "pending_ella_review"
+    },
+    {
+      "id": "guaifenesin",
+      "kind": "ingredient",
+      "canonical": "guaifenesin",
+      "zh_hant": "愈創甘油醚",
+      "spoken_yue": "愈創甘油醚",
+      "aliases": [
+        "guaifenesin",
+        "愈創甘油醚",
+        "愈创甘油醚"
+      ],
+      "search_query": "guaifenesin",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Medicine profile linked ingredient information; Chinese wording and local applicability await professional review."
+    },
+    {
+      "id": "phenylephrine",
+      "kind": "ingredient",
+      "canonical": "phenylephrine hydrochloride",
+      "zh_hant": "鹽酸去氧腎上腺素",
+      "spoken_yue": "鹽酸去氧腎上腺素",
+      "aliases": [
+        "phenylephrine",
+        "phenylephrine hydrochloride",
+        "鹽酸去氧腎上腺素",
+        "盐酸去氧肾上腺素",
+        "去氧腎上腺素",
+        "去氧肾上腺素"
+      ],
+      "search_query": "phenylephrine",
+      "identity_scope": "ingredient_only_not_product",
+      "review_status": "pending_ella_review",
+      "source_note": "Medicine profile linked ingredient information; Chinese wording and local applicability await professional review."
+    }
+  ]
+}

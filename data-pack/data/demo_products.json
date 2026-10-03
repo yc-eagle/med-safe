@@ -1,0 +1,214 @@
+[
+  {
+    "registration_number": "HK-53362",
+    "product_name": "PANADOL CAPLET 500MG",
+    "certificate_holder": "HALEON HONG KONG LIMITED",
+    "active_ingredients": [
+      "paracetamol"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "paracetamol"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-53319",
+    "product_name": "PANADOL COLD & COUGH TAB",
+    "certificate_holder": "HALEON HONG KONG LIMITED",
+    "active_ingredients": [
+      "guaifenesin",
+      "paracetamol",
+      "phenylephrine hydrochloride"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "guaifenesin",
+      "paracetamol",
+      "phenylephrine hydrochloride"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-41421",
+    "product_name": "WARFARIN TAB 1MG (TEVA)",
+    "certificate_holder": "TEVA PHARMACEUTICAL HONG KONG O/B TEVA PHARMACEUTICAL HONG KONG LIMITED",
+    "active_ingredients": [
+      "warfarin sodium"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "warfarin"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-35198",
+    "product_name": "APO-IBUPROFEN TAB 200MG",
+    "certificate_holder": "HIND WING CO LTD",
+    "active_ingredients": [
+      "ibuprofen"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "ibuprofen"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-67345",
+    "product_name": "ASPIRIN KUKJE GASTRO-RESISTANT TABLETS 100MG",
+    "certificate_holder": "SB PHARMA LIMITED",
+    "active_ingredients": [
+      "aspirin"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "aspirin"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-34921",
+    "product_name": "APO-NAPROXEN TAB 250MG",
+    "certificate_holder": "HIND WING CO LTD",
+    "active_ingredients": [
+      "naproxen"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "naproxen"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-43787",
+    "product_name": "PLAVIX TAB 75MG",
+    "certificate_holder": "SANOFI HONG KONG LIMITED",
+    "active_ingredients": [
+      "clopidogrel (as bisulfate)"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "clopidogrel"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-44354",
+    "product_name": "LOSEC MUPS TAB 20MG",
+    "certificate_holder": "ZUELLIG PHARMA LIMITED",
+    "active_ingredients": [
+      "omeprazole (as magnesium)"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "omeprazole"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-64320",
+    "product_name": "ESOMEPRAZOLE ACTAVIS GASTRO-RESISTANT TABLETS 20MG",
+    "certificate_holder": "TEVA PHARMACEUTICAL HONG KONG O/B TEVA PHARMACEUTICAL HONG KONG LIMITED",
+    "active_ingredients": [
+      "esomeprazole (as magnesium)"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "esomeprazole"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-34337",
+    "product_name": "ZOCOR TAB 10MG",
+    "certificate_holder": "ORGANON HONG KONG LIMITED",
+    "active_ingredients": [
+      "simvastatin"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "simvastatin"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-43890",
+    "product_name": "KLACID FORTE TAB 500MG",
+    "certificate_holder": "ABBOTT LAB LTD",
+    "active_ingredients": [
+      "clarithromycin"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "clarithromycin"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-45575",
+    "product_name": "VIAGRA TAB 25MG",
+    "certificate_holder": "VIATRIS HEALTHCARE HONG KONG LIMITED",
+    "active_ingredients": [
+      "sildenafil (as citrate)"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "oral",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "sildenafil"
+    ],
+    "medical_review_status": "pending_ella_review"
+  },
+  {
+    "registration_number": "HK-67272",
+    "product_name": "NITROSTAT TABLETS 0.6MG",
+    "certificate_holder": "VIATRIS HEALTHCARE HONG KONG LIMITED",
+    "active_ingredients": [
+      "glyceryl trinitrate"
+    ],
+    "source_id": "hk_xml",
+    "source_updated": "2026-09-25",
+    "demo_route": "sublingual",
+    "route_provenance": "Demo selection based on product name; verify the physical pack. Route is NOT provided by DrugList.xml.",
+    "canonical_ingredients": [
+      "glyceryl trinitrate"
+    ],
+    "medical_review_status": "pending_ella_review"
+  }
+]

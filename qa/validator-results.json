@@ -1,0 +1,96 @@
+{
+  "date": "2026-10-03T06:38:37.870Z",
+  "synthetic_fixtures": true,
+  "platform_comparison": false,
+  "passed": 22,
+  "results": [
+    {
+      "name": "Exact complete catalogue match accepted as fields only",
+      "status": "passed"
+    },
+    {
+      "name": "Explicit ingredient synonym normalizes and preserves provenance",
+      "status": "passed"
+    },
+    {
+      "name": "Missing one compound ingredient is a conflict",
+      "status": "passed"
+    },
+    {
+      "name": "Invented ingredient conflicts",
+      "status": "passed"
+    },
+    {
+      "name": "Wrong registration conflicts despite correct name",
+      "status": "passed"
+    },
+    {
+      "name": "Unknown reference is unverified, not evidence of AI error",
+      "status": "passed"
+    },
+    {
+      "name": "Missing name is unverified",
+      "status": "passed"
+    },
+    {
+      "name": "Brand alone cannot establish full formulation",
+      "status": "passed"
+    },
+    {
+      "name": "Unconfirmed reference never accepted",
+      "status": "passed"
+    },
+    {
+      "name": "Missing product rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Duplicate input index rejected",
+      "status": "passed"
+    },
+    {
+      "name": "Reordered output uses explicit input index",
+      "status": "passed"
+    },
+    {
+      "name": "Personal dose from pack is not verifiable",
+      "status": "passed"
+    },
+    {
+      "name": "Personal frequency from pack is not verifiable",
+      "status": "passed"
+    },
+    {
+      "name": "Extra unvalidated safety claim is not silently accepted",
+      "status": "passed"
+    },
+    {
+      "name": "Unknown product fields are not silently accepted",
+      "status": "passed"
+    },
+    {
+      "name": "Markdown code fences allowed without rewriting raw content",
+      "status": "passed"
+    },
+    {
+      "name": "Prose output remains unparseable rather than guessing",
+      "status": "passed"
+    },
+    {
+      "name": "Non-string ingredient array does not crash",
+      "status": "passed"
+    },
+    {
+      "name": "Accepted identity and missing rule coverage remain separate",
+      "status": "passed"
+    },
+    {
+      "name": "Prescription conflict is referred without choosing a dose",
+      "status": "passed"
+    },
+    {
+      "name": "No matching rule never changes clinicalSafety",
+      "status": "passed"
+    }
+  ]
+}
