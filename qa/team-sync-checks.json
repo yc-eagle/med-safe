@@ -1,0 +1,17 @@
+{
+  "team_base": "b91b00c75ec2627f3df4e9e84b90409ce88272aa",
+  "tested_working_head": "dc334b935cabf3f21c7c90ec10cb43329aca111c",
+  "scope": "Engineering regression checks in an isolated archive of the rebased working tree; no clinical validation or new physical-phone test. The team checkout and its existing QA files were not written by these tests.",
+  "checks": {
+    "engine": 35,
+    "patient_workflow": 26,
+    "product_features": 14,
+    "independent_validator": 22,
+    "multi_medicine": 41,
+    "patient_languages": 8,
+    "browser_voice_failures": 9,
+    "voice_language_routing": 8
+  },
+  "passed": 163,
+  "failed": 0
+}

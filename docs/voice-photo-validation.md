@@ -17,6 +17,12 @@ The smaller regression suite uses controlled responses to test error handling. I
 
 Public browser OCR processes selected images locally. The image tests observed no outgoing non-GET request during image processing. All photo inputs still require the user to confirm the medicine and route before a check; missing matches do not imply safety.
 
+## Team synchronization
+
+The native media observations above were collected before the latest review-status wording update. They are retained as historical observations, not relabeled as new-device tests. This branch is now based on team commit `b91b00c`, which includes the recorded review of the 14 rules and interface copy updates. Of the 45 files changed by the team since `f38b5ee`, 44 remain byte-for-byte identical; the latest `app/voice.js` contains only the previously prepared error-handling patch in addition to the teammate’s content.
+
+[Preservation comparison](../qa/team-sync-preservation.json) and [163 passing engineering regression checks](../qa/team-sync-checks.json) document this integration. Checks ran in an isolated copy so they did not rewrite the team’s existing result files.
+
 ## Evidence
 
 - [Native voice UI observations](../qa/native-voice-ui-observations.json)
