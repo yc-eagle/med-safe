@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-03T08:57:53.162Z",
+  "url": "http://127.0.0.1:8870/",
+  "scope": "Real browser OCR and app matching with original image pixels. A synthetic label checks the positive path; manufacturer thumbnails are held-out realistic challenges. Not a physical camera test.",
+  "images": [
+    {
+      "name": "synthetic-labels",
+      "state": "ocrDone",
+      "text": "SYNTHETIC TEST LABELS - NOT REAL PACKAGING\nNo product photos. No physical medicine verified.\nDEMO A\nDEMO B\nPANADOL CAPLET 500MG\nPANADOL COLD & COUGH TAB\nHK-53362\nHK-53319\nACTIVE INGREDIENTS\nACTIVE INGREDIENTS\nPARACETAMOL\nGUAIFENESIN\nPARACETAMOL\nPHENYLEPHRINE HYDROCHLORIDE\nFor software testing only\nFor software testing only",
+      "candidateIds": [
+        "HK-53362",
+        "HK-53319"
+      ],
+      "autoSelected": 0,
+      "outbound": []
+    },
+    {
+      "name": "official-panadol",
+      "state": "ocrNone",
+      "text": "",
+      "candidateIds": [],
+      "autoSelected": 0,
+      "outbound": []
+    },
+    {
+      "name": "official-panadol-cold",
+      "state": "ocrNone",
+      "text": "『 |\n,理靖開\n全",
+      "candidateIds": [],
+      "autoSelected": 0,
+      "outbound": []
+    },
+    {
+      "name": "official-panadol-large",
+      "state": "ocrNone",
+      "text": "BSS ISSSSS\nos\n主治\n痛\nOPTI\niE VY\nSutenes\nai\n可於空月\nALE\n服用y\nNEE A\n€\n24%\n成分最\n&",
+      "candidateIds": [],
+      "autoSelected": 0,
+      "outbound": []
+    }
+  ],
+  "source_pages": [
+    "https://www.panadol.com/zh-hk/products/adult-product/panadol-tablets-with-optizorb-formulation/",
+    "https://www.panadol.com/zh-hk/products/adult/everyday-pain-relief/panadol-carplets/"
+  ],
+  "note": "Manufacturer photos are not redistributed in the repository. Each was downloaded as an original image and passed to the browser without altering its pixels."
+}

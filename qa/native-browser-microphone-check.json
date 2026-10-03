@@ -1,0 +1,120 @@
+{
+  "time": "2026-10-03T09:00:33.164Z",
+  "scope": "Unmodified Chrome recognizer and OS speech synthesis, synthetic WAV microphone input. Not human or physical-phone validation.",
+  "languages": [
+    {
+      "locale": "en",
+      "capabilities": {
+        "asr": true,
+        "voices": [],
+        "buttonDisabled": false
+      },
+      "transcript": "",
+      "recognition": [
+        {
+          "event": "start",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "audiostart",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "error",
+          "lang": "en-HK",
+          "error": "no-speech",
+          "text": null
+        },
+        {
+          "event": "end",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        }
+      ],
+      "answerInputSource": "typed built-in example",
+      "speaking": [
+        {
+          "event": "start",
+          "error": null,
+          "lang": "en-US",
+          "voice": "Samantha",
+          "local": true,
+          "text": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThese prepared warnings await clinical review and do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review."
+        },
+        {
+          "event": "end",
+          "error": null,
+          "lang": "en-US",
+          "voice": "Samantha",
+          "local": true,
+          "text": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThese prepared warnings await clinical review and do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review."
+        }
+      ],
+      "answer": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThese prepared warnings await clinical review and do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review.",
+      "status": "Could not transcribe this clip. Record again or type. Use 0.3–20 seconds.",
+      "toast": ""
+    },
+    {
+      "locale": "yue",
+      "capabilities": {
+        "asr": true,
+        "voices": [],
+        "buttonDisabled": false
+      },
+      "transcript": "",
+      "recognition": [
+        {
+          "event": "start",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "audiostart",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "speechstart",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "end",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        }
+      ],
+      "answerInputSource": "typed built-in example",
+      "speaking": [
+        {
+          "event": "start",
+          "error": null,
+          "lang": "yue-HK",
+          "voice": "Sinji",
+          "local": true,
+          "text": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n呢啲係未經醫學複核嘅演示提示，資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。"
+        },
+        {
+          "event": "end",
+          "error": null,
+          "lang": "yue-HK",
+          "voice": "Sinji",
+          "local": true,
+          "text": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n呢啲係未經醫學複核嘅演示提示，資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。"
+        }
+      ],
+      "answer": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n呢啲係未經醫學複核嘅演示提示，資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。",
+      "status": "正在聆聽，最多20秒；再按一次結束。",
+      "toast": ""
+    }
+  ]
+}

@@ -9,6 +9,13 @@
  const unsupported=()=>say('This Mac’s offline recognizer supports Cantonese only. Type in English, or open the public web app for optional browser voice input.','这台 Mac 的离线识别目前仅支持粤语。请用普通话文字提问，或打开公开网页使用可选的浏览器语音。','粵語識別尚未就緒，請先打字提問。');let recorder=null,stream=null,timer=null,serial=0,answer=null,question='',url=null,busy=false;
  function clearAnswer(){serial++;answer=null;$('#voice-answer').hidden=true;$('#answer-audio audio')?.pause();$('#answer-audio').innerHTML='';if(url)URL.revokeObjectURL(url);url=null;}
  function status(text){$('#voice-status').textContent=text;}
+ function browserFailure(code){
+  const next=say(' Try again, use voice typing on your phone keyboard if available, or type your question.','请重试，使用手机键盘的语音输入（如支持），或直接打字。','可以再試，或者用手機鍵盤嘅語音輸入（如支援），亦可以直接打字。');
+  if(code==='not-allowed'||code==='audio-capture')return say('The browser could not access the microphone. Check microphone permission.','浏览器无法使用麦克风，请检查麦克风权限。','瀏覽器未能使用咪高峰，請檢查咪高峰權限。')+next;
+  if(code==='network'||code==='service-not-allowed')return say('The browser speech service is unavailable.','浏览器语音服务暂时无法使用。','瀏覽器語音服務暫時用唔到。')+next;
+  if(code==='language-not-supported')return say('The browser speech service does not support the selected language.','浏览器语音服务不支持当前语言。','瀏覽器語音服務唔支援而家揀嘅語言。')+next;
+  return say('Listening ended without a usable transcript.','收音已结束，但没有识别到可用文字。','收音已經結束，但未識別到可用文字。')+next;
+ }
  function update(){
   document.querySelectorAll('[data-v]').forEach(el=>el.textContent=v(el.dataset.v));
   const browser=api?.runtime==='browser';
@@ -35,7 +42,17 @@
  }
  function closeStream(){stream?.getTracks().forEach(t=>t.stop());stream=null;clearTimeout(timer);}
  async function record(){
-  if(api?.runtime==='browser'){if(BrowserRuntime.stopListening?.())return;clearAnswer();stopAudio();const requestSerial=serial;try{const text=await BrowserRuntime.listen(current());if(text&&requestSerial===serial){$('#question-text').value=text.slice(0,500);inputChanged();status(v('confirmHeard'));}}catch{status(v('error'));}return;}
+  if(api?.runtime==='browser'){
+   if(BrowserRuntime.stopListening?.())return;
+   clearAnswer();stopAudio();const requestSerial=serial;
+   try{
+    const text=await BrowserRuntime.listen(current());
+    if(requestSerial!==serial||text===null)return;
+    if(typeof text==='string'&&text.trim()){$('#question-text').value=text.slice(0,500);inputChanged();status(v('confirmHeard'));}
+    else status(browserFailure('no-speech'));
+   }catch(error){if(requestSerial===serial)status(browserFailure(error?.message));}
+   return;
+  }
 
   if(recorder?.state==='recording'){recorder.stop();return;}
   if(!canRecord())return status(current()!=='yue'?unsupported():v('missing'));
