@@ -39,16 +39,23 @@
 
 ## 3. What our model does not cover
 
-<!-- TODO (Sun and Ella) -->
+**This mirrors the "outside the model's capability" list in [`decision-logic.md`](decision-logic.md).** Keep the two in step.
 
 | Not covered | Note |
 |---|---|
 | Dosage and administration | We deliberately give **no** dosage advice |
-| The patient's own circumstances | Age, liver and kidney function, allergies, pregnancy — **we know none of it** |
-| Herbal medicines and supplements | _TODO: actual coverage_ |
-| Food-drug interactions | _TODO_ |
+| Treatment duration and dosing intervals | Not modelled |
+| The patient's own circumstances | Age, liver and kidney function, allergies, pregnancy and breastfeeding — **we know none of it** |
+| Paediatric regimens | Not covered |
+| Higher-order interactions | Three or more medicines interacting together is not assessed; only pairs are |
+| Cumulative dose | Not assessed |
+| Herbal medicines, Chinese patent medicines, supplements | **Not covered.** Stated as such in the product |
+| Food-drug interactions | **Not covered** |
+| What the user has already taken today, and when | We do not know it |
+| Recall monitoring | Not covered |
 | Drug names outside Hong Kong | Brand names differ by region |
-| Time | We do not know **what the user has already taken today** |
+
+> **These gaps cannot be closed by downloading more model weights.** They need reliable data, a defined scope, and professional validation — which is human work.
 
 ---
 
@@ -71,19 +78,23 @@
 |---|---|
 | Low recognition confidence | Retake, choose another image, or enter the registration number; it does not guess |
 | Identity not confirmed by the user | Outputs `identity_confirmation_required`; the full check does not proceed |
+| An unmapped ingredient, or a missing route | Outputs `incomplete_check`; the gap stays visible |
 | Data not matched | Outputs `no_rule_found` and states **not covered** |
-| Route not confirmed or outside scope | Outputs `route_review_required`; shown as a prompt to confirm |
+| Route not confirmed or outside scope | Outputs `route_review_required`; shown as a prompt to confirm, and not extrapolated |
+| The same product added twice | Outputs `duplicate_input_requires_review` |
 | Ambiguous wording in the output | Reviewed line by line by Ella; must be checked before the demo |
 | System entirely unavailable | The interface states plainly: consult a doctor or pharmacist |
+| Offline, external citation link | The link does not resolve; the local summary, the date and the section reference remain |
 
-<!-- TODO: document the actual degradation paths in the implementation. -->
+**Two flags are attached to every result, without exception:** `clinicalSafety: not_assessed` and `coverageComplete: false`. **There is no code path that issues a safe conclusion.**
 
 ---
 
 ## 6. Checklist
 
-- [ ] Failure-mode table corrected against the actual implementation
-- [ ] **"No data is not the same as no problem" is enforced in code and has been tested**
-- [ ] Non-coverage table completed
-- [ ] The four "do not do" items are stated in the interface and in the demo
+- [x] Failure table reflects the implemented output labels
+- [x] **"A missing match never establishes safety" is enforced in code**
+- [x] Non-coverage table completed from [`decision-logic.md`](decision-logic.md)
+- [ ] The four "do not do" items verified in the interface and in the demo
+- [ ] All fallback paths exercised in the rehearsal
 - [ ] Fallback paths tested

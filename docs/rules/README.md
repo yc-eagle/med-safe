@@ -99,23 +99,21 @@ Every tier uses the same table so it can be fed straight into code:
 
 ---
 
-## 3. L1 - Contraindicated / severe interaction
+## 3. What the tiers contain in practice
 
-| id | Drug A | Drug B | statement (plain language) | action | source | verified_by |
-|---|---|---|---|---|---|---|
-| _TODO_ | | | | | | |
+The engine does not use L1/L2/L3 as labels. It uses the five evidence levels listed in section 0. **The mapping is:**
 
-<!-- Example row (requires Ella's verification before it moves into the table above):
-| L1-001 | warfarin | aspirin | Taking these two together may significantly increase the risk of bleeding. Do not take them together without advice. | Speak to a doctor or pharmacist immediately | TODO | TO VERIFY |
--->
+| Display tier | Corresponds to implemented levels | Example rule |
+|---|---|---|
+| **L1** | `label_contraindication` | R08 simvastatin + clarithromycin |
+| **L2** | `label_recommends_avoid`, `increased_bleeding_risk` and other increased-risk levels, `consult_before_use`, `nitrate_warning` | R03 warfarin + aspirin; R06 clopidogrel + omeprazole; R09 warfarin + paracetamol |
+| **L3** | no rule matched — output `no_rule_found` | any pair outside the 14 rules |
 
----
+**R01 (paracetamol + paracetamol) is `duplicate_ingredient`.** It is not an interaction and must not be presented as one.
 
-## 4. L2 - Caution / requires doctor confirmation
+**The full, authoritative list of the 14 rules — ingredient pair, evidence level, permitted route and source section — is in section 1b above, and in machine-readable form in [`../../data/data_inventory.json`](../../data/data_inventory.json) and [`review.csv`](review.csv).**
 
-| id | Drug A | Drug B | statement (plain language) | action | source | verified_by |
-|---|---|---|---|---|---|---|
-| _TODO_ | | | | | | |
+**No rule may be moved from "draft" to "approved" without a named professional reviewer filling the approval column.** The `verified_by` field stays empty until then.
 
 ---
 
@@ -134,18 +132,26 @@ What it needs is **explicit wording**, not rows:
 
 ## 6. Data sources and coverage
 
-<!-- TODO (Ella and Sun): confirm the sources actually used and state the coverage boundary -->
+**These are the real numbers, taken from the repository, not estimates.** Source of truth: [`../../data-pack/validation/data_checks.json`](../../data-pack/validation/data_checks.json) and [`../../data/data_inventory.json`](../../data/data_inventory.json).
 
 | Question | Answer |
 |---|---|
-| What data source do we use? | _TODO_ |
-| How many medicines does it cover? | _TODO_ |
-| How many interaction pairs? | _TODO_ |
-| **What will definitely not be found?** | _TODO_ - this row matters most; it *is* L3 |
-| Are Chinese patent and herbal medicines covered? | _TODO_ |
-| How current is it? | _TODO_ |
+| What data source do we use? | **Hong Kong registered pharmaceutical products catalogue** (Department of Health, Drug Office), plus Drug Office consumer guidance and DailyMed labelling for the rule sources. Full attribution: [`../../data-pack/SOURCES.md`](../../data-pack/SOURCES.md) |
+| How many medicines does it cover? | **14,269 registered products**, 14,269 unique registration numbers, **23,835** product-ingredient rows, **2,081** distinct raw ingredient strings |
+| How many interaction pairs? | **14 rules.** These are **not** an interaction database — see the honest framing below |
+| **What will definitely not be found?** | Anything outside the 14 rules: **all higher-order interactions (three or more medicines), cumulative dose, Chinese patent and herbal medicines, supplements, food interactions, what the user has already taken today, dosing intervals, hepatic and renal adjustment, allergy matching, pregnancy, breastfeeding and paediatric regimens, and recall monitoring** |
+| Are Chinese patent and herbal medicines covered? | **No.** Outside current scope, and stated as such in the product |
+| How current is it? | Catalogue snapshot **2026-09-25**; inventory check **2026-10-03** |
 
-> **The "what will definitely not be found" row must be written down and stated proactively in the pitch.**
+### The framing that must be used when quoting these numbers
+
+- **"14,269 products" is a catalogue, not a knowledge base.** There are roughly **101.8 million** product pairs in it. **14 rules cannot claim to cover that**, and the product makes no claim of being "the most complete".
+- **A rule not matching is a coverage statement, never a safety statement.**
+- **`derived_from_class` rules (R11, R12) must have their derivation shown**, not hidden.
+- **US sources are not equivalent to Hong Kong product approval labelling.**
+- **Zero of the 14 rules are professionally approved** ([`review.csv`](review.csv), approval column empty).
+
+> **The "what will definitely not be found" row must be stated proactively in the pitch.**
 > The problem statement requires *"State what it costs, **what it gets wrong**, and what leaves the device."* Drawing your own coverage boundary is far more credible than claiming completeness.
 
 ---

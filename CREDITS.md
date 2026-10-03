@@ -9,18 +9,31 @@
 
 ## 1. Open-source libraries and frameworks
 
-| Name | Purpose | Version | Licence | Used for |
-|---|---|---|---|---|
-| _TODO_ | | | | |
+These are the components actually shipped, taken from `app/vendor/` and `tools/asr-requirements.lock.txt`. Licence texts are included in the repository alongside the assets.
 
-<!--
-Example rows:
-| Tesseract OCR | Offline text recognition | 5.x | Apache-2.0 | Reading medicine labels |
-| Ollama | Local model inference | - | MIT | On-device inference |
-| FastAPI | Backend framework | 0.1xx | MIT | API service |
--->
+| Name | Purpose | Licence | Where it is used |
+|---|---|---|---|
+| **Tesseract.js** | OCR engine for the browser | Apache-2.0 | `app/vendor/tesseract.min.js`, `worker.min.js` |
+| **tesseract.js-core** | Tesseract compiled to WebAssembly | Apache-2.0 | `app/vendor/tesseract-core*.wasm` |
+| **tessdata_fast** — `eng`, `chi_tra` | Trained language data for English and Traditional Chinese | Apache-2.0 | `app/vendor/eng.traineddata`, `chi_tra.traineddata` |
+| **regenerator-runtime** | Runtime dependency bundled with Tesseract.js | MIT | `app/vendor/tesseract.min.js.LICENSE.txt` |
+| **Apple Vision framework** | On-device OCR on macOS | Apple system framework, used as provided | `native/ocr.swift` |
+| **MLX** | Local inference runtime for the optional Cantonese speech model | MIT | `tools/asr-requirements.lock.txt` |
+| **Qwen3-ASR** (`mlx-community/Qwen3-ASR-0.6B-4bit`) | Cantonese speech recognition, optional Apple Silicon path | Model licence as published by the model authors | Downloaded by `tools/install_voice.py`, revision `313d850181767edf09f00a9c289becca70e58cd0`, about 0.7 GB. **Weights are not redistributed in this repository** |
 
-**Add a row every time a new library is introduced.** Pay attention to licence type in particular; copyleft licences carry obligations.
+**Why the licence text files are committed:** the Apache-2.0 and MIT terms require the notice to travel with the distribution. They are in `app/vendor/*LICENSE*.txt`.
+
+**Add a row every time a new component is introduced.** Copyleft licences in particular carry obligations that must be checked before use.
+
+### Components deliberately NOT used
+
+For the record, so the time is not spent twice:
+
+| Name | Status |
+|---|---|
+| **RxNav / RxNav-in-a-Box** (U.S. NLM) | **Not used as an interaction database.** Its official FAQ states the interaction API has been retired |
+| **DrugBank** | **Not used.** Requires an academic licence; the download page showed academic downloads temporarily paused |
+| **Ollama, FastAPI and similar** | **Not used.** Earlier planning notes listed them as examples; the shipped prototype does not depend on them |
 
 ---
 

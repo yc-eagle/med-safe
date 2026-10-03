@@ -1,4 +1,4 @@
-﻿# MedSafe — Hong Kong Medication Verification Assistant
+# MedSafe — Hong Kong Medication Verification Assistant
 
 [English](README.md) | [中文](README.zh-CN.md)
 
@@ -64,7 +64,7 @@ Open the public entry point; no GitHub account needed. Search by full HK registr
 
 The public site has also passed anonymous Chromium testing of all offline downloads, an offline reload, and catalogue search, with 9 additional canonical-URL redirect regression checks. Physical phone testing remains pending.
 
-The mobile offline upgrade passed 16 core engineering checks (47 cached resources, about 52.6 MiB, covering offline reopen, lookup, rules, OCR and disabling speech when offline). **Official release status is determined by the offline download entry point on the page.** Browser speech may be processed by the browser vendor's servers; this is disclosed and consent is requested each time. **Web speech recognition is not fully offline and must not be described as such.** Manual input remains available offline. A local voice is used only when the device has one.
+The public URL has been verified by an **anonymous Chromium session** doing a full offline download, an offline reopen, and a drug lookup while offline; **9 additional site-redirect regression checks** were added at the same time. The mobile offline upgrade passed 16 core engineering checks (47 cached resources, about 52.6 MiB, covering offline reopen, lookup, rules, OCR and disabling speech when offline). **Official release status is determined by the offline download entry point on the page. Testing on a physical phone has not been completed.** Browser speech may be processed by the browser vendor's servers; this is disclosed and consent is requested each time. **Web Cantonese recognition is not fully offline and must not be described as such.** Manual input remains available offline. A local voice is used only when the device has one.
 
 ### Desktop, offline, with no model
 
@@ -198,8 +198,8 @@ Ella provided Doubao and Raccoon share links; automated tooling could not retrie
 | Member | University | GitHub | Responsibility |
 |---|---|---|---|
 | **Yicheng JIANG** | Beijing Foreign Studies University | [@yc-eagle](https://github.com/yc-eagle) | Overall topic selection and concept (originator of the idea) / core work / project progress management / repository and workflow / pitch deck / presentation and pitching |
-| **Shuoyang SUN** | Tsinghua University | _TODO: GitHub username_ | All desktop-web development / Live Demo |
-| **Lin MA (Ella)** | Tsinghua University | _TODO: GitHub username_ | Domain expertise, rule review, and Raccoon evidence |
+| **Shuoyang SUN** | Tsinghua University | [@lkwet](https://github.com/lkwet) | All desktop-web development / Live Demo |
+| **Lin MA (Ella)** | Tsinghua University | [@huaxiamalin113](https://github.com/huaxiamalin113) | Domain expertise, rule review, and Raccoon evidence |
 
 The presentation keeps the team's structure: **read it clearly / find a sourced warning / admit what is not covered.** Do not present every risk as an absolute prohibition. The existing [competition discussion](docs/competitors.md) and [pitch planning](deck/pitch-deck.md) are retained as material still to be verified; unevidenced generalisations or outdated feature descriptions must be corrected against the current implementation and sources before use on stage. The original conflicting documents are preserved in the [team planning archive](docs/team-planning/README.md).
 

@@ -1,4 +1,4 @@
-﻿# Evidence Protocol
+# Evidence Protocol
 
 > **Internal working document**, written in English for consistency with the rest of the repository.
 
@@ -65,14 +65,21 @@ State this explicitly, and make it **verifiable**:
 
 ## 3. What it costs
 
-<!-- TODO (Sun) -->
+Source: [`../COST_AND_DATA_FLOW.md`](../COST_AND_DATA_FLOW.md). The honest headline is that **the recurring cost is low and the missing resources are the real cost.**
 
 | Item | Cost | Note |
 |---|---|---|
-| On-device inference hardware requirement | _TODO_ | Can it run on an ordinary phone or laptop |
-| Size of the offline data pack | _TODO_ | Determines whether offline is realistic |
-| Cost per call when online | _TODO_ | Estimated |
-| Development and maintenance | _TODO_ | State it honestly |
+| Per-question API cost | **None** | Catalogue search and the deterministic rules run in the browser with **no per-question paid API** |
+| Offline data pack | **47 resources, about 52.6 MiB** | The mobile offline cache. Initial download, decompression, memory and latency vary by device |
+| On-device inference requirement | **No GPU or model needed for the core path.** Browser OCR uses bundled Tesseract WASM and the English / Traditional Chinese data | Runs on an ordinary laptop; performance on low-end phones is untested |
+| Optional local speech model | **About 0.7 GB**, downloaded once on an Apple Silicon Mac only | `mlx-community/Qwen3-ASR-0.6B-4bit`, fixed revision, installed into a separate runtime. **First installation is not an offline operation** |
+| Static hosting | Provider limits and terms apply | The prototype **does not promise free hosting indefinitely, nor a production service-level agreement** |
+| **DrugBank commercial licence** | **Not held** | A missing resource, not a zero-cost resource already obtained |
+| **Full clinical interaction subscription** | **Not held** | As above |
+| **Clinician-approved comprehensive rule set** | **Not held** | As above. This is human work, not a download |
+| Development and maintenance | Not a stable figure | Do not quote one |
+
+> **Say this plainly if asked:** machine-downloadable catalogue and model work is complete for the current scope; **professional product review, rule review and real-world evaluation remain human work and are not done.**
 
 ---
 

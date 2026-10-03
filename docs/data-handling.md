@@ -1,82 +1,98 @@
-﻿# Data and Privacy: What Leaves the Device
+# Data and Privacy: What Leaves the Device
 
 [English](data-handling.md) | [中文](data-handling.zh-CN.md)
 
 > The problem statement **requires** this: *"State what it costs, what it gets wrong, and **what leaves the device**."*
+> **Owner: Sun.**
 
-> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`../docs/decision-logic.md`](../docs/decision-logic.md) or the program, **the implementation wins**.
+> **Earlier planning material — corrections applied.** Written before the product was built. Where this file conflicts with [`../README.md`](../README.md), [`decision-logic.md`](decision-logic.md) or the program, **the implementation wins**.
 >
 > - **Cantonese is prioritised** for the primary users; English narration appears in the demo video only.
 > - **Risk levels are separate** (labelling contraindication / recommends avoid / increased risk / consult first / duplicate ingredient). Not every warning is "must not be taken together".
 > - When a sourced rule matches, **the product does show the warning**. It never outputs a **"safe" conclusion**; a missing rule is a **coverage** status.
 > - **Zero of the 14 rules are professionally approved.**
 > - Capabilities of third-party products and services must be verified individually, not generalised.
-> **Owner: Sun.**
 
 ---
 
-## 1. By default, nothing leaves the device
+## 1. What actually leaves the device
 
-| Action | Where it happens | Data leaving the device |
+| Action | Where it happens | What leaves the device |
 |---|---|---|
-| Photographing | On device | **None** |
-| Text recognition | On device | **None** |
-| Medicine lookup | Local data | **None** |
-| Interaction check | Local rules | **None** |
-| Speech synthesis | On device | **None** |
+| Catalogue lookup and rule checking | In the browser, using downloaded data | **Nothing** |
+| Photographing and text recognition (browser) | On the device, by bundled Tesseract | **Nothing.** The original image is processed by the browser |
+| Photographing and text recognition (Apple Silicon Mac) | Local service on the same machine | Only to `localhost` on that machine. **Temporary files are deleted with the request** |
+| Speech input in the browser | **Browser `SpeechRecognition` may be handled by the vendor's servers** | **A recording may reach the browser vendor.** Disclosed in the interface, with consent requested each time |
+| Speech input (Apple Silicon Mac, local model) | Local Qwen3-ASR | **Nothing** once the model is installed |
+| Speech output | The device's own voices | **Nothing** |
+| Opening an external citation link | The source website | A normal web request to that site |
 
-<!-- TODO (Sun): confirm each row against the actual implementation and mark honestly anything not yet implemented. -->
+**There is no application backend storing patient data.** Normal catalogue and rule use has no server-side patient store.
 
-**This is a design target, not an add-on.** Two reasons: one of the barriers in the problem statement is having no connection, and a photograph of someone's medicines is **personal health information** that should not be uploaded as a matter of course.
-
----
-
-## 2. When it does go online
-
-<!-- TODO (Sun): if any part of the MVP requires connectivity, state it plainly -->
-
-| Situation | Online? | What is sent | Why |
-|---|---|---|---|
-| _TODO_ | | | |
-
-> **If the prototype depends on connectivity anywhere, say so in the pitch before a judge asks.** Stating a boundary yourself earns credit. Having it discovered costs you.
+**One thing that does always leave:** requesting the public site exposes normal access metadata, such as an IP address, to the static hosting provider. That is unavoidable for any hosted page and should be stated plainly if asked.
 
 ---
 
-## 3. Offline degradation
+## 2. The distinction that must not be blurred
+
+> **Web speech recognition is not fully offline.**
+
+Browser `SpeechRecognition` can be processed by the browser vendor's servers. It is started only after the interface states this, and consent is requested for that use. **When offline, the user should type instead.** The product must never describe web Cantonese recognition as fully offline.
+
+Local speech (the Apple Silicon option) is different: once the model is installed it runs on the machine. A local voice is used for output only when the device reports one.
+
+---
+
+## 3. Offline behaviour
 
 | Scenario | Behaviour |
 |---|---|
-| Fully offline | _TODO: which functions remain available_ |
-| Unstable connection | _TODO_ |
-| Data pack not downloaded | _TODO_ |
+| Fully offline, after the data pack has downloaded | Catalogue lookup, rule checking, manual entry and the pharmacist question card all work. Browser OCR works from the bundled resources. **External citation links do not resolve**; local summaries, dates and section references remain |
+| Unstable connection | Downloaded-data functions behave as offline; external links may fail |
+| Data pack not downloaded | Only what is already cached is available. The offline download entry point on the page is the authoritative status indicator |
+| Offline installation size and cache completion | **Read from the shipped interface and verify on the device.** Do not quote a figure that has not been observed on that device |
+
+**Testing status, stated precisely:** the public URL has been verified in an **anonymous Chromium session** performing a full offline download, an offline reopen and a drug lookup while offline; **9 site-redirect regression checks** were added at the same time. The mobile offline upgrade passed **16 core engineering checks** across **47 cached resources, about 52.6 MiB**. **Testing on a physical phone has not been completed.** The declared scope of that suite is: Chromium desktop emulating 320/390px, real OCR of a synthetic fixture, simulated speech recognition, service workers blocked for that suite. **It is not physical iOS, Safari or Android device testing, not patient testing, and not clinical validation.**
 
 ---
 
-## 4. Compliance notes
+## 4. What must not be put in the cache
+
+Personal medicine selections, user questions, audio recordings and images **should not be added to the application cache**. The cache is for the catalogue, ingredient material, rules and recognition resources — not for the user's own circumstances.
+
+---
+
+## 5. Compliance notes
 
 | Item | Note |
 |---|---|
-| Hong Kong Personal Data (Privacy) Ordinance (PDPO) | Personal health information is not uploaded by default; if it ever is, the purpose and scope are stated |
-| Photograph retention | _TODO: retained or not, for how long, stored where_ |
-| Can the user delete it | _TODO_ |
-| Third-party services | List every third-party call and its data flow |
+| Hong Kong Personal Data (Privacy) Ordinance (PDPO) | Personal health information is not uploaded by default. The product is designed so that a patient data store is unnecessary |
+| Photograph retention | Browser: processed on the device, not uploaded. Mac: a temporary file deleted with the request |
+| Can the user delete it | There is no server-side patient record to delete. Clearing browser or app cache removes cached resources. **Per-browser cache retention and eviction behaviour still needs verification** |
+| Third-party services | The static hosting provider of the public site; the browser vendor, only if browser speech recognition is used; and the external citation sites the user chooses to open |
+| Installed model weights | The optional local speech model (about 0.7 GB) is installed on the user's own machine. **No patient information is required during installation** |
 
 ---
 
-## 5. How to say it in the pitch
+## 6. How to say it in the pitch
 
 One sentence, usable directly:
 
-> **"By default everything runs on the device — the photograph never leaves the phone, because a photograph of medicines is personal health information."**
-> "(Where applicable) It only goes online in ___ , it sends ___ , and it does not send ___ ."
+> **"There is no backend holding patient data. In the browser, the photograph is recognised on the device and does not leave it — because a photograph of medicines is personal health information."**
+
+If asked about speech, say it without hedging:
+
+> **"Web speech recognition may be processed by the browser vendor, so we disclose that and ask for consent each time. When offline, you type. The local Mac option keeps audio on the machine."**
+
+Do not claim the web speech path is offline. That is the one claim here that would not survive a question.
 
 ---
 
-## 6. Checklist
+## 7. Checklist
 
-- [ ] Table above corrected against the actual implementation
-- [ ] Photograph retention settled
-- [ ] All third-party calls listed
-- [ ] Offline path tested (**unplug the network and run it once**)
+- [x] Table above reflects the implementation
+- [x] The "web speech is not fully offline" distinction is stated in the interface and in this document
+- [x] All third-party calls identified
+- [ ] Offline path tested (**unplug the network and run it once**) — verified in anonymous Chromium; **physical device still pending**
+- [ ] Per-browser cache retention and eviction behaviour verified
 - [ ] Can state "what leaves the device" in one sentence during the pitch
