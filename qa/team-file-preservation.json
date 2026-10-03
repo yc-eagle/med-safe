@@ -1,0 +1,188 @@
+{
+  "baseline_commit": "62c5aa2ddfcf5aa023949b37ffbdec64a8429f03",
+  "existing_teammate_files_unchanged": true,
+  "count": 45,
+  "files": [
+    {
+      "path": "CREDITS.md",
+      "sha256": "1ed620d7233e6ad8998618acb72f20ecc2c961c5f85f2b51f8d1a89fa5189c2c"
+    },
+    {
+      "path": "CREDITS.zh-CN.md",
+      "sha256": "838053ae40e58c21fb98a7fb57be95c72f9bea17a587c705311114024af98d17"
+    },
+    {
+      "path": "README.md",
+      "sha256": "a2862d7bc91e09307c32dc4cd74790b8b80583f90d616b5b2b57da49da3bbd17"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "sha256": "35a6fb3690d26728f80d8768bc9c154b554c76fb5d059add9e049460c7d78123"
+    },
+    {
+      "path": "assets/interviews/README.md",
+      "sha256": "b33480efb9c744391f9bb98bfcdb663d25488910c89b8d6dae333e1b2f3cea6f"
+    },
+    {
+      "path": "assets/interviews/consent.md",
+      "sha256": "514c5c405d0e36f8529ec00816473664d354c1f8ff4f568e401791ba532db19d"
+    },
+    {
+      "path": "deck/README.md",
+      "sha256": "fd6edbd95a9c408d5bb055e95e5fcdaa2d5c90204f1b093e34c0339dc577dae0"
+    },
+    {
+      "path": "deck/README.zh-CN.md",
+      "sha256": "2cca26a707c411a5322b4109c20ee4c709d266855fa88e149634848bc44c59fd"
+    },
+    {
+      "path": "deck/pitch-deck.md",
+      "sha256": "c8ce47db15799afd4fa75277dc9a1b4a7c9ab60c3760f6632bb84e853610a5d9"
+    },
+    {
+      "path": "deck/pitch-deck.zh-CN.md",
+      "sha256": "c9e84df72a533802bb1110fdbbe28b4ce09e86aff8725910e9e16d1819e3ae7e"
+    },
+    {
+      "path": "docs/competitors.md",
+      "sha256": "1dcfe8e404c16e39fa0dec01b8d90c06ed30d2fd6126a18dbb3c66dfd7544494"
+    },
+    {
+      "path": "docs/competitors.zh-CN.md",
+      "sha256": "d78360721fc1900d5b4cae1186e010f6d7a29565ce92952cf91f6599ba920e97"
+    },
+    {
+      "path": "docs/data-handling.md",
+      "sha256": "2cc23fb887e8cfb23ed30701fc9a0fb80146bfaddc8718630b2780f7332fb524"
+    },
+    {
+      "path": "docs/data-handling.zh-CN.md",
+      "sha256": "1ef09b016ff31b6a0d819adaadbd12766c7b748852da100e933dc080f5b236a9"
+    },
+    {
+      "path": "docs/data-inventory.en.md",
+      "sha256": "7294f65ea0ac3f83150557f5e706a288d16ad7db7514ec7638e91b376768aa02"
+    },
+    {
+      "path": "docs/data-inventory.md",
+      "sha256": "ccbb3e5ae6259be2501b1c33569d20daeaa80513ff5028c3b35df69f88262cd1"
+    },
+    {
+      "path": "docs/decision-logic.en.md",
+      "sha256": "2cdb1c67b0718bd19261d782c12a077f90b3184358f996e49112e3c72c65b716"
+    },
+    {
+      "path": "docs/decision-logic.md",
+      "sha256": "b96ba7f52f1862953e00867760b24b1eb56880af63b166ab06d8a5193f839e4f"
+    },
+    {
+      "path": "docs/demo-script.md",
+      "sha256": "8fa81839284ed719b3bfb73e1f5b876291a5165a78f047591f5fdef9f6622670"
+    },
+    {
+      "path": "docs/evidence-protocol.md",
+      "sha256": "15be2882faa177830b066b4d205d5c1b1e8b2248bc5b82bd860dfca5089ce811"
+    },
+    {
+      "path": "docs/limitations.md",
+      "sha256": "b93c1efb804150ca373780d5c97bfeb7055c6c29dcd6c7ff6af66b706303302a"
+    },
+    {
+      "path": "docs/limitations.zh-CN.md",
+      "sha256": "3ea48198bd4d13c40ba99cfded275130d1d6a691ede43511bfd4c2fc5de2bdf4"
+    },
+    {
+      "path": "docs/offline.en.md",
+      "sha256": "fabd8f82c0bf54610f87522fa22ebfd1c932dbc1c564d143a32e5cc91999c856"
+    },
+    {
+      "path": "docs/offline.md",
+      "sha256": "2a0a356ec91fdfb946fab0bc139e8f5f156709c4c181c85c3276b6066d36c09f"
+    },
+    {
+      "path": "docs/problem.md",
+      "sha256": "af64868a09611b2b0b8ce8222711405b63f7bf11accb9b49d8cb4887610457fa"
+    },
+    {
+      "path": "docs/problem.zh-CN.md",
+      "sha256": "6db465590a4cdccf3e0718a89f2ecc6db21529827439682d6292e8a51e8cf67c"
+    },
+    {
+      "path": "docs/raccoon-usage-log.md",
+      "sha256": "e49db5e97ee34e51013fa4d3a107411571d55c2b1f879115c96c857595b85874"
+    },
+    {
+      "path": "docs/rules/README.md",
+      "sha256": "c09ea491e1e003a0aa06dfecd5ed0ebeb8214350802e0d64af5b4a49839a20bd"
+    },
+    {
+      "path": "docs/rules/README.zh-CN.md",
+      "sha256": "97599a6eadad6f24c36642ce1780a9f1ce5770fa9377fb684fd21669d4814232"
+    },
+    {
+      "path": "docs/rules/review.csv",
+      "sha256": "0e473c50314b7e8ff86d8a6b15207363dbd028e5af2eab8f66fa74112c35ce7f"
+    },
+    {
+      "path": "docs/submission.en.md",
+      "sha256": "7f9b36e480939842433252a93deae9e4bf220ff867ec3fbd5ba5269ba0d1f959"
+    },
+    {
+      "path": "docs/submission.md",
+      "sha256": "f5cb43332b7be8b30b38f3cdab6bd748fe2fdfd83cdb17fe38eff570c59ea2b7"
+    },
+    {
+      "path": "docs/team-planning/CREDITS.md.txt",
+      "sha256": "85e7cfa7af93f5a5c5ffd7e228547c44f677f0123d593e8b1b9b18d881a1f4cc"
+    },
+    {
+      "path": "docs/team-planning/README.md",
+      "sha256": "1c0695143efa44a1b6544ab9d29067752a7647be4a8dd2ba92bfaefc60baa4dc"
+    },
+    {
+      "path": "docs/team-planning/README.md.txt",
+      "sha256": "2fc12613bf532087cbf3d1676bb37a3906181465c5ed234c3676ba026081155d"
+    },
+    {
+      "path": "docs/team-planning/docs--data-handling.md.txt",
+      "sha256": "741ae7616d275b2477080a60b04191f447d9c053ce88cd67d6fb552660edf667"
+    },
+    {
+      "path": "docs/team-planning/docs--demo-script.md.txt",
+      "sha256": "0a160129949eaea305e57c8956f5f12cb7ba349d4de0b737f7ff351fe346d59a"
+    },
+    {
+      "path": "docs/team-planning/docs--evidence-protocol.md.txt",
+      "sha256": "0c9454dd40e162c2bb53ddaf03f30c194168e21da8608455e334898fe29b6780"
+    },
+    {
+      "path": "docs/team-planning/docs--limitations.md.txt",
+      "sha256": "fbe8632eb0a693e29082483bc54c612e3c1e6234b11d65772163cbfeaef8d994"
+    },
+    {
+      "path": "docs/team-planning/docs--problem.md.txt",
+      "sha256": "547f00b2009e39755921bca07d5d86724d7257740ca8b318c7d0492a73fa7049"
+    },
+    {
+      "path": "docs/team-planning/docs--raccoon-usage-log.md.txt",
+      "sha256": "12b0d85677defd6479d106f1ba17431153a47ceeaab2d3ec2e1b3dcb3c37f7cf"
+    },
+    {
+      "path": "docs/team-planning/docs--rules--README.md.txt",
+      "sha256": "110601b2dbd0db5eafa2ea96a99da64e2e6dac8376ade64af3f05b1f3a165dd8"
+    },
+    {
+      "path": "docs/try-it.md",
+      "sha256": "37cd888965565242594a1d062fcd569165097d8f07c84fefeb7fc525b56fe7d6"
+    },
+    {
+      "path": "docs/tryout.md",
+      "sha256": "b246010dbfe4a9e3d270cd9a60570f7ac1faab7ecb42e4bd8c717fbd9c9ecd3b"
+    },
+    {
+      "path": "raccoon-shots/README.md",
+      "sha256": "b688e32afe745324788df162d8389b946e3adc19dfc0afd05bd0e9a546de82df"
+    }
+  ],
+  "scope": "Preserves the existing teammate documentation and story. New presentation companions are additional files."
+}

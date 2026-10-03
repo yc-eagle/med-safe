@@ -17,8 +17,8 @@ def has_asr():return ASR_PYTHON.is_file() and (ASR_MODEL/'model.safetensors').is
 MAX_BODY=16*1024*1024
 SEM=threading.BoundedSemaphore(2)
 VOICES={'yue':'Sinji','cmn':'Tingting','en':'Samantha'}
-STATIC={'/medicine-info.js':'app/medicine-info.js','/product-features.js':'app/product-features.js','/product-features.css':'app/product-features.css','/verify.html':'app/verify.html','/verify.css':'app/verify.css','/verify.js':'app/verify.js','/validator.js':'app/validator.js','/':'app/index.html','/index.html':'app/index.html','/app.css':'app/app.css',
-        '/patient.js':'app/patient.js','/voice.js':'app/voice.js','/app.js':'app/app.js','/engine.js':'app/engine.js','/data.js':'app/data.js',
+STATIC={'/demo.html':'app/demo.html','/demo-3min.mp4':'assets/demo-3min.mp4','/demo-3min.en.srt':'assets/demo-3min.en.srt','/demo-3min.en.vtt':'assets/demo-3min.en.vtt','/Med-Safe-HacKU2026.pptx':'deck/Med-Safe-HacKU2026.pptx','/Med-Safe-HacKU2026.pdf':'deck/Med-Safe-HacKU2026.pdf','/medicine-info.js':'app/medicine-info.js','/product-features.js':'app/product-features.js','/product-features.css':'app/product-features.css','/verify.html':'app/verify.html','/verify.css':'app/verify.css','/verify.js':'app/verify.js','/validator.js':'app/validator.js','/':'app/index.html','/index.html':'app/index.html','/app.css':'app/app.css',
+        '/vendor/opencc-t2cn.js':'app/vendor/opencc-t2cn.js','/locale.js':'app/locale.js','/resource-pages.js':'app/resource-pages.js','/resource-pages.css':'app/resource-pages.css','/patient.js':'app/patient.js','/voice.js':'app/voice.js','/app.js':'app/app.js','/engine.js':'app/engine.js','/data.js':'app/data.js',
         '/offline-runtime.js':'app/offline-runtime.js','/manifest.webmanifest':'app/manifest.webmanifest','/icon-192.svg':'app/icon-192.svg','/icon-512.svg':'app/icon-512.svg','/browser-runtime.js':'app/browser-runtime.js','/release-ui.js':'app/release-ui.js','/release.css':'app/release.css','/data-report.html':'app/data-report.html','/offline.html':'app/offline.html','/favicon.svg':'app/favicon.svg','/sample-labels.png':'app/sample-labels.png'}
 
 class Handler(BaseHTTPRequestHandler):
@@ -45,7 +45,7 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(200,dict(token=TOKEN,ocr=OCR.is_file(),tts=bool(shutil.which('say')),asr=has_asr(),asr_warm=VOICE_SERVICE.warm,asr_language='yue',audio_retention='temporary_only',mode='local_mac',photo_retention='temporary_only'))
         if path not in STATIC:return self.send(404,{'error':'Not found'})
         p=ROOT/STATIC[path]
-        kinds={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png'}
+        kinds={'.html':'text/html; charset=utf-8','.js':'application/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.svg':'image/svg+xml','.png':'image/png','.mp4':'video/mp4','.vtt':'text/vtt; charset=utf-8','.pdf':'application/pdf','.pptx':'application/vnd.openxmlformats-officedocument.presentationml.presentation','.srt':'text/plain; charset=utf-8'}
         return self.send(200,p.read_bytes(),kinds.get(p.suffix,'application/octet-stream'))
     def do_POST(self):
         port=self.server.server_port
