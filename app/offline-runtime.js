@@ -3,8 +3,8 @@
 window.OfflineRuntime=(()=>{
   const base=new URL('./',document.baseURI);
   let registration=null,installPrompt=null,state={ready:false,current:false,bytes:0},phase='checking',download=null;
-  const tr=(z,e)=>document.documentElement.lang==='en'?e:z;
-  const web=()=>window.PUBLIC_DEMO || (typeof api!=='undefined' && api?.runtime==='browser');
+  const tr=(z,e)=>window.MedLocale?MedLocale.choose(z,e):document.documentElement.lang==='en'?e:z;
+  const web=()=>typeof api!=='undefined' && api ? api.runtime==='browser' : !!window.PUBLIC_DEMO;
   const mb=n=>(n/1048576).toFixed(1);
   const style=document.createElement('style');
   style.textContent='#offline-panel{border:1px solid #b9d0c5;background:#edf5f1;border-radius:12px;padding:14px 16px;margin:12px 0 18px;font-size:14px;line-height:1.65}#offline-panel p{margin:5px 0}#offline-panel .offline-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}#offline-panel strong{font-size:15px}#offline-panel button{min-height:44px}#offline-panel progress{width:100%;height:16px;accent-color:#246d63}#offline-panel small{display:block;color:#405f53}#offline-panel summary{font-size:14px;min-height:44px;padding-top:8px}#offline-panel li{margin:6px 0}#offline-panel[hidden]{display:none!important}@media print{#offline-panel{display:none!important}}';
@@ -13,16 +13,16 @@ window.OfflineRuntime=(()=>{
   if(!document.querySelector('meta[name="theme-color"]')){const m=document.createElement('meta');m.name='theme-color';m.content='#246d63';document.head.append(m);}
   const panel=document.createElement('section');panel.id='offline-panel';panel.hidden=!web();panel.setAttribute('aria-labelledby','offline-title');
   panel.innerHTML='<div class="offline-row"><strong id="offline-title"></strong><button type="button" class="button secondary" id="prepare-offline"></button><button type="button" class="button secondary" id="install-offline" hidden></button></div><p id="offline-state" role="status" aria-live="polite"></p><progress id="offline-progress" max="100" value="0" hidden aria-label="Offline download progress"></progress><small id="offline-boundary"></small><details><summary id="offline-how-title"></summary><div id="offline-how"></div></details>';
-  const anchor=document.getElementById('capability-strip');
-  if(anchor)anchor.insertAdjacentElement('afterend',panel);else(document.querySelector('main')||document.body).prepend(panel);
+  const anchor=document.getElementById('release-links');
+  if(anchor)anchor.insertAdjacentElement('beforebegin',panel);else(document.querySelector('main')||document.body).prepend(panel);
   const el=id=>document.getElementById(id);
   function voiceOffline(){
     if(!web())return;
     const button=el('record-question');
     if(navigator.onLine===false){
       if(button){button.disabled=true;button.title=tr('離線時請打字；網頁語音需要網絡。','Type while offline; browser recognition needs a network.');}
-      const line=el('voice-status');if(line)line.textContent=tr('目前離線：請打字提問。網頁語音不會在離線時啟動；已有的本機粵語聲音仍可嘗試朗讀。','Offline: type your question. Browser recognition is disabled; an installed local Cantonese voice may still read answers.');
-    }else if(button){button.disabled=!(typeof api!=='undefined' && api?.asr);button.removeAttribute('title');}
+      const line=el('voice-status');if(line)line.textContent=tr('目前離線：請打字提問。網頁語音不會在離線時啟動；已有的本機聲音仍可嘗試朗讀。','Offline: type your question. Browser recognition is disabled; an installed local voice may still read answers.');
+    }else if(button){if(window.VoiceUI)VoiceUI.update();else button.disabled=!(typeof api!=='undefined' && api?.asr);button.removeAttribute('title');}
   }
   function render(){
     panel.hidden=!web();if(panel.hidden)return;
@@ -44,7 +44,7 @@ window.OfflineRuntime=(()=>{
     else if(state.ready)message=tr('已有完整離線版本；網站有更新。連網時按「更新離線資料」。','A complete offline copy is available; a newer site version exists. Update while online.');
     else message=navigator.onLine===false?tr('目前離線，但未有完整下載。這頁可能仍可查藥；重新開啟及照片識字未獲保證。連網後先準備離線。','Offline, with no complete saved copy. This open page may work, but reopening and photo OCR are not assured. Prepare while online.'):tr(`先連網下載約 ${mb(state.bytes)} MB，完成後才可離線重開；不會下載示範影片。`,`First download about ${mb(state.bytes)} MB while online. Reopening offline works only after completion; demo videos are not downloaded.`);
     el('offline-state').textContent=message;
-    el('offline-boundary').textContent=tr('只儲存公開藥品資料、程式及識字模型；不儲存你選的藥、照片、錄音或問句。來源外鏈與網頁語音需聯網。本機粵語朗讀視乎已安裝聲音。','Only public medicine data, app files and OCR models are saved. Your selections, photos, recordings and questions are not saved. Source links and browser voice need internet; local Cantonese reading depends on installed voices.');
+    el('offline-boundary').textContent=tr('只儲存公開藥品資料、程式及識字模型；不儲存你選的藥、照片、錄音或問句。來源外鏈與網頁語音需聯網。本機朗讀視乎所選語言及已安裝聲音。','Only public medicine data, app files and OCR models are saved. Your selections, photos, recordings and questions are not saved. Source links and browser voice need internet; local reading depends on the selected language and installed voices.');
     el('offline-how-title').textContent=tr('如何放到手機主畫面？','How do I add it to my home screen?');
     el('offline-how').innerHTML=tr('<ol><li><strong>iPhone／iPad：</strong>用 Safari 打開網址 → 分享 →「加入主畫面」。</li><li><strong>Android：</strong>用 Chrome 打開網址 → 選單 →「安裝應用程式」或「加入主畫面」。如瀏覽器提供安裝提示，也可按下方安裝。</li><li>從新圖示開啟，再按「準備離線使用」，等到顯示「已核對並儲存」，才開飛行模式重開。</li></ol><p>加入主畫面不等於已下載模型。不同瀏覽器／主畫面模式的儲存可能分開，請在實際要用的入口準備。私人瀏覽、清理瀏覽資料或系統釋放空間可能移除離線檔案，出門前請再測試。重新載入會清空當次用藥資料。</p>','<ol><li><strong>iPhone / iPad:</strong> Open in Safari → Share → Add to Home Screen.</li><li><strong>Android:</strong> Open in Chrome → menu → Install app or Add to Home screen. If the browser offers installation, an install button may also appear here.</li><li>Open the new icon, press Prepare for offline use, and wait for verified completion. Then test by reopening in airplane mode.</li></ol><p>Adding an icon does not download the OCR models. Browser and home-screen storage may differ: prepare in the entry you will actually use. Private browsing, clearing data or system storage eviction can remove files. Test again before relying on offline access. Reloading clears the current medicine session.</p>');
     el('install-offline').hidden=!installPrompt;el('install-offline').textContent=tr('安裝到這部裝置','Install on this device');

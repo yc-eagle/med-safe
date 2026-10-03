@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-03T07:52:51.935Z",
+  "passed": 8,
+  "checks": [
+    "Default English reaches voice heading and selector",
+    "en: example, answer, local speech and browser recognition language agree; consent precedes recognition",
+    "cmn: example, answer, local speech and browser recognition language agree; consent precedes recognition",
+    "yue: example, answer, local speech and browser recognition language agree; consent precedes recognition",
+    "Language change cancels outstanding speech consent, clears the old answer and preserves the original question",
+    "Offline browser recognition remains blocked",
+    "Mac recognition only enables Cantonese, while local reading selects English or Mandarin correctly",
+    "No browser JavaScript exceptions"
+  ],
+  "errors": [],
+  "scope": "Recognition and local voices are controlled test doubles. Verifies language routing and privacy gates, not provider accuracy or real-device voice availability."
+}
