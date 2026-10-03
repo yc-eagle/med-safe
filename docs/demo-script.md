@@ -1,4 +1,4 @@
-﻿# Demo Script: The Three Cards
+# Demo Script: The Three Cards
 
 > **Internal working document**, written in English for consistency with the rest of the repository. A Chinese reference version can be added on request. A Chinese spoken script for the judges' questions is available at the end of this file.
 
@@ -35,15 +35,22 @@
 
 | Card | Material | What it shows | Time | Proves |
 |---|---|---|---|---|
-| **1. Translate** | One **common medicine** | Photograph it, read out the information, English voice output | about 40 s | It **works** |
-| **2. Signal danger** | **Two** medicines with an interaction | Photograph them, **"these two must not be taken together"**, plus source, plus consult a doctor | about 60 s | It is **useful** (the high point) |
-| **3. Decline** | **One medicine that cannot be found**, or a blurred photo | Photograph it, **"I cannot find it. Please consult a doctor."** | about 30 s | It is **trustworthy** |
+| **1. Read it clearly** | One **common medicine** | Photograph it, **let the user confirm the product**, read out the information | about 40 s | It **works** |
+| **2. Show the sourced warning** | **Two** medicines with a rule | Photograph them, show the warning **at its real strength** (increased risk or contraindication), plus the source, plus consult a doctor | about 60 s | It is **useful** (the high point) |
+| **3. State what is not covered** | **A pair the 14 rules do not cover** | Photograph them, **"not covered — please consult a doctor"** | about 30 s | It is **honest about its coverage** |
 
 ### Three rehearsal rules
 
-1. **Card 3 must appear once in the first 30 seconds.** Establish early that it declines to answer, so everything after it is credible.
-2. **Never present cards 2 and 3 back to back as one idea.** Card 2 actively catches a danger; card 3 actively admits ignorance. **Presented together, both are lost.**
+1. **Card 3 must appear once in the first 30 seconds.** Establish early that uncovered pairs are stated as uncovered, so everything after it is credible.
+2. **Never present cards 2 and 3 back to back as one idea.** Card 2 shows a **sourced warning**; card 3 states a **coverage boundary**. **Presented together, both are lost.**
 3. **Demonstrate offline once.** Unplug the network and run it. It is the only way to turn "no signal" from a claim into a fact.
+
+### What must NOT be said on stage
+
+- Do **not** say "it refuses to answer when it finds a danger." **When a rule matches, it does warn.** What it never outputs is a **safe** conclusion.
+- Do **not** say "these two must not be taken together" for an **increased-risk** rule. Warfarin plus aspirin is a raised bleeding risk, **not a ban**, and aspirin plus clopidogrel may be a **doctor's deliberate regimen** — the product does not advise stopping it.
+- Do **not** say the leaflet "never mentions" interactions. It does; the problem is readability.
+- Do **not** claim any rule is clinically approved. **Zero of the 14 are.**
 
 ---
 
@@ -51,8 +58,8 @@
 
 - [ ] **3 real medicine boxes** (physical packaging, not images)
   - [ ] One common medicine (card 1)
-  - [ ] A pair with an interaction (card 2) — Ella must confirm the pair is in L1
-  - [ ] One that cannot be found (card 3) — confirm it is genuinely **not** in the data
+  - [ ] A pair with a sourced rule (card 2) — **Ella must confirm which evidence level it is**, and the wording must match that level
+  - [ ] A pair the rules do **not** cover (card 3) — confirm it is genuinely **not** in the 14 rules
 - [ ] Phone or laptop for the demo, **fully charged**
 - [ ] Power bank
 - [ ] **A second device** ready to take over immediately

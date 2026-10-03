@@ -1,4 +1,4 @@
-﻿# Pitch Deck — Slide-by-Slide Structure
+# Pitch Deck — Slide-by-Slide Structure
 
 [English](pitch-deck.md) | [中文](pitch-deck.zh-CN.md)
 
@@ -70,8 +70,8 @@
 >
 > And when the person looking after an older adult is a **foreign domestic helper who cannot read Chinese**, the leaflet in that box might as well not exist."
 
-**Play the "decline" card immediately after this slide** (see slide 10) —
-establish early that the system refuses to answer when it cannot verify. Everything after that becomes credible.
+**Play the "not covered" card immediately after this slide** (see slide 10) —
+establish early that when the rules do not cover a pair, the product says so instead of implying safety. Everything after that becomes credible.
 
 ---
 
@@ -142,26 +142,30 @@ Three parts:
 
 ---
 
-## Slide 6 — Solution: a three-state machine
+## Slide 6 — Solution: confirm, warn, and state what is not covered
 
 **On the slide** (three columns, visually equal — this matters)
 
-| **1. Translate** | **2. Signal danger** | **3. Decline to answer** |
+| **1. Read it clearly** | **2. Show the sourced warning** | **3. State what is not covered** |
 |---|---|---|
-| One photo, recognised | Multiple photos, **interaction found** | Multiple photos, **combination not in our data** |
-| Reads out the medicine, with **voice output** (English / Cantonese) | **"These two must not be taken together."** Plus source, plus consult a doctor | **"I cannot find information on these two medicines. Please consult a doctor."** |
-| It **works** | It is **useful** | It is **trustworthy** |
+| One photo, then **the user confirms the product** | A sourced rule matches, **and the route is in scope** | The rules do not cover this pair |
+| Reads out the medicine, with **voice output** (Cantonese first, English available) | **The warning, at its real strength** — labelling contraindication, recommends avoid, or increased risk are different things — plus the source, plus consult a doctor | **"I cannot find information on these two medicines. Please consult a doctor."** |
+| It **works** | It is **useful** | It is **honest about its coverage** |
 
-(Boundary case: blurred photo -> "I cannot read this photo clearly. Please take another one.")
+(Boundary case: blurred photo -> retake, choose another image, or enter the registration number. **A photo never confirms identity on its own.**)
 
 **Script (30 s)**
-> "The interaction has three states.
+> "Three things happen, and only three.
 >
-> If it can read the box, it reads it to you. **If it finds a danger, it tells you plainly not to take them together. If it cannot find anything, it says it cannot find anything.**
+> If it can read the box, it reads it to you — and you confirm it, because **a photograph cannot confirm which medicine this is.**
 >
-> **These three are not error handling — they are the product.**"
+> If a sourced rule matches, it shows you the warning **at the strength the source actually supports.** An increased risk is not the same as a prohibition — warfarin with aspirin is a raised bleeding risk, not a ban.
+>
+> And if our rules do not cover the pair, **it says so.** It never says 'safe'. **There is no branch in this program that outputs a safe conclusion.**"
 
-**Visual discipline:** the three columns must be **equal in width and weight**. Do not let state 3 look like an exception branch. It is a design decision, not a fallback.
+**Visual discipline:** the three columns must be **equal in width and weight**. Column 3 is not an exception branch — **it is a coverage statement, and it is the honest half of the product.**
+
+**Do not say** "it refuses to answer when it finds a danger." That is factually wrong: when a rule matches, it warns. What it refuses to produce is a **clean bill of health**.
 
 ---
 
@@ -218,9 +222,29 @@ Three parts:
 >
 > You work through the whole chain — read the box, find the leaflet, phone someone, wait for the appointment — and **very often you still end up not knowing.**
 >
-> **The real difference is not the __ seconds saved. It is where you end up**: either a judgement, or an honest 'I cannot find it'. **The manual method never tells you that it does not know.**"
+> **The real difference is not the __ seconds saved. It is where you end up**: either a warning with a source, or an honest 'not covered'. **The manual method never tells you that it does not know.**"
 
 **The blank numbers must be filled in before the rehearsal** (see [`../docs/evidence-protocol.md`](../docs/evidence-protocol.md)). An empty field on a slide is far worse than an unimpressive number.
+
+### Verified numbers you can state with confidence
+
+These come from the repository, not from a slide. **Use them — precise numbers are far more convincing than adjectives**, and every one of them is checkable by a judge in [`../data/data_inventory.json`](../data/data_inventory.json).
+
+| Number | What it is |
+|---|---|
+| **14,269** | Hong Kong registered products in the catalogue (snapshot 2026-09-25) |
+| **23,835** / **2,081** | raw ingredient records / distinct ingredient strings |
+| **14** | sourced rules — **all drafts** |
+| **0** | professionally approved rules |
+| **12** / **66** | maximum products per check / pairs enumerated per check |
+| **101.8 million** | approximate product pairs in the catalogue — **why 14 rules cannot claim to cover it** |
+| **47** / **52.6 MiB** | offline cached resources / total size |
+| **16** | offline engineering checks passed |
+
+**Two things about how to use these:**
+
+1. **State the "0" yourself.** Saying "zero of our 14 rules are professionally approved, and here is the review table" is much stronger than being caught out by it. It is also the honest thing to do.
+2. **Do not say "the most complete".** Saying "14,269 products but roughly 101.8 million possible pairs, so we make no claim of completeness" demonstrates that you understand your own data. That is a maturity signal judges reward.
 
 ---
 
@@ -289,21 +313,23 @@ Three parts:
 **On the slide**
 
 **What it gets wrong:**
-- Blurred photo, similar packaging -> misidentification -> **degrades to "please retake"**
-- Combination products, supplements -> uncertain ingredient recognition -> **goes to state 3**
-- Insufficient data coverage -> **goes to state 3; never states "no interaction found"**
-- Chinese patent medicines and herbal medicines -> limited coverage, **stated as such**
+- Blurred photo, similar packaging -> misidentification -> **retake, choose another image, or enter the registration number; the user confirms**
+- Combination products, supplements -> uncertain ingredient recognition -> **listed as a gap; identity still requires user confirmation**
+- The rules do not cover the pair -> **states "not covered"; it never states "no interaction found"**
+- Chinese patent medicines, herbal medicines, supplements, food, and what was already taken today -> **outside current scope, stated as such**
+- **No number filled in without real data** — including error rates
 
 **What leaves the device:**
-- By default **everything runs on the device** — photographs do not leave the phone
-- Photographs of medicines are personal health information and should not be uploaded without need
+- In the browser, photographs are recognised **on the device**
+- In the Mac version, photographs and recordings go only to a **local service on the same machine**, and temporary files are deleted with the request
+- **Browser speech may send recordings to the browser vendor** — disclosed separately, consent requested each time
 
 **Script (30 s)**
 > "We also say clearly what we cannot do.
 >
-> **Its most dangerous moment is not getting an answer wrong. It is turning 'I don't know' into 'it's fine.'** So when it cannot find anything, it has exactly one behaviour: **send you to a pharmacist.**
+> **Its most dangerous moment is not getting an answer wrong. It is turning 'we don't know' into 'it's fine.'** So **every result carries two flags: clinical safety not assessed, and coverage not complete. There is no code path that issues a safe conclusion.**
 >
-> And one more thing: **the photograph never leaves the phone.** A photograph of medicines is personal health information."
+> Two more things. **Zero of our 14 rules are professionally approved** — that column is still empty, and here is the review table. And **the photograph does not leave the device.** A photograph of medicines is personal health information."
 
 **This slide and the core product design are the same thing.** Connect them when speaking:
 **we acknowledge our boundaries in the product, so we acknowledge our boundaries in the pitch.**
@@ -313,8 +339,10 @@ Three parts:
 ## Slide 14 — Next steps
 
 **On the slide**
-- Cantonese version (English is prioritised now, for domestic helpers)
-- Wider coverage of Chinese patent medicines and herbal medicines
+- **Cantonese is already prioritised**; English is available for foreign domestic helpers
+- Wider coverage: Chinese patent medicines, herbal medicines, supplements
+- **Getting the 14 rules professionally reviewed** — the approval column is currently empty
+- Real-device phone testing and observation with real older adults
 - Channels: community pharmacies, elderly centres, domestic helper agencies
 
 **Script (15 s)**
