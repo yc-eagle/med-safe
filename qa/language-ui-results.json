@@ -1,0 +1,165 @@
+{
+  "date": "2026-10-03T07:53:55.252Z",
+  "url": "http://127.0.0.1:8768",
+  "passed": 35,
+  "failed": 0,
+  "scope": "Language and UI behavior using synthetic cases, mocked browser speech/voices and intercepted local TTS. No real microphone, camera, cloud speech, patient testing, clinical approval or accuracy measurement. Offline cache tested separately.",
+  "results": [
+    {
+      "name": "Default entry is English and uses English product/voice headings",
+      "status": "passed"
+    },
+    {
+      "name": "en: URL selects the language and resource links preserve it",
+      "status": "passed"
+    },
+    {
+      "name": "en: all four demos require confirmation and produce their expected result",
+      "status": "passed"
+    },
+    {
+      "name": "en: all 14 clinical rule matches are language-invariant",
+      "status": "passed"
+    },
+    {
+      "name": "en: manual catalogue search remains available",
+      "status": "passed"
+    },
+    {
+      "name": "en: knowledge shortcuts use the selected language",
+      "status": "passed"
+    },
+    {
+      "name": "en: product details and profile audio use the selected language",
+      "status": "passed"
+    },
+    {
+      "name": "en: pharmacist text download follows current language and preserves user input",
+      "status": "passed"
+    },
+    {
+      "name": "en: recognition explicitly opts in and selects the correct language",
+      "status": "passed"
+    },
+    {
+      "name": "en: 320px large-text layout has no horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "en: 390px large-text layout has no horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: URL selects the language and resource links preserve it",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: all four demos require confirmation and produce their expected result",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: all 14 clinical rule matches are language-invariant",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: manual catalogue search remains available",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: knowledge shortcuts use the selected language",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: product details and profile audio use the selected language",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: pharmacist text download follows current language and preserves user input",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: recognition explicitly opts in and selects the correct language",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: 320px large-text layout has no horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "cmn: 390px large-text layout has no horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "yue: URL selects the language and resource links preserve it",
+      "status": "passed"
+    },
+    {
+      "name": "yue: all four demos require confirmation and produce their expected result",
+      "status": "passed"
+    },
+    {
+      "name": "yue: all 14 clinical rule matches are language-invariant",
+      "status": "passed"
+    },
+    {
+      "name": "yue: manual catalogue search remains available",
+      "status": "passed"
+    },
+    {
+      "name": "yue: knowledge shortcuts use the selected language",
+      "status": "passed"
+    },
+    {
+      "name": "yue: product details and profile audio use the selected language",
+      "status": "passed"
+    },
+    {
+      "name": "yue: pharmacist text download follows current language and preserves user input",
+      "status": "passed"
+    },
+    {
+      "name": "yue: recognition explicitly opts in and selects the correct language",
+      "status": "passed"
+    },
+    {
+      "name": "yue: 320px large-text layout has no horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "yue: 390px large-text layout has no horizontal overflow",
+      "status": "passed"
+    },
+    {
+      "name": "Switching languages preserves selected identities, routes, confirmations and raw question",
+      "status": "passed"
+    },
+    {
+      "name": "Offline Mac mode disables non-Cantonese recognition and hides audio upload",
+      "status": "passed"
+    },
+    {
+      "name": "Mac profile reading sends the selected voice without real audio generation",
+      "status": "passed"
+    },
+    {
+      "name": "No uncaught browser exceptions or unexpected outgoing requests",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "speech_requests": [
+    {
+      "voice": "en",
+      "text_language_checked": true
+    },
+    {
+      "voice": "cmn",
+      "text_language_checked": true
+    },
+    {
+      "voice": "yue",
+      "text_language_checked": true
+    }
+  ]
+}

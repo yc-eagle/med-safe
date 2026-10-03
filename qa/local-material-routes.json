@@ -1,0 +1,72 @@
+{
+  "passed": 11,
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 10310,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/locale.js",
+      "status": 200,
+      "bytes": 2841,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "/vendor/opencc-t2cn.js",
+      "status": 200,
+      "bytes": 69931,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "/resource-pages.js",
+      "status": 200,
+      "bytes": 22210,
+      "content_type": "application/javascript; charset=utf-8"
+    },
+    {
+      "path": "/resource-pages.css",
+      "status": 200,
+      "bytes": 3029,
+      "content_type": "text/css; charset=utf-8"
+    },
+    {
+      "path": "/demo.html",
+      "status": 200,
+      "bytes": 747,
+      "content_type": "text/html; charset=utf-8"
+    },
+    {
+      "path": "/demo-3min.mp4",
+      "status": 200,
+      "bytes": 5542358,
+      "content_type": "video/mp4"
+    },
+    {
+      "path": "/demo-3min.en.vtt",
+      "status": 200,
+      "bytes": 1463,
+      "content_type": "text/vtt; charset=utf-8"
+    },
+    {
+      "path": "/Med-Safe-HacKU2026.pptx",
+      "status": 200,
+      "bytes": 427057,
+      "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
+    },
+    {
+      "path": "/Med-Safe-HacKU2026.pdf",
+      "status": 200,
+      "bytes": 1411287,
+      "content_type": "application/pdf"
+    },
+    {
+      "path": "/api/status",
+      "status": 200,
+      "local_ocr_available": true,
+      "local_asr_language": "yue",
+      "local_asr_available": true
+    }
+  ]
+}

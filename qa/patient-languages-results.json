@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-03T07:58:02.541Z",
+  "passed": 8,
+  "checks": [
+    "en examples preserve intent, medical limits and their own language",
+    "cmn examples preserve intent, medical limits and their own language",
+    "yue examples preserve intent, medical limits and their own language",
+    "Every language keeps the same rule/source identities",
+    "English general information uses the stored English profile rather than a new medical translation",
+    "Emergency, prescription and identity gates remain localized and conservative",
+    "Source warnings remain distinct from no-coverage and personal prescribing",
+    "Omitted locale retains Cantonese compatibility"
+  ],
+  "clinical_validation": false
+}
