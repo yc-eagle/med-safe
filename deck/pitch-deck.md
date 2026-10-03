@@ -173,7 +173,7 @@ Three parts:
 
 **On the slide:** live demo, or a 20-second looping recording
 
-**What to do:** photograph two boxes on stage -> produce **"these two must not be taken together"** plus the source
+**What to do:** photograph two boxes on stage -> produce **the warning, at the strength the source supports** (a contraindication and an increased risk are not the same sentence) plus the source
 
 **Script (30 s)**
 > "Let me photograph two boxes."
@@ -278,7 +278,7 @@ These come from the repository, not from a slide. **Use them — precise numbers
 | | What it does | **The gap** |
 |---|---|---|
 | General-purpose AI assistants | Anything you ask | 1. Do not know local drug names<br>2. Need a connection<br>3. **Answer confidently and wrongly** |
-| The leaflet in the box | Official and accurate | 1. Covers one medicine only<br>2. **Never mentions taking it with something else** |
+| The leaflet in the box | Official and accurate | 1. Covers that medicine in clinical language<br>2. **The people who need it cannot read it** |
 | Drug information tools / eHealth | Authoritative information and records | 1. **Give information, not judgement**<br>2. Require login<br>3. Assume literacy |
 | Community and remote pharmacist services | **Real professional judgement** | **Requires a phone call, service hours, and authorisation** |
 | **MedSafe** | **Gives a judgement at that moment, and marks where it is unsure** | We do **not** replace the pharmacist |

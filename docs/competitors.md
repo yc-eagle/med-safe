@@ -1,4 +1,4 @@
-﻿# Competition and Existing Alternatives
+# Competition and Existing Alternatives
 
 [English](competitors.md) | [中文](competitors.zh-CN.md)
 
@@ -29,7 +29,7 @@ Entries marked **[verify]** below must be personally checked before the pitch. *
 | Existing option | What it solves | **What gap remains** | Who the gap hurts most |
 |---|---|---|---|
 | **General-purpose AI assistants** (ChatGPT and similar) | Anything can be asked | 1. **Do not know local Hong Kong drug or brand names**<br>2. **Cannot run offline**<br>3. **Answer confidently and wrongly** — and in a medication context a confident error is far more dangerous than not knowing | All users |
-| **The leaflet in the box** | Official, accurate, no device needed | 1. One sheet of small print, lost easily<br>2. **Clinical terminology**<br>3. **Describes that one medicine only, and never mentions taking it with something else** | Older adults, helpers |
+| **The leaflet in the box** | Official, accurate, no device needed | 1. One sheet of small print, lost easily<br>2. **Clinical terminology**<br>3. **It does contain interaction sections** — the gap is that the people who need it **cannot read it**, and it is not tied to what is actually in front of them | Older adults, helpers |
 | **Drug information tools** (Drug Office public information, pharmacopoeia apps) | Authoritative drug information | 1. **Give information, not judgement** — the user has to complete the "can these two be taken together" reasoning themselves<br>2. Mostly web-based, **require a connection**<br>3. Assume the reader is literate and can reason from it | Helpers |
 | **eHealth / HA Go** **[verify]** (government electronic health records, Hospital Authority app) | The patient's **official medication record**, appointments, bookings | 1. It is a **record**, not a **check**<br>2. **Requires an account and login** — a domestic helper typically does not have one<br>3. Interface is predominantly Chinese | Helpers |
 | **Community / remote pharmacist consultation** (for example St. James' Settlement charity community pharmacy, free remote service since 2009) | **Genuine professional judgement**; can review the eHealth record and reconcile medicines | 1. **You have to call**<br>2. **During service hours**<br>3. **With authorisation in place**<br>4. The pharmacist is not in your kitchen | All users |
@@ -41,8 +41,8 @@ Entries marked **[verify]** below must be personally checked before the pitch. *
 
 > **Everyone else is doing lookup. We are doing verification.**
 >
-> The difference: **"this is warfarin" and "these two must not be taken together" are two different things.**
-> The first is information. The second is judgement — and judgement is where a person actually gets stuck.
+> The difference: **"this is warfarin" and "these two raise your bleeding risk, from this source" are two different things.**
+> The first is a lookup. The second is **a sourced warning attached to what is actually in your hand** — and that is where a person actually gets stuck.
 
 **The second sentence (about the moment):**
 
@@ -105,16 +105,20 @@ This is not "nobody thought of it". There are three structural reasons:
 
 | Question | Answer |
 |---|---|
-| **"How are you different from ChatGPT?"** | Not "smarter" — **three things it cannot do**: know local drug names, run offline, and **decline to answer when it cannot verify.** The third one is the point. |
+| **"How are you different from ChatGPT?"** | Not "smarter" — **three things it cannot do**: know local Hong Kong registration numbers and ingredients, run offline, and **state plainly when a pair is not covered instead of implying safety.** The third one is the point. |
 | **"Pharmacist services already exist. Why do we need you?"** | We say so ourselves, and it is the better option. **We cover the moments it cannot reach.** We are not replacing it. |
-| **"What gives you the right to make a judgement?"** | We do **not** diagnose; we verify and cite a source. And **when we cannot find anything we do not guess** — see [`limitations.md`](limitations.md). |
-| **"Why would a user trust you?"** | Fair question. Our answer is not "because we are accurate". It is **"because it tells you when it does not know."** That is the only reason it can be trusted. |
+| **"What gives you the right to make a judgement?"** | We do **not** diagnose, and we do not give a verdict. We surface a warning **with its source and its strength**, and we keep the levels apart — an increased risk is not a prohibition. And **when a pair is not covered we say so** — see [`limitations.md`](limitations.md). |
+| **"Why would a user trust you?"** | Fair question. Our answer is not "because we are accurate". It is **"because it tells you what it has not covered."** That is the only reason it can be trusted. |
 
 ---
 
-## 6. TODO
+## 6. TODO — verify before going on stage
 
-- [ ] **[verify]** Whether **HA Go / eHealth** genuinely requires account login, and whether it offers any drug interaction flagging
-- [ ] **[verify]** Existing **drug lookup apps** in Hong Kong (find at least 1-2 specific ones)
-- [ ] Confirm the current status and scope of the **St. James' Settlement community pharmacy remote pharmacist consultation** service
+**This whole table is planning material and is not yet fact-checked item by item.** None of it may be presented as a verified claim about another product's capabilities.
+
+- [ ] **Every row**, including the general assistants, must be checked **product by product and service by service**
+- [ ] Whether **HA Go / eHealth** genuinely requires account login, and whether it flags drug interactions
+- [ ] Existing **drug lookup apps** in Hong Kong (find at least 1-2 specific ones and check them)
+- [ ] The current status and scope of the **St. James' Settlement community pharmacy remote pharmacist consultation** service
+- [ ] **Do not summarise competitors** as "none of them do this" or "only we do". If a claim cannot be verified, **drop the claim rather than soften it**
 - [ ] If any verification contradicts the table above, **correct it immediately** — getting a local product's features wrong is worse than not knowing

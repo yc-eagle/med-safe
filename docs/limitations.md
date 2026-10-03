@@ -1,4 +1,4 @@
-﻿# What It Gets Wrong
+# What It Gets Wrong
 
 [English](limitations.md) | [中文](limitations.zh-CN.md)
 
@@ -14,14 +14,16 @@
 
 | # | Failure mode | When it happens | Severity | Our handling |
 |---|---|---|---|---|
-| 1 | **Medicine misidentification** | Blurred photo, poor angle, low light, similar packaging | High | Degrades to "I cannot read this photo clearly. Please take another one." |
-| 2 | **Ingredient misidentification** | Combination products, supplements, over-the-counter packaging | High | Recognition uncertain -> goes to state 3 |
-| 3 | **Insufficient data coverage** | The combination is not in our data | Medium | **Goes to state 3** — never "no interaction found" |
-| 4 | **Chinese patent and herbal medicines not covered** | Patent medicine packaging, raw herbs | Medium | Coverage stated honestly |
-| 5 | **Speech recognition or synthesis error** | Noisy environment, accent | Low | Text is shown on screen as well; never voice-only |
-| 6 | **Over-simplification** | Compressing a complex risk into one sentence | Medium | Wording reviewed line by line by Ella |
+| 1 | **Medicine misidentification** | Blurred photo, poor angle, low light, similar packaging | High | Retake, choose another image, or enter the registration number. **A photo and OCR produce candidates only; the user confirms identity.** |
+| 2 | **Ingredient misidentification** | Combination products, supplements, over-the-counter packaging | High | Unmapped ingredients are **listed as gaps**; identity still requires user confirmation |
+| 3 | **Insufficient rule coverage** | The pair is not covered by the 14 rules | Medium | Outputs **`no_rule_found`** — states **not covered**, and never "no interaction found" |
+| 4 | **Chinese patent medicines, herbal medicines and supplements not covered** | Patent medicine packaging, raw herbs | Medium | Outside current scope, **stated as such** |
+| 5 | **Speech recognition error** | Noisy environment, accent | **Not uniformly low** — a misheard name can point at a different drug | Text is shown as well as audio; **never voice-only**, and the user still confirms |
+| 6 | **Route of administration unclear** | Route not confirmed, or outside the rule's scope | Medium | Outputs **`route_review_required`**; shows the potential warning but does not extrapolate |
+| 7 | **Over-simplification** | Compressing a complex risk into one sentence | Medium | Wording reviewed line by line by Ella |
+| 8 | **Duplicate entry** | The same product added twice | Low | Outputs **`duplicate_input_requires_review`** |
 
-<!-- TODO (Ella and Sun): correct this table against the actual implementation and add a frequency column. -->
+**No failure-rate number is filled in without real data.** Incidence rates are left blank deliberately.
 
 ---
 
@@ -67,8 +69,10 @@
 
 | Stage | Safe fallback |
 |---|---|
-| Low recognition confidence | Goes straight to "please retake"; it does not guess |
-| Data not matched | Goes to state 3 |
+| Low recognition confidence | Retake, choose another image, or enter the registration number; it does not guess |
+| Identity not confirmed by the user | Outputs `identity_confirmation_required`; the full check does not proceed |
+| Data not matched | Outputs `no_rule_found` and states **not covered** |
+| Route not confirmed or outside scope | Outputs `route_review_required`; shown as a prompt to confirm |
 | Ambiguous wording in the output | Reviewed line by line by Ella; must be checked before the demo |
 | System entirely unavailable | The interface states plainly: consult a doctor or pharmacist |
 
