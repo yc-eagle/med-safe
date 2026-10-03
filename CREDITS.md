@@ -34,3 +34,9 @@ The original challenge statement was reached through team-supplied event materia
 ## Original code licence
 
 No blanket open-source licence has been selected for original team-authored code. Rights not otherwise granted are reserved pending team choice. Third-party components and open catalogue data remain subject to their own terms; a future code licence must not override them. Public repository access and GitHub's platform terms are distinct from granting a broad downstream code licence.
+
+## Team planning and background references
+
+Team planning materials are preserved in `docs/team-planning/` with their source commit. They contain research leads (including Hong Kong medication-management services and polypharmacy discussion) and potential datasets, not a record of data integrated into the runtime. RxNav-in-a-Box, TwoSides, HODDI, and DrugBank are not our clinical checking engine. Unverified publication/service claims remain leads until independently checked.
+
+Raccoon Work is a development aid and is not called by the runtime. Actual usage records must still be provided by Ella; template screenshots or an unfilled log are not evidence of an executed session or rejected result. Team interview consent forms are preparation tools, not proof that interviews occurred.

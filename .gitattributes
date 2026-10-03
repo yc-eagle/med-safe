@@ -1,3 +1,17 @@
+# 统一换行符，避免 Windows / macOS 协作者之间产生无意义的整文件 diff
+* text=auto eol=lf
+
+# 明确按二进制处理
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary
+*.mp4 binary
+*.mov binary
+*.wav binary
+*.zip binary
+
+# Preserve hashes of attributed source snapshots and vendored OCR resources
 data-pack/raw/* -text -diff
 app/vendor/* -text -diff
 *.csv -text

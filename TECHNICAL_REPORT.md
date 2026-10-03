@@ -21,7 +21,7 @@ The browser tests require Playwright and a supported installed browser. API test
 
 ## Current release checks
 
-The release additionally passed 16 public-browser workflow checks, 41 multi-product checks and 11 PWA core checks. PWA checks cover a 47-resource / approximately 52.6 MiB cache, reopening while offline, catalogue/rules/OCR availability and disabling browser recognition offline. The static site is public; the PWA upgrade is being deployed to the same URL. These are automated browser checks, not physical iPhone/Android or clinical validation.
+The release additionally passed 16 public-browser workflow checks, 41 multi-product checks and 16 PWA core checks. PWA checks cover a 47-resource / approximately 52.6 MiB cache, reopening while offline, catalogue/rules/OCR availability and disabling browser recognition offline. The static site and PWA upgrade are publicly deployed at the same URL. These are automated browser checks, not physical iPhone/Android or clinical validation.
 
 ## What meaningful tests cover
 
