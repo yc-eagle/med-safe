@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-03T07:11:55.986Z",
+  "passed": 9,
+  "checks": [
+    "All 47 public assets verify and save despite canonical 307 redirects",
+    "Regression server actually emitted homepage and other HTML redirects",
+    "Cache remains confined to public manifest and completion marker",
+    "Canonical homepage reloads and catalogue works offline",
+    "Pair checking continues offline after redirected prepare",
+    "OCR workers and language resources remain available offline",
+    "Browser speech remains disabled offline",
+    "All three extensionless HTML pages and original HTML URLs work offline",
+    "No page JavaScript exceptions"
+  ],
+  "redirects": [
+    "http://127.0.0.1:9877/index.html",
+    "http://127.0.0.1:9877/offline.html",
+    "http://127.0.0.1:9877/data-report.html",
+    "http://127.0.0.1:9877/verify.html"
+  ],
+  "state": {
+    "ready": true,
+    "current": true,
+    "bytes": 55154783,
+    "type": "READY",
+    "version": "368171514a50ec58",
+    "files": 47,
+    "cachedVersion": "368171514a50ec58",
+    "preparing": false,
+    "preparedAt": "2026-10-03T07:11:51.467Z",
+    "phase": "idle"
+  },
+  "errors": [],
+  "service_worker_sha256": "e792405fd653fc96b8e07df88b8f5f371ccfdf499239f33bdf486e9474127a4e",
+  "scope": "Anonymous Chromium at 390px; local static host reproduces Sites HTTP 307 canonicalisation; synthetic label OCR. This is not physical phone or clinical validation."
+}

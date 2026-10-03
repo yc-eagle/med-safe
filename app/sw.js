@@ -6,6 +6,14 @@ const RELEASE = {"version":"fcf7273d5520179b","bytes":55155927,"assets":[{"path"
 const PREFIX = 'medsafe-offline-v1-', CACHE = PREFIX + RELEASE.version;
 const ROOT = new URL('./', self.location.href), META = new URL('__offline_complete__', ROOT).href;
 const urls = new Map(RELEASE.assets.map(a => [new URL(a.path, ROOT).href, a]));
+// Static hosts may canonicalise index.html to / and other .html files to /name.
+// These are aliases of explicit manifest files, never arbitrary navigation.
+const aliases = new Map();
+for (const [href, item] of urls) {
+  aliases.set(href, href);
+  if (item.path.endsWith('.html')) aliases.set(href.slice(0,-5), href);
+  if (item.path === 'index.html') aliases.set(ROOT.href, href);
+}
 let preparing = null, selectedCache = null;
 const hex = buffer => Array.from(new Uint8Array(buffer), b => b.toString(16).padStart(2,'0')).join('');
 async function complete(name) {
@@ -51,8 +59,10 @@ async function download() {
       const controller = new AbortController(), timer = setTimeout(()=>controller.abort(),60000);
       let response, content;
       try {
-        response = await fetch(target, {cache:'reload',credentials:'same-origin',redirect:'error',signal:controller.signal});
+        response = await fetch(target, {cache:'reload',credentials:'same-origin',redirect:'follow',signal:controller.signal});
         if (!response.ok || response.type === 'opaque') throw Error('download_failed');
+        // Accept only this file's explicitly enumerated same-origin alias.
+        if (aliases.get(response.url) !== target) throw Error('unexpected_redirect');
         content = await response.arrayBuffer();
       } finally { clearTimeout(timer); }
       if (content.byteLength !== item.bytes || hex(await crypto.subtle.digest('SHA-256', content)) !== item.sha256)
@@ -101,13 +111,13 @@ self.addEventListener('fetch', event => {
   const target = new URL(request.url);
   if (target.origin !== ROOT.origin || !target.pathname.startsWith(ROOT.pathname)) return;
   target.search='';target.hash='';
-  if (target.href === ROOT.href) target.pathname += 'index.html';
+  const assetURL = aliases.get(target.href);
   // No APIs, uploads, audio, external URLs, arbitrary navigation or video.
-  if (!urls.has(target.href)) return;
+  if (!assetURL) return;
   event.respondWith((async()=>{
     if (!selectedCache) await findComplete();
     if (selectedCache) {
-      const saved = await (await caches.open(selectedCache)).match(target.href);
+      const saved = await (await caches.open(selectedCache)).match(assetURL);
       if (saved) return saved;
       selectedCache = null; // The browser may have evicted part of its storage.
     }
