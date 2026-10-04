@@ -53,7 +53,8 @@
 - **公开移动端入口：** [MedSafe](https://med-care.pages.dev)
 - **全部数据与规则：** [可视化清单](app/data-report.html) | [机器可读清单](data/data_inventory.json) | [数据说明](docs/data-inventory.md)
 - **决策如何做出：** [决策逻辑与证据边界](docs/decision-logic.md) | [14 条规则](docs/rules/README.zh-CN.md)
-- **演示材料：** [3 分钟录像与下载](https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4) | [仓库内的录像](assets/demo-3min.mp4) | [8 页可编辑 Deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)
+- **路演稿：** [14 页网页版 Deck](pitch-ppt/index.html) —— 用浏览器打开，按 `P` 进入演讲者模式。**这就是提交用的 Deck。**
+- **更早的材料（已被取代，仅作留档）：** [8 页 PPTX 与 PDF](deck/)，以及[预演发布里的 3 分钟录像](https://github.com/yc-eagle/med-safe/releases/tag/rehearsal-20261003)。3 分钟录像不作为提交物：它的旁白早于已记录的临床复核，因此不再作为当前证据展示或引用。
 - **给队友试用：** [五分钟反馈步骤](docs/tryout.md) | [详细走查](docs/try-it.md)
 - **提交跟踪：** [提交清单](docs/submission.md)
 
@@ -204,7 +205,7 @@ Lin MA 提供了豆包与小浣熊的分享链接；自动化工具无法取回�
 | **Shuoyang SUN** | 清华大学 | [@lkwet](https://github.com/lkwet) | 全部桌面网页开发 / Live Demo |
 | **Lin MA** | 清华大学 | [@huaxiamalin113](https://github.com/huaxiamalin113) | 领域专业支持、规则审阅与小浣熊证据 |
 
-汇报保持团队的结构：**把它读清楚 / 找到有来源的警告 / 承认哪些没有覆盖。** 不要把每一种风险都讲成绝对禁止。现有的[竞品讨论](docs/competitors.zh-CN.md)与[路演规划](deck/pitch-deck.zh-CN.md)保留为尚待核实的材料；没有证据的概括或过时的功能描述，必须按当前实现与来源更正后才能上台使用。原先相互冲突的文档保存在[团队规划存档](docs/team-planning/README.md)中。
+汇报保持团队的结构：**把它读清楚 / 找到有来源的警告 / 承认哪些没有覆盖。** 不要把每一种风险都讲成绝对禁止。现有的[竞品讨论](docs/competitors.zh-CN.md)与[路演规划](deck/pitch-deck.zh-CN.md)保留为尚待核实的材料；没有证据的概括或过时的功能描述，必须按当前实现与来源更正后才能上台使用。路演规划文档描述的是早先的 8 页结构；**实际使用的 Deck 是 [`pitch-ppt/index.html`](pitch-ppt/index.html)**。原先相互冲突的文档保存在[团队规划存档](docs/team-planning/README.md)中。
 
 ---
 

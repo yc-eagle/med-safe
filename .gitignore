@@ -129,7 +129,6 @@ desktop.ini
 *~
 
 # Deliberate small, synthetic submission assets (not patient media)
-!/assets/demo-3min.mp4
 !/data-pack/validation/cantonese_sample.wav
 !/data-pack/validation/mandarin_sample.wav
 # Team interview templates are public; recordings require separate consent.

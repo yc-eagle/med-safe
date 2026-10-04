@@ -8,7 +8,7 @@ HacKU 2026 · DeepTech 賽道 · 香港大學 · 2026 年 10 月 2–4 日
 
 **認清手上嘅藥，睇明有出處嘅提示，帶埋未解決嘅問題去問藥劑師。**
 
-[廣東話試用](https://med-care.pages.dev/?lang=yue) · [中文体验](https://med-care.pages.dev/?lang=cmn) · [English demo](https://med-care.pages.dev/?lang=en) · [三分鐘示範同簡報](https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4)
+[廣東話試用](https://med-care.pages.dev/?lang=yue) · [中文体验](https://med-care.pages.dev/?lang=cmn) · [English demo](https://med-care.pages.dev/?lang=en) · [14 頁網頁版簡報](../../pitch-ppt/index.html)
 
 項目介紹同預設介面用 **English**。廣東話用嚟支援香港長者同照顧者嘅本地交流；中文同廣東話入口可以用語言連結揀。介面語言同部裝置有冇相應語音，係兩回事。
 

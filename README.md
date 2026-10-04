@@ -53,7 +53,8 @@ Every result the program produces carries two standing flags: `clinicalSafety: n
 - **Public mobile entry point:** [MedSafe](https://med-care.pages.dev)
 - **All data and rules:** [visual inventory](app/data-report.html) | [machine-readable inventory](data/data_inventory.json) | [data notes](docs/data-inventory.md)
 - **How decisions are made:** [decision logic and evidence boundaries](docs/decision-logic.md) | [the 14 rules](docs/rules/README.md)
-- **Demo material:** [3-minute recording and downloads](https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4) | [recording in the repository](assets/demo-3min.mp4) | [8-slide editable deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)
+- **Pitch deck:** [14-page web deck](pitch-ppt/index.html) — open it in a browser and press `P` for presenter mode. **This is the submission deck.**
+- **Earlier material (superseded, kept for history):** [8-slide PPTX and PDF](deck/) and the [3-minute recording in the rehearsal release](https://github.com/yc-eagle/med-safe/releases/tag/rehearsal-20261003). The three-minute recording is not a submission artifact: its narration predates the recorded clinical review, so it is no longer shown or linked as current evidence.
 - **For teammates trying it:** [five-minute feedback steps](docs/tryout.md) | [detailed walkthrough](docs/try-it.md)
 - **Submission tracking:** [submission checklist](docs/submission.md)
 
@@ -204,7 +205,7 @@ Lin MA provided Doubao and Raccoon share links; automated tooling could not retr
 | **Shuoyang SUN** | Tsinghua University | [@lkwet](https://github.com/lkwet) | All desktop-web development / Live Demo |
 | **Lin MA** | Tsinghua University | [@huaxiamalin113](https://github.com/huaxiamalin113) | Domain expertise, rule review, and Raccoon evidence |
 
-The presentation keeps the team's structure: **read it clearly / find a sourced warning / admit what is not covered.** Do not present every risk as an absolute prohibition. The existing [competition discussion](docs/competitors.md) and [pitch planning](deck/pitch-deck.md) are retained as material still to be verified; unevidenced generalisations or outdated feature descriptions must be corrected against the current implementation and sources before use on stage. The original conflicting documents are preserved in the [team planning archive](docs/team-planning/README.md).
+The presentation keeps the team's structure: **read it clearly / find a sourced warning / admit what is not covered.** Do not present every risk as an absolute prohibition. The [competition discussion](docs/competitors.md) and the [pitch planning](deck/pitch-deck.md) are retained as material still to be verified; unevidenced generalisations or outdated feature descriptions must be corrected against the current implementation and sources before use on stage. The pitch planning document describes the earlier 8-slide structure; **the deck actually used is [`pitch-ppt/index.html`](pitch-ppt/index.html)**. The original conflicting documents are preserved in the [team planning archive](docs/team-planning/README.md).
 
 ---
 

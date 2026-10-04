@@ -1,60 +1,6 @@
 {
   "checked_on": "2026-10-03",
-  "files": [
-    {
-      "path": "assets/demo-3min.mp4",
-      "bytes": 5542358,
-      "sha256": "d76e8049da8545017873e545615b2187e4e90fc2dca3d9652d4d7515e92b6a5d"
-    },
-    {
-      "path": "assets/demo-3min.en.srt",
-      "bytes": 1455,
-      "sha256": "53f390b959c5872f7e6b5f3d308e43176b77f67433941a1edd617b737e12a50e"
-    },
-    {
-      "path": "assets/demo-narration.txt",
-      "bytes": 2818,
-      "sha256": "be1d57d415e5bbafa3cde0c3086df3d67729ba3274ab959ebfcb5cc5c589697e"
-    },
-    {
-      "path": "deck/Med-Safe-HacKU2026.pptx",
-      "bytes": 427057,
-      "sha256": "3790c4931bdd980c38980f0ac29d5be900697c7b9b49bed47a2ce60148381763"
-    },
-    {
-      "path": "deck/Med-Safe-HacKU2026.pdf",
-      "bytes": 1411287,
-      "sha256": "371cd5f14660e065664d1548a18d8a1413676c44a97527950e807c5543e7e987"
-    }
-  ],
-  "video": {
-    "duration_seconds": 180,
-    "width": 1440,
-    "height": 1000,
-    "codec": "H.264",
-    "audio": "AAC, synthetic Samantha narration",
-    "subtitles": "English, embedded mov_text and separate SRT",
-    "full_decode_exit_code": 0,
-    "decoded_frames": 4320,
-    "audio_peak_db": -1.7,
-    "audio_mean_db": -16.6,
-    "captured_browser_frames": 720,
-    "capture_fps": 4,
-    "encoding_fps": 24,
-    "actual_browser_ui": true,
-    "synthetic_labels": true,
-    "real_patient_data": false,
-    "clinical_validation": false,
-    "real_microphone_or_camera": false,
-    "external_requests": [],
-    "browser_exceptions": [],
-    "voice_question_typed_not_microphone": true,
-    "real_time_comparison_claimed": false,
-    "frames_visual_reviewed": [
-      120,
-      154
-    ]
-  },
+  "files": [],
   "deck": {
     "slides": 8,
     "editable_pptx_text_objects": 100,
@@ -70,5 +16,7 @@
     "No claim of all phone voice functions working offline.",
     "Physical device and real-user manual comparison remain pending."
   ],
-  "ready_for_public_repository": true
+  "ready_for_public_repository": true,
+  "removed_on": "2026-10-04",
+  "removed_note": "the 3-minute recording, its subtitles, its narration script and the 8-slide PPTX/PDF were removed. The recording's narration and subtitles stated that the clinical review was pending, which stopped being true on 2026-10-03. This file is kept as a record of what was verified before removal, not as a claim about current deliverables."
 }

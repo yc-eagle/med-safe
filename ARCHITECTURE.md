@@ -9,7 +9,7 @@ Input text / photo / voice
   -> HK catalogue (14,269 products)
   -> Explicit ingredient aliases, preserving unmapped ingredients
   -> Pairwise enumeration (2–12 products; up to 66 pairs)
-  -> 14 sourced rule drafts + route constraints
+  -> 14 sourced rules, clinician-reviewed on 2026-10-03 + route constraints
   -> Warnings + unknown coverage + source provenance
   -> Controlled education answer / pharmacist question card
 ```

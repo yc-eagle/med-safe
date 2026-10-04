@@ -23,7 +23,7 @@ function referralYue(result){
  return {reason:'未找到規則；這不代表已排除風險。',question:'原型未查到足夠依據，請幫我核對呢個組合同我嘅個人情況。'};
 }
 function answerYue(question,items,result,data){
- const q=norm(question),found=terms(q,data),base={clinicalSafety:'not_assessed',autoSelect:[],sourceRuleIds:[],needsPharmacist:true,reviewStatus:'pending_ella_review'};
+ const q=norm(question),found=terms(q,data),base={clinicalSafety:'not_assessed',autoSelect:[],sourceRuleIds:[],needsPharmacist:true,reviewStatus:'not_reviewed'};
  const out=(intent,text,extra={})=>({...base,intent,text,...extra});
  if(!q)return out('empty','請先講或者輸入你想問嘅問題。');
  if(/(呼吸困難|呼吸困难|喘唔到氣|喘唔到气|昏迷|叫唔醒|抽搐|trouble breathing|unconscious|seizure)/i.test(q))return out('urgent_help','如果你講嘅呼吸困難、叫唔醒、抽搐等情況正喺發生，請立即打香港 999 求助，唔好等藥品核對或者語音結果。原型唔可以判斷嚴重程度。如果你只係問一般副作用，可以講「呢隻藥有咩副作用？」。',{sourceProfileIds:['emergency'],urgency:'conditional_emergency'});

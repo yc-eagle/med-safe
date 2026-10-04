@@ -27,7 +27,7 @@ function validate(truth,output,data){
    const expected=[...new Set(product.active_ingredients.map(x=>ingredient(x,data)))].sort(),observed=[...new Set(claim.ingredients.map(x=>ingredient(x,data)))].sort();
    const same=JSON.stringify(expected)===JSON.stringify(observed);
    check('ingredients',same?'matched':'conflict',claim.ingredients,product.active_ingredients,same?'complete_ingredient_set_matches':'missing_or_extra_ingredient');
-   for(const raw of claim.ingredients){const canonical=ingredient(raw,data);if(norm(raw)!==canonical)row.normalizations.push({observed:raw,canonical,method:'explicit_alias_table',review_status:'pending_ella_review'});}
+   for(const raw of claim.ingredients){const canonical=ingredient(raw,data);if(norm(raw)!==canonical)row.normalizations.push({observed:raw,canonical,method:'explicit_alias_table',review_status:'not_reviewed'});}
   }
   for(const key of ['dose','frequency','patient_instructions','recommended_dose','administration'])if(claim[key]!=null&&claim[key]!=='')check(key,'unverified',claim[key],null,'patient_instruction_not_verifiable_from_product_catalogue');
   const known=new Set(['input_index','registration_number','product_name','ingredients','dose','frequency','patient_instructions','recommended_dose','administration']);

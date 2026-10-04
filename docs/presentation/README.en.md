@@ -8,7 +8,7 @@ HacKU 2026 · DeepTech Track · The University of Hong Kong · 2–4 October 202
 
 **Confirm the medicine. Read the sourced warning. Bring the unresolved question to a pharmacist.**
 
-[Try in English](https://med-care.pages.dev/?lang=en) · [中文体验](https://med-care.pages.dev/?lang=cmn) · [廣東話試用](https://med-care.pages.dev/?lang=yue) · [Three-minute demonstration and slides](https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4)
+[Try in English](https://med-care.pages.dev/?lang=en) · [中文体验](https://med-care.pages.dev/?lang=cmn) · [廣東話試用](https://med-care.pages.dev/?lang=yue) · [14-page web deck](../../pitch-ppt/index.html)
 
 The presentation and default interface are in **English**. Cantonese supports the local conversation between older adults and caregivers; Chinese and Cantonese entry points are available through the language links. Interface language and the availability of a speech voice are separate settings.
 

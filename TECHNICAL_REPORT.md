@@ -4,7 +4,7 @@ The current release is an engineering prototype. Test evidence does not demonstr
 
 ## Scope
 
-14,269 catalogue products; 14 ingredient profiles; 13 illustrative formulations; 22 lexicon entries; 14 sourced rule drafts, all pending review. A check accepts up to 12 distinct confirmed products and emits every pair (up to 66), retaining unmapped ingredients, route gaps, no-match coverage and sources. Counts should be read from `data/data_inventory.json` after each build.
+14,269 catalogue products; 14 ingredient profiles; 13 illustrative formulations; 22 lexicon entries; 14 sourced rules, all clinician-reviewed on 2026-10-03. A check accepts up to 12 distinct confirmed products and emits every pair (up to 66), retaining unmapped ingredients, route gaps, no-match coverage and sources. Counts should be read from `data/data_inventory.json` after each build.
 
 ## Reproducible checks
 

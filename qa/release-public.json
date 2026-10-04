@@ -3,12 +3,9 @@
   "access": "public",
   "site_deployment_status": "succeeded",
   "site_deployment_id": "appgdep_6ac0b5e026f481918acf1c7f9d901e5a",
-  "site_source_commit": "df7459dbea2da7ecd6adac0d8e84be656f1f9b15",
   "github_url": "https://github.com/yc-eagle/med-safe",
   "github_main_merge": "adbd7d9",
   "team_prior_commit_preserved": "9c499e2",
-  "video_url": "https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4",
-  "video_duration_seconds": 180,
   "offline_assets": 53,
   "offline_bytes": 55277699,
   "clinical_review": "clinician_reviewed_2026-10-03",
@@ -27,8 +24,11 @@
   ],
   "teammate_existing_documents_unchanged": 45,
   "published_languages_and_ocr_offline": "passed",
-  "deck_url": "https://github.com/yc-eagle/med-safe/blob/main/deck/Med-Safe-HacKU2026.pptx",
+  "deck_url": "https://github.com/yc-eagle/med-safe/blob/main/pitch-ppt/index.html",
   "site_url_previous_status": "returns Cloudflare 403 as of 2026-10-03; do not use in submissions",
   "superseded_host": "med-safe-hacku-2026.stashes-primers-4n.chatgpt.site",
-  "superseded_host_note": "returned Cloudflare 403 on 2026-10-03; replaced by med-care.pages.dev"
+  "superseded_host_note": "returned Cloudflare 403 on 2026-10-03; replaced by med-care.pages.dev",
+  "deck_note": "the 14-page web deck; the earlier deck/Med-Safe-HacKU2026.pptx and .pdf and the 3-minute recording were removed on 2026-10-04 because their branding and review-status wording predated the recorded clinical review",
+  "release_commit_note": "no commit hash is recorded here on purpose: the previously recorded value df7459d no longer exists as an object in the repository, so it could not be re-verified. Verify the deployed revision against the live files instead.",
+  "deployment_lag_note": "checked 2026-10-04 12:xx HKT: med-care.pages.dev still serves the pre-rename build (title MedSafe, header MedSafe) and its data.js still contains 60 pending_ella_review values against 14 clinician_reviewed ones. Redeploy before submission."
 }

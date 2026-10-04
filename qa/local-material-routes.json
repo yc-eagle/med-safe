@@ -38,30 +38,6 @@
       "content_type": "text/html; charset=utf-8"
     },
     {
-      "path": "/demo-3min.mp4",
-      "status": 200,
-      "bytes": 5542358,
-      "content_type": "video/mp4"
-    },
-    {
-      "path": "/demo-3min.en.vtt",
-      "status": 200,
-      "bytes": 1463,
-      "content_type": "text/vtt; charset=utf-8"
-    },
-    {
-      "path": "/Med-Safe-HacKU2026.pptx",
-      "status": 200,
-      "bytes": 427057,
-      "content_type": "application/vnd.openxmlformats-officedocument.presentationml.presentation"
-    },
-    {
-      "path": "/Med-Safe-HacKU2026.pdf",
-      "status": 200,
-      "bytes": 1411287,
-      "content_type": "application/pdf"
-    },
-    {
       "path": "/api/status",
       "status": 200,
       "local_ocr_available": true,

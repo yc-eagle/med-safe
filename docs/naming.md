@@ -47,6 +47,8 @@ The word 安心 means *peace of mind*, not *safety*. That distinction is the who
 
 - Repository path `med-safe` and package name `med-safe-hacku-2026`
 - Live host `med-care.pages.dev`
-- `assets/MedSafe-QR.png`, `deck/Med-Safe-HacKU2026.pptx`, `deck/Med-Safe-HacKU2026.pdf`, and the release zip names
+- `assets/MedSafe-QR.png` and the release zip names
 
 These are referenced by the printed QR code, by links already sent to organisers, and by release URLs. Renaming them would break material that is already in other people's hands, and a visible brand does not require a renamed file.
+
+**Removed on 2026-10-04, so no longer part of this list:** `deck/Med-Safe-HacKU2026.pptx`, `deck/Med-Safe-HacKU2026.pdf`, `assets/demo-3min.mp4`, its subtitles and its narration script. The deck files were superseded by [`../pitch-ppt/index.html`](../pitch-ppt/index.html); the recording was withdrawn because its narration stated that the clinical review was pending, which stopped being true on 2026-10-03. Files obtainable from the rehearsal release keep the old name and cannot be renamed — the release is immutable, so it is left as history.

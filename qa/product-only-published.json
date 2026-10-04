@@ -114,18 +114,6 @@
       "status": 404,
       "type": "text/html; charset=utf-8",
       "body": true
-    },
-    {
-      "path": "/demo-3min.mp4",
-      "status": 404,
-      "type": "text/html; charset=utf-8",
-      "body": true
-    },
-    {
-      "path": "/Med-Safe-HacKU2026.pptx",
-      "status": 404,
-      "type": "text/html; charset=utf-8",
-      "body": true
     }
   ],
   "scope": "Anonymous desktop Chrome, 390px viewport; live asset integrity and removed media routes, not physical phone."
