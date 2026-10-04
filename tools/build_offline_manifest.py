@@ -16,7 +16,7 @@ PUBLIC = [
     'theme.css', 'experience.css', 'experience.js',
     'locale.js', 'vendor/opencc-t2cn.js', 'vendor/OPENCC-LICENSE.txt', 'vendor/opencc-source.json',
     'resource-pages.js', 'resource-pages.css',
-    'browser-runtime.js', 'data.js', 'engine.js', 'medicine-info.js', 'patient.js',
+    'photo-tools.js', 'browser-runtime.js', 'data.js', 'engine.js', 'medicine-info.js', 'patient.js',
     'app.js', 'voice.js', 'product-features.js', 'release-ui.js', 'offline-runtime.js',
     'offline.html', 'data-report.html', 'verify.html', 'verify.css', 'verify.js',
     'validator.js', 'sample-labels.png', 'favicon.svg', 'manifest.webmanifest',

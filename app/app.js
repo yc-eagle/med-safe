@@ -295,15 +295,20 @@ function clearPhotoResults(){
  $('#ocr-details').hidden=true;$('#ocr-preview').textContent='';$('#ocr-text').textContent='';$('#ocr-candidates').textContent='';
  $('#ocr-status').textContent='';$('#ocr-status').dataset.state='';
 }
-async function recognize(file,isSample=false){
+async function preparePhoto(file){
+ const request=++ocrSequence;clearPhotoResults();
+ if(file.size>10*1024*1024)return toast(t("limitPhoto"));
+ try{const prepared=await PhotoTools.edit(file);if(prepared&&request===ocrSequence)await recognize(prepared.file,false,{script:prepared.script,prepared:true});}catch{toast(t("ocrFail"));}finally{$("#photo").value="";}
+}
+async function recognize(file,isSample=false,options={}){
  const request=++ocrSequence;clearPhotoResults();
  if(!api?.ocr)return toast(t('ocrOffline'));
- if(file.size>10*1024*1024)return toast(t('limitPhoto'));
+ if(!options.prepared&&file.size>10*1024*1024)return toast(t('limitPhoto'));
  $('#ocr-status').className='success-note';$('#ocr-status').dataset.state='ocrBusy';$('#ocr-status').textContent=t('ocrBusy');
  $('#photo').disabled=true;$('#ocr-sample').disabled=true;
  try{
   let data;
-  if(api.runtime==='browser')data=await BrowserRuntime.ocr(file,{onProgress:progress=>{if(request===ocrSequence)$('#ocr-status').textContent=t('ocrBusy')+' '+Math.round(progress*100)+'%';}});
+  if(api.runtime==='browser')data=await BrowserRuntime.ocr(file,{script:options.script,onProgress:progress=>{if(request===ocrSequence)$('#ocr-status').textContent=t('ocrBusy')+' '+Math.round(progress*100)+'%';}});
   else {
    const base64=await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result.split(',')[1]);reader.onerror=reject;reader.readAsDataURL(file);});
    const response=await fetch('/api/ocr',{method:'POST',headers:{'Content-Type':'application/json','X-MedCheck-Token':api.token},body:JSON.stringify({image:base64})});
@@ -320,7 +325,7 @@ async function recognize(file,isSample=false){
   if(request===ocrSequence){$('#ocr-status').className='error-note';$('#ocr-status').dataset.state='ocrFail';$('#ocr-status').textContent=t('ocrFail');}
  }finally{if(request===ocrSequence){$('#photo').disabled=false;$('#ocr-sample').disabled=false;$('#photo').value='';}}
 }
-function reset(){ocrSequence++;$('#photo').disabled=false;$('#ocr-sample').disabled=false;window.Consultation?.reset();window.dispatchEvent(new Event('medicine-change'));generation++;selected=[];currentResult=null;stopAudio();if(previewURL)URL.revokeObjectURL(previewURL);previewURL=null;$('#ocr-details').hidden=true;$('#ocr-preview').innerHTML='';$('#ocr-text').textContent='';$('#ocr-candidates').innerHTML='';$('#ocr-status').textContent='';$('#ocr-status').dataset.state='';$('#search').value='';$('#search-results').innerHTML='';renderSelected();renderResult();}
+function reset(){window.PhotoTools?.cancel();ocrSequence++;$('#photo').disabled=false;$('#ocr-sample').disabled=false;window.Consultation?.reset();window.dispatchEvent(new Event('medicine-change'));generation++;selected=[];currentResult=null;stopAudio();if(previewURL)URL.revokeObjectURL(previewURL);previewURL=null;$('#ocr-details').hidden=true;$('#ocr-preview').innerHTML='';$('#ocr-text').textContent='';$('#ocr-candidates').innerHTML='';$('#ocr-status').textContent='';$('#ocr-status').dataset.state='';$('#search').value='';$('#search-results').innerHTML='';renderSelected();renderResult();}
 document.addEventListener('click',event=>{const el=event.target.closest('button');if(!el)return;
  if(el.dataset.add)add(el.dataset.add,el.closest('#ocr-candidates')?.dataset.sample==='true');
  if(el.dataset.remove){
@@ -344,7 +349,7 @@ $('#clear').onclick=()=>{
  const previous=selected.map(x=>({...x})),notes=window.Consultation?.get();reset();const revision=generation;
  toast(t('restart'),previous.length?{label:MedLocale.choose('復原','Undo'),run:()=>{if(generation!==revision)return;selected=previous;window.Consultation?.restore(notes);invalidate();renderSelected();toast(MedLocale.choose('已復原','Restored'));}}:null);
 };$('#about').onclick=about;$('#close-dialog').onclick=()=>$('#dialog').close();$('#dialog').addEventListener('click',e=>{if(e.target===$('#dialog')){const r=$('#dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('#dialog').close();}});
-$('#photo').onchange=e=>{if(e.target.files[0])recognize(e.target.files[0]);};$('#upload-label').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('#photo').click();}});
+$('#photo').onchange=e=>{if(e.target.files[0])preparePhoto(e.target.files[0]);};$('#upload-label').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('#photo').click();}});
 $('#ocr-sample').onclick=async()=>{if(!api?.ocr)return toast(t('ocrOffline'));try{const b=await(await fetch('sample-labels.png')).blob();recognize(new File([b],'synthetic-labels.png',{type:'image/png'}),true);}catch{toast(t('ocrFail'));}};
 setLanguage();
 if(location.protocol==='http:'&&['127.0.0.1','localhost'].includes(location.hostname))fetch('/api/status').then(r=>r.json()).then(s=>{api=s;setLanguage();window.dispatchEvent(new Event('local-api-ready'));}).catch(()=>{});

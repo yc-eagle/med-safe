@@ -1,0 +1,37 @@
+{
+  "tested_at": "2026-10-04T04:30:55.708852+00:00",
+  "base_commit": "d4ed84b",
+  "scope": "Desktop Chrome at phone width, supplied real images, no physical phone/camera or clinical validation",
+  "models": [
+    "tessdata_fast/eng",
+    "tessdata_fast/chi_tra"
+  ],
+  "changes": [
+    "Explicit crop and 90-degree rotation before OCR",
+    "Bounded rescale and white margin",
+    "Chinese + English default, separate Chinese or English option",
+    "No automatic selection or fuzzy medicine correction"
+  ],
+  "observations": [
+    {
+      "sample": "User supplied metronidazole bottle",
+      "printed_ingredient_detected": true,
+      "hk_id_detected": true,
+      "candidate_ids": [
+        "HK-28848"
+      ],
+      "automatic_selection": 0
+    },
+    {
+      "sample": "User supplied two Chinese Panadol packs",
+      "stylised_brand_recognised": false,
+      "candidate_ids": [],
+      "automatic_selection": 0
+    }
+  ],
+  "limitations": [
+    "Chinese stylised brand still failed; do not claim solved or infer formulation from brand.",
+    "Handwriting, glare, curved labels and clipped registration digits require manual confirmation.",
+    "The photo editor helps target label text, not a measured general OCR accuracy improvement."
+  ]
+}
