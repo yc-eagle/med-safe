@@ -167,7 +167,7 @@
   */
   .frame-img{overflow:hidden;position:relative;background:rgba(0,0,0,.04);box-sizing:border-box;width:100%;border-radius:4px}
   .slide.dark .frame-img{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)}
-  .frame-img > img{width:100%;height:auto;object-fit:contain;object-position:center center;display:block;max-height:52vh}
+  .frame-img > img{width:100%;height:auto;object-fit:contain;object-position:center center;display:block;max-height:min(52vh,44vw)}
   .frame-img.fit-contain > img{object-fit:contain;object-position:center center}
   .frame-img.no-crop{aspect-ratio:auto;max-height:none;background:transparent}
   .frame-img.r-16x9{aspect-ratio:16/9;max-height:64vh}
@@ -720,8 +720,8 @@
       </div>
     </div>
     <figure class="frame-img fit-contain" data-anim>
-      <img src="images/03-medicine-bag.png" alt="A Hong Kong hospital medicine bag">
-      <figcaption class="img-cap">Hospital medicine bag</figcaption>
+      <img src="images/09-bag-with-pills.jpg" alt="Three medicines as dispensed together in a paper bag">
+      <figcaption class="img-cap">Three medicines, one bag</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -765,25 +765,25 @@
     <div>Act III &middot; Product</div>
     <div>07 / 13</div>
   </div>
-  <div class="frame grid-2-7-5" style="padding-top:6vh">
+  <div class="frame grid-2-7-5" style="padding-top:3vh">
     <div style="display:flex;flex-direction:column;justify-content:space-between;gap:3vh">
       <div>
-        <div class="kicker" data-anim>Read it clearly</div>
+        <div class="kicker" style="margin-bottom:1.6vh" data-anim>Read it clearly</div>
         <h2 class="h-xl" style="font-size:5vw;line-height:1.12" data-anim>
-          A photo finds candidates. It never confirms identity.
+          Three similar bottles. Three different medicines.
         </h2>
         <p class="lead" style="margin-top:3vh" data-anim>
-          The full HK registration number must exist in the catalogue, and the user confirms the product before any rule applies.
+          The user confirms the product. No rule applies before that.
         </p>
       </div>
       <div class="callout" data-anim>
-        14,269 products &middot; 23,835 ingredient records &middot; 2,081 distinct strings
-        <div class="callout-src">&mdash; Hong Kong Drug Office catalogue, snapshot 2026-09-25</div>
+        14,269 products &middot; 23,835 ingredient records
+        <div class="callout-src">&mdash; Hong Kong Drug Office catalogue</div>
       </div>
     </div>
     <figure class="frame-img fit-contain" data-anim>
-      <img src="images/01-single-pack.webp" alt="A single paracetamol 500 mg pack">
-      <figcaption class="img-cap">Paracetamol 500 mg</figcaption>
+      <img src="images/07-three-similar-bottles.jpg" alt="Three medicine bottles that look alike but are different medicines">
+      <figcaption class="img-cap">Three bottles, three medicines</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -952,8 +952,8 @@
       </div>
     </div>
     <figure class="frame-img fit-contain" data-anim>
-      <img src="images/04-bag-ingredients.jpg" alt="A hospital medicine bag where the ingredients are unclear to the caregiver">
-      <figcaption class="img-cap">The bag on the counter</figcaption>
+      <img src="images/08-english-prescription.jpg" alt="A prescription written entirely in English, which an older reader may not follow">
+      <figcaption class="img-cap">English only, and hard to read</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -976,7 +976,7 @@
       Read it clearly. See the sourced warning. Take the gaps to a pharmacist.
     </p>
     <div class="meta-row" data-anim>
-      <span>github.com/yc-eagle/med-safe</span><span>&middot;</span><span>Group 51 &mdash; Bauhinia Spheal</span>
+      <span>med-care.pages.dev</span><span>&middot;</span><span>github.com/yc-eagle/med-safe</span>
     </div>
   </div>
   <div class="foot">
@@ -1014,15 +1014,15 @@ const SPEAKER_NOTES = [
     transition:"Widen to the systemic evidence." },
   { id:"evidence", title:"The information exists. It does not arrive.", section:"Evidence", minutes:0.6,
     purpose:"Show the failure is systemic.",
-    talk:["A bag lists medicines, not how the patient takes them.","Say clearly that the incidents we cite are reports, not our data.","We use them because the failure mode is identical."],
+    talk:["Three medicines dispensed together in one bag - this is what the person at home is handed.","A bag lists medicines, not how the patient takes them.","Say clearly that the incident we cite is a report, not our data."],
     transition:"Name the cost of getting it wrong." },
   { id:"incidents", title:"One pattern, over and over", section:"Evidence", minutes:0.5,
     purpose:"Establish the stakes without over-claiming a number.",
     talk:["The wrong medicine, or the wrong dose, reaching the patient.","We show one reported case; the pattern is not limited to it.","Keep the tone factual; do not dwell."],
     transition:"Now show what we built." },
-  { id:"confirm", title:"A photo finds candidates. It never confirms identity.", section:"Product", minutes:0.5,
+  { id:"confirm", title:"Three similar bottles. Three different medicines.", section:"Product", minutes:0.5,
     purpose:"Introduce the catalogue and the identity rule.",
-    talk:["Search the HK registration number, or photograph the box.","OCR produces candidates; the user confirms.","14,269 products, 23,835 ingredient records, 2,081 distinct strings."],
+    talk:["These three bottles came from one consultation: alike, and not the same medicine.","Search the HK registration number, or photograph the box; then the user confirms.","14,269 products and 23,835 ingredient records sit behind that confirmation."],
     transition:"Move from identity to the check itself." },
   { id:"warning", title:"A warning is not a prohibition", section:"Product", minutes:0.6,
     purpose:"Present the three-state logic as the core design decision.",
@@ -1042,7 +1042,7 @@ const SPEAKER_NOTES = [
     transition:"End on the roadmap.", cue:"Do not generalise about competitors; we have not verified them item by item." },
   { id:"next", title:"Four things before a pharmacy counter", section:"Next", minutes:0.4,
     purpose:"Show a credible path rather than a wish list.",
-    talk:["Review every rule with a named clinician.","Test the offline pack on real phones.","Then observe real users, and widen coverage."],
+    talk:["This prescription is English only - an older reader may not follow it. That is the gap.","Review every rule with a named clinician.","Test the offline pack on real phones, then observe real users."],
     transition:"Close on the design principle." },
   { id:"close", title:"It says I do not know.", section:"Next", minutes:0.4,
     purpose:"Land one memorable line and a concrete next action.",
@@ -1789,8 +1789,6 @@ const initialSlide = initialSlideParam ? Number(initialSlideParam) - 1 : 0;
 go(Number.isFinite(initialSlide) ? initialSlide : 0);
 window.__pptPresenter?.initMode();
 </script>
-<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-<script>lucide.createIcons();</script>
 
 <!-- ============ Motion One 动效引擎（本地优先,CDN 兜底） ============
      加载策略:先 ./assets/motion.min.js(本地,离线可用),失败 fallback 到 jsDelivr CDN
