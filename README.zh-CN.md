@@ -203,7 +203,7 @@ Lin MA 提供了豆包与小浣熊的分享链接；自动化工具无法取回�
 |---|---|---|---|
 | **Yicheng JIANG** | 北京外国语大学 | [@yc-eagle](https://github.com/yc-eagle) | 整体选题与概念（本想法由他提出）/ 核心工作 / 项目进度管理 / 仓库与工作流 / Pitch Deck / 汇报与路演 |
 | **Shuoyang SUN** | 清华大学 | [@lkwet](https://github.com/lkwet) | 全部桌面网页开发 / Live Demo |
-| **Lin MA** | 清华大学 | [@huaxiamalin113](https://github.com/huaxiamalin113) | 领域专业支持、规则审阅与小浣熊证据 |
+| **Lin MA** | 清华大学 · 医学博士生 | [@huaxiamalin113](https://github.com/huaxiamalin113) | 领域专业支持、规则审阅与小浣熊证据 |
 
 汇报保持团队的结构：**把它读清楚 / 找到有来源的警告 / 承认哪些没有覆盖。** 不要把每一种风险都讲成绝对禁止。现有的[竞品讨论](docs/competitors.zh-CN.md)与[路演规划](deck/pitch-deck.zh-CN.md)保留为尚待核实的材料；没有证据的概括或过时的功能描述，必须按当前实现与来源更正后才能上台使用。路演规划文档描述的是早先的 8 页结构；**实际使用的 Deck 是 [`pitch-ppt/index.html`](pitch-ppt/index.html)**。原先相互冲突的文档保存在[团队规划存档](docs/team-planning/README.md)中。
 

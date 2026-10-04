@@ -203,7 +203,7 @@ Lin MA provided Doubao and Raccoon share links; automated tooling could not retr
 |---|---|---|---|
 | **Yicheng JIANG** | Beijing Foreign Studies University | [@yc-eagle](https://github.com/yc-eagle) | Overall topic selection and concept (originator of the idea) / core work / project progress management / repository and workflow / pitch deck / presentation and pitching |
 | **Shuoyang SUN** | Tsinghua University | [@lkwet](https://github.com/lkwet) | All desktop-web development / Live Demo |
-| **Lin MA** | Tsinghua University | [@huaxiamalin113](https://github.com/huaxiamalin113) | Domain expertise, rule review, and Raccoon evidence |
+| **Lin MA** | Tsinghua University · medical doctoral researcher | [@huaxiamalin113](https://github.com/huaxiamalin113) | Domain expertise, rule review, and Raccoon evidence |
 
 The presentation keeps the team's structure: **read it clearly / find a sourced warning / admit what is not covered.** Do not present every risk as an absolute prohibition. The [competition discussion](docs/competitors.md) and the [pitch planning](deck/pitch-deck.md) are retained as material still to be verified; unevidenced generalisations or outdated feature descriptions must be corrected against the current implementation and sources before use on stage. The pitch planning document describes the earlier 8-slide structure; **the deck actually used is [`pitch-ppt/index.html`](pitch-ppt/index.html)**. The original conflicting documents are preserved in the [team planning archive](docs/team-planning/README.md).
 

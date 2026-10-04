@@ -1,9 +1,9 @@
-﻿# Medication Criteria
+# Medication Criteria
 
 [English](README.md) | [中文](README.zh-CN.md)
 
 > **This directory is the product's decision core.**
-> **Owner: Lin MA.** All 14 rules were **clinician-reviewed on 2026-10-03 and the reviewer agrees with each one**. Line-by-line record: [`review.csv`](review.csv). Education profiles, lexicon and patient wording remain pending review.
+> **Owner: Lin MA, medical doctoral researcher.** All 14 rules were **clinician-reviewed on 2026-10-03 and the reviewer agrees with each one**. Line-by-line record: [`review.csv`](review.csv). Education profiles, lexicon and patient wording remain pending review.
 
 ---
 
