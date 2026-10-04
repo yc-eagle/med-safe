@@ -1,0 +1,154 @@
+{
+  "checked_at": "2026-10-04T02:05:09.795487+00:00",
+  "team_main": "25865151766ac315f2e18467c60ff7d9ed4e8eb5",
+  "integration_commit": "ba6fbbd31b532d9c55c707d6491df84a79e0997f",
+  "product_commit": "d54300675d4884e5c076752139daa50b92ede2c9",
+  "preserved_team_files": [
+    {
+      "path": "README.md",
+      "matches_team_commit": true,
+      "sha256": "60ab9455fb5fa8e82c5e5f9999317af993058889ec8c6d358c1d3490fe56210f"
+    },
+    {
+      "path": "README.zh-CN.md",
+      "matches_team_commit": true,
+      "sha256": "720061df1e5c68a3950449eed539e7fba8b3f2f4069339b5f36180b85460bce1"
+    },
+    {
+      "path": "deck/pitch-deck.md",
+      "matches_team_commit": true,
+      "sha256": "02c26df8cac8c0681925aeada5ef9a743c664faca70257e3dce53eb8d031ec42"
+    },
+    {
+      "path": "deck/pitch-deck.zh-CN.md",
+      "matches_team_commit": true,
+      "sha256": "6793519d3ae1fc539c641318f5a686981fb07e76159b5fc702bd9b8ee1a98fca"
+    },
+    {
+      "path": "docs/presentation/README.en.md",
+      "matches_team_commit": true,
+      "sha256": "d7371c2d1f49120df34f7372d826037924ab2872484b4d618a181b81bccdcfe7"
+    },
+    {
+      "path": "docs/presentation/README.yue.md",
+      "matches_team_commit": true,
+      "sha256": "7f32e4e3aba28a17268a27ac11af2c7f84c600fea637bcdfa66be2e0f6921efa"
+    },
+    {
+      "path": "docs/presentation/README.zh-CN.md",
+      "matches_team_commit": true,
+      "sha256": "43657141ae3ed19ad5c1dc3ae770f441f0618b8416ef7c88b75452f5e49d6384"
+    },
+    {
+      "path": "docs/submission.en.md",
+      "matches_team_commit": true,
+      "sha256": "de701db2dac9deb5bc3d665a93424fc4b6ab43238f4ef0cf19e35f23993c894b"
+    },
+    {
+      "path": "docs/submission.md",
+      "matches_team_commit": true,
+      "sha256": "55b5bf494dbef7125bb0a21251fdc85b1608d0e461c2d6593cb3ea7915ee176f"
+    },
+    {
+      "path": "docs/try-it.md",
+      "matches_team_commit": true,
+      "sha256": "b7ae2666cca1c3232561067c246ea8fbb3fd51f6a12cdec16b9c020856b62035"
+    },
+    {
+      "path": "docs/tryout.md",
+      "matches_team_commit": true,
+      "sha256": "6b189a21b4bf88a8f05c4fe87f62e3418089b9122b75098386155ca940b45f73"
+    },
+    {
+      "path": "pitch-ppt/images/01-single-pack.webp",
+      "matches_team_commit": true,
+      "sha256": "b3a2a35091477d24212ea89ae2af0760d5b675d39d7a86c333f28bd1a73f8a90"
+    },
+    {
+      "path": "pitch-ppt/images/02-duplicate-ingredient.png",
+      "matches_team_commit": true,
+      "sha256": "0388fe1f9e72f5bdfae09813cf627477c45267536baa0394738574f35de43149"
+    },
+    {
+      "path": "pitch-ppt/images/03-medicine-bag.png",
+      "matches_team_commit": true,
+      "sha256": "823c04f69cbdf375dc00fbcd0ffa40dfadbadcc4949d10b76e14530c5483a585"
+    },
+    {
+      "path": "pitch-ppt/images/04-bag-ingredients.jpg",
+      "matches_team_commit": true,
+      "sha256": "aabfac1b82d74fd196f27ce03b926839a06f7a5fc9801f3a5b7352e2a3c68bae"
+    },
+    {
+      "path": "pitch-ppt/images/05-incident-pwh.png",
+      "matches_team_commit": true,
+      "sha256": "3a427b119ea442e5d2ae728e311604043b80dffbd60d66413c45a86f8c8c1b02"
+    },
+    {
+      "path": "pitch-ppt/images/06-incident-north.png",
+      "matches_team_commit": true,
+      "sha256": "6a50e59ae65d4ca9055d1b12776841c9f7ad554e930ef93c0da92aa1acec5186"
+    },
+    {
+      "path": "pitch-ppt/images/在香港找医生开的药，这三种药很相似但药效截然不同，开出来的时候也装在药袋里，可以替代01或02.jpg",
+      "matches_team_commit": true,
+      "sha256": "3e4b5ac7c2a05ba783695b203d01220b63734967d5fce5deabebf4f7016665ef"
+    },
+    {
+      "path": "pitch-ppt/images/这三种药装在药袋里的样子，非常像。可以替代03或04.jpg",
+      "matches_team_commit": true,
+      "sha256": "64b2c35d627256e26ee971c46ff60d3a1063af2267bd355eb52cf4d626dc3873"
+    },
+    {
+      "path": "pitch-ppt/index.html",
+      "matches_team_commit": true,
+      "sha256": "049a5d8b007924be3b66400710b4aa0948545401d939506d8e6f7b5b788fa724"
+    },
+    {
+      "path": "pitch-ppt/motion.min.js",
+      "matches_team_commit": true,
+      "sha256": "45615c1e7639fb9828942d0689c897e745690b0f6df13022223c9409fc01557c"
+    },
+    {
+      "path": "pitch-ppt/项目记录.md",
+      "matches_team_commit": true,
+      "sha256": "aa467ac45769f6e39d15c264d2cab33ff369d8ae04644b9d274d2fc503db9e58"
+    },
+    {
+      "path": "qa/live-demo/live-01-en.png",
+      "matches_team_commit": true,
+      "sha256": "5b96c96f1379595a889a733a92e4ee6b00793b58244e28f93bd71c41f2a36f59"
+    },
+    {
+      "path": "qa/live-demo/live-02-cmn.png",
+      "matches_team_commit": true,
+      "sha256": "11541cf9deb07526009cf1ec84e85f6b1ef81462b1b478a7dc1e8e1c21792cac"
+    },
+    {
+      "path": "qa/live-demo/live-03-yue.png",
+      "matches_team_commit": true,
+      "sha256": "161ab0b6a3d305e85fa798b2dadee5d69be71697901e7fb41aa2ce48b96710cc"
+    },
+    {
+      "path": "qa/published-languages-offline-results.json",
+      "matches_team_commit": true,
+      "sha256": "4d19d8522ed7c659d9ea795e2467f6c24dda68852172c32e0ebcd0c3db06b03b"
+    },
+    {
+      "path": "qa/published-mobile-offline.json",
+      "matches_team_commit": true,
+      "sha256": "85be731c53bdbb62bfbec3042e9bc78b27e291ba421c84298a219d061ea6afc8"
+    },
+    {
+      "path": "qa/release-public.json",
+      "matches_team_commit": true,
+      "sha256": "999fffe4cf47e406fce01d96ba0106a7b6778364c6b7f2a6982f3cb5dd86eccc"
+    }
+  ],
+  "preserved_count": 28,
+  "public_build_files": 58,
+  "public_build_matches_last_deployed_staging": true,
+  "website": "https://med-care.pages.dev/",
+  "branch": "codex/voice-photo-checks",
+  "main_merge_performed": false
+}
