@@ -20,7 +20,7 @@ const Z={
   "photoTitle": "拍下藥品標籤",
   "photoHint": "拍清完整藥名和 HK 編號，保持光線充足，遮住個人資料。",
   "upload": "選擇圖片",
-  "ocrSample": "試用示例照片",
+  "ocrSample": "試讀實拍標籤",
   "privacy": "圖片只交給這台 Mac 識字，處理後刪除暫存檔。",
   "ocrDetails": "查看識別到的文字",
   "or": "或手動查找",
@@ -116,7 +116,7 @@ const EN={
   "photoTitle": "Photograph the medicine label",
   "photoHint": "Include the full medicine name and HK number. Use a clear, well-lit photo and cover any personal details.",
   "upload": "Choose a photo",
-  "ocrSample": "Try a sample photo",
+  "ocrSample": "Try a real label photo",
   "privacy": "Only this Mac reads the image. Temporary image files are deleted after processing.",
   "ocrDetails": "Read the detected text",
   "or": "or search manually",
@@ -350,7 +350,7 @@ $('#clear').onclick=()=>{
  toast(t('restart'),previous.length?{label:MedLocale.choose('復原','Undo'),run:()=>{if(generation!==revision)return;selected=previous;window.Consultation?.restore(notes);invalidate();renderSelected();toast(MedLocale.choose('已復原','Restored'));}}:null);
 };$('#about').onclick=about;$('#close-dialog').onclick=()=>$('#dialog').close();$('#dialog').addEventListener('click',e=>{if(e.target===$('#dialog')){const r=$('#dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('#dialog').close();}});
 $('#photo').onchange=e=>{if(e.target.files[0])preparePhoto(e.target.files[0]);};$('#upload-label').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('#photo').click();}});
-$('#ocr-sample').onclick=async()=>{if(!api?.ocr)return toast(t('ocrOffline'));try{const b=await(await fetch('sample-labels.png')).blob();recognize(new File([b],'synthetic-labels.png',{type:'image/png'}),true);}catch{toast(t('ocrFail'));}};
+$('#ocr-sample').onclick=async()=>{if(!api?.ocr)return toast(t('ocrOffline'));try{const b=await(await fetch('sample-medicine.jpg')).blob();recognize(new File([b],'sample-medicine.jpg',{type:'image/jpeg'}),true);}catch{toast(t('ocrFail'));}};
 setLanguage();
 if(location.protocol==='http:'&&['127.0.0.1','localhost'].includes(location.hostname))fetch('/api/status').then(r=>r.json()).then(s=>{api=s;setLanguage();window.dispatchEvent(new Event('local-api-ready'));}).catch(()=>{});
 window.addEventListener('beforeunload',stopAudio);

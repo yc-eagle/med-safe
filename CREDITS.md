@@ -101,3 +101,7 @@ Its output was treated as **input to be verified, not as a conclusion to be trus
 | Interview material under `assets/interviews/` | Informed consent recorded in that directory | Problem validation |
 
 <!-- TODO: record consent status for each interview subject and whether the material may be used publicly. -->
+
+## Demonstration photograph
+
+`app/sample-medicine.jpg` is the team-supplied real medicine-bottle photograph selected for the public OCR example on 4 October 2026. OCR runs on the image pixels; no medicine identity is prefilled. The older synthetic `sample-labels.png` is retained only as a regression-test fixture. Neither image demonstrates general OCR or clinical accuracy.

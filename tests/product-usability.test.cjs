@@ -104,9 +104,9 @@ const root=path.resolve(__dirname,'..'),base=process.env.TEST_URL||'http://127.0
   await page.waitForFunction(()=>document.querySelector('#camera-state').textContent.includes('permission denied'));
   assert.equal(await page.locator('#camera-file').isEnabled(),true);await page.click('#close-dialog');assert.equal(await page.locator('#search').isEnabled(),true);
  });
- await test('Real local OCR of the synthetic label produces candidates without selecting medicines',async()=>{
-  await page.click('#clear');await page.click('#ocr-sample');await page.waitForSelector('#ocr-candidates [data-add="HK-53362"]',{timeout:90000});
-  assert.equal(await page.locator('#ocr-candidates [data-add="HK-53319"]').count(),1);assert.equal(await page.locator('.selected-card').count(),0);
+ await test('Real local OCR of the photographed medicine label produces a candidate without selecting medicines',async()=>{
+  await page.click('#clear');await page.click('#ocr-sample');await page.waitForSelector('#ocr-candidates [data-add="HK-28848"]',{timeout:90000});
+  assert.equal(await page.locator('#ocr-candidates [data-add="HK-28848"]').count(),1);assert.equal(await page.locator('.selected-card').count(),0);
  });
  await test('Starting a new photo clears old candidates and a failure cannot leave stale matches',async()=>{
   await page.evaluate(()=>{window.__ocrJobs=[];BrowserRuntime.ocr=(file,options)=>new Promise((resolve,reject)=>__ocrJobs.push({resolve,reject,options}));recognize(new File(['test'],'new.png',{type:'image/png'}));});
@@ -128,7 +128,7 @@ const root=path.resolve(__dirname,'..'),base=process.env.TEST_URL||'http://127.0
   const overflow=await page.evaluate(()=>[...document.querySelectorAll('button,input,select,textarea')].filter(x=>x.getBoundingClientRect().width&&x.getBoundingClientRect().right>innerWidth+1).map(x=>x.id||x.textContent));assert.deepEqual(overflow,[]);
   if(width===390)await page.screenshot({path:root+'/qa/product-blue-'+lang+'-result.png',fullPage:true});
  });
- assert.deepEqual(errors,[]);const result={tested_at:new Date().toISOString(),url:base,passed:checks.length,checks,errors,scope:'Desktop Chrome at phone and desktop widths; real Tesseract on a synthetic label. Speech, microphone and camera APIs mocked. No physical-phone, human-accent, real-pack OCR accuracy or clinical validation.'};
+ assert.deepEqual(errors,[]);const result={tested_at:new Date().toISOString(),url:base,passed:checks.length,checks,errors,scope:'Desktop Chrome at phone and desktop widths; real Tesseract on a team-supplied medicine photograph. Speech, microphone and camera APIs mocked. No physical-phone, human-accent, real-pack OCR accuracy or clinical validation.'};
  fs.writeFileSync(root+'/qa/product-usability-results.json',JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({passed:checks.length,errors}));
  }finally{await browser.close();}
 })().catch(e=>{console.error(e);process.exit(1);});
