@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-04T00:58:58.197Z",
+  "passed": 9,
+  "checks": [
+    "en: empty transcript ends listening, preserves typed question and offers a retry",
+    "cmn: empty transcript ends listening, preserves typed question and offers a retry",
+    "yue: empty transcript ends listening, preserves typed question and offers a retry",
+    "no-speech: actionable browser-specific fallback",
+    "network: actionable browser-specific fallback",
+    "not-allowed: actionable browser-specific fallback",
+    "language-not-supported: actionable browser-specific fallback",
+    "An old-language failure cannot overwrite the new-language status",
+    "Declining or cancelling does not display a transcription failure"
+  ],
+  "scope": "Controlled error and empty-result regression tests; not ASR accuracy or physical-device validation."
+}

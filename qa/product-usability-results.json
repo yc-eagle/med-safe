@@ -1,7 +1,7 @@
 {
-  "tested_at": "2026-10-04T00:46:31.510Z",
-  "url": "http://127.0.0.1:8891",
-  "passed": 22,
+  "tested_at": "2026-10-04T00:58:40.183Z",
+  "url": "http://127.0.0.1:8892",
+  "passed": 24,
   "checks": [
     "Search is first, photo entry is optional, and file selection is distinct from camera capture",
     "Added medicine is marked and the next action leads to the next required step",
@@ -10,6 +10,8 @@
     "A cold voice list waits for voiceschanged instead of falsely reporting unsupported audio",
     "Stopping while voices load prevents delayed surprise playback",
     "Speech has a finish state and still requires a confirmed transcript",
+    "Editing a question cancels the previous spoken answer and requires confirmation again",
+    "Device support checks local language voices without promising successful recognition",
     "Removal can be undone without restoring a stale check result",
     "Undo clear restores the medicine list and pharmacist notes in memory only",
     "Camera denial leaves file and manual entry available",

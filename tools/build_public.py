@@ -1,16 +1,33 @@
-"""Build the public static app and an exact offline manifest. No patient files."""
+"""Build only the public product. Use an empty output directory, never a gallery."""
 from pathlib import Path
-import argparse,shutil,subprocess,sys
-ROOT=Path(__file__).resolve().parents[1]
-p=argparse.ArgumentParser();p.add_argument('--out',required=True);args=p.parse_args();out=Path(args.out).resolve();out.mkdir(parents=True,exist_ok=True)
-shutil.copytree(ROOT/'app',out,dirs_exist_ok=True)
-s=(out/'index.html').read_text().replace('<script src="browser-runtime.js">','<script>window.PUBLIC_DEMO=true;</script><script src="browser-runtime.js">');(out/'index.html').write_text(s)
-for name in ['demo-3min.mp4','demo-3min.en.srt']:
-    if (ROOT/'assets'/name).exists():shutil.copy2(ROOT/'assets'/name,out/name)
-if (out/'demo-3min.en.srt').exists():
-    import re
-    text=(out/'demo-3min.en.srt').read_text();(out/'demo-3min.en.vtt').write_text('WEBVTT\n\n'+re.sub(r'(\d{2}:\d{2}:\d{2}),(\d{3})',r'\1.\2',text))
-for name in ['Med-Safe-HacKU2026.pptx','Med-Safe-HacKU2026.pdf']:
-    if (ROOT/'deck'/name).exists():shutil.copy2(ROOT/'deck'/name,out/name)
-subprocess.run([sys.executable,str(ROOT/'tools/build_offline_manifest.py'),'--app-dir',str(out)],check=True)
-print(out)
+import argparse
+import shutil
+from build_offline_manifest import PUBLIC, ROOT, main as build_manifest
+
+
+def build(out):
+    out = Path(out).resolve()
+    # Refusing an occupied destination prevents stale recordings or unrelated
+    # files from silently becoming part of a later public deployment.
+    if out.exists() and (not out.is_dir() or any(out.iterdir())):
+        raise ValueError('Output must be an empty directory. Choose a new build directory.')
+    out.mkdir(parents=True, exist_ok=True)
+    for name in [*PUBLIC, 'sw.js', '404.html']:
+        target = out / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(ROOT / 'app' / name, target)
+    index = out / 'index.html'
+    index.write_text(index.read_text().replace(
+        '<script src="browser-runtime.js">',
+        '<script>window.PUBLIC_DEMO=true;</script><script src="browser-runtime.js">'))
+    build_manifest(out)
+    return out
+
+
+if __name__ == '__main__':
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--out', required=True)
+    try:
+        print(build(parser.parse_args().out))
+    except ValueError as error:
+        parser.error(str(error))

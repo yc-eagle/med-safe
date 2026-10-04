@@ -39,3 +39,7 @@ Browser recognition remains optional and may use the browser provider after cons
 The photo fixture is synthetic. Browser layout checks are not physical iPhone or Android tests. Mocked speech tests establish interface behavior, not accent accuracy. The separate native reading test records its own outcome and does not prove phone audio output. No clinical outcome claim is made.
 
 Speech lifecycle implementation references: [utterance events](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance) and [cancelling queued speech](https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis/cancel).
+
+## Product audit follow-up
+
+The public build now excludes all videos, gallery, subtitles, volunteer material and slides. Device support can test the selected local voice, and editing a question cancels the prior spoken answer. All three languages passed the native-service recognition → confirmation → sourced answer → local reading test with synthesized input tracks. See the [complete capability audit](product-capabilities.md), [native voice report](../qa/product-native-voice-workflow.json), [current resource checks](../qa/product-only-pages.json) and [current offline update check](../qa/product-audit-offline-update.json). Earlier test records above retain their original dates and scope.

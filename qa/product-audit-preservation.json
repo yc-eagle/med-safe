@@ -1,0 +1,27 @@
+{
+  "before": "58906579a19a68039c997c7d10a7c8e11787606a",
+  "team_main": "b91b00c75ec2627f3df4e9e84b90409ce88272aa",
+  "clinical_modules": [
+    {
+      "path": "app/data.js",
+      "unchanged": true,
+      "sha256": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c"
+    },
+    {
+      "path": "app/engine.js",
+      "unchanged": true,
+      "sha256": "546b17d6ea6732f417454b2d676830be1e5e27a56e3b492604816c44cec086fd"
+    },
+    {
+      "path": "app/medicine-info.js",
+      "unchanged": true,
+      "sha256": "9be18556c8cf32386e65bd7c21544ee6f481e5b157a6a0f33c7e04daaaa3b709"
+    },
+    {
+      "path": "app/patient.js",
+      "unchanged": true,
+      "sha256": "51413c5074dd03c37c76a71311be5c0363ed94d3c0935bf7f0035709fb75819a"
+    }
+  ],
+  "build_boundary_checks_passed": 2
+}

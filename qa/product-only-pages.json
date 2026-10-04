@@ -1,0 +1,20 @@
+{
+  "tested_at": "2026-10-04T01:01:22.200Z",
+  "passed": 12,
+  "checks": [
+    "en /",
+    "en /data-report.html",
+    "en /offline.html",
+    "en /verify.html",
+    "cmn /",
+    "cmn /data-report.html",
+    "cmn /offline.html",
+    "cmn /verify.html",
+    "yue /",
+    "yue /data-report.html",
+    "yue /offline.html",
+    "yue /verify.html"
+  ],
+  "errors": [],
+  "scope": "Three languages, 390px Chromium; no physical device."
+}

@@ -5,18 +5,17 @@ Updated 4 October 2026 (Hong Kong time). This index collects the team's project 
 ## Open the product
 
 - **Interactive product for exhibition and testing:** https://med-care.pages.dev/
-- **Recorded examples and captured answer audio:** https://med-care.pages.dev/showcase/
-- **20-minute volunteer guide:** https://med-care.pages.dev/showcase/volunteer.html
 - **Phone QR code:** [MedSafe-QR.png](../assets/MedSafe-QR.png)
 
-The current product update uses a light-blue interface and a shorter search → confirm → check → ask workflow. It adds guided next actions, undo, stable keyboard focus, stale-photo protection and cancellable reading while system voices load. See [product changes and verification](product-usability.md). This update does not include a new video; the recorded examples remain earlier workflow references.
+The current product update uses a light-blue interface and a shorter search → confirm → check → ask workflow. It adds guided next actions, undo, stable keyboard focus, stale-photo protection and cancellable reading while system voices load. See [product changes and verification](product-usability.md). The deployed product excludes videos, gallery and volunteer material. See [all functions and verification limits](product-capabilities.md). Historical recordings remain in the GitHub release only.
 
-The first URL is the actual interactive medicine checker. The second is a recording gallery. The fixed Cloudflare Pages host does not depend on the development computer staying online. Downloaded recordings can be played offline. On a phone, first open the new address while connected, choose **Prepare offline** and wait for download verification; then add it to the home screen if supported. The old hostname's saved cache does not transfer. An installed, verified offline copy supports its documented local features; browser speech recognition still requires a network and installed voices determine local reading support.
+The product URL opens the interactive medicine checker. The fixed Cloudflare Pages host does not depend on the development computer staying online. On a phone, first open the new address while connected, choose **Prepare offline** and wait for download verification; then add it to the home screen if supported. The old hostname's saved cache does not transfer. An installed, verified offline copy supports its documented local features; browser speech recognition still requires a network and installed voices determine local reading support.
 
 ## GitHub links
 
 | Deliverable | GitHub location |
 |---|---|
+| Product capabilities and verification | [Current function audit](product-capabilities.md) |
 | Team main repository | [yc-eagle/med-safe](https://github.com/yc-eagle/med-safe) |
 | Latest supplementary implementation and handoff | [codex/voice-photo-checks](https://github.com/yc-eagle/med-safe/tree/codex/voice-photo-checks) · [PR #3](https://github.com/yc-eagle/med-safe/pull/3) |
 | Download the whole rehearsal package | [MedSafe-rehearsal-kit-20261003.zip](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-rehearsal-kit-20261003.zip) |

@@ -31,7 +31,7 @@
   if(!busy&&recorder?.state!=='recording')status(browser?(navigator.onLine===false?say('Offline: type your question. Browser voice recognition is disabled.','当前离线，请打字提问；浏览器语音识别已停用。','目前離線，請打字提問；網頁語音識別已停用。'):api?.asr?say('Speak or type your question below.','在下方说出或输入你的问题。','喺下面講出或者打低你嘅問題。'):v('missing')):current()!=='yue'?unsupported():v(api?.asr?'ready':'missing'));
  }
 
- function inputChanged(){clearAnswer();question='';$('#confirm-question').disabled=!$('#question-text').value.trim();}
+ function inputChanged(){stopAudio();clearAnswer();question='';$('#confirm-question').disabled=!$('#question-text').value.trim();}
  async function base64(file){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(r.result.split(',')[1]);r.onerror=reject;r.readAsDataURL(file);});}
  async function transcribe(blob){
   if(api?.runtime==='browser')return status(say('Browser voice accepts live microphone input, not uploaded recordings. Please type instead.','网页版仅支持即时麦克风，不支持录音文件转写，请打字提问。','網頁版只支援即時咪高峰，不支援錄音檔轉寫，請打字提問。'));if(current()!=='yue')return status(unsupported());if(!api?.asr)return status(v('notInstalled'));
