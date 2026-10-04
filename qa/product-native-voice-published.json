@@ -1,0 +1,169 @@
+{
+  "tested_at": "2026-10-04T01:02:42.705Z",
+  "url": "https://med-care.pages.dev",
+  "scope": "Native Chrome recognition service receives a synthesized audio track, not a physical microphone. Actual product confirmation, sourced answer and native local speech start/end events. No recordings, human-accent, acoustic-audibility or physical-phone validation.",
+  "languages": [
+    {
+      "locale": "en",
+      "assetHashes": {
+        "browser-runtime.js": "6129d1353957ecffe7a8b92c73bde0f162a75cc7ced4d6074096e8abf381f513",
+        "voice.js": "e4bfe358c22a0cff03bb50b032da5bcfdca429adccc803471ebc092ddab5b3cf",
+        "patient.js": "51413c5074dd03c37c76a71311be5c0363ed94d3c0935bf7f0035709fb75819a",
+        "engine.js": "546b17d6ea6732f417454b2d676830be1e5e27a56e3b492604816c44cec086fd",
+        "data.js": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c"
+      },
+      "syntheticInputSha256": "4c157f7d2fd422aa5a2cfccd902d2c45ccc8e94343728998c905066d8615fcc7",
+      "transcript": "can these medicines be taken together",
+      "recognition": [
+        {
+          "event": "start",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "result",
+          "lang": "en-HK",
+          "error": null,
+          "text": "can these medicines be taken together"
+        },
+        {
+          "event": "end",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        }
+      ],
+      "confirmationRequired": true,
+      "speaking": [
+        {
+          "event": "start",
+          "lang": "en-US",
+          "voice": "Samantha",
+          "local": true,
+          "text": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThe 14 rules behind these warnings were clinician-reviewed on 3 October 2026; they still do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review.",
+          "error": null
+        },
+        {
+          "event": "end",
+          "lang": "en-US",
+          "voice": "Samantha",
+          "local": true,
+          "text": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThe 14 rules behind these warnings were clinician-reviewed on 3 October 2026; they still do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review.",
+          "error": null
+        }
+      ],
+      "answer": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThe 14 rules behind these warnings were clinician-reviewed on 3 October 2026; they still do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review.",
+      "sources": "Source rules: R01",
+      "success": true
+    },
+    {
+      "locale": "yue",
+      "assetHashes": {
+        "browser-runtime.js": "6129d1353957ecffe7a8b92c73bde0f162a75cc7ced4d6074096e8abf381f513",
+        "voice.js": "e4bfe358c22a0cff03bb50b032da5bcfdca429adccc803471ebc092ddab5b3cf",
+        "patient.js": "51413c5074dd03c37c76a71311be5c0363ed94d3c0935bf7f0035709fb75819a",
+        "engine.js": "546b17d6ea6732f417454b2d676830be1e5e27a56e3b492604816c44cec086fd",
+        "data.js": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c"
+      },
+      "syntheticInputSha256": "2e3c0942081853c8b3c5d461d4b6f4559daf5c2de54dcc6d23b67bd7dd2cbb4d",
+      "transcript": "呢兩隻藥可唔可以一齊食",
+      "recognition": [
+        {
+          "event": "start",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "result",
+          "lang": "zh-HK",
+          "error": null,
+          "text": "呢兩隻藥可唔可以一齊食"
+        },
+        {
+          "event": "end",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        }
+      ],
+      "confirmationRequired": true,
+      "speaking": [
+        {
+          "event": "start",
+          "lang": "yue-HK",
+          "voice": "Sinji",
+          "local": true,
+          "text": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n相關規則已完成臨床複核，粵語字句仍待複核。資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。",
+          "error": null
+        },
+        {
+          "event": "end",
+          "lang": "yue-HK",
+          "voice": "Sinji",
+          "local": true,
+          "text": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n相關規則已完成臨床複核，粵語字句仍待複核。資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。",
+          "error": null
+        }
+      ],
+      "answer": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n相關規則已完成臨床複核，粵語字句仍待複核。資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。",
+      "sources": "對應出處：R01",
+      "success": true
+    },
+    {
+      "locale": "cmn",
+      "assetHashes": {
+        "browser-runtime.js": "6129d1353957ecffe7a8b92c73bde0f162a75cc7ced4d6074096e8abf381f513",
+        "voice.js": "e4bfe358c22a0cff03bb50b032da5bcfdca429adccc803471ebc092ddab5b3cf",
+        "patient.js": "51413c5074dd03c37c76a71311be5c0363ed94d3c0935bf7f0035709fb75819a",
+        "engine.js": "546b17d6ea6732f417454b2d676830be1e5e27a56e3b492604816c44cec086fd",
+        "data.js": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c"
+      },
+      "syntheticInputSha256": "614b9316b847e0dbe076cc9f34ab3efc352bcb77ff2b52ed429f3b5bd57c9d57",
+      "transcript": "这两种药可以一起服用吗",
+      "recognition": [
+        {
+          "event": "start",
+          "lang": "zh-CN",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "result",
+          "lang": "zh-CN",
+          "error": null,
+          "text": "这两种药可以一起服用吗"
+        },
+        {
+          "event": "end",
+          "lang": "zh-CN",
+          "error": null,
+          "text": null
+        }
+      ],
+      "confirmationRequired": true,
+      "speaking": [
+        {
+          "event": "start",
+          "lang": "zh-CN",
+          "voice": "Eddy (Chinese (China mainland))",
+          "local": true,
+          "text": "以下警示仅针对上方已确认的药品清单。\n两项产品含同一成分扑热息痛，可能重复用药；非经医护人员指示，不应自行合用。\n这些警示依据的 14 条规则已于 2026 年 10 月 3 日经临床复核；它们仍不能提供完整评估，也不能据此认定可以合用。请药师核实。",
+          "error": null
+        },
+        {
+          "event": "end",
+          "lang": "zh-CN",
+          "voice": "Eddy (Chinese (China mainland))",
+          "local": true,
+          "text": "以下警示仅针对上方已确认的药品清单。\n两项产品含同一成分扑热息痛，可能重复用药；非经医护人员指示，不应自行合用。\n这些警示依据的 14 条规则已于 2026 年 10 月 3 日经临床复核；它们仍不能提供完整评估，也不能据此认定可以合用。请药师核实。",
+          "error": null
+        }
+      ],
+      "answer": "以下警示仅针对上方已确认的药品清单。\n两项产品含同一成分扑热息痛，可能重复用药；非经医护人员指示，不应自行合用。\n这些警示依据的 14 条规则已于 2026 年 10 月 3 日经临床复核；它们仍不能提供完整评估，也不能据此认定可以合用。请药师核实。",
+      "sources": "对应规则：R01",
+      "success": true
+    }
+  ]
+}

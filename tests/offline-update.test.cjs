@@ -25,6 +25,6 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'/Users/ssy/.cache/codex
   const after=await p.evaluate(()=>OfflineRuntime.getState());assert.equal(after.current,true);assert.equal(after.files,56);assert.notEqual(after.version,before.version);
   assert.equal(await p.evaluate(()=>getComputedStyle(document.body).backgroundColor),'rgb(243, 248, 253)');
   const result={tested_at:new Date().toISOString(),passed:3,checks:['Prepared the prior published build','Updated all assets from the existing saved page','Reopened the blue product and searched with the network disabled'],before,after,scope:'Desktop Chrome; no physical phone tested.'};
-  fs.writeFileSync(path.resolve(__dirname,'../qa/product-blue-offline-update.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({passed:3,before:before.version,after:after.version}));
+  fs.writeFileSync(process.env.TEST_OUTPUT||path.resolve(__dirname,'../qa/product-blue-offline-update.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify({passed:3,before:before.version,after:after.version}));
  }finally{await browser.close();await new Promise(resolve=>server.close(resolve));}
 })().catch(e=>{console.error(e);process.exit(1);});

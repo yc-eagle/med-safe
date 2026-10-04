@@ -4,7 +4,7 @@ The team repository remains [yc-eagle/med-safe](https://github.com/yc-eagle/med-
 
 **Live product:** https://med-care.pages.dev/
 
-Published on 4 October 2026 (Hong Kong time). Cloudflare confirmed the project name `med-care` and production deployment `44a57a70-4369-480c-95dd-7c59d5ad20f9`, built from application revision `84accc0` with the light-blue interface and updated product workflow. See the [deployment receipt](../qa/cloudflare-package-status.json), [live asset comparison](../qa/product-blue-published.json), [browser checks](../qa/product-blue-published.json) and [offline checks](../qa/product-blue-offline-results.json).
+Published on 4 October 2026 (Hong Kong time). Cloudflare confirmed the project name `med-care` and production deployment `cfc41793-f3ad-411c-b378-1ed345a0080b`, built from application revision `d543006` with the light-blue product, device voice checks and no presentation media. See the [deployment receipt](../qa/cloudflare-package-status.json), [live asset comparison](../qa/product-only-published.json), [browser checks](../qa/product-only-published.json) and [offline checks](../qa/product-audit-offline-results.json).
 
 This free Pages address does not require the development computer or a temporary tunnel to stay online. The Cloudflare project is hosted in the publishing account; source code and deliverables remain in the team repository.
 
@@ -26,6 +26,6 @@ Keep deployment changes on the team's review branch until the maintainer accepts
 
 ## Check after publishing
 
-Open the fixed HTTPS address on a phone. Check search, a confirmed example, photo input, all three interface languages and offline preparation. The published origin passed desktop Chrome checks at a 390px viewport and verified 56 offline assets (55,300,370 bytes), followed by disconnected reopening, medicine lookup, duplicate checking and synthetic-label OCR. These are engineering checks, not clinical or physical-phone validation. Browser speech still depends on the phone, permissions and network. An offline copy saved under the previous hostname does not transfer: prepare offline again at the new address.
+Open the fixed HTTPS address on a phone. Check search, a confirmed example, photo input, all three interface languages and offline preparation. The published origin passed desktop Chrome checks at a 390px viewport and verified 56 offline assets (55,301,451 bytes), followed by disconnected reopening, medicine lookup, duplicate checking and synthetic-label OCR. These are engineering checks, not clinical or physical-phone validation. Browser speech still depends on the phone, permissions and network. An offline copy saved under the previous hostname does not transfer: prepare offline again at the new address.
 
 Sources: [Cloudflare Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/), [Git integration](https://developers.cloudflare.com/pages/get-started/git-integration/).

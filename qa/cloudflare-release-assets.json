@@ -3,8 +3,8 @@
   "assets": [
     {
       "file": "MedSafe-Cloudflare-Pages.zip",
-      "bytes": 34923173,
-      "sha256": "824c1188c81a336a9ec380b4780245183119ab0165bee500dede6c1c1847c400",
+      "bytes": 21073558,
+      "sha256": "34de7f3d696c70781f0bcd2b4b29143f9b3ce6cebf1909792e741a2e1c0e6f5e",
       "github_digest_matches": true,
       "url": "https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-Cloudflare-Pages.zip"
     },
@@ -30,5 +30,5 @@
       "url": "https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/-20.txt"
     }
   ],
-  "checked_at": "2026-10-04T00:50:56.935648+00:00"
+  "checked_at": "2026-10-04T01:04:25.394936+00:00"
 }
