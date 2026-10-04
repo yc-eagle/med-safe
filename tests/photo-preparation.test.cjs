@@ -3,7 +3,7 @@ const {chromium}=require(process.env.PLAYWRIGHT_MODULE||'/Users/ssy/.cache/codex
 const assert=require('node:assert/strict'),path=require('node:path');
 (async()=>{const browser=await chromium.launch({headless:true,executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome'});try{
  const page=await browser.newPage({viewport:{width:390,height:844}}),errors=[],writes=[];page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(r.method()!=='GET')writes.push(r.url());});
- await page.goto(process.env.TEST_URL||'http://127.0.0.1:8895');await page.waitForFunction(()=>api?.runtime==='browser');
+ await page.goto(process.env.TEST_URL||'http://127.0.0.1:8895');await page.waitForFunction(()=>api?.runtime==='browser');await page.locator('#photo-entry>summary').click();
  const sample=path.resolve(__dirname,'../app/sample-labels.png');
  await page.setInputFiles('#photo',sample);await page.waitForSelector('#photo-editor[open]');assert.equal(await page.locator('#photo-script').inputValue(),'mixed');
  await page.click('#photo-rotate');await page.click('#photo-rotate');await page.click('#photo-rotate');await page.click('#photo-rotate');await page.click('#photo-read');
