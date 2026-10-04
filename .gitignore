@@ -1,4 +1,4 @@
-# Credentials / machine-specific runtime
+﻿# Credentials / machine-specific runtime
 .env
 .env.*
 !.env.example
@@ -138,3 +138,10 @@ desktop.ini
 !/assets/interviews/README.md
 !/assets/interviews/consent.md
 /work/
+
+# 本地渲染测量的临时产物，不进仓库
+_measure*.html
+**/_measure*.html
+_shot_*.html
+**/_shot_*.html
+qa/_ocr.html
