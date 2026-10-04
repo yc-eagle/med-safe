@@ -1014,15 +1014,15 @@ const SPEAKER_NOTES = [
     transition:"Widen to the systemic evidence." },
   { id:"evidence", title:"The information exists. It does not arrive.", section:"Evidence", minutes:0.6,
     purpose:"Show the failure is systemic.",
-    talk:["Three medicines dispensed together in one bag - this is what the person at home is handed.","A bag lists medicines, not how the patient takes them.","Say clearly that the incident we cite is a report, not our data."],
+    talk:["A bag lists medicines, not how the patient takes them.","Say clearly that the incidents we cite are reports, not our data.","We use them because the failure mode is identical."],
     transition:"Name the cost of getting it wrong." },
   { id:"incidents", title:"One pattern, over and over", section:"Evidence", minutes:0.5,
     purpose:"Establish the stakes without over-claiming a number.",
     talk:["The wrong medicine, or the wrong dose, reaching the patient.","We show one reported case; the pattern is not limited to it.","Keep the tone factual; do not dwell."],
     transition:"Now show what we built." },
-  { id:"confirm", title:"Three similar bottles. Three different medicines.", section:"Product", minutes:0.5,
+  { id:"confirm", title:"A photo finds candidates. It never confirms identity.", section:"Product", minutes:0.5,
     purpose:"Introduce the catalogue and the identity rule.",
-    talk:["These three bottles came from one consultation: alike, and not the same medicine.","Search the HK registration number, or photograph the box; then the user confirms.","14,269 products and 23,835 ingredient records sit behind that confirmation."],
+    talk:["Search the HK registration number, or photograph the box.","OCR produces candidates; the user confirms.","14,269 products, 23,835 ingredient records, 2,081 distinct strings."],
     transition:"Move from identity to the check itself." },
   { id:"warning", title:"A warning is not a prohibition", section:"Product", minutes:0.6,
     purpose:"Present the three-state logic as the core design decision.",
@@ -1042,7 +1042,7 @@ const SPEAKER_NOTES = [
     transition:"End on the roadmap.", cue:"Do not generalise about competitors; we have not verified them item by item." },
   { id:"next", title:"Four things before a pharmacy counter", section:"Next", minutes:0.4,
     purpose:"Show a credible path rather than a wish list.",
-    talk:["This prescription is English only - an older reader may not follow it. That is the gap.","Review every rule with a named clinician.","Test the offline pack on real phones, then observe real users."],
+    talk:["Review every rule with a named clinician.","Test the offline pack on real phones.","Then observe real users, and widen coverage."],
     transition:"Close on the design principle." },
   { id:"close", title:"It says I do not know.", section:"Next", minutes:0.4,
     purpose:"Land one memorable line and a concrete next action.",
@@ -1909,5 +1909,33 @@ if(motion){
   playSlide(window.__currentSlideIndex || 0);
 }
 </script>
+
+<script>
+window.addEventListener('load',()=>setTimeout(()=>{
+ const out={bg:null,imgs:[]};
+ const s0=document.querySelectorAll('section.slide');
+ // background of the light slides
+ const c=document.createElement('canvas');c.width=c.height=1;
+ // report computed background of each light slide + each img box
+ s0.forEach((s,i)=>{
+   const id=s.dataset.slideId||i;
+   const cs=getComputedStyle(s);
+   s.querySelectorAll('img').forEach(im=>{
+     const r=im.getBoundingClientRect();
+     const par=im.parentElement.getBoundingClientRect();
+     out.imgs.push({page:id, natW:im.naturalWidth,natH:im.naturalHeight,
+                    boxW:Math.round(r.width),boxH:Math.round(r.height),
+                    fit:getComputedStyle(im).objectFit,
+                    parentW:Math.round(par.width),parentH:Math.round(par.height),
+                    full: r.width<=par.width+1 && r.height<=par.height+1});
+   });
+   if(i===1) out.bgLight=cs.backgroundColor;
+   if(i===0) out.bgDark=cs.backgroundColor;
+ });
+ const o=document.createElement('pre');o.id='m2';o.textContent=JSON.stringify(out);
+ document.body.appendChild(o);
+},1200));
+</script>
+
 </body>
 </html>
