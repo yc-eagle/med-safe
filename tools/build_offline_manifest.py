@@ -13,6 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 APP = ROOT / 'app'
 PUBLIC = [
     'index.html', 'app.css', 'product-features.css', 'release.css',
+    'theme.css', 'experience.css', 'experience.js',
     'locale.js', 'vendor/opencc-t2cn.js', 'vendor/OPENCC-LICENSE.txt', 'vendor/opencc-source.json',
     'resource-pages.js', 'resource-pages.css',
     'browser-runtime.js', 'data.js', 'engine.js', 'medicine-info.js', 'patient.js',

@@ -1,0 +1,31 @@
+{
+  "tested_at": "2026-10-04T00:46:31.510Z",
+  "url": "http://127.0.0.1:8891",
+  "passed": 22,
+  "checks": [
+    "Search is first, photo entry is optional, and file selection is distinct from camera capture",
+    "Added medicine is marked and the next action leads to the next required step",
+    "Keyboard focus stays on a rebuilt route or identity control",
+    "A sourced result can be read and explicitly stopped",
+    "A cold voice list waits for voiceschanged instead of falsely reporting unsupported audio",
+    "Stopping while voices load prevents delayed surprise playback",
+    "Speech has a finish state and still requires a confirmed transcript",
+    "Removal can be undone without restoring a stale check result",
+    "Undo clear restores the medicine list and pharmacist notes in memory only",
+    "Camera denial leaves file and manual entry available",
+    "Real local OCR of the synthetic label produces candidates without selecting medicines",
+    "Starting a new photo clears old candidates and a failure cannot leave stale matches",
+    "Late photo results and progress cannot replace a newer photo or unlock its controls",
+    "en 320px navigation, enlarged text and result fit the viewport",
+    "en 390px navigation, enlarged text and result fit the viewport",
+    "en 1365px navigation, enlarged text and result fit the viewport",
+    "cmn 320px navigation, enlarged text and result fit the viewport",
+    "cmn 390px navigation, enlarged text and result fit the viewport",
+    "cmn 1365px navigation, enlarged text and result fit the viewport",
+    "yue 320px navigation, enlarged text and result fit the viewport",
+    "yue 390px navigation, enlarged text and result fit the viewport",
+    "yue 1365px navigation, enlarged text and result fit the viewport"
+  ],
+  "errors": [],
+  "scope": "Desktop Chrome at phone and desktop widths; real Tesseract on a synthetic label. Speech, microphone and camera APIs mocked. No physical-phone, human-accent, real-pack OCR accuracy or clinical validation."
+}

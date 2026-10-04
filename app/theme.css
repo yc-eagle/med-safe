@@ -1,0 +1,29 @@
+:root {
+  --paper: #f3f8fd;
+  --ink: #233e52;
+  --muted: #536c7f;
+  --teal: #286a99;
+  --line: #d5e4f0;
+  --pale: #eaf4fc;
+  --radius: 10px;
+  accent-color: #286a99;
+  color-scheme: light;
+}
+body { background: var(--paper); color: var(--ink); }
+::selection { background: #cfe8fb; color: #17394f; }
+a { color: #24628f; }
+button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible,
+select:focus-visible, textarea:focus-visible, summary:focus-visible {
+  outline: 3px solid #286a99;
+  outline-offset: 3px;
+}
+.resource-header { background: #eaf4fc; border-color: var(--line); }
+.resource-brand, .resource-language select { color: var(--ink); }
+.resource-main details, .resource-table td, .resource-table th { border-color: var(--line); }
+.resource-table th { background: #eaf4fc; }
+.resource-main h1 { font-weight: 650; }
+.resource-main video { background: #233e52; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; }
+}

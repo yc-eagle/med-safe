@@ -8,13 +8,13 @@
 @media(max-width:360px){.topbar .brandmark{display:none}.language-picker select{max-width:105px}.topright{gap:.3rem}.topbar{gap:.3rem}}
 
 /* Patient-facing presentation: fewer badges and more room for readable labels. */
-:root{--radius:12px;--paper:#f7f8f6}
+:root{--radius:12px;--paper:#f5f7f9}
 .intro .eyebrow{letter-spacing:.35px;text-transform:none;font-size:13px}
 .intro h1{font-size:34px;letter-spacing:-.5px}
 .panel{box-shadow:none}.sample-row button{border-radius:6px;font-size:13px;min-height:44px}
 .capability-strip{background:transparent;border:0;padding:0 0 12px;gap:8px 20px}
 .capability-strip>span{background:transparent;border:0;padding:0;font-size:13px}
-.shield{border-radius:10px;background:#f3f5f2;color:#61726b;width:48px;height:48px}
+.shield{border-radius:10px;background:#f0f4f7;color:#506c83;width:48px;height:48px}
 .section-note{font-size:13px}.micro,.section-description,.field-label,.confirm-box,.result-note{font-size:13px}
 .prescription-note{padding:0 0 12px;line-height:1.65}
 .upload-area h3{font-size:16px}.upload-area p{font-size:13px}.upload-area{border-radius:8px}

@@ -1,0 +1,187 @@
+{
+  "tested_at": "2026-10-04T00:46:43.931Z",
+  "results": [
+    {
+      "language": "en",
+      "result": "native playback ended",
+      "voices": [
+        {
+          "name": "Samantha",
+          "lang": "en-US"
+        },
+        {
+          "name": "Albert",
+          "lang": "en-US"
+        },
+        {
+          "name": "Bad News",
+          "lang": "en-US"
+        },
+        {
+          "name": "Bahh",
+          "lang": "en-US"
+        },
+        {
+          "name": "Bells",
+          "lang": "en-US"
+        },
+        {
+          "name": "Boing",
+          "lang": "en-US"
+        },
+        {
+          "name": "Bubbles",
+          "lang": "en-US"
+        },
+        {
+          "name": "Cellos",
+          "lang": "en-US"
+        },
+        {
+          "name": "Daniel",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Eddy (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Eddy (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Flo (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Flo (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Fred",
+          "lang": "en-US"
+        },
+        {
+          "name": "Good News",
+          "lang": "en-US"
+        },
+        {
+          "name": "Grandma (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Grandma (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Grandpa (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Grandpa (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Jester",
+          "lang": "en-US"
+        },
+        {
+          "name": "Junior",
+          "lang": "en-US"
+        },
+        {
+          "name": "Karen",
+          "lang": "en-AU"
+        },
+        {
+          "name": "Kathy",
+          "lang": "en-US"
+        },
+        {
+          "name": "Moira",
+          "lang": "en-IE"
+        },
+        {
+          "name": "Organ",
+          "lang": "en-US"
+        },
+        {
+          "name": "Ralph",
+          "lang": "en-US"
+        },
+        {
+          "name": "Reed (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Reed (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Rishi",
+          "lang": "en-IN"
+        },
+        {
+          "name": "Rocko (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Rocko (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Sandy (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Sandy (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Shelley (English (United States))",
+          "lang": "en-US"
+        },
+        {
+          "name": "Shelley (English (United Kingdom))",
+          "lang": "en-GB"
+        },
+        {
+          "name": "Superstar",
+          "lang": "en-US"
+        },
+        {
+          "name": "Tessa",
+          "lang": "en-ZA"
+        },
+        {
+          "name": "Trinoids",
+          "lang": "en-US"
+        },
+        {
+          "name": "Whisper",
+          "lang": "en-US"
+        },
+        {
+          "name": "Wobble",
+          "lang": "en-US"
+        },
+        {
+          "name": "Zarvox",
+          "lang": "en-US"
+        }
+      ]
+    },
+    {
+      "language": "yue",
+      "result": "native playback ended",
+      "voices": [
+        {
+          "name": "Sinji",
+          "lang": "yue-HK"
+        }
+      ]
+    }
+  ],
+  "initial_attempt": "The former 350 ms startup wait incorrectly reported unavailable voices. A probe found voices after several seconds; the app now waits for voiceschanged with a six-second cap and supports cancellation while waiting.",
+  "scope": "Unmocked Chrome SpeechSynthesis on this Mac, checked through native completion events. No new recording; audible output not independently captured. Not a phone or microphone test."
+}

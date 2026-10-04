@@ -12,7 +12,7 @@
 2. 确认页面出现以下两个示例，不要换成其他款式：
    PANADOL CAPLET 500MG — HK-53362
    PANADOL COLD & COUGH TAB — HK-53319
-3. 逐项勾选示例确认框，再点 “Check confirmed medicines”。
+3. 逐项勾选示例确认框，再点 “Check these medicines”。
 4. 顶部语言切到「粵語」，往下找到语音区域。
 5. 点「開始講廣東話」，同意本次语音服务并允许麦克风，正常说：
    「呢兩隻藥可唔可以一齊食？」

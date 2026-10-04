@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-04T00:40:28.042Z",
+  "checks": [
+    "en: short title and localized homepage",
+    "en: data-report renders, fits phone and preserves review limits",
+    "en: offline renders, fits phone and preserves review limits",
+    "en: demo renders, fits phone and preserves review limits",
+    "en: verify renders, fits phone and preserves review limits",
+    "cmn: short title and localized homepage",
+    "cmn: data-report renders, fits phone and preserves review limits",
+    "cmn: offline renders, fits phone and preserves review limits",
+    "cmn: demo renders, fits phone and preserves review limits",
+    "cmn: verify renders, fits phone and preserves review limits",
+    "yue: short title and localized homepage",
+    "yue: data-report renders, fits phone and preserves review limits",
+    "yue: offline renders, fits phone and preserves review limits",
+    "yue: demo renders, fits phone and preserves review limits",
+    "yue: verify renders, fits phone and preserves review limits"
+  ],
+  "passed": 15,
+  "errors": [],
+  "scope": "Presentation and existing rule-review metadata only. No clinical data or medical decision logic changed. Browser viewport checks are not physical-phone usability testing."
+}

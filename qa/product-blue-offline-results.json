@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-04T00:40:29.019Z",
+  "url": "http://127.0.0.1:8891",
+  "passed": 7,
+  "checks": [
+    "Complete current public asset set verifies before offline use",
+    "en: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "cmn: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "yue: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "Offline OCR still reads the synthetic label with the updated language bundle",
+    "Offline auxiliary routes retain Mandarin language selection",
+    "No JavaScript exceptions"
+  ],
+  "state": {
+    "ready": true,
+    "current": true,
+    "bytes": 55299606,
+    "type": "READY",
+    "version": "29d8595f8072913e",
+    "files": 56,
+    "cachedVersion": "29d8595f8072913e",
+    "preparing": false,
+    "preparedAt": "2026-10-04T00:40:22.749Z",
+    "phase": "idle"
+  },
+  "errors": [],
+  "scope": "Chromium mobile viewport and synthetic labels; not physical-phone or clinical validation."
+}
