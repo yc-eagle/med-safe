@@ -13,7 +13,7 @@ html[data-large="true"] body{font-size:20px}html[data-large="true"] .selected-ca
 .voice-panel{margin:24px 0 30px;padding:26px}.voice-panel>p{color:var(--muted);line-height:1.7}.voice-panel textarea{display:block;box-sizing:border-box;width:100%;font:inherit;line-height:1.65;border:1px solid #9fb3c4;border-radius:12px;padding:14px;background:#fff;color:#192d3d;margin:10px 0}.question-examples{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:16px}#voice-answer{margin-top:22px;padding:20px;background:#f0f4f7;border:1px solid #bbc9d5;border-radius:14px}#answer-text{white-space:pre-line;font-size:1.1rem;line-height:1.9}#answer-audio audio{width:100%;margin-top:15px}.spoken-note{background:#fff9ed;padding:12px;border-radius:9px}.pharmacist-card{padding:15px;margin:18px 0;border-radius:12px;background:#eaeff3}.pharmacist-card p{line-height:1.7}.voice-panel .button[disabled]{opacity:.5;cursor:not-allowed}.question-examples button{text-align:left}
 @media print{.voice-panel{display:none!important}}
 
-/* Brand stack: Ngon Sam is the name, 藥安心 is the Cantonese wordmark, MedSafe is the internal codename. */
+/* Product wordmark. */
 .brand-text{display:flex;flex-direction:column;align-items:flex-start;line-height:1.2}
 .brand-line-1{display:flex;align-items:baseline}
 .brand .brand-credit{display:block;margin-left:0;font-size:10px;letter-spacing:.4px;color:#7d93a6;font-weight:500;order:2}

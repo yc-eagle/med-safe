@@ -1,10 +1,10 @@
-# Ngon Sam · 藥安心 — 香港用药核对助手
+# MedSafe — 香港用药核对助手
 
 [English](README.md) | [中文](README.zh-CN.md)
 
 > **确认你手里拿的是什么，读出来源明确的警告，把没有答案的问题带去问药师。**
 
-**关于名字。** Ngon Sam 是粤语「藥安心」的读音，意思是"对用药放心"，不是"用药安全"的承诺 —— 产品从不判定一个组合安全，界面上每一次结果都写着这一点。MedSafe 保留为内部项目代号，用于仓库路径与工程记录。
+**MedSafe** 是产品名称。产品提供有来源的用药信息，不判定一个组合安全；每次核对结果都会说明未覆盖的风险。
 
 > 一个面向香港长者与照护者的 HacKU 2026 原型：拍下药盒，人工确认产品，查成分，逐对核对所选药品，用语音提问，最后带着一张给药师的问题卡离开。
 
@@ -50,7 +50,7 @@
 
 ## 已部署的内容
 
-- **公开移动端入口：** [MedSafe](https://med-care.pages.dev)
+- **公开移动端入口：** [MedSafe](https://med-safe.pages.dev)
 - **全部数据与规则：** [可视化清单](app/data-report.html) | [机器可读清单](data/data_inventory.json) | [数据说明](docs/data-inventory.md)
 - **决策如何做出：** [决策逻辑与证据边界](docs/decision-logic.md) | [14 条规则](docs/rules/README.zh-CN.md)
 - **路演稿：** [14 页网页版 Deck](pitch-ppt/index.html) —— 用浏览器打开，按 `P` 进入演讲者模式。**这就是提交用的 Deck。**

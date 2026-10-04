@@ -7,7 +7,7 @@
 | 材料 | 目标／位置 | 本次整理状态 |
 |---|---|---|
 | 公开仓库 | https://github.com/yc-eagle/med-safe | 已合并并推送到 main；队友原有提交保留 |
-| 在线演示 | https://med-care.pages.dev | 已公开；手机离线升级已发布，真实手机仍待试用；缓存及断网工作流通过 16 项工程检查。**部署内容落后于仓库（品牌与部分规则状态未同步），提交前需重新部署** |
+| 在线演示 | https://med-safe.pages.dev | MedSafe 最新版及实拍示例；断网查药与实拍 OCR 通过 7 项工程检查。手机语音仍需实机验证。 |
 | 3 分钟录屏 | 不使用 | **不作为本次提交物**：旁白与字幕称"临床复核未完成"，与已完成的事实不符。历史录像保留在预演发布中，不链接为当前材料 |
 | Pitch Deck | [`pitch-ppt/index.html`](../pitch-ppt/index.html) | **14 页网页版 Deck，浏览器打开、按 `P` 进入演讲者模式**。早先的 8 页 PPTX／PDF 已删除，不再作为交付物 |
 | Raccoon 使用亮点 | `raccoon-usage-log.md` | 收到分享链接，正文未成功取得，真实记录待 Lin MA |
@@ -17,4 +17,4 @@
 
 小浣熊奖项中的 implementation/completeness 评分包含 validation of AI-generated outputs，不能直接转述为“AI 验证本身占 30%”。真实使用、原始输出及独立核验应可追溯，不要求故意制造错误。
 
-公开媒体入口：[产品在线演示](https://med-care.pages.dev) 与 [14 页网页版 Deck](../pitch-ppt/index.html)。部署已成功，不代表比赛表单已提交。
+公开媒体入口：[产品在线演示](https://med-safe.pages.dev) 与 [14 页网页版 Deck](../pitch-ppt/index.html)。部署已成功，不代表比赛表单已提交。

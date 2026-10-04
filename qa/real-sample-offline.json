@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-04T04:39:01.097Z",
+  "url": "http://127.0.0.1:8896",
+  "passed": 7,
+  "checks": [
+    "Complete current public asset set verifies before offline use",
+    "en: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "cmn: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "yue: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "Offline OCR reads the real medicine label",
+    "Offline auxiliary routes retain Mandarin language selection",
+    "No JavaScript exceptions"
+  ],
+  "state": {
+    "ready": true,
+    "current": true,
+    "bytes": 55438355,
+    "type": "READY",
+    "version": "03cbcf3a956de492",
+    "files": 58,
+    "cachedVersion": "03cbcf3a956de492",
+    "preparing": false,
+    "preparedAt": "2026-10-04T04:38:39.633Z",
+    "phase": "idle"
+  },
+  "errors": [],
+  "scope": "Chromium mobile viewport and a team-supplied medicine photograph; not physical-phone or clinical validation."
+}

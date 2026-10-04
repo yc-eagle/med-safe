@@ -1,0 +1,17 @@
+{
+  "tested_at": "2026-10-04T04:38:26.029Z",
+  "url": "http://127.0.0.1:8896",
+  "sample_sha256": "f3c78f4b0ef723af5bd213aa6cbf7711050c179dd5fff52b80b5e12c81bd4d8b",
+  "recognised_ingredient": "Metronidazole",
+  "recognised_registration": "HK-28848",
+  "image_dimensions": [
+    1279,
+    1706
+  ],
+  "automatic_selection": false,
+  "confirmation_required": true,
+  "practice_example": true,
+  "errors": [],
+  "outbound_writes": [],
+  "scope": "One supplied real photo in desktop Chrome at phone width; not a general OCR accuracy or clinical study."
+}
