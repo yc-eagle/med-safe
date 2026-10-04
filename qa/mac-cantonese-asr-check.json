@@ -1,0 +1,12 @@
+{
+  "text": "呢两只药可唔可以一齐食？",
+  "language": "yue",
+  "duration_seconds": 2.42,
+  "processing_seconds": 15.37,
+  "requires_confirmation": true,
+  "seed_vocabulary_hint": true,
+  "model": "Qwen3-ASR-0.6B-4bit",
+  "resident_model_reused": false,
+  "wall_seconds": 15.88,
+  "scope": "Mac offline ASR; synthetic Cantonese recording; not mobile browser recognition"
+}

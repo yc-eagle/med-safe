@@ -6,3 +6,17 @@
 .topright{gap:.5rem}.topbar .brand{flex-shrink:0}.coverage summary{cursor:pointer;font-size:1rem;font-weight:650;padding:.4rem 0;min-height:44px}.coverage .stats{margin-top:1rem}.coverage:not([open]){padding-bottom:.6rem}.team-credit{font-weight:600}.notice{font-size:.88rem}.intro h1{max-width:800px}.label-mode span{vertical-align:middle}
 @media(max-width:600px){.topbar{align-items:center;padding:12px 16px}.topbar .brand small{display:none}.topright{margin-left:auto}.topright #mode{display:none}.topbar .brand{font-size:1.1rem}.language-picker select{max-width:120px;font-size:.95rem}.topright .smallbtn{font-size:.85rem;padding:.45rem .55rem}.intro{padding-top:26px}.intro h1{font-size:2rem;line-height:1.2}.intro p{max-width:100%}}
 @media(max-width:360px){.topbar .brandmark{display:none}.language-picker select{max-width:105px}.topright{gap:.3rem}.topbar{gap:.3rem}}
+
+/* Patient-facing presentation: fewer badges and more room for readable labels. */
+:root{--radius:12px;--paper:#f5f7f9}
+.intro .eyebrow{letter-spacing:.35px;text-transform:none;font-size:13px}
+.intro h1{font-size:34px;letter-spacing:-.5px}
+.panel{box-shadow:none}.sample-row button{border-radius:6px;font-size:13px;min-height:44px}
+.capability-strip{background:transparent;border:0;padding:0 0 12px;gap:8px 20px}
+.capability-strip>span{background:transparent;border:0;padding:0;font-size:13px}
+.shield{border-radius:10px;background:#f0f4f7;color:#506c83;width:48px;height:48px}
+.section-note{font-size:13px}.micro,.section-description,.field-label,.confirm-box,.result-note{font-size:13px}
+.prescription-note{padding:0 0 12px;line-height:1.65}
+.upload-area h3{font-size:16px}.upload-area p{font-size:13px}.upload-area{border-radius:8px}
+.result-empty h3{font-size:18px}.result-empty p{line-height:1.65}
+@media(max-width:600px){.intro h1{font-size:29px}.section-heading{flex-wrap:wrap}.section-note{margin-left:37px}.intro{padding:22px 0 20px}}

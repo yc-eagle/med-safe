@@ -1,0 +1,13 @@
+{
+  "tested_at": "2026-10-03T23:41:13.917Z",
+  "url": "https://med-care.pages.dev/",
+  "passed": 4,
+  "checks": [
+    "en: phone-width layout, medicine lookup and confirmed duplicate warning",
+    "cmn: phone-width layout, medicine lookup and confirmed duplicate warning",
+    "yue: phone-width layout, medicine lookup and confirmed duplicate warning",
+    "Recorded examples, audio players and fixed-address QR load"
+  ],
+  "errors": [],
+  "scope": "Desktop Chrome in a 390px viewport. This does not test a physical phone, microphone, human accent or clinical outcomes."
+}

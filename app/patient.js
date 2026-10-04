@@ -50,7 +50,7 @@ function answerYue(question,items,result,data){
  if(data.medicineProfiles&&Info){const facts=Info.knowledge(question,items,data);if(facts)return out(facts.intent,facts.text,{sourceProfileIds:facts.sourceProfileIds});}
  if(!result)return out('check_required','藥品清單已確認。請先按「確認資料並核對」，再問呢個組合嘅提示。');
  if(/(藥師|药师|藥劑師|药剂师|pharmacist)/i.test(q)){const r=referral(result);return out('pharmacist',r.reason+'\n你可以咁問：'+r.question+'\n請同時提供實際食法、其他藥同身體情況。', {sourceRuleIds:[...new Set(result.alerts.map(r=>r.rule_id))]});}
- if(/(一齊|一齐|一起|同食|合用|重複|重复|食重|禁忌|風險|风险|注意|安全|提示|警示|得唔得|可唔可以|can.*take|together|risk|safe|warning|contraindication)/i.test(q))return out('check_summary','以下只講上面已確認清單嘅演示提示。\n'+warningText(result,data).join('\n')+'\n呢啲係未經醫學複核嘅演示提示，資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。',{sourceRuleIds:[...new Set(result.alerts.map(r=>r.rule_id))]});
+ if(/(一齊|一齐|一起|同食|合用|重複|重复|食重|禁忌|風險|风险|注意|安全|提示|警示|得唔得|可唔可以|can.*take|together|risk|safe|warning|contraindication)/i.test(q))return out('check_summary','以下只講上面已確認清單嘅演示提示。\n'+warningText(result,data).join('\n')+'\n相關規則已完成臨床複核，粵語字句仍待複核。資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。',{sourceRuleIds:[...new Set(result.alerts.map(r=>r.rule_id))]});
  return out('out_of_scope','我而家只可以解釋已確認藥品嘅成分、演示警示，同埋整理要問藥劑師嘅問題。你呢個問題暫時答唔到，請帶齊藥品資料問藥劑師。');
 }
 

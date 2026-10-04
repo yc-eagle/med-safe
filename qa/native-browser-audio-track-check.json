@@ -1,0 +1,67 @@
+{
+  "scope": "Native recognizer fed a synthetic AudioContext track; tests recognition service independently of microphone capture and product UI.",
+  "results": [
+    {
+      "locale": "en",
+      "tag": "en-HK",
+      "events": [
+        {
+          "event": "start",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "audiostart",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "speechstart",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "result",
+          "error": null,
+          "text": "can these medicines be taken together"
+        },
+        {
+          "event": "end",
+          "error": null,
+          "text": null
+        }
+      ]
+    },
+    {
+      "locale": "yue",
+      "tag": "zh-HK",
+      "events": [
+        {
+          "event": "start",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "audiostart",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "speechstart",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "result",
+          "error": null,
+          "text": "呢兩隻藥可唔可以一齊食"
+        },
+        {
+          "event": "end",
+          "error": null,
+          "text": null
+        }
+      ]
+    }
+  ]
+}

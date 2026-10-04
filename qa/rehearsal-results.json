@@ -1,0 +1,26 @@
+{
+  "team_base": "b91b00c75ec2627f3df4e9e84b90409ce88272aa",
+  "source_branch": "codex/voice-photo-checks",
+  "date": "2026-10-03",
+  "text_browser_cases": 10,
+  "text_passed": 10,
+  "voice_input": "Synthesized audio track -> native Chrome recognizer, not physical microphone",
+  "voice_languages": [
+    "en",
+    "yue"
+  ],
+  "voice_passed": 2,
+  "captured_answer_audio": "ScreenCaptureKit audio from the dedicated test Chrome process; not a replacement narration",
+  "cantonese_copy_fix": "Completed review of underlying rules; Cantonese wording review still pending. Rule data and matching engine unchanged.",
+  "engineering_after_copy_change": {
+    "patient": 26,
+    "patient_languages": 8
+  },
+  "public_data_hash_matches_regenerated_data": true,
+  "video_decode": "3 files passed",
+  "human_phone_validation": false,
+  "clinical_validation_claim": false,
+  "media_release": "https://github.com/yc-eagle/med-safe/releases/tag/rehearsal-20261003",
+  "offline_checks_after_change": 7,
+  "offline_public_manifest": "9f17ff70202b3af9"
+}

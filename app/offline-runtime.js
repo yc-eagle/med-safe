@@ -7,10 +7,10 @@ window.OfflineRuntime=(()=>{
   const web=()=>typeof api!=='undefined' && api ? api.runtime==='browser' : !!window.PUBLIC_DEMO;
   const mb=n=>(n/1048576).toFixed(1);
   const style=document.createElement('style');
-  style.textContent='#offline-panel{border:1px solid #b9d0c5;background:#edf5f1;border-radius:12px;padding:14px 16px;margin:12px 0 18px;font-size:14px;line-height:1.65}#offline-panel p{margin:5px 0}#offline-panel .offline-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}#offline-panel strong{font-size:15px}#offline-panel button{min-height:44px}#offline-panel progress{width:100%;height:16px;accent-color:#246d63}#offline-panel small{display:block;color:#405f53}#offline-panel summary{font-size:14px;min-height:44px;padding-top:8px}#offline-panel li{margin:6px 0}#offline-panel[hidden]{display:none!important}@media print{#offline-panel{display:none!important}}';
+  style.textContent='#offline-panel{border:1px solid #b6c6d3;background:#edf1f5;border-radius:12px;padding:14px 16px;margin:12px 0 18px;font-size:14px;line-height:1.65}#offline-panel p{margin:5px 0}#offline-panel .offline-row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}#offline-panel strong{font-size:15px}#offline-panel button{min-height:44px}#offline-panel progress{width:100%;height:16px;accent-color:#244c6d}#offline-panel small{display:block;color:#3c5163}#offline-panel summary{font-size:14px;min-height:44px;padding-top:8px}#offline-panel li{margin:6px 0}#offline-panel[hidden]{display:none!important}@media print{#offline-panel{display:none!important}}';
   document.head.append(style);
   if(!document.querySelector('link[rel="manifest"]')){const l=document.createElement('link');l.rel='manifest';l.href=new URL('manifest.webmanifest',base).href;document.head.append(l);}
-  if(!document.querySelector('meta[name="theme-color"]')){const m=document.createElement('meta');m.name='theme-color';m.content='#246d63';document.head.append(m);}
+  if(!document.querySelector('meta[name="theme-color"]')){const m=document.createElement('meta');m.name='theme-color';m.content='#244c6d';document.head.append(m);}
   const panel=document.createElement('section');panel.id='offline-panel';panel.hidden=!web();panel.setAttribute('aria-labelledby','offline-title');
   panel.innerHTML='<div class="offline-row"><strong id="offline-title"></strong><button type="button" class="button secondary" id="prepare-offline"></button><button type="button" class="button secondary" id="install-offline" hidden></button></div><p id="offline-state" role="status" aria-live="polite"></p><progress id="offline-progress" max="100" value="0" hidden aria-label="Offline download progress"></progress><small id="offline-boundary"></small><details><summary id="offline-how-title"></summary><div id="offline-how"></div></details>';
   const anchor=document.getElementById('release-links');
@@ -26,7 +26,7 @@ window.OfflineRuntime=(()=>{
   }
   function render(){
     panel.hidden=!web();if(panel.hidden)return;
-    el('offline-title').textContent=tr('帶走使用 · 手機離線','Take it with you · offline on your phone');
+    el('offline-title').textContent=tr('離線使用','Use offline');
     const button=el('prepare-offline');button.textContent=phase==='downloading'?tr('正在下載…','Downloading…'):state.ready&&!state.current?tr('更新離線資料','Update offline copy'):state.current?tr('檢查更新','Check for updates'):tr('準備離線使用','Prepare for offline use');
     button.disabled=['checking','downloading','unsupported'].includes(phase)||navigator.onLine===false;
     const progress=el('offline-progress');progress.hidden=phase!=='downloading';
@@ -36,13 +36,13 @@ window.OfflineRuntime=(()=>{
     else if(phase==='downloading'){
       const loaded=download?.loaded||0,total=download?.total||state.bytes;
       progress.value=total?Math.round(loaded/total*100):0;
-      message=tr(`正在儲存公開程式與識字模型：${mb(loaded)} / ${mb(total)} MB。請保持頁面開啟，完成前不要斷網。`,`Saving public app files and OCR models: ${mb(loaded)} / ${mb(total)} MB. Keep this page open and stay online until complete.`);
+      message=tr(`正在下載離線檔案：${mb(loaded)} / ${mb(total)} MB。請保持頁面開啟，完成前不要斷網。`,`Downloading offline files: ${mb(loaded)} / ${mb(total)} MB. Keep this page open and stay online until complete.`);
     }else if(phase==='failed'){
       const why=state.code==='storage_full'?tr('儲存空間不足。','Storage is full.'):state.code==='release_changed'?tr('網站版本已更新，請重新整理後重試。','The site version changed. Reload and try again.'):tr('有檔案未下載或核對成功，請連網重試。','Some files could not be downloaded or verified. Reconnect and retry.');
       message=tr('今次準備未完成。','Preparation did not complete. ')+why+(state.ready?tr(' 上一次完整離線版本仍可使用。',' The previous complete offline version remains available.'):'');
     }else if(state.current)message=navigator.onLine===false?tr('已離線 · 查藥、逐對核對、照片識字和問題卡可用。','Offline · search, pair checks, photo OCR and question cards are available.'):tr(`離線資料已核對並儲存（${mb(state.bytes)} MB）。現在可以斷網重開測試。`,`Offline files verified and saved (${mb(state.bytes)} MB). You can now disconnect and reopen to test.`);
     else if(state.ready)message=tr('已有完整離線版本；網站有更新。連網時按「更新離線資料」。','A complete offline copy is available; a newer site version exists. Update while online.');
-    else message=navigator.onLine===false?tr('目前離線，但未有完整下載。這頁可能仍可查藥；重新開啟及照片識字未獲保證。連網後先準備離線。','Offline, with no complete saved copy. This open page may work, but reopening and photo OCR are not assured. Prepare while online.'):tr(`先連網下載約 ${mb(state.bytes)} MB，完成後才可離線重開；不會下載示範影片。`,`First download about ${mb(state.bytes)} MB while online. Reopening offline works only after completion; demo videos are not downloaded.`);
+    else message=navigator.onLine===false?tr('目前離線，但未有完整下載。這頁可能仍可查藥；重新開啟及照片識字未獲保證。連網後先準備離線。','Offline, with no complete saved copy. This open page may work, but reopening and photo OCR are not assured. Prepare while online.'):tr(`先連網下載約 ${mb(state.bytes)} MB，完成後才可離線重開。`,`First download about ${mb(state.bytes)} MB while online. Reopening offline works only after completion.`);
     el('offline-state').textContent=message;
     el('offline-boundary').textContent=tr('只儲存公開藥品資料、程式及識字模型；不儲存你選的藥、照片、錄音或問句。來源外鏈與網頁語音需聯網。本機朗讀視乎所選語言及已安裝聲音。','Only public medicine data, app files and OCR models are saved. Your selections, photos, recordings and questions are not saved. Source links and browser voice need internet; local reading depends on the selected language and installed voices.');
     el('offline-how-title').textContent=tr('如何放到手機主畫面？','How do I add it to my home screen?');

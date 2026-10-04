@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-03T07:53:55.252Z",
-  "url": "http://127.0.0.1:8768",
+  "date": "2026-10-04T00:38:57.026Z",
+  "url": "http://127.0.0.1:8891",
   "passed": 35,
   "failed": 0,
   "scope": "Language and UI behavior using synthetic cases, mocked browser speech/voices and intercepted local TTS. No real microphone, camera, cloud speech, patient testing, clinical approval or accuracy measurement. Offline cache tested separately.",

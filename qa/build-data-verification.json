@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-10-03T09:49:32.432923+00:00",
+  "source_commit": "9a0e074d3ccc2c897cda1560fb83aae67f7e8670",
+  "team_main": "b91b00c75ec2627f3df4e9e84b90409ce88272aa",
+  "branch": "codex/voice-photo-checks",
+  "command": "python3 tools/build_data.py",
+  "executed_in": "current feature checkout",
+  "exit_code": 0,
+  "stdout": [
+    "Built 14269 catalogue records, 13 demo formulations, 14 rules",
+    "Updated SQLite education profiles and provenance; the 14 rules are clinician-reviewed, education profiles still pending"
+  ],
+  "before": {
+    "app_data_sha256": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c",
+    "sqlite_sha256": "43c6ce1cb4925b90070e042e090243408d5b3eec5f0feb2f0555f00ae5fa103b",
+    "sqlite_semantic_sha256": "c295879d1670cacae9eb5f0c393682afef235ae8f32ef3e753863001246425c2"
+  },
+  "rebuilt": {
+    "app_data_sha256": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c",
+    "sqlite_sha256": "3730fd99600a0349a3cc391f15692ceecc04595b8b90b692b460d5c1d1250e59",
+    "sqlite_semantic_sha256": "c295879d1670cacae9eb5f0c393682afef235ae8f32ef3e753863001246425c2"
+  },
+  "catalogue_records": 14269,
+  "demo_formulations": 13,
+  "rules": 14,
+  "rule_review_statuses": [
+    "clinician_reviewed"
+  ],
+  "public_url": "https://cart-loop-automatically-josh.trycloudflare.com/data.js",
+  "public_http_status": 200,
+  "public_app_data_sha256": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c",
+  "public_matches_rebuilt_data": true,
+  "app_data_unchanged": true,
+  "sqlite_semantically_unchanged": true,
+  "sqlite_byte_backup_restored_only_after_proving_equal_contents": true,
+  "note": "The SQLite builder can change file-level bookkeeping even with identical table contents. Only an identical-content byte backup is restored to avoid a meaningless binary diff. No team main history is rewritten."
+}

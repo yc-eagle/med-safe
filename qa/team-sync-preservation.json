@@ -1,0 +1,198 @@
+{
+  "team_head": "b91b00c75ec2627f3df4e9e84b90409ce88272aa",
+  "working_head": "dc334b935cabf3f21c7c90ec10cb43329aca111c",
+  "teammate_changed_files": 45,
+  "untouched_teammate_files_verified": 44,
+  "voice_file_verified": "Latest teammate voice.js plus only our previously reviewed failure-handling patch; compared byte for byte after applying that patch to the latest file.",
+  "checks": [
+    {
+      "file": "COST_AND_DATA_FLOW.md",
+      "identical": true
+    },
+    {
+      "file": "README.md",
+      "identical": true
+    },
+    {
+      "file": "README.zh-CN.md",
+      "identical": true
+    },
+    {
+      "file": "app/app.js",
+      "identical": true
+    },
+    {
+      "file": "app/data.js",
+      "identical": true
+    },
+    {
+      "file": "app/engine.js",
+      "identical": true
+    },
+    {
+      "file": "app/index.html",
+      "identical": true
+    },
+    {
+      "file": "app/patient.js",
+      "identical": true
+    },
+    {
+      "file": "app/validator.js",
+      "identical": true
+    },
+    {
+      "file": "app/verify.js",
+      "identical": true
+    },
+    {
+      "file": "data-pack/DATA_DICTIONARY.md",
+      "identical": true
+    },
+    {
+      "file": "data-pack/README.md",
+      "identical": true
+    },
+    {
+      "file": "data-pack/data/demo_rules.json",
+      "identical": true
+    },
+    {
+      "file": "data-pack/data/hk_medication.sqlite",
+      "identical": true
+    },
+    {
+      "file": "data-pack/tools/check_demo.py",
+      "identical": true
+    },
+    {
+      "file": "data/data_inventory.json",
+      "identical": true
+    },
+    {
+      "file": "deck/pitch-deck.md",
+      "identical": true
+    },
+    {
+      "file": "deck/pitch-deck.zh-CN.md",
+      "identical": true
+    },
+    {
+      "file": "docs/competitors.md",
+      "identical": true
+    },
+    {
+      "file": "docs/competitors.zh-CN.md",
+      "identical": true
+    },
+    {
+      "file": "docs/data-handling.md",
+      "identical": true
+    },
+    {
+      "file": "docs/decision-logic.en.md",
+      "identical": true
+    },
+    {
+      "file": "docs/decision-logic.md",
+      "identical": true
+    },
+    {
+      "file": "docs/demo-script.md",
+      "identical": true
+    },
+    {
+      "file": "docs/evidence-protocol.md",
+      "identical": true
+    },
+    {
+      "file": "docs/limitations.md",
+      "identical": true
+    },
+    {
+      "file": "docs/limitations.zh-CN.md",
+      "identical": true
+    },
+    {
+      "file": "docs/presentation/README.en.md",
+      "identical": true
+    },
+    {
+      "file": "docs/presentation/release-notes.en.md",
+      "identical": true
+    },
+    {
+      "file": "docs/problem.md",
+      "identical": true
+    },
+    {
+      "file": "docs/raccoon-usage-log.md",
+      "identical": true
+    },
+    {
+      "file": "docs/rules/README.md",
+      "identical": true
+    },
+    {
+      "file": "docs/rules/README.zh-CN.md",
+      "identical": true
+    },
+    {
+      "file": "docs/rules/review.csv",
+      "identical": true
+    },
+    {
+      "file": "qa/engine-results.json",
+      "identical": true
+    },
+    {
+      "file": "qa/engineering-validation-summary.json",
+      "identical": true
+    },
+    {
+      "file": "qa/multi-medicine-results.json",
+      "identical": true
+    },
+    {
+      "file": "qa/patient-results.json",
+      "identical": true
+    },
+    {
+      "file": "qa/product-features-results.json",
+      "identical": true
+    },
+    {
+      "file": "qa/release-public.json",
+      "identical": true
+    },
+    {
+      "file": "qa/validator-results.json",
+      "identical": true
+    },
+    {
+      "file": "tests/engine.test.cjs",
+      "identical": true
+    },
+    {
+      "file": "tests/multi-medicine.test.cjs",
+      "identical": true
+    },
+    {
+      "file": "tools/build_data.py",
+      "identical": true
+    }
+  ],
+  "our_changed_files": [
+    "app/voice.js",
+    "docs/voice-photo-validation.md",
+    "qa/browser-photo-observations.json",
+    "qa/browser-voice-failures.json",
+    "qa/mac-cantonese-asr-check.json",
+    "qa/native-browser-audio-track-check.json",
+    "qa/native-browser-microphone-check.json",
+    "qa/native-voice-ui-observations.json",
+    "qa/voice-language-regression-results.json",
+    "tests/browser-voice-failures.test.cjs"
+  ],
+  "previous_team_head": "f38b5ee8382b88b5ff05752f702b780c61c5d3b9"
+}

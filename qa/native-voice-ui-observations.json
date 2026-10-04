@@ -1,0 +1,433 @@
+{
+  "time": "2026-10-03T09:07:35.760Z",
+  "scope": "Product UI with synthetic audio-track injection; native Chrome recognition and actual OS speech output. Bypasses microphone hardware; not human or physical-phone validation.",
+  "languages": [
+    {
+      "locale": "en",
+      "capabilities": {
+        "asr": true,
+        "voices": [
+          {
+            "name": "Samantha",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Albert",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Bad News",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Bahh",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Bells",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Boing",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Bubbles",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Cellos",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Daniel",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Eddy (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Eddy (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Eddy (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Eddy (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Flo (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Flo (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Flo (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Flo (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Fred",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Good News",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Grandma (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Grandma (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Grandma (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Grandma (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Grandpa (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Grandpa (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Grandpa (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Grandpa (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Jester",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Junior",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Karen",
+            "lang": "en-AU",
+            "local": true
+          },
+          {
+            "name": "Kathy",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Meijia",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Moira",
+            "lang": "en-IE",
+            "local": true
+          },
+          {
+            "name": "Organ",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Ralph",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Reed (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Reed (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Reed (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Reed (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Rishi",
+            "lang": "en-IN",
+            "local": true
+          },
+          {
+            "name": "Rocko (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Rocko (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Rocko (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Rocko (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Sandy (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Sandy (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Sandy (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Sandy (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Shelley (English (United States))",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Shelley (English (United Kingdom))",
+            "lang": "en-GB",
+            "local": true
+          },
+          {
+            "name": "Shelley (Chinese (China mainland))",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Shelley (Chinese (Taiwan))",
+            "lang": "zh-TW",
+            "local": true
+          },
+          {
+            "name": "Sinji",
+            "lang": "yue-HK",
+            "local": true
+          },
+          {
+            "name": "Superstar",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Tessa",
+            "lang": "en-ZA",
+            "local": true
+          },
+          {
+            "name": "Tingting",
+            "lang": "zh-CN",
+            "local": true
+          },
+          {
+            "name": "Trinoids",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Whisper",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Wobble",
+            "lang": "en-US",
+            "local": true
+          },
+          {
+            "name": "Zarvox",
+            "lang": "en-US",
+            "local": true
+          }
+        ],
+        "buttonDisabled": false
+      },
+      "transcript": "can these medicines be taken together",
+      "recognition": [
+        {
+          "event": "start",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "audiostart",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "speechstart",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "result",
+          "lang": "en-HK",
+          "error": null,
+          "text": "can these medicines be taken together"
+        },
+        {
+          "event": "end",
+          "lang": "en-HK",
+          "error": null,
+          "text": null
+        }
+      ],
+      "answerInputSource": "recognized synthetic audio",
+      "speaking": [
+        {
+          "event": "start",
+          "error": null,
+          "lang": "en-US",
+          "voice": "Samantha",
+          "local": true,
+          "text": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThese prepared warnings await clinical review and do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review."
+        },
+        {
+          "event": "end",
+          "error": null,
+          "lang": "en-US",
+          "voice": "Samantha",
+          "local": true,
+          "text": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThese prepared warnings await clinical review and do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review."
+        }
+      ],
+      "answer": "These warnings concern only the confirmed list above.\nBoth products contain paracetamol. Taking both can duplicate this ingredient. Check with a pharmacist or prescriber before combining them.\nThese prepared warnings await clinical review and do not provide a complete assessment or approval to combine medicines. Ask a pharmacist to review.",
+      "status": "Review and edit the transcript. No answer is given until you confirm.",
+      "toast": ""
+    },
+    {
+      "locale": "yue",
+      "capabilities": {
+        "asr": true,
+        "voices": [],
+        "buttonDisabled": false
+      },
+      "transcript": "呢兩隻藥可唔可以一齊食",
+      "recognition": [
+        {
+          "event": "start",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "audiostart",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "speechstart",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        },
+        {
+          "event": "result",
+          "lang": "zh-HK",
+          "error": null,
+          "text": "呢兩隻藥可唔可以一齊食"
+        },
+        {
+          "event": "end",
+          "lang": "zh-HK",
+          "error": null,
+          "text": null
+        }
+      ],
+      "answerInputSource": "recognized synthetic audio",
+      "speaking": [
+        {
+          "event": "start",
+          "error": null,
+          "lang": "yue-HK",
+          "voice": "Sinji",
+          "local": true,
+          "text": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n呢啲係未經醫學複核嘅演示提示，資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。"
+        },
+        {
+          "event": "end",
+          "error": null,
+          "lang": "yue-HK",
+          "voice": "Sinji",
+          "local": true,
+          "text": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n呢啲係未經醫學複核嘅演示提示，資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。"
+        }
+      ],
+      "answer": "以下只講上面已確認清單嘅演示提示。\n呢兩項藥都有撲熱息痛，可能會食重咗相同成分。加用之前，請帶齊藥盒同藥袋問藥劑師，唔好自行一齊用。\n呢啲係未經醫學複核嘅演示提示，資料亦未齊，唔可以當成可以合用嘅結論。請藥劑師核實。",
+      "status": "請先閱讀並修改問句；按確認後才回答。",
+      "toast": ""
+    }
+  ]
+}

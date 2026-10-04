@@ -1,0 +1,60 @@
+{
+  "tested_at": "2026-10-04T00:49:37.382Z",
+  "url": "https://med-care.pages.dev/",
+  "deployment_url": "https://44a57a70.med-care.pages.dev/",
+  "source_commit": "84accc0",
+  "checks": [
+    "en: blue phone layout, confirmed medicine check and guided action",
+    "cmn: blue phone layout, confirmed medicine check and guided action",
+    "yue: blue phone layout, confirmed medicine check and guided action"
+  ],
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "91b900dcbf271385e164bcd8ffa7d2a43dc5b6e73682b8b967f3ea169c4bec34"
+    },
+    {
+      "path": "app.js",
+      "status": 200,
+      "sha256": "a06ead6e8e44fe59b445768456c4d63c093ae4f070441fefc84daa414de31b73"
+    },
+    {
+      "path": "theme.css",
+      "status": 200,
+      "sha256": "6a28bd6bb31f9ef93c97f0ade9b31e1937a534c98547d79f97ee7e21fe69ec70"
+    },
+    {
+      "path": "experience.css",
+      "status": 200,
+      "sha256": "4dd6e0fab46654d440280fa5a8537e0d7ea3fdff368eceaccd5a5ac6655448dd"
+    },
+    {
+      "path": "experience.js",
+      "status": 200,
+      "sha256": "4fdd30e957caaba2e98fad563e691b63d960c40b2e2e2962f87d1f3cdfe01ec0"
+    },
+    {
+      "path": "browser-runtime.js",
+      "status": 200,
+      "sha256": "24ad0ba910a458d32132b7e6723392b40363d85dc810e3d675728dda5f492f13"
+    },
+    {
+      "path": "voice.js",
+      "status": 200,
+      "sha256": "48bace54bc34ca1e374929bf9451d90af23177410fe30ecc5c8eae2e420b49fb"
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "sha256": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c"
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "sha256": "e2e0de72e8f71f7f01afb14912a67d56df3ce390c42c46da951dd03d34e37589"
+    }
+  ],
+  "errors": [],
+  "scope": "Anonymous Chrome at a phone viewport. Does not establish physical-phone speech or clinical safety."
+}

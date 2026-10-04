@@ -1,0 +1,34 @@
+{
+  "checked_on": "2026-10-04 HKT",
+  "assets": [
+    {
+      "file": "MedSafe-Cloudflare-Pages.zip",
+      "bytes": 21073558,
+      "sha256": "34de7f3d696c70781f0bcd2b4b29143f9b3ce6cebf1909792e741a2e1c0e6f5e",
+      "github_digest_matches": true,
+      "url": "https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-Cloudflare-Pages.zip"
+    },
+    {
+      "file": "MedSafe-rehearsal-kit-20261003.zip",
+      "bytes": 7061832,
+      "sha256": "592f7d6ce7464a01743ed0a4928845a55ed858c3b4f0497a4101d763dc65ec61",
+      "github_digest_matches": true,
+      "url": "https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-rehearsal-kit-20261003.zip"
+    },
+    {
+      "file": "MedSafe-QR.png",
+      "bytes": 2346,
+      "sha256": "41797757d830c3e405d465e8f3c0120f8927abf4313af5a2b25bcf801823c478",
+      "github_digest_matches": true,
+      "url": "https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-QR.png"
+    },
+    {
+      "file": "-20.txt",
+      "bytes": 4549,
+      "sha256": "bdd88462a223ae3a195731ef6479e629f71857efd989cd2f4118d36bcfeb038e",
+      "github_digest_matches": true,
+      "url": "https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/-20.txt"
+    }
+  ],
+  "checked_at": "2026-10-04T01:04:25.394936+00:00"
+}

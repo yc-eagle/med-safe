@@ -1,0 +1,62 @@
+给澳门同学：MedSafe 20 分钟执行卡
+
+我们想请你帮忙做三件事：实测粤语/英语语音、演一段照护者情景、录一段英文旁白。你不用懂医学，也不用服药。
+
+准备（2 分钟）
+用手机 Safari 或 Chrome 打开：https://med-care.pages.dev/
+参考录屏：https://med-care.pages.dev/showcase/
+找安静、光线好的地方，关通知。情景视频横拍，普通 1080p 即可。可以只拍手和手机；露脸和声音只在你同意公开的情况下使用。文件名统一用 speaker01，不写中文姓名。
+
+任务一：真实语音测试（6 分钟）
+1. 英文首页往下找 “Try an example”，点 “Duplicate ingredient”。
+2. 确认页面出现以下两个示例，不要换成其他款式：
+   PANADOL CAPLET 500MG — HK-53362
+   PANADOL COLD & COUGH TAB — HK-53319
+3. 逐项勾选示例确认框，再点 “Check these medicines”。
+4. 顶部语言切到「粵語」，往下找到语音区域。
+5. 点「開始講廣東話」，同意本次语音服务并允许麦克风，正常说：
+   「呢兩隻藥可唔可以一齊食？」
+   等出现文字，先看有没有听错；有就修改，并记录改了什么。然后点确认，让工具回答并播放。
+6. 再试一句：
+   「我應該食幾多粒？」
+   观察它会不会生成个人剂量；这个原型应该让人核实处方，而不是直接开剂量。
+7. 切到 English，分别用 “Speak English” 说两句：
+   “Can these medicines be taken together?”
+   “How much should I take?”
+   每句同样先检查识别文字，再确认、听回答。
+8. 每次留一张结果截图，记下：听错什么、声音是否自然、能否听懂下一步。四次尝试都保留；失败也发给我们。
+
+遇到问题就这样做
+麦克风不可用：检查浏览器麦克风权限，重试一次。仍不行就截图并记手机型号、浏览器，不用反复折腾。
+识别失败：保留失败记录，再打字继续；在记录里注明“改用文字”。
+没有回答声音：点“再聽廣東話回答／Hear the English answer”，检查手机音量；仍无声就记录，不装作成功。
+网页语音需要联网。先不要开启飞行模式测试语音。
+
+任务二：录一个约 1 分钟的情景（8 分钟）
+角色：帮家人核对药品的照护者。用页面示例或无个人资料的道具，不需要装老人或表演生病。
+
+镜头 A：你对镜头说，约 10 秒
+「我想幫屋企人睇清楚啲藥。一盒係必理痛，一盒係傷風咳藥。唔同名，成分會唔會有重複呢？」
+字幕：“I’m helping a family member check two medicines. Different names—could they share an ingredient?”
+
+镜头 B：拍手机操作和真实回答，约 30–40 秒
+打开上面的重复成分示例 → 确认 → 核对 → 用粤语问「呢兩隻藥可唔可以一齊食？」→ 确认识别文字 → 让工具实际回答。
+如果操作超过一分钟，可以分镜头录，不要为了时长跳过确认。让镜头拍清 paracetamol／撲熱息痛、重复成分提示和来源按钮。
+工具的声音由网页真实播放；不要由演员冒充。现场失败时，明确说改用文字或播放已录制演示。
+
+镜头 C：你收尾，约 10 秒
+「原來兩款都有撲熱息痛。我會帶齊藥盒同藥袋，問清楚藥劑師先，唔會自己改藥。」
+字幕：“Both contain paracetamol. I’ll bring the packs and medicine bags to a pharmacist before making a change.”
+
+任务三：单独录英文旁白（4 分钟）
+找安静位置，只录声音也可以。自然语速读下面这段，两遍即可，开头和结尾各留两秒安静：
+“Different medicine names can hide the same ingredient. MedSafe helps people confirm their medicines, read a sourced warning, and prepare a question for a pharmacist. If a medicine is unclear or a combination is not covered, it says so. It does not change a prescription.”
+
+最后发给我们四样东西
+1. speaker01_scene：情景原视频或三个分镜头；
+2. speaker01_english：英文旁白原音频；
+3. 四次语音测试截图/录屏，标注成功、改字、失败或无声音；
+4. 一句话反馈：“最难懂/最不自然的是____，我建议改成____。”
+先发原文件，不用剪辑、不用加音乐、不用自己做字幕。真实测试和情景表演分开记录；我们不会把它当作老人或临床测试。
+
+如果只有 5 分钟：做一次粤语提问并听回答，发原结果；再录英文旁白。其他可以后补。

@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-04T00:49:59.607Z",
+  "url": "https://med-care.pages.dev",
+  "passed": 7,
+  "checks": [
+    "Complete current public asset set verifies before offline use",
+    "en: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "cmn: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "yue: offline reopen, lookup, duplicate rule and voice-offline boundary",
+    "Offline OCR still reads the synthetic label with the updated language bundle",
+    "Offline auxiliary routes retain Mandarin language selection",
+    "No JavaScript exceptions"
+  ],
+  "state": {
+    "ready": true,
+    "current": true,
+    "bytes": 55300370,
+    "type": "READY",
+    "version": "f31cc6ae1fd45588",
+    "files": 56,
+    "cachedVersion": "f31cc6ae1fd45588",
+    "preparing": false,
+    "preparedAt": "2026-10-04T00:49:56.549Z",
+    "phase": "idle"
+  },
+  "errors": [],
+  "scope": "Chromium mobile viewport and synthetic labels; not physical-phone or clinical validation."
+}

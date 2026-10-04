@@ -1,0 +1,42 @@
+{
+  "file": "MedSafe-Cloudflare-Pages.zip",
+  "bytes": 21073558,
+  "sha256": "34de7f3d696c70781f0bcd2b4b29143f9b3ce6cebf1909792e741a2e1c0e6f5e",
+  "files": 58,
+  "largest_asset_bytes": 4697227,
+  "cloudflare_pages_file_limit_checked": true,
+  "deployment_status": "Production deployment successful; fixed hostname verified in anonymous Chrome. No GitHub main merge performed.",
+  "published_at_hkt": "2026-10-04",
+  "url": "https://med-care.pages.dev/",
+  "project_name": "med-care",
+  "deployment_id": "cfc41793-f3ad-411c-b378-1ed345a0080b",
+  "deployment_url": "https://cfc41793.med-care.pages.dev/",
+  "production_branch": "codex/voice-photo-checks",
+  "application_source_commit": "d54300675d4884e5c076752139daa50b92ede2c9",
+  "additional_packaging": "Product-only allowlist. No recordings, gallery, subtitles, slides or volunteer materials.",
+  "repository": "https://github.com/yc-eagle/med-safe",
+  "delivery_mode": "Cloudflare Pages Direct Upload; not automatic Git deployment",
+  "includes": "Public product, data and recognition resources only; no local API, credentials or patient files.",
+  "verification": {
+    "browser": "product-only-published.json",
+    "offline": "product-audit-offline-results.json",
+    "assets": "product-only-published.json",
+    "qr_decodes_to": "https://med-care.pages.dev/",
+    "physical_phone_tested": false,
+    "live_microphone_tested": false,
+    "clinical_safety_assessed": false,
+    "workflow": "product-usability-results.json",
+    "offline_update": "product-audit-offline-update.json",
+    "native_reading": "product-blue-native-reading.json",
+    "native_voice": "product-native-voice-published.json",
+    "removed_public_media_routes": "7 former media/presentation paths returned 404",
+    "native_voice_languages_passed": [
+      "en",
+      "yue",
+      "cmn"
+    ]
+  },
+  "initial_verified_deployment_id": "189218bf-b176-40ea-ade8-6c5db03a2313",
+  "final_update_scope": "Remove presentation artifacts from public deployment; test local reading voices; stop outdated answers when questions change; document feature boundaries.",
+  "updated_at": "2026-10-04T01:04:25.394936+00:00"
+}

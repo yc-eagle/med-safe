@@ -1,0 +1,132 @@
+{
+  "tested_at": "2026-10-04T02:05:12.662Z",
+  "url": "https://med-care.pages.dev",
+  "sourceCommit": "d543006",
+  "languages": [
+    {
+      "locale": "en",
+      "status": 200
+    },
+    {
+      "locale": "cmn",
+      "status": 200
+    },
+    {
+      "locale": "yue",
+      "status": 200
+    }
+  ],
+  "assets": [
+    {
+      "path": "index.html",
+      "status": 200,
+      "sha256": "91b900dcbf271385e164bcd8ffa7d2a43dc5b6e73682b8b967f3ea169c4bec34",
+      "matches": true
+    },
+    {
+      "path": "browser-runtime.js",
+      "status": 200,
+      "sha256": "6129d1353957ecffe7a8b92c73bde0f162a75cc7ced4d6074096e8abf381f513",
+      "matches": true
+    },
+    {
+      "path": "voice.js",
+      "status": 200,
+      "sha256": "e4bfe358c22a0cff03bb50b032da5bcfdca429adccc803471ebc092ddab5b3cf",
+      "matches": true
+    },
+    {
+      "path": "product-features.js",
+      "status": 200,
+      "sha256": "ba34a4bc49423aae4b2e2b0e1f44f6763015054d1c1af234cb49175d266c8815",
+      "matches": true
+    },
+    {
+      "path": "resource-pages.js",
+      "status": 200,
+      "sha256": "44ac07af214c415673a9588e34785583e6beda6ec3632d964355f8741996baf2",
+      "matches": true
+    },
+    {
+      "path": "offline-runtime.js",
+      "status": 200,
+      "sha256": "33844ebbfb19795ceefe7432e990eff254bf458874f5d23bf54c01206b963bb4",
+      "matches": true
+    },
+    {
+      "path": "data.js",
+      "status": 200,
+      "sha256": "78621430ce6e623354fd234f8e7f647cf2cebe49f5c6aa0c5b820f12c312d85c",
+      "matches": true
+    },
+    {
+      "path": "engine.js",
+      "status": 200,
+      "sha256": "546b17d6ea6732f417454b2d676830be1e5e27a56e3b492604816c44cec086fd",
+      "matches": true
+    },
+    {
+      "path": "patient.js",
+      "status": 200,
+      "sha256": "51413c5074dd03c37c76a71311be5c0363ed94d3c0935bf7f0035709fb75819a",
+      "matches": true
+    },
+    {
+      "path": "sw.js",
+      "status": 200,
+      "sha256": "653fb558d329a38a2f06b294d6c1f66208b2eb9c6087ef5a82f1add88fac89f1",
+      "matches": true
+    },
+    {
+      "path": "404.html",
+      "status": 200,
+      "sha256": "01eed12aeb63a707ae7726930cac12956bbde334dc26f02ba43efdd2e70ef4ff",
+      "matches": true
+    }
+  ],
+  "removedRoutes": [
+    {
+      "path": "/showcase/",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "body": true
+    },
+    {
+      "path": "/showcase/volunteer.html",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "body": true
+    },
+    {
+      "path": "/showcase/yue-voice-demo.mp4",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "body": true
+    },
+    {
+      "path": "/demo",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "body": true
+    },
+    {
+      "path": "/demo.html",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "body": true
+    },
+    {
+      "path": "/demo-3min.mp4",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "body": true
+    },
+    {
+      "path": "/Med-Safe-HacKU2026.pptx",
+      "status": 404,
+      "type": "text/html; charset=utf-8",
+      "body": true
+    }
+  ],
+  "scope": "Anonymous desktop Chrome, 390px viewport; live asset integrity and removed media routes, not physical phone."
+}
