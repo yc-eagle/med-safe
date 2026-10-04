@@ -166,6 +166,8 @@
      object-position:top center 保证严禁裁剪顶部和左右，只裁剪底部
   */
   .frame-img{overflow:hidden;position:relative;background:rgba(0,0,0,.04);box-sizing:border-box;width:100%;border-radius:4px}
+  .frame-img.photo{height:min(30vh,34vw);display:flex;align-items:center;justify-content:center}
+  .frame-img.photo > img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;flex:0 0 auto}
   .slide.dark .frame-img{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)}
   .frame-img > img{width:100%;height:auto;object-fit:contain;object-position:center center;display:block;max-height:min(52vh,44vw)}
   .frame-img.fit-contain > img{object-fit:contain;object-position:center center}
@@ -688,9 +690,8 @@
         <div class="callout-src">&mdash; the overdose line</div>
       </div>
     </div>
-    <figure class="frame-img fit-contain" data-anim>
+    <figure class="frame-img photo fit-contain" data-anim>
       <img src="images/02-duplicate-ingredient.png" alt="Two paracetamol products: pain relief tablets and a cold and flu formulation">
-      <figcaption class="img-cap">Pain relief &middot; cold and flu</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -704,24 +705,17 @@
     <div>Act II &middot; Evidence</div>
     <div>05 / 13</div>
   </div>
-  <div class="frame grid-2-8-4" style="padding-top:2vh">
+  <div class="frame grid-2-7-5" style="padding-top:2vh">
     <div>
       <div class="kicker" style="margin-bottom:1.6vh" data-anim>What never reaches them</div>
-      <h2 class="h-xl" style="margin-top:1vh;margin-bottom:3vh" data-anim>The information exists. It does not arrive.</h2>
+      <h2 class="h-xl" style="font-size:5vw;margin-top:1vh;margin-bottom:2.4vh" data-anim>The information exists. It does not arrive.</h2>
 
-      <p class="lead" style="margin-bottom:2.4vh" data-anim>
-        A hospital bag lists the medicines. It does not say how the patient actually takes them at home.
+      <p class="lead" data-anim>
+        A bag lists the medicines. It does not say how they are taken at home.
       </p>
-
-      <div class="callout" style="margin-top:0" data-anim>
-        Reported, not our data.<br>
-        We cite them because the failure mode is the same.
-        <div class="callout-src">&mdash; how we use this evidence</div>
-      </div>
     </div>
-    <figure class="frame-img fit-contain" data-anim>
+    <figure class="frame-img photo fit-contain" data-anim>
       <img src="images/09-bag-with-pills.jpg" alt="Three medicines as dispensed together in a paper bag">
-      <figcaption class="img-cap">Three medicines, one bag</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -735,7 +729,7 @@
     <div>Act II &middot; Evidence</div>
     <div>06 / 13</div>
   </div>
-  <div class="frame grid-2-8-4" style="padding-top:2vh">
+  <div class="frame grid-2-7-5" style="padding-top:2vh">
     <div>
       <div class="kicker" style="margin-bottom:1.6vh" data-anim>Reported harm</div>
       <h2 class="h-xl" style="margin-top:1vh;margin-bottom:3vh" data-anim>One pattern, over and over</h2>
@@ -749,9 +743,8 @@
         <div class="callout-src">&mdash; why we built a checker</div>
       </div>
     </div>
-    <figure class="frame-img fit-contain" data-anim>
+    <figure class="frame-img photo fit-contain" data-anim>
       <img src="images/05-incident-pwh.png" alt="News report of a medicine mix-up at Prince of Wales Hospital">
-      <figcaption class="img-cap">Reported in a Hong Kong public hospital</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -766,24 +759,17 @@
     <div>07 / 13</div>
   </div>
   <div class="frame grid-2-7-5" style="padding-top:3vh">
-    <div style="display:flex;flex-direction:column;justify-content:space-between;gap:3vh">
-      <div>
-        <div class="kicker" style="margin-bottom:1.6vh" data-anim>Read it clearly</div>
-        <h2 class="h-xl" style="font-size:5vw;line-height:1.12" data-anim>
-          Three similar bottles. Three different medicines.
-        </h2>
-        <p class="lead" style="margin-top:3vh" data-anim>
-          The user confirms the product. No rule applies before that.
-        </p>
-      </div>
-      <div class="callout" data-anim>
-        14,269 products &middot; 23,835 ingredient records
-        <div class="callout-src">&mdash; Hong Kong Drug Office catalogue</div>
-      </div>
+    <div style="display:flex;flex-direction:column;gap:2.4vh">
+      <div class="kicker" style="margin-bottom:1.6vh" data-anim>Read it clearly</div>
+      <h2 class="h-xl" style="font-size:5.4vw;line-height:1.12" data-anim>
+        Three similar bottles. Three different medicines.
+      </h2>
+      <p class="lead" style="margin-top:1.6vh;max-width:26ch" data-anim>
+        The user confirms the product.
+      </p>
     </div>
-    <figure class="frame-img fit-contain" data-anim>
+    <figure class="frame-img photo fit-contain" data-anim>
       <img src="images/07-three-similar-bottles.jpg" alt="Three medicine bottles that look alike but are different medicines">
-      <figcaption class="img-cap">Three bottles, three medicines</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -867,32 +853,26 @@
       <div class="stat-card" data-anim>
         <div class="stat-label">Catalogue</div>
         <div class="stat-nb">14,269</div>
-        <div class="stat-note">Hong Kong registered products</div>
       </div>
       <div class="stat-card" data-anim>
         <div class="stat-label">Ingredients</div>
         <div class="stat-nb">23,835</div>
-        <div class="stat-note">Records mapped</div>
       </div>
       <div class="stat-card" data-anim>
         <div class="stat-label">Rules</div>
         <div class="stat-nb">14</div>
-        <div class="stat-note">Each with its source</div>
       </div>
       <div class="stat-card" data-anim>
         <div class="stat-label">Reviewed</div>
         <div class="stat-nb">3 Oct</div>
-        <div class="stat-note">By a clinician, rule by rule</div>
       </div>
       <div class="stat-card" data-anim>
         <div class="stat-label">Up to</div>
         <div class="stat-nb">66</div>
-        <div class="stat-note">Pairs in one check</div>
       </div>
       <div class="stat-card" data-anim>
         <div class="stat-label">Warfarin + aspirin</div>
         <div class="stat-nb">1</div>
-        <div class="stat-note">Real pair we catch</div>
       </div>
     </div>
   </div>
@@ -937,23 +917,17 @@
     <div>Act V &middot; Next</div>
     <div>12 / 13</div>
   </div>
-  <div class="frame grid-2-8-4" style="padding-top:2vh">
+  <div class="frame grid-2-7-5" style="padding-top:2vh">
     <div>
       <div class="kicker" style="margin-bottom:1.6vh" data-anim>The honest roadmap</div>
-      <h2 class="h-xl" style="margin-top:1vh;margin-bottom:3vh" data-anim>Four things before a pharmacy counter</h2>
+      <h2 class="h-xl" style="font-size:5vw;margin-top:1vh;margin-bottom:2.4vh" data-anim>Four things before a pharmacy counter</h2>
 
-      <p class="lead" style="margin-bottom:3vh" data-anim>
-        Review every rule with a named clinician. Test the offline pack on real phones.
+      <p class="lead" data-anim>
+        Review every rule with a named clinician. Test on real phones.
       </p>
-
-      <div class="callout" data-anim>
-        Then: observe real users, and widen coverage.
-        <div class="callout-src">&mdash; next month</div>
-      </div>
     </div>
-    <figure class="frame-img fit-contain" data-anim>
+    <figure class="frame-img photo fit-contain" data-anim>
       <img src="images/08-english-prescription.jpg" alt="A prescription written entirely in English, which an older reader may not follow">
-      <figcaption class="img-cap">English only, and hard to read</figcaption>
     </figure>
   </div>
   <div class="foot">
@@ -1014,7 +988,7 @@ const SPEAKER_NOTES = [
     transition:"Widen to the systemic evidence." },
   { id:"evidence", title:"The information exists. It does not arrive.", section:"Evidence", minutes:0.6,
     purpose:"Show the failure is systemic.",
-    talk:["Three medicines dispensed together in one bag - this is what the person at home is handed.","A bag lists medicines, not how the patient takes them.","Say clearly that the incident we cite is a report, not our data."],
+    talk:["Three medicines dispensed together in one bag - this is what the person at home is handed.","A bag lists medicines, not how the patient takes them.","Say clearly that the reported case we cite is a report, not our own data."],
     transition:"Name the cost of getting it wrong." },
   { id:"incidents", title:"One pattern, over and over", section:"Evidence", minutes:0.5,
     purpose:"Establish the stakes without over-claiming a number.",
@@ -1042,7 +1016,7 @@ const SPEAKER_NOTES = [
     transition:"End on the roadmap.", cue:"Do not generalise about competitors; we have not verified them item by item." },
   { id:"next", title:"Four things before a pharmacy counter", section:"Next", minutes:0.4,
     purpose:"Show a credible path rather than a wish list.",
-    talk:["This prescription is English only - an older reader may not follow it. That is the gap.","Review every rule with a named clinician.","Test the offline pack on real phones, then observe real users."],
+    talk:["This prescription is English only - an older reader may not follow it. That is the gap.","Review every rule with a named clinician.","Test the offline pack on real phones, then observe real users and widen coverage."],
     transition:"Close on the design principle." },
   { id:"close", title:"It says I do not know.", section:"Next", minutes:0.4,
     purpose:"Land one memorable line and a concrete next action.",

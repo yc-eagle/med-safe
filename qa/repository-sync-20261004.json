@@ -152,9 +152,9 @@
   "branch": "codex/voice-photo-checks",
   "main_merge_performed": false,
   "premerge_recheck": {
-    "checked_at": "2026-10-04T02:16:42.492782+00:00",
-    "team_main": "8677c719b2a3cc903ec0ef036099d064a5d38025",
-    "conflict_resolution": "Keep the complete latest team pitch-ppt directory, including deletions and renamed assets. Product files unchanged.",
+    "checked_at": "2026-10-04T02:18:27.896187+00:00",
+    "team_main": "5791584fe9dad0816820c5698f9395978c117f45",
+    "conflict_resolution": "Keep latest team pitch-ppt byte for byte. Preserve all team .gitignore entries and add the existing local Cloudflare cache exclusion. Product files unchanged.",
     "pitch_files_preserved": 8,
     "unresolved_conflicts": 0
   }
