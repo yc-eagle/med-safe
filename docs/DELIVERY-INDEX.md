@@ -22,7 +22,7 @@ The first URL is the actual interactive medicine checker. The second is a record
 | Download the whole rehearsal package | [MedSafe-rehearsal-kit-20261003.zip](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-rehearsal-kit-20261003.zip) |
 | All published rehearsal media and QR | [Rehearsal release](https://github.com/yc-eagle/med-safe/releases/tag/rehearsal-20261003) |
 | Complete deployable website | [MedSafe-Cloudflare-Pages.zip](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/MedSafe-Cloudflare-Pages.zip) |
-| Fixed-host deployment and verification | [Deployment receipt](../qa/cloudflare-package-status.json) · [browser checks](../qa/cloudflare-browser-verification.json) · [offline checks](../qa/cloudflare-offline-verification.json) |
+| Fixed-host deployment and verification | [Deployment receipt](../qa/cloudflare-package-status.json) · [browser checks](../qa/product-blue-published.json) · [offline checks](../qa/product-blue-offline-results.json) |
 | English voice video | [MP4](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/en-voice-demo.mp4) |
 | Cantonese voice video | [MP4](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/yue-voice-demo.mp4) |
 | Three text scenarios | [MP4](https://github.com/yc-eagle/med-safe/releases/download/rehearsal-20261003/text-three-cases.mp4) |
