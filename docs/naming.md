@@ -8,7 +8,7 @@ Decided on 4 October 2026, during the HacKU 2026 build weekend.
 |---|---|---|
 | Name | **Ngon Sam** | Slides, app header (large), documentation titles |
 | Wordmark | **藥安心** | Slides under the name, app header (next to the name), Cantonese/Mandarin materials |
-| Meaning line | **peace of mind about medicine** | English-facing material under the name |
+| Meaning line | **peace of mind about medicine** | Spoken by the presenter; README and API surfaces |
 | Internal codename | **MedSafe** | Repository path, package name, engineering records, the pitch deck's small print |
 
 Pronunciation for an English-speaking audience: **"ng-on sum"** — the *ng* is a velar nasal, the same sound that ends *sing*. The full Jyutping is `ngon1 sam1`.
@@ -19,7 +19,9 @@ The word 安心 means *peace of mind*, not *safety*. That distinction is the who
 
 **What it costs.** `Ngon Sam` is harder for a non-Cantonese speaker to say than an English name would be. This matters less than it first appears: judges do not deduct marks for a non-English product name, and the romanisation is the official Hong Kong Government convention. The real risk is different — after the pitch, when judges discuss the ranking without the slides in front of them, they refer to projects by name. A name they cannot pronounce is a name they may not repeat.
 
-**The mitigation, and it is deliberate.** Three things travel together on every surface: the pronounceable spelling `Ngon Sam`, the Chinese wordmark `藥安心`, and the English meaning line `peace of mind about medicine`. A judge who cannot manage the *ng* can still describe the project as *the peace of mind one*, which is enough to survive the discussion room. The cover carries an explicit pronunciation cue (`say it "ng-on sum"`) so the presenter never has to correct anyone out loud.
+**The mitigation, and it is deliberate.** Three things travel together: the pronounceable spelling `Ngon Sam`, the Chinese wordmark `藥安心`, and the meaning. On the deck cover the third line is `MedSafe`, and the meaning is carried by the presenter and by the [`README`](../README.md) — the cover states the name, the defence states the meaning. A judge who cannot manage the *ng* can still describe the project as *the peace of mind one*, which is enough to survive the discussion room. The cover carries an explicit pronunciation cue (`say it "ng-on sum"`) so the presenter never has to correct anyone out loud.
+
+**Because the cover no longer carries the meaning line, the presenter must say it.** If the meaning is never spoken, the only handle a judge retains is a Cantonese word they cannot pronounce, and the mitigation is lost. The line to say is in the opening note of the speaker notes: *Ngon Sam is Cantonese for 藥安心 — peace of mind about medicine. Not safety; the product never claims safety.*
 
 ## Names considered and rejected
 
