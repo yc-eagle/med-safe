@@ -19,7 +19,7 @@ PUBLIC = [
     'photo-tools.js', 'browser-runtime.js', 'data.js', 'engine.js', 'medicine-info.js', 'patient.js',
     'app.js', 'voice.js', 'product-features.js', 'release-ui.js', 'offline-runtime.js',
     'offline.html', 'data-report.html', 'verify.html', 'verify.css', 'verify.js',
-    'validator.js', 'sample-medicine.jpg', 'sample-labels.png', 'favicon.svg', 'manifest.webmanifest',
+    'validator.js', 'sample-medicine.jpg', 'sample-medicine-2.jpg', 'sample-medicine-3.jpg', 'sample-labels.png', 'favicon.svg', 'manifest.webmanifest',
     'icon-192.svg', 'icon-512.svg',
     'vendor/tesseract.min.js', 'vendor/worker.min.js',
     'vendor/eng.traineddata', 'vendor/chi_tra.traineddata',

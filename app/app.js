@@ -20,7 +20,9 @@ const Z={
   "photoTitle": "拍下藥品標籤",
   "photoHint": "拍清完整藥名和 HK 編號，保持光線充足，遮住個人資料。",
   "upload": "選擇圖片",
-  "ocrSample": "試讀實拍標籤",
+  "ocrSample": "實拍示例 1",
+  "ocrSample2": "實拍示例 2",
+  "ocrSample3": "實拍示例 3",
   "privacy": "圖片只交給這台 Mac 識字，處理後刪除暫存檔。",
   "ocrDetails": "查看識別到的文字",
   "or": "或手動查找",
@@ -116,7 +118,9 @@ const EN={
   "photoTitle": "Photograph the medicine label",
   "photoHint": "Include the full medicine name and HK number. Use a clear, well-lit photo and cover any personal details.",
   "upload": "Choose a photo",
-  "ocrSample": "Try a real label photo",
+  "ocrSample": "Sample photo 1",
+  "ocrSample2": "Sample photo 2",
+  "ocrSample3": "Sample photo 3",
   "privacy": "Only this Mac reads the image. Temporary image files are deleted after processing.",
   "ocrDetails": "Read the detected text",
   "or": "or search manually",
@@ -289,8 +293,9 @@ async function speak(){const voice=$('#voice').value,text=reportText(voice),g=ge
  if(api?.runtime==='browser'){await BrowserRuntime.speak(text,voice);}else if(api?.tts){const res=await fetch('/api/tts',{method:'POST',headers:{'Content-Type':'application/json','X-MedCheck-Token':api.token},body:JSON.stringify({text,voice})});if(!res.ok)throw Error();const blob=await res.blob();if(g!==generation)return;audioURL=URL.createObjectURL(blob);$('#audio-output').innerHTML='<audio controls></audio>';const a=$('#audio-output audio');a.src=audioURL;await a.play();}
  else {const target={yue:['zh-HK','yue'],cmn:['zh-CN','cmn'],en:['en-US','en-GB']}[voice];const found=window.speechSynthesis?.getVoices().find(v=>v.localService&&target.some(l=>v.lang.toLowerCase().startsWith(l.toLowerCase())));if(!found)return toast(t('ttsFallback'));const u=new SpeechSynthesisUtterance(text);u.voice=found;u.lang=found.lang;window.speechSynthesis.speak(u);}
  }catch{toast(t('ttsFail'));}finally{if(g===generation&&$('#speak')){$('#speak').disabled=false;$('#speak').textContent=t('speak');}}}
+function setPhotoInputsDisabled(value){for(const id of ['#photo','#ocr-sample','#ocr-sample-2','#ocr-sample-3'])$(id).disabled=value;}
 function clearPhotoResults(){
- $('#photo').disabled=false;$('#ocr-sample').disabled=false;
+ setPhotoInputsDisabled(false);
  if(previewURL)URL.revokeObjectURL(previewURL);previewURL=null;
  $('#ocr-details').hidden=true;$('#ocr-preview').textContent='';$('#ocr-text').textContent='';$('#ocr-candidates').textContent='';
  $('#ocr-status').textContent='';$('#ocr-status').dataset.state='';
@@ -305,7 +310,7 @@ async function recognize(file,isSample=false,options={}){
  if(!api?.ocr)return toast(t('ocrOffline'));
  if(!options.prepared&&file.size>10*1024*1024)return toast(t('limitPhoto'));
  $('#ocr-status').className='success-note';$('#ocr-status').dataset.state='ocrBusy';$('#ocr-status').textContent=t('ocrBusy');
- $('#photo').disabled=true;$('#ocr-sample').disabled=true;
+ setPhotoInputsDisabled(true);
  try{
   let data;
   if(api.runtime==='browser')data=await BrowserRuntime.ocr(file,{script:options.script,onProgress:progress=>{if(request===ocrSequence)$('#ocr-status').textContent=t('ocrBusy')+' '+Math.round(progress*100)+'%';}});
@@ -323,9 +328,9 @@ async function recognize(file,isSample=false,options={}){
   $('#ocr-status').dataset.state=found.candidates.length?'ocrDone':'ocrNone';$('#ocr-status').textContent=t($('#ocr-status').dataset.state);
  }catch{
   if(request===ocrSequence){$('#ocr-status').className='error-note';$('#ocr-status').dataset.state='ocrFail';$('#ocr-status').textContent=t('ocrFail');}
- }finally{if(request===ocrSequence){$('#photo').disabled=false;$('#ocr-sample').disabled=false;$('#photo').value='';}}
+ }finally{if(request===ocrSequence){setPhotoInputsDisabled(false);$('#photo').value='';}}
 }
-function reset(){window.PhotoTools?.cancel();ocrSequence++;$('#photo').disabled=false;$('#ocr-sample').disabled=false;window.Consultation?.reset();window.dispatchEvent(new Event('medicine-change'));generation++;selected=[];currentResult=null;stopAudio();if(previewURL)URL.revokeObjectURL(previewURL);previewURL=null;$('#ocr-details').hidden=true;$('#ocr-preview').innerHTML='';$('#ocr-text').textContent='';$('#ocr-candidates').innerHTML='';$('#ocr-status').textContent='';$('#ocr-status').dataset.state='';$('#search').value='';$('#search-results').innerHTML='';renderSelected();renderResult();}
+function reset(){window.PhotoTools?.cancel();ocrSequence++;setPhotoInputsDisabled(false);window.Consultation?.reset();window.dispatchEvent(new Event('medicine-change'));generation++;selected=[];currentResult=null;stopAudio();if(previewURL)URL.revokeObjectURL(previewURL);previewURL=null;$('#ocr-details').hidden=true;$('#ocr-preview').innerHTML='';$('#ocr-text').textContent='';$('#ocr-candidates').innerHTML='';$('#ocr-status').textContent='';$('#ocr-status').dataset.state='';$('#search').value='';$('#search-results').innerHTML='';renderSelected();renderResult();}
 document.addEventListener('click',event=>{const el=event.target.closest('button');if(!el)return;
  if(el.dataset.add)add(el.dataset.add,el.closest('#ocr-candidates')?.dataset.sample==='true');
  if(el.dataset.remove){
@@ -350,7 +355,17 @@ $('#clear').onclick=()=>{
  toast(t('restart'),previous.length?{label:MedLocale.choose('復原','Undo'),run:()=>{if(generation!==revision)return;selected=previous;window.Consultation?.restore(notes);invalidate();renderSelected();toast(MedLocale.choose('已復原','Restored'));}}:null);
 };$('#about').onclick=about;$('#close-dialog').onclick=()=>$('#dialog').close();$('#dialog').addEventListener('click',e=>{if(e.target===$('#dialog')){const r=$('#dialog').getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)$('#dialog').close();}});
 $('#photo').onchange=e=>{if(e.target.files[0])preparePhoto(e.target.files[0]);};$('#upload-label').addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();$('#photo').click();}});
-$('#ocr-sample').onclick=async()=>{if(!api?.ocr)return toast(t('ocrOffline'));try{const b=await(await fetch('sample-medicine.jpg')).blob();recognize(new File([b],'sample-medicine.jpg',{type:'image/jpeg'}),true);}catch{toast(t('ocrFail'));}};
+async function readSamplePhoto(filename){
+ if(!api?.ocr)return toast(t('ocrOffline'));
+ const request=++ocrSequence;window.PhotoTools?.cancel();clearPhotoResults();
+ setPhotoInputsDisabled(true);
+ try{const response=await fetch(filename);if(!response.ok)throw Error('Sample unavailable');const b=await response.blob();if(request!==ocrSequence)return;await recognize(new File([b],filename,{type:'image/jpeg'}),true);}
+ catch{if(request===ocrSequence)toast(t('ocrFail'));}
+ finally{if(request===ocrSequence)setPhotoInputsDisabled(false);}
+}
+$('#ocr-sample').onclick=()=>readSamplePhoto('sample-medicine.jpg');
+$('#ocr-sample-2').onclick=()=>readSamplePhoto('sample-medicine-2.jpg');
+$('#ocr-sample-3').onclick=()=>readSamplePhoto('sample-medicine-3.jpg');
 setLanguage();
 if(location.protocol==='http:'&&['127.0.0.1','localhost'].includes(location.hostname))fetch('/api/status').then(r=>r.json()).then(s=>{api=s;setLanguage();window.dispatchEvent(new Event('local-api-ready'));}).catch(()=>{});
 window.addEventListener('beforeunload',stopAudio);

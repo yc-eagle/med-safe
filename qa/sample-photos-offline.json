@@ -1,0 +1,26 @@
+{
+  "tested_at": "2026-10-04T04:53:56.471Z",
+  "url": "http://127.0.0.1:8898",
+  "offline": true,
+  "images": [
+    "sample-medicine.jpg",
+    "sample-medicine-2.jpg",
+    "sample-medicine-3.jpg"
+  ],
+  "second_photo_candidates": [
+    "HK-49896",
+    "HK-55448"
+  ],
+  "third_photo_candidate": "HK-41434",
+  "automatically_selected": false,
+  "requires_manual_strength_confirmation": true,
+  "selected_pair": [
+    "HK-28848",
+    "HK-49896"
+  ],
+  "pair_status": "incomplete_check",
+  "clinical_safety": "not_assessed",
+  "coverage_complete": false,
+  "errors": [],
+  "scope": "Actual browser OCR of three supplied photographs. Second photo registration is cropped; strength is manually confirmed. These photos demonstrate intake and coverage limits, not a proven interaction."
+}

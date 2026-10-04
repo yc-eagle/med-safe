@@ -1,0 +1,30 @@
+{
+  "tested_at": "2026-10-04T04:54:16.896Z",
+  "scope": "Actual browser OCR of supplied full-frame images, without crop; no general accuracy claim.",
+  "photos": [
+    {
+      "description": "Three bottles and pharmacy labels in one photograph",
+      "recognised_targets": {
+        "ciprofloxacin": false,
+        "paracetamol": false,
+        "calcium_lactate": false,
+        "panadol_chinese": false
+      },
+      "candidate_ids": [],
+      "ready_as_automatic_identification_demo": false,
+      "reason": "Cannot reliably identify every product in the full scene; crop one label and confirm its identity."
+    },
+    {
+      "description": "Two stylised Chinese Panadol packs",
+      "recognised_targets": {
+        "ciprofloxacin": false,
+        "paracetamol": false,
+        "calcium_lactate": false,
+        "panadol_chinese": false
+      },
+      "candidate_ids": [],
+      "ready_as_automatic_identification_demo": false,
+      "reason": "The visible stylised brand was not recognised; a brand alone would not establish the formulation."
+    }
+  ]
+}
