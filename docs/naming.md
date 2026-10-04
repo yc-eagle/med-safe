@@ -1,6 +1,6 @@
 # Product name — MedSafe
 
-On 4 October 2026, the product owner confirmed **MedSafe** as the website name. Page titles, the app header and the installable app name now use MedSafe. The earlier decision below is retained as history; it is superseded for the website.
+On 4 October 2026, the product owner confirmed **MedSafe** as the website name. Page titles, the app header and the installable app name now use MedSafe. The user then chose **https://med-safe.pages.dev/** as the final public address, without a random suffix. Old public entries remain available for previously shared links. The earlier decision below is retained as history; it is superseded for the website name and host.
 
 ## Earlier naming record — Ngon Sam · 藥安心
 

@@ -4,8 +4,8 @@ Updated 4 October 2026 (Hong Kong time). This index collects the team's project 
 
 ## Open the product
 
-- **Interactive product for exhibition and testing:** https://med-care.pages.dev/
-- **Phone QR code:** [MedSafe-QR.png](../assets/MedSafe-QR.png) — the filename keeps the internal codename so the printed code keeps working
+- **Interactive product for exhibition and testing:** https://med-safe.pages.dev/
+- **Phone QR code:** [MedSafe-QR.png](../assets/MedSafe-QR.png) — updated to the med-safe.pages.dev entry; previously printed codes still reach the maintained old entry
 
 The current product update uses a light-blue interface and a shorter search → confirm → check → ask workflow. It adds guided next actions, undo, stable keyboard focus, stale-photo protection and cancellable reading while system voices load. See [product changes and verification](product-usability.md). The deployed product excludes videos, gallery and volunteer material. See [all functions and verification limits](product-capabilities.md).
 
@@ -68,4 +68,4 @@ The published data matches this build. Cloudflare serves a deployed snapshot: af
 
 ## Fixed website address and presentation update
 
-The patient-facing pages now use shorter English, Mandarin and Cantonese instructions. Review labels follow the team-recorded rule status; source links, coverage limits and speech-service consent remain visible. See [Cloudflare Pages setup](cloudflare-pages.md) and [presentation checks](../qa/public-copy-verification.json). The fixed address **https://med-care.pages.dev/** is published. Application files were compared against the deployed origin, and the new origin passed phone-width browser and offline checks. Physical-phone speech and clinical validation remain separate tasks.
+The patient-facing pages now use shorter English, Mandarin and Cantonese instructions. Review labels follow the team-recorded rule status; source links, coverage limits and speech-service consent remain visible. See [Cloudflare Pages setup](cloudflare-pages.md) and [presentation checks](../qa/public-copy-verification.json). The fixed address **https://med-safe.pages.dev/** is published. Application files were compared against the deployed origin, and the new origin passed phone-width browser and offline checks. Physical-phone speech and clinical validation remain separate tasks.

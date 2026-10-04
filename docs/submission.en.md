@@ -7,7 +7,7 @@ Deadline: **2026-10-04 13:00 HKT**. The official handbook has been verified loca
 | Material | Target / location | Status of this round of preparation |
 |---|---|---|
 | Public repository | https://github.com/yc-eagle/med-safe | Merged and pushed to main; the teammates' existing commits are preserved |
-| Online demo | https://med-care.pages.dev | Public; the mobile offline upgrade is published, a real phone is still to be tried; the cache and offline workflow passed 16 engineering checks. **The deployment lags the repository — the brand and part of the rule status are not yet synced, so it must be redeployed before submission** |
+| Online demo | https://med-safe.pages.dev | Current MedSafe release with the real medicine photograph; offline lookup and real-photo OCR passed 7 engineering checks. Voice still requires physical-phone validation. |
 | 3-minute recording | Not used | **Not a submission artifact**: its narration and subtitles say the clinical review is pending, which is no longer true. The historical recording stays in the rehearsal release and is not linked as current material |
 | Pitch Deck | [`pitch-ppt/index.html`](../pitch-ppt/index.html) | **A 14-page web deck; open it in a browser and press `P` for presenter mode.** The earlier 8-slide PPTX and PDF have been deleted and are no longer deliverables |
 | Raccoon usage highlights | `raccoon-usage-log.md` | The share link was received, the body was not successfully obtained, the real record is pending Lin MA |
@@ -17,4 +17,4 @@ Final acceptance: visit every link in an incognito window; open the product on a
 
 The implementation/completeness criterion in the Raccoon Work award includes validation of AI-generated outputs, and it must not be directly restated as "AI validation alone is worth 30 percent". Real use, raw output and independent verification should be traceable; deliberately manufacturing errors is not required.
 
-Public media entry points: [the online product demo](https://med-care.pages.dev) and the [14-page web deck](../pitch-ppt/index.html). A successful deployment does not mean the competition form has been submitted.
+Public media entry points: [the online product demo](https://med-safe.pages.dev) and the [14-page web deck](../pitch-ppt/index.html). A successful deployment does not mean the competition form has been submitted.

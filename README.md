@@ -1,10 +1,10 @@
-# Ngon Sam · 藥安心 — Hong Kong Medication Verification Assistant
+# MedSafe — Hong Kong Medication Verification Assistant
 
 [English](README.md) | [中文](README.zh-CN.md)
 
 > **Confirm what is in your hand, read the sourced warnings, and take the unresolved questions to a pharmacist.**
 
-**The name.** *Ngon Sam* is Cantonese for 藥安心 — *peace of mind about medicine*. It is not a claim of safety: the product never concludes that a combination is safe, and the interface says so on every result. *MedSafe* remains the internal project codename, used in the repository path and in engineering records.
+**MedSafe** helps users review sourced medicine information. The name is not a claim of safety: the product never concludes that a combination is safe, and the interface says so on every result.
 
 > A HacKU 2026 prototype for older adults and caregivers in Hong Kong: photograph a medicine box, confirm the product manually, look up ingredients, check selected medicines pair by pair, ask questions by voice, and leave with a question card for the pharmacist.
 
@@ -50,7 +50,7 @@ Every result the program produces carries two standing flags: `clinicalSafety: n
 
 ## What is deployed
 
-- **Public mobile entry point:** [MedSafe](https://med-care.pages.dev)
+- **Public mobile entry point:** [MedSafe](https://med-safe.pages.dev)
 - **All data and rules:** [visual inventory](app/data-report.html) | [machine-readable inventory](data/data_inventory.json) | [data notes](docs/data-inventory.md)
 - **How decisions are made:** [decision logic and evidence boundaries](docs/decision-logic.md) | [the 14 rules](docs/rules/README.md)
 - **Pitch deck:** [14-page web deck](pitch-ppt/index.html) — open it in a browser and press `P` for presenter mode. **This is the submission deck.**
