@@ -1,0 +1,24 @@
+{
+  "tested_at": "2026-10-04T04:42:22.795Z",
+  "url": "https://med-safe.pages.dev",
+  "sample_sha256": "f3c78f4b0ef723af5bd213aa6cbf7711050c179dd5fff52b80b5e12c81bd4d8b",
+  "recognised_ingredient": "Metronidazole",
+  "recognised_registration": "HK-28848",
+  "image_dimensions": [
+    1279,
+    1706
+  ],
+  "automatic_selection": false,
+  "confirmation_required": true,
+  "practice_example": true,
+  "errors": [],
+  "outbound_writes": [],
+  "scope": "One supplied real photo in desktop Chrome at phone width; not a general OCR accuracy or clinical study.",
+  "app_commit": "9542d05",
+  "deployment": "https://76b6f569.med-safe.pages.dev/",
+  "primary_url": "https://med-safe.pages.dev/",
+  "offline_release": "03cbcf3a956de492",
+  "offline_checks_passed": 7,
+  "repo_pull_request": "https://github.com/yc-eagle/med-safe/pull/4",
+  "main_merge_performed": false
+}
