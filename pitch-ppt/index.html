@@ -166,10 +166,10 @@
      object-position:top center 保证严禁裁剪顶部和左右，只裁剪底部
   */
   .frame-img{overflow:hidden;position:relative;background:rgba(0,0,0,.04);box-sizing:border-box;width:100%;border-radius:4px}
-  .frame-img.photo{height:min(30vh,34vw);display:flex;align-items:center;justify-content:center}
-  .frame-img.photo > img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;flex:0 0 auto}
+  .frame-img.photo{display:flex;align-items:center;justify-content:center}
+  .frame-img.photo > img{width:100%;height:auto;max-width:100%;max-height:52vh;object-fit:contain;flex:0 0 auto}
   .slide.dark .frame-img{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.12)}
-  .frame-img > img{width:100%;height:auto;object-fit:contain;object-position:center center;display:block;max-height:min(52vh,44vw)}
+  .frame-img > img{width:100%;height:auto;object-fit:contain;object-position:center center;display:block;max-height:52vh}
   .frame-img.fit-contain > img{object-fit:contain;object-position:center center}
   .frame-img.no-crop{aspect-ratio:auto;max-height:none;background:transparent}
   .frame-img.r-16x9{aspect-ratio:16/9;max-height:64vh}
@@ -571,7 +571,7 @@
     <div>01 / 13</div>
   </div>
   <div class="frame" style="display:grid;gap:6vh;align-content:center;min-height:80vh">
-    <div class="kicker" data-anim>Why this moment</div>
+    <div class="kicker" data-anim>Where the advice runs out</div>
     <h1 class="h-hero" style="font-size:6.4vw;line-height:1.1" data-anim>
       The pharmacist is not there at 2&nbsp;a.m.
     </h1>
@@ -591,14 +591,14 @@
     <div>02 / 13</div>
   </div>
   <div class="frame" style="padding-top:3vh">
-    <div class="kicker" data-anim>Two people, two languages</div>
+    <div class="kicker" data-anim>Who this is for</div>
     <h2 class="h-xl" data-anim>Two people who cannot read each other</h2>
 
     <div class="grid-3-3" style="margin-top:4.5vh;gap:4vw">
       <div data-anim>
         <div class="kicker" style="margin-bottom:1.8vh">Older adults &middot; Cantonese</div>
         <p style="font-family:var(--sans-zh);font-size:max(17px,1.35vw);line-height:1.6;opacity:.9">
-          Several medicines. The explanation is not retained.
+          Several medicines, and an explanation they forget by dinner.
         </p>
       </div>
       <div data-anim>
@@ -610,8 +610,8 @@
     </div>
 
     <div class="callout" style="margin-top:5vh" data-anim>
-      There is nothing between them.
-      <div class="callout-src">&mdash; the gap we are designing for</div>
+      So it reads the answer out loud &mdash; in Cantonese or in English.
+      <div class="callout-src">&mdash; the feature both of them can use</div>
     </div>
   </div>
   <div class="foot">
@@ -678,7 +678,7 @@
   <div class="frame grid-2-7-5" style="padding-top:6vh">
     <div style="display:flex;flex-direction:column;justify-content:space-between;gap:3vh">
       <div>
-        <div class="kicker" data-anim>One real pair</div>
+        <div class="kicker" data-anim>Two boxes from one shelf</div>
         <h2 class="h-xl" style="font-size:5.4vw;line-height:1.1" data-anim>Both boxes are paracetamol.</h2>
         <p class="lead" style="margin-top:3vh" data-anim>
           One treats a headache. The other is a cold and flu formulation. Both contain the same ingredient, and a caregiver would not catch it.
@@ -687,7 +687,7 @@
       <div class="callout" data-anim>
         4,000 mg a day is the ceiling.<br>
         At 500 mg each, that is eight tablets.
-        <div class="callout-src">&mdash; the overdose line</div>
+        <div class="callout-src">&mdash; the daily limit</div>
       </div>
     </div>
     <figure class="frame-img photo fit-contain" data-anim>
@@ -707,8 +707,8 @@
   </div>
   <div class="frame grid-2-7-5" style="padding-top:2vh">
     <div>
-      <div class="kicker" style="margin-bottom:1.6vh" data-anim>What never reaches them</div>
-      <h2 class="h-xl" style="font-size:5vw;margin-top:1vh;margin-bottom:2.4vh" data-anim>The information exists. It does not arrive.</h2>
+      <div class="kicker" style="margin-bottom:1.6vh" data-anim>What they are handed</div>
+      <h2 class="h-xl" style="font-size:5vw;margin-top:1vh;margin-bottom:2.4vh" data-anim>A bag lists the medicines. Not how to take them.</h2>
 
       <p class="lead" data-anim>
         A bag lists the medicines. It does not say how they are taken at home.
@@ -731,8 +731,8 @@
   </div>
   <div class="frame grid-2-7-5" style="padding-top:2vh">
     <div>
-      <div class="kicker" style="margin-bottom:1.6vh" data-anim>Reported harm</div>
-      <h2 class="h-xl" style="margin-top:1vh;margin-bottom:3vh" data-anim>One pattern, over and over</h2>
+      <div class="kicker" style="margin-bottom:1.6vh" data-anim>When it goes further</div>
+      <h2 class="h-xl" style="margin-top:1vh;margin-bottom:3vh" data-anim>The wrong medicine, or the wrong dose</h2>
 
       <p class="lead" style="margin-bottom:3vh" data-anim>
         The wrong medicine, or the wrong dose, reaching the patient. This is the failure we work on.
@@ -740,7 +740,7 @@
 
       <div class="callout" data-anim>
         Checking and escalation are the countermeasures.
-        <div class="callout-src">&mdash; why we built a checker</div>
+        <div class="callout-src">&mdash; why we built a checker, not a chatbot</div>
       </div>
     </div>
     <figure class="frame-img photo fit-contain" data-anim>
@@ -784,8 +784,8 @@
     <div>08 / 13</div>
   </div>
   <div class="frame" style="padding-top:5vh">
-    <div class="kicker" data-anim>Three things, kept separate</div>
-    <h2 class="h-xl" data-anim>A warning is not a prohibition</h2>
+    <div class="kicker" data-anim>Only three outcomes</div>
+    <h2 class="h-xl" data-anim>A warning is not a ban</h2>
 
     <div class="grid-3-3" style="margin-top:4.5vh;gap:4vw">
       <div data-anim>
@@ -803,7 +803,7 @@
       <div data-anim>
         <div class="kicker">03 &middot; Never &ldquo;safe&rdquo;</div>
         <p style="font-family:var(--sans-zh);font-size:max(17px,1.35vw);line-height:1.6;opacity:.9;margin-top:2vh">
-          No code path returns &ldquo;safe&rdquo;.
+          It never calls a combination safe. Nothing in it can.
         </p>
       </div>
     </div>
@@ -824,7 +824,7 @@
     <div>09 / 13</div>
   </div>
   <div class="frame" style="display:grid;gap:7vh;align-content:center;min-height:80vh">
-    <div class="kicker" data-anim>Why we refuse to guess</div>
+    <div class="kicker" data-anim>The mistake we will not make</div>
     <h1 class="h-hero" style="font-size:6vw;line-height:1.12">
       <span data-anim style="display:block">False reassurance</span>
       <span data-anim style="display:block">is worse than</span>
@@ -846,33 +846,17 @@
     <div>10 / 13</div>
   </div>
   <div class="frame" style="padding-top:1vh">
-    <div class="kicker" style="margin-bottom:1.4vh" data-anim>Scope, in six numbers</div>
-    <h2 class="h-xl" style="font-size:5.2vw" data-anim>What the numbers actually are</h2>
+    <div class="kicker" style="margin-bottom:1.4vh" data-anim>Where the data comes from</div>
+    <h2 class="h-xl" style="font-size:5.2vw" data-anim>Two numbers that matter</h2>
 
-    <div class="grid-6" style="margin-top:1vh;gap:2vh 6vw;padding:1vh 0">
+    <div class="grid-6" style="margin-top:3vh;gap:3vh 6vw;padding:2vh 0;grid-template-columns:repeat(2,1fr);grid-template-rows:auto">
       <div class="stat-card" data-anim>
-        <div class="stat-label">Catalogue</div>
+        <div class="stat-label">Hong Kong registered products</div>
         <div class="stat-nb">14,269</div>
       </div>
       <div class="stat-card" data-anim>
-        <div class="stat-label">Ingredients</div>
+        <div class="stat-label">Ingredient records mapped</div>
         <div class="stat-nb">23,835</div>
-      </div>
-      <div class="stat-card" data-anim>
-        <div class="stat-label">Rules</div>
-        <div class="stat-nb">14</div>
-      </div>
-      <div class="stat-card" data-anim>
-        <div class="stat-label">Reviewed</div>
-        <div class="stat-nb">3 Oct</div>
-      </div>
-      <div class="stat-card" data-anim>
-        <div class="stat-label">Up to</div>
-        <div class="stat-nb">66</div>
-      </div>
-      <div class="stat-card" data-anim>
-        <div class="stat-label">Warfarin + aspirin</div>
-        <div class="stat-nb">1</div>
       </div>
     </div>
   </div>
@@ -888,8 +872,8 @@
     <div>11 / 13</div>
   </div>
   <div class="frame" style="padding-top:5vh">
-    <div class="kicker" data-anim>Lookup versus verification</div>
-    <h2 class="h-xl" style="margin-bottom:4vh" data-anim>Everyone looks it up. Nobody checks it.</h2>
+    <div class="kicker" data-anim>What is already out there</div>
+    <h2 class="h-xl" style="margin-bottom:4vh" data-anim>Plenty of apps look it up. None of them check it.</h2>
 
     <div class="grid-2-6-6" style="gap:5vw 4vh">
       <div data-anim="left" style="padding:3vh 2vw;border-left:3px solid currentColor;opacity:.55">
@@ -919,7 +903,7 @@
   </div>
   <div class="frame grid-2-7-5" style="padding-top:2vh">
     <div>
-      <div class="kicker" style="margin-bottom:1.6vh" data-anim>The honest roadmap</div>
+      <div class="kicker" style="margin-bottom:1.6vh" data-anim>What we do next</div>
       <h2 class="h-xl" style="font-size:5vw;margin-top:1vh;margin-bottom:2.4vh" data-anim>Four things before a pharmacy counter</h2>
 
       <p class="lead" data-anim>
@@ -942,7 +926,7 @@
     <div>13 / 13</div>
   </div>
   <div class="frame" style="display:grid;gap:6vh;align-content:center;min-height:80vh">
-    <div class="kicker" data-anim>The point</div>
+    <div class="kicker" data-anim>One last thing</div>
     <h1 class="h-hero" style="font-size:7vw;line-height:1.08" data-anim>
       It says &ldquo;I don't know.&rdquo;
     </h1>
@@ -966,62 +950,94 @@
 <!-- 演讲备注：每页一条，id 必须与 section[data-slide-id] 一致。见 references/presenter-mode.md -->
 <script>
 const SPEAKER_NOTES = [
-  { id:"cover", title:"MedSafe", section:"Opening", minutes:0.4,
-    purpose:"State the product and the level of honesty for the whole talk.",
-    talk:["Photograph a box, confirm the product, read sourced warnings.","Say at once that when we cannot verify a pair it says so.","Do not read the title aloud."],
-    transition:"Move to the gap this fills.", cue:"Wait for the room before starting." },
-  { id:"hook", title:"The pharmacist is not there at 2 a.m.", section:"The Gap", minutes:0.5,
-    purpose:"Establish the gap before any product detail.",
-    talk:["Hong Kong's pharmacist services are real and good. Say that first.","They cannot reach the kitchen table.","When the caregiver cannot read the label, the leaflet may as well not exist."],
-    transition:"Introduce the two people.", cue:"Slow down on the last sentence." },
-  { id:"users", title:"Two people who cannot read each other", section:"The Gap", minutes:0.5,
-    purpose:"Make the two-user structure concrete.",
-    talk:["Older adult speaks Cantonese; helper reads English.","She handles the pills but not the reasoning.","Verification, not diagnosis, is what she needs."],
-    transition:"Show how a dose actually goes wrong." },
-  { id:"failure", title:"Five steps to a duplicated dose", section:"The Gap", minutes:0.5,
-    purpose:"Turn the abstract gap into a chain a clinician recognises.",
-    talk:["Walk the five steps left to right.","Do not dramatise; the chain is enough.","Land the hospital line and pause."],
-    transition:"Show one real pair.", cue:"Press right to light each step." },
-  { id:"duplicate", title:"Both boxes are paracetamol", section:"Evidence", minutes:0.5,
-    purpose:"Give one undeniable case with real numbers.",
-    talk:["One for headaches, one a cold and flu formulation.","4,000 mg a day is the ceiling; at 500 mg each that is eight tablets.","A caregiver would not catch this."],
-    transition:"Widen to the systemic evidence." },
-  { id:"evidence", title:"The information exists. It does not arrive.", section:"Evidence", minutes:0.6,
-    purpose:"Show the failure is systemic.",
-    talk:["Three medicines dispensed together in one bag - this is what the person at home is handed.","A bag lists medicines, not how the patient takes them.","Say clearly that the reported case we cite is a report, not our own data."],
-    transition:"Name the cost of getting it wrong." },
-  { id:"incidents", title:"One pattern, over and over", section:"Evidence", minutes:0.5,
-    purpose:"Establish the stakes without over-claiming a number.",
-    talk:["The wrong medicine, or the wrong dose, reaching the patient.","We show one reported case; the pattern is not limited to it.","Keep the tone factual; do not dwell."],
-    transition:"Now show what we built." },
-  { id:"confirm", title:"Three similar bottles. Three different medicines.", section:"Product", minutes:0.5,
-    purpose:"Introduce the catalogue and the identity rule.",
-    talk:["These three bottles came from one consultation: alike, and not the same medicine.","Search the HK registration number, or photograph the box; then the user confirms.","14,269 products and 23,835 ingredient records sit behind that confirmation."],
-    transition:"Move from identity to the check itself." },
-  { id:"warning", title:"A warning is not a prohibition", section:"Product", minutes:0.6,
-    purpose:"Present the three-state logic as the core design decision.",
-    talk:["Three things happen and only three.","Found, not covered, and never safe.","Warfarin with aspirin is a raised bleeding risk, not a ban; aspirin with clopidogrel may be a deliberate regimen."],
-    transition:"Defend the refusal to guess.", cue:"This is the high point of the pitch." },
-  { id:"notcovered", title:"False reassurance is worse than no answer.", section:"Product", minutes:0.5,
-    purpose:"Defend the core decision on safety grounds.",
-    talk:["The most dangerous failure is not a wrong answer; it is false reassurance.","Turning we-do-not-know into it-is-fine is the one unforgivable error.","A first-line response should escalate, not guess."],
-    transition:"Compare against what already exists." },
-  { id:"scope", title:"What the numbers actually are", section:"Honesty", minutes:0.6,
-    purpose:"Show the real scale and rigour in six numbers, and name the boundary in one line.",
-    talk:["14,269 registered products and 23,835 ingredient records from the Hong Kong Drug Office.","All 14 rules carry a source and were clinician-reviewed on 3 October.","Up to 66 pairs checked in one go - and we say plainly what is not covered."],
-    transition:"End on the roadmap.", cue:"Volunteer the boundary; do not wait to be caught." },
-  { id:"competition", title:"Everyone looks it up. Nobody checks it.", section:"Honesty", minutes:0.6,
-    purpose:"Show we know the landscape and where we stand.",
-    talk:["Assistants need a connection and can answer confidently and wrongly.","Leaflets are accurate but unreadable to the person holding the box.","Records assume you can log in and reason; pharmacists need a call and hours.","Close on moving the pharmacist's first sentence to the moment it is needed."],
-    transition:"End on the roadmap.", cue:"Do not generalise about competitors; we have not verified them item by item." },
-  { id:"next", title:"Four things before a pharmacy counter", section:"Next", minutes:0.4,
-    purpose:"Show a credible path rather than a wish list.",
-    talk:["This prescription is English only - an older reader may not follow it. That is the gap.","Review every rule with a named clinician.","Test the offline pack on real phones, then observe real users and widen coverage."],
-    transition:"Close on the design principle." },
-  { id:"close", title:"It says I do not know.", section:"Next", minutes:0.4,
-    purpose:"Land one memorable line and a concrete next action.",
-    talk:["Repeat the three steps as the whole product.","Give the repository as the place to check every claim we made.","Then stop."],
-    transition:"Thank the judges and take questions.", cue:"Pause two seconds before thanking." }
+  { id:"cover", title:"MedSafe", section:"开场", minutes:0.4,
+    purpose:"一句话说清产品，并定下全场「不吹」的调子。",
+    talk:["一句话：拍照、确认药品、看到有出处的警告。","马上说明：查不到的时候它会直说，不猜。","不要念标题。"],
+    transition:"转到我们要填的那个缺口。",
+    cue:"等观众安静下来再开口。" },
+
+  { id:"hook", title:"凌晨两点，药剂师不在", section:"缺口", minutes:0.5,
+    purpose:"先立缺口，再讲产品。",
+    talk:["香港的社区药剂师服务真实存在，而且做得不错，先说这句。","但它到不了厨房餐桌。","当照护者读不懂中文标签时，那张纸等于不存在。"],
+    transition:"引出两个用户。",
+    cue:"最后一句放慢。",
+    pronunciation:"pharmacist /ˈfɑːməsɪst/ 药剂师 · caregiver /ˈkeəɡɪvə/ 照护者" },
+
+  { id:"users", title:"两个互相读不懂的人", section:"缺口", minutes:0.5,
+    purpose:"把两个用户讲具体。",
+    talk:["长者讲粤语，佣工读英文。","佣工负责喂药，但不负责判断。","所以产品会把答案读出来：粤语或英语。"],
+    transition:"看一次剂量是怎么出错的。",
+    pronunciation:"domestic helper /dəˈmestɪk ˈhelpə/ 家庭佣工 · Cantonese /ˌkæntəˈniːz/ 粤语" },
+
+  { id:"failure", title:"五步走到重复用药", section:"缺口", minutes:0.5,
+    purpose:"把抽象的缺口变成医生认得的链条。",
+    talk:["从左到右走完五步。","不要渲染，这条链本身就够。","落在「会进医院」这句上，停一下。"],
+    transition:"看一个真实的药品组合。",
+    cue:"按右方向键逐步点亮每一步。" },
+
+  { id:"duplicate", title:"两盒都是扑热息痛", section:"证据", minutes:0.5,
+    purpose:"给一个无法反驳的真实例子。",
+    talk:["一盒治头痛，一盒是伤风感冒配方。","每天上限 4,000 毫克；每片 500 毫克，就是八片。","照护者根本不会发现。"],
+    transition:"放大到系统性的证据。",
+    pronunciation:"paracetamol /ˌpærəˈsiːtəmɒl/ 扑热息痛 · ingredient /ɪnˈɡriːdiənt/ 成分" },
+
+  { id:"evidence", title:"信息存在，但到不了人手上", section:"证据", minutes:0.6,
+    purpose:"说明这个失败是系统性的。",
+    talk:["三种药装在同一个药袋里发出来，这就是家属拿到手的东西。","药袋写了是什么药，没写实际怎么吃。","我们引用的报道要说明是报道，不是我们自己的数据。"],
+    transition:"说清搞错的代价。",
+    pronunciation:"dispense /dɪˈspens/ 配药 · prescription /prɪˈskrɪpʃn/ 处方" },
+
+  { id:"incidents", title:"同一种错，反复出现", section:"证据", minutes:0.5,
+    purpose:"建立分量，但不消费事故。",
+    talk:["错误的药、或错误的剂量，到达病人身上。","我们只放了一起报道；这类事情远不止一起。","语气保持客观，不要停留。"],
+    transition:"现在看我们做了什么。",
+    pronunciation:"administer /ədˈmɪnɪstə/ 给药 · incident /ˈɪnsɪdənt/ 事件" },
+
+  { id:"confirm", title:"三个相似的瓶子，三种不同的药", section:"产品", minutes:0.5,
+    purpose:"引入目录和「身份确认」这条规则。",
+    talk:["这三个瓶子来自同一次看诊：长得很像，并不是同一种药。","拍照或输入香港注册编号；然后由人确认。","确认背后是 14,269 个产品和 23,835 条成分记录。"],
+    transition:"从身份转到核对本身。",
+    pronunciation:"registration number /ˌredʒɪˈstreɪʃn/ 注册编号 · catalogue /ˈkætəlɒɡ/ 目录" },
+
+  { id:"warning", title:"警告不等于禁用", section:"产品", minutes:0.6,
+    purpose:"把三态逻辑讲成本产品的核心设计。",
+    talk:["只有三种情况。","查到了：按出处支持的强度显示。","查不到：直说没覆盖，转给药剂师。","永远不会说「安全」——产品里没有任何一条路径能这么说。"],
+    transition:"解释我们为什么拒绝猜。",
+    cue:"这是全场的高点。",
+    pronunciation:"prohibition /ˌprəʊɪˈbɪʃn/ 禁止 · anticoagulant /ˌæntikəʊˈæɡjələnt/ 抗凝血药 · regimen /ˈredʒɪmən/ 用药方案" },
+
+  { id:"notcovered", title:"假的安心，比没有答案更糟", section:"产品", minutes:0.5,
+    purpose:"从安全角度为这个决定辩护。",
+    talk:["最危险的失败不是答错，是给出假的安心。","把「我不知道」说成「没关系」，是唯一不可原谅的错误。","一线响应应该上报，不是猜。"],
+    transition:"在被问之前，自己先说清边界。",
+    pronunciation:"reassurance /ˌriːəˈʃʊərəns/ 安心感 · escalate /ˈeskəleɪt/ 上报升级" },
+
+  { id:"scope", title:"两个真正重要的数字", section:"诚实", minutes:0.5,
+    purpose:"用两个数字说明数据量级，不要堆数字。",
+    talk:["14,269 个香港注册产品、23,835 条成分记录，来自卫生署药物办公室。","重点不是数字大，是我们知道自己没覆盖什么。","查不到就说查不到，不说安全。"],
+    transition:"对比现有的方案。",
+    cue:"主动交代边界，不要等被问。",
+    pronunciation:"catalogue /ˈkætəlɒɡ/ 目录 · coverage /ˈkʌvərɪdʒ/ 覆盖范围" },
+
+  { id:"competition", title:"大家都在查，没人做核对", section:"诚实", minutes:0.6,
+    purpose:"说明我们知道市面上有什么、我们站在哪。",
+    talk:["聊天机器人需要信号，而且会自信地答错。","说明书是准确的，但在餐桌上读不懂。","药剂师服务有真判断，但要打电话、要在上班时间。","我们的位置：把药剂师的第一句话，放到需要它的那一刻。"],
+    transition:"收在路线图上。",
+    cue:"不要一概而论地评价竞品，我们还没逐项核实。",
+    pronunciation:"lookup /ˈlʊkʌp/ 查询 · verification /ˌverɪfɪˈkeɪʃn/ 核对" },
+
+  { id:"next", title:"上药房柜台前的四件事", section:"下一步", minutes:0.4,
+    purpose:"给出可信的路径，不是许愿清单。",
+    talk:["这张处方全英文，年长者未必看得懂，这就是缺口。","每一条规则都要有具名临床复核人。","在真机上测试离线包，然后做真实用户观察。"],
+    transition:"收在核心设计原则上。",
+    pronunciation:"offline /ˌɒfˈlaɪn/ 离线 · observation /ˌɒbzəˈveɪʃn/ 观察" },
+
+  { id:"close", title:"它会说「我不知道」", section:"收尾", minutes:0.4,
+    purpose:"留一句能被记住的话，并给一个具体动作。",
+    talk:["把三步再讲一遍：读清楚、看到有出处的警告、把没解决的部分带给药剂师。","给出仓库地址，所有主张都能在那里查。","然后停住。"],
+    transition:"致谢，进入问答。",
+    cue:"停两秒再致谢。",
+    pronunciation:"pharmacist /ˈfɑːməsɪst/ 药剂师 · repository /rɪˈpɒzətri/ 代码仓库" }
 ];
 window.__SPEAKER_NOTES__ = SPEAKER_NOTES;
 </script>
