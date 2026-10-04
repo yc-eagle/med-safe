@@ -47,10 +47,10 @@
 
 ## 已部署的内容
 
-- **公开移动端入口：** [MedSafe](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
+- **公开移动端入口：** [MedSafe](https://med-care.pages.dev)
 - **全部数据与规则：** [可视化清单](app/data-report.html) | [机器可读清单](data/data_inventory.json) | [数据说明](docs/data-inventory.md)
 - **决策如何做出：** [决策逻辑与证据边界](docs/decision-logic.md) | [14 条规则](docs/rules/README.zh-CN.md)
-- **演示材料：** [3 分钟录像与下载](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html) | [仓库内的录像](assets/demo-3min.mp4) | [8 页可编辑 Deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)
+- **演示材料：** [3 分钟录像与下载](https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4) | [仓库内的录像](assets/demo-3min.mp4) | [8 页可编辑 Deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)
 - **给队友试用：** [五分钟反馈步骤](docs/tryout.md) | [详细走查](docs/try-it.md)
 - **提交跟踪：** [提交清单](docs/submission.md)
 

@@ -8,7 +8,7 @@ HacKU 2026 · DeepTech 赛道 · 香港大学 · 2026 年 10 月 2–4 日
 
 **认清手里的药，看懂有出处的警示，把未解决的问题带给药师。**
 
-[中文体验](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/?lang=cmn) · [English demo](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/?lang=en) · [廣東話試用](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/?lang=yue) · [三分钟演示与幻灯片](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html)
+[中文体验](https://med-care.pages.dev/?lang=cmn) · [English demo](https://med-care.pages.dev/?lang=en) · [廣東話試用](https://med-care.pages.dev/?lang=yue) · [三分钟演示与幻灯片](https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4)
 
 项目介绍和默认界面使用 **English**。粤语支持香港长者与照护者的本地交流，中文及粤语入口可通过语言链接选择；界面语言与设备能否提供相应语音是两回事。
 

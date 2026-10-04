@@ -47,10 +47,10 @@ Every result the program produces carries two standing flags: `clinicalSafety: n
 
 ## What is deployed
 
-- **Public mobile entry point:** [MedSafe](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
+- **Public mobile entry point:** [MedSafe](https://med-care.pages.dev)
 - **All data and rules:** [visual inventory](app/data-report.html) | [machine-readable inventory](data/data_inventory.json) | [data notes](docs/data-inventory.md)
 - **How decisions are made:** [decision logic and evidence boundaries](docs/decision-logic.md) | [the 14 rules](docs/rules/README.md)
-- **Demo material:** [3-minute recording and downloads](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html) | [recording in the repository](assets/demo-3min.mp4) | [8-slide editable deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)
+- **Demo material:** [3-minute recording and downloads](https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4) | [recording in the repository](assets/demo-3min.mp4) | [8-slide editable deck](deck/Med-Safe-HacKU2026.pptx) | [PDF](deck/Med-Safe-HacKU2026.pdf)
 - **For teammates trying it:** [five-minute feedback steps](docs/tryout.md) | [detailed walkthrough](docs/try-it.md)
 - **Submission tracking:** [submission checklist](docs/submission.md)
 
