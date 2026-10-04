@@ -7,7 +7,10 @@ const Z={
   "productDetails": "藥品資料與注意事項",
   "verifyAI": "核對 AI 回答",
   "prescriptionBoundary": "請依照個人處方。藥盒與藥袋的指示不同時，先問藥師，不要自行調整劑量。",
-  "brand": "MedSafe",
+  "brand": "Ngon Sam",
+  "brandSub": "藥安心",
+  "docTitle": "Ngon Sam · 藥安心",
+  "brandCredit": "MedSafe",
   "notice": "試用版本 · 只涵蓋部分相互作用。更改用藥前，請先問藥師。",
   "eyebrow": "香港藥品資料",
   "title": "核對你的藥品",
@@ -100,7 +103,10 @@ const EN={
   "productDetails": "Medicine details and precautions",
   "verifyAI": "Check an AI answer",
   "prescriptionBoundary": "Follow the instructions on your prescription. If the pack and pharmacy label differ, ask your pharmacist before changing a dose.",
-  "brand": "MedSafe",
+  "brand": "Ngon Sam",
+  "brandSub": "藥安心",
+  "docTitle": "Ngon Sam · 藥安心",
+  "brandCredit": "MedSafe",
   "notice": "Prototype · Covers selected interactions. Ask a pharmacist before changing medicines.",
   "eyebrow": "Medicine information for Hong Kong",
   "title": "Check your medicines",
@@ -191,6 +197,10 @@ const EN={
   "subtitleShort": "Medicine information and questions for your pharmacist."
 };
 const YUE={
+  "brand": "Ngon Sam",
+  "brandSub": "藥安心",
+  "brandCredit": "MedSafe",
+  "docTitle": "Ngon Sam · 藥安心",
   "labelKind": "你手上係藥盒定藥袋？",
   "title": "核對你手上嘅藥",
   "subtitle": "加入用緊同準備加用嘅藥，再對住標籤逐隻確認。",
@@ -225,7 +235,7 @@ function setLanguage(){
  document.querySelectorAll('[data-t]').forEach(el=>el.textContent=t(el.dataset.t));
  $('#language').value=MedLocale.current;$('#large-font').textContent=MedLocale.choose('大字','Larger text');
  $('#search').placeholder=t('inputHint');$('#mode').textContent=t(api?'modeLocal':'modeFile');$('#privacy').textContent=t(api?'privacy':'filePrivacy');
- document.title='MedSafe';
+ document.title=t('docTitle');
  renderSelected();renderResult();if($('#search').value)doSearch();
  if($('#dialog').open)$('#dialog').close();
  window.dispatchEvent(new Event('language-change'));

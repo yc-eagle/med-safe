@@ -1,8 +1,11 @@
-# MedSafe — Hong Kong Medication Verification Assistant
+# Ngon Sam · 藥安心 — Hong Kong Medication Verification Assistant
 
 [English](README.md) | [中文](README.zh-CN.md)
 
 > **Confirm what is in your hand, read the sourced warnings, and take the unresolved questions to a pharmacist.**
+
+**The name.** *Ngon Sam* is Cantonese for 藥安心 — *peace of mind about medicine*. It is not a claim of safety: the product never concludes that a combination is safe, and the interface says so on every result. *MedSafe* remains the internal project codename, used in the repository path and in engineering records.
+
 > A HacKU 2026 prototype for older adults and caregivers in Hong Kong: photograph a medicine box, confirm the product manually, look up ingredients, check selected medicines pair by pair, ask questions by voice, and leave with a question card for the pharmacist.
 
 **HacKU 2026** — DeepTech Track | The University of Hong Kong | 2-4 October 2026

@@ -1,7 +1,7 @@
 {
   "id": "./",
-  "name": "MedSafe",
-  "short_name": "MedSafe",
+  "name": "Ngon Sam · 藥安心",
+  "short_name": "Ngon Sam",
   "description": "Medicine information, sourced warnings and questions for a pharmacist in Hong Kong.",
   "lang": "en",
   "start_url": "./index.html",

@@ -81,7 +81,7 @@ const root=path.resolve(__dirname,'..'),base=process.env.TEST_URL||'http://127.0
  await test('Device support checks local language voices without promising successful recognition',async()=>{
   await page.click('#device-readiness');assert.match(await page.locator('#dialog-body').innerText(),/microphone permission and speech service required/);
   assert.equal(await page.locator('#local-voice-status .readiness-row').count(),3);assert.match(await page.locator('#local-voice-status').innerText(),/Local voice found/);
-  await page.click('#test-local-voice');await page.waitForFunction(()=>__spoken.at(-1).text==='MedSafe. Please check the medicine label.');
+  await page.click('#test-local-voice');await page.waitForFunction(()=>__spoken.at(-1).text==='請核對藥品標籤。');
   await page.click('#stop-test-voice');assert.equal(await page.locator('#voice-test-status').innerText(),'Stopped.');
   await page.evaluate(()=>{window.__deviceVoices=speechSynthesis.getVoices;speechSynthesis.getVoices=()=>[{lang:'zh-HK',localService:false}];speechSynthesis.dispatchEvent(new Event('voiceschanged'));});
   assert.equal(await page.locator('#local-voice-status strong').allTextContents().then(a=>a.every(x=>x==='No local voice listed yet')),true);

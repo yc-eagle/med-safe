@@ -27,7 +27,7 @@
  async function testLocalVoice(){
   const token=++voiceTest,target=$('#voice-test-status');if(!target)return;
   stopAudio();$('#test-local-voice').disabled=true;target.textContent=tr('正在準備朗讀…','Preparing reading…');
-  try{await BrowserRuntime.speak(tr('MedSafe。請核對藥品標籤。','MedSafe. Please check the medicine label.','MedSafe。請對清楚藥品標籤。'),locale());if(token===voiceTest)target.textContent=tr('播放已結束。如果聽不到，請檢查裝置音量或聲音設定。','Playback finished. If you heard nothing, check your volume or sound settings.');}
+  try{await BrowserRuntime.speak(tr('請核對藥品標籤。','Please check the medicine label.','請對清楚藥品標籤。'),locale());if(token===voiceTest)target.textContent=tr('播放已結束。如果聽不到，請檢查裝置音量或聲音設定。','Playback finished. If you heard nothing, check your volume or sound settings.');}
   catch{if(token===voiceTest)target.textContent=tr('未能播放這個語言。可以稍候再試、安裝本機聲音，或閱讀文字。','This language could not be played. Retry, install a local voice, or read on screen.');}
   finally{if(token===voiceTest){if($('#test-local-voice'))$('#test-local-voice').disabled=false;refreshVoiceSupport();}}
  }
