@@ -1883,5 +1883,33 @@ if(motion){
   playSlide(window.__currentSlideIndex || 0);
 }
 </script>
+
+<script>
+window.addEventListener('load',()=>setTimeout(()=>{
+ const out={bg:null,imgs:[]};
+ const s0=document.querySelectorAll('section.slide');
+ // background of the light slides
+ const c=document.createElement('canvas');c.width=c.height=1;
+ // report computed background of each light slide + each img box
+ s0.forEach((s,i)=>{
+   const id=s.dataset.slideId||i;
+   const cs=getComputedStyle(s);
+   s.querySelectorAll('img').forEach(im=>{
+     const r=im.getBoundingClientRect();
+     const par=im.parentElement.getBoundingClientRect();
+     out.imgs.push({page:id, natW:im.naturalWidth,natH:im.naturalHeight,
+                    boxW:Math.round(r.width),boxH:Math.round(r.height),
+                    fit:getComputedStyle(im).objectFit,
+                    parentW:Math.round(par.width),parentH:Math.round(par.height),
+                    full: r.width<=par.width+1 && r.height<=par.height+1});
+   });
+   if(i===1) out.bgLight=cs.backgroundColor;
+   if(i===0) out.bgDark=cs.backgroundColor;
+ });
+ const o=document.createElement('pre');o.id='m2';o.textContent=JSON.stringify(out);
+ document.body.appendChild(o);
+},1200));
+</script>
+
 </body>
 </html>
