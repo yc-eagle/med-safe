@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-04T04:25:54.653Z",
-  "passed": 35,
+  "date": "2026-10-04T04:52:01.945Z",
+  "passed": 40,
   "failed": 0,
   "catalogue": 14269,
   "details": [
@@ -142,6 +142,26 @@
     },
     {
       "name": "All 78 distinct demo pairs always disclose clinical uncertainty",
+      "status": "passed"
+    },
+    {
+      "name": "Printed TABLETS and catalogue TAB retain both DEXOPHEN strengths",
+      "status": "passed"
+    },
+    {
+      "name": "A full ingredient alone does not identify a branded medicine",
+      "status": "passed"
+    },
+    {
+      "name": "Visible exact strength still narrows the candidate",
+      "status": "passed"
+    },
+    {
+      "name": "An unlisted strength is not silently changed",
+      "status": "passed"
+    },
+    {
+      "name": "A printed parenthesised brand and strength remains an exact candidate",
       "status": "passed"
     }
   ]

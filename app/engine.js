@@ -14,9 +14,12 @@ function suggest(products,rows){
  const matches=ids.map(id=>products.find(p=>p.registration_number===id)).filter(Boolean);
  if(matches.length)return {method:'registration_number',candidates:matches,unmatchedIds:ids.filter(id=>!matches.some(p=>p.registration_number===id))};
  // Approximate OCR terms can only produce candidates, never a confirmed identity.
+ // A full ingredient alone cannot identify its brand, strength or dosage form.
+ const ingredientNames=new Set(products.flatMap(p=>p.active_ingredients.map(norm)));
+ const labelName=s=>norm(s).replace(/^[('"“‘]+|[)"'”’]+$/g,'').replace(/\bTABLETS?\b/g,'TAB');
  const candidates=[];
- for(const row of rows){const q=norm(row.text);if(q.length<4)continue;
-  for(const p of products){const n=norm(p.product_name);if(n===q||(q.length>=9&&n.includes(q))){if(!candidates.includes(p))candidates.push(p);if(candidates.length>=10)break;}}
+ for(const row of rows){if(ingredientNames.has(norm(row.text)))continue;const q=labelName(row.text);if(q.length<4)continue;
+  for(const p of products){const n=labelName(p.product_name);if(n===q||(q.length>=9&&n.includes(q))){if(!candidates.includes(p))candidates.push(p);if(candidates.length>=10)break;}}
   if(candidates.length>=10)break;
  }
  return {method:'name_candidate',candidates,unmatchedIds:ids};

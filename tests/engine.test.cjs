@@ -22,5 +22,10 @@ test('Unknown OCR registration retained beside known one',()=>assert.deepEqual(E
 test('Blank OCR stays blank',()=>assert.equal(E.suggest(D.products,[]).candidates.length,0));
 test('Known alias mapping is explicit',()=>assert.ok(D.aliases.find(x=>x.canonical==='paracetamol').aliases.includes('對乙酰氨基酚')));
 test('All 78 distinct demo pairs always disclose clinical uncertainty',()=>{for(let i=0;i<D.demoProducts.length;i++)for(let j=i+1;j<D.demoProducts.length;j++){let r=check(D.demoProducts[i].registration_number,D.demoProducts[j].registration_number);assert.equal(r.clinicalSafety,'not_assessed');assert.equal(r.reviewStatus,'clinician_reviewed');assert.equal(r.coverageComplete,false)}});
+test('Printed TABLETS and catalogue TAB retain both DEXOPHEN strengths',()=>assert.deepEqual(E.suggest(D.products,[{text:'DEXOPHEN TABLETS'},{text:'Dextromethorphan Hydrobromide'}]).candidates.map(p=>p.registration_number).sort(),['HK-49896','HK-55448']));
+test('A full ingredient alone does not identify a branded medicine',()=>assert.equal(E.suggest(D.products,[{text:'Dextromethorphan Hydrobromide'}]).candidates.length,0));
+test('Visible exact strength still narrows the candidate',()=>assert.deepEqual(E.suggest(D.products,[{text:'DEXOPHEN TABLETS 30MG'}]).candidates.map(p=>p.registration_number),['HK-49896']));
+test('An unlisted strength is not silently changed',()=>assert.equal(E.suggest(D.products,[{text:'DEXOPHEN TABLETS 60MG'}]).candidates.length,0));
+test('A printed parenthesised brand and strength remains an exact candidate',()=>assert.deepEqual(E.suggest(D.products,[{text:'(Eurozyme Tablets 30mg'}]).candidates.map(p=>p.registration_number),['HK-41434']));
 const result={date:new Date().toISOString(),passed,failed:0,catalogue:D.products.length,details};
 fs.mkdirSync(path.join(root,'qa'),{recursive:true});fs.writeFileSync(path.join(root,'qa/engine-results.json'),JSON.stringify(result,null,2));console.log(`${passed} meaningful engine checks passed`);

@@ -105,3 +105,7 @@ Its output was treated as **input to be verified, not as a conclusion to be trus
 ## Demonstration photograph
 
 `app/sample-medicine.jpg` is the team-supplied real medicine-bottle photograph selected for the public OCR example on 4 October 2026. OCR runs on the image pixels; no medicine identity is prefilled. The older synthetic `sample-labels.png` is retained only as a regression-test fixture. Neither image demonstrates general OCR or clinical accuracy.
+
+`app/sample-medicine-2.jpg` is the second team-supplied real photograph (DEXOPHEN label). Its registration number is cropped out. The visible name produces formulation candidates; users must verify strength and identity against the photograph. It is not an example of an established interaction with the first medicine.
+
+`app/sample-medicine-3.jpg` is the third team-supplied photograph (EUROZYME label). The visible printed name and strength can produce a catalogue candidate; users still confirm its identity.
