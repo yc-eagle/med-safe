@@ -1,6 +1,6 @@
 # 队友试用与反馈
 
-公开网页已上线：[点这里试用](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)。直接把链接发给队友，不用 GitHub 帐号。手机先用 Safari／Chrome 打开，允许相机只是可选项。不要给真实患者作服药建议。
+公开网页已上线：[点这里试用](https://med-care.pages.dev)。直接把链接发给队友，不用 GitHub 帐号。手机先用 Safari／Chrome 打开，允许相机只是可选项。不要给真实患者作服药建议。
 
 建议先试三条路径，每条约一分钟：
 

@@ -12,7 +12,7 @@
 > - **14 条规则已于 2026-10-03 经临床复核，每条都有具名复核人。** 复核的是措辞、出处与适用范围，**不等于**一个经过验证的临床风险模型；产品仍不授予任何合用许可。
 > - 通用助手、药品工具与药师服务的能力必须**逐项核实**，不得概括为「它们都不做」或「只有我们做」。
 >
-> **已产出的交付物：** [8 页可编辑 Deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3 分钟录像](../assets/demo-3min.mp4) | [公开产品](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
+> **已产出的交付物：** [8 页可编辑 Deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3 分钟录像](../assets/demo-3min.mp4) | [公开产品](https://med-care.pages.dev)
 
 > **负责人：Yicheng JIANG** | **10 月 4 日 16:20 Top 8 路演**
 > 时长基准：**约 6 分钟含问答**（8 队分 80 分钟）

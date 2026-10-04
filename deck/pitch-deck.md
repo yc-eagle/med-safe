@@ -12,7 +12,7 @@
 > - **All 14 rules were clinician-reviewed on 2026-10-03, with a named reviewer per rule.** This is a review of wording, sourcing and scope; it is **not** a validated clinical risk model, and the product still grants no permission to combine.
 > - The capabilities of general assistants, drug tools and pharmacist services must be **verified one by one**, not summarised as "none of them do" or "only we do".
 >
-> **Deliverables already produced:** [8-slide editable deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3-minute recording](../assets/demo-3min.mp4) | [public product](https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site)
+> **Deliverables already produced:** [8-slide editable deck](Med-Safe-HacKU2026.pptx) | [PDF](Med-Safe-HacKU2026.pdf) | [3-minute recording](../assets/demo-3min.mp4) | [public product](https://med-care.pages.dev)
 
 > **Owner: Yicheng JIANG** | **Top 8 pitching round, 4 Oct 16:20**
 > Running time: **about 6 minutes including Q&A** (8 teams in 80 minutes)

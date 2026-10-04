@@ -1,5 +1,5 @@
-﻿{
-  "site_url": "https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site",
+{
+  "site_url": "https://med-care.pages.dev",
   "access": "public",
   "site_deployment_status": "succeeded",
   "site_deployment_id": "appgdep_6ac0b5e026f481918acf1c7f9d901e5a",
@@ -7,14 +7,14 @@
   "github_url": "https://github.com/yc-eagle/med-safe",
   "github_main_merge": "adbd7d9",
   "team_prior_commit_preserved": "9c499e2",
-  "video_url": "https://med-safe-hacku-2026.stashes-primers-4n.chatgpt.site/demo.html",
+  "video_url": "https://github.com/yc-eagle/med-safe/blob/main/assets/demo-3min.mp4",
   "video_duration_seconds": 180,
   "offline_assets": 53,
   "offline_bytes": 55277699,
   "clinical_review": "clinician_reviewed_2026-10-03",
   "actual_phone_test": "pending",
   "competition_form_submitted": false,
-  "published_anonymous_browser_offline_reload_and_search": "passed",
+  "published_anonymous_browser_offline_reload_and_search": "passed (checked on the previous host; re-verify on med-care.pages.dev before submitting)",
   "published_offline_test": "qa/published-languages-offline-results.json",
   "product_version": "0.4.0",
   "teammate_base_commit": "62c5aa2ddfcf5aa023949b37ffbdec64a8429f03",
@@ -26,5 +26,9 @@
     "yue"
   ],
   "teammate_existing_documents_unchanged": 45,
-  "published_languages_and_ocr_offline": "passed"
+  "published_languages_and_ocr_offline": "passed",
+  "deck_url": "https://github.com/yc-eagle/med-safe/blob/main/deck/Med-Safe-HacKU2026.pptx",
+  "site_url_previous_status": "returns Cloudflare 403 as of 2026-10-03; do not use in submissions",
+  "superseded_host": "med-safe-hacku-2026.stashes-primers-4n.chatgpt.site",
+  "superseded_host_note": "returned Cloudflare 403 on 2026-10-03; replaced by med-care.pages.dev"
 }
