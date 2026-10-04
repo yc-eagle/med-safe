@@ -1,0 +1,16 @@
+{
+  "published_at": "2026-10-04T04:36:08.626895+00:00",
+  "app_commit": "26970a9",
+  "product_name": "MedSafe",
+  "primary_url": "https://medsafe-3gz.pages.dev/",
+  "existing_url": "https://med-care.pages.dev/",
+  "new_project_deployment": "https://41a5e4c4.medsafe-3gz.pages.dev/",
+  "existing_project_deployment": "https://6e99ffd7.med-care.pages.dev/",
+  "offline_release": "dd099cedef541b98",
+  "checks": [
+    "MedSafe title and header in en/cmn/yue on published existing URL",
+    "Installable app name and short_name are MedSafe",
+    "PhotoTools present"
+  ],
+  "note": "New free Pages hostname assigned by Cloudflare; existing QR destination stays available. Source is on PR #4, not merged into main."
+}
